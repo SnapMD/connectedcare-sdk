@@ -1,4 +1,4 @@
-﻿namespace SnapMD.Sdk.Models
+﻿namespace SnapMD.ConnectedCare.Sdk.Models
 {
     /// <summary>
     ///     Simple object for IDs and text.

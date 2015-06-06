@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json.Linq;
 
-namespace SnapMD.Sdk.ReportApi
+namespace SnapMD.ConnectedCare.Sdk.ReportApi
 {
     public class SnapReportApi : ApiCall
     {

@@ -1,4 +1,4 @@
-﻿namespace SnapMD.Sdk.Models
+﻿namespace SnapMD.ConnectedCare.Sdk.Models
 {
     public class OnDemandResponse
     {

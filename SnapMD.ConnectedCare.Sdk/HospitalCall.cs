@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SnapMD.Sdk
+namespace SnapMD.ConnectedCare.Sdk
 {
     public class HospitalCall : ApiCall
     {

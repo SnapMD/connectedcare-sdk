@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using SnapMD.ConnectedCare.Sdk.Models;
 
-namespace SnapMD.Sdk
+namespace SnapMD.ConnectedCare.Sdk
 {
     public class PaymentsApi : ApiCall
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json.Linq;
 
-namespace SnapMD.Sdk
+namespace SnapMD.ConnectedCare.Sdk
 {
     public class HospitalApi : ApiCall
     {

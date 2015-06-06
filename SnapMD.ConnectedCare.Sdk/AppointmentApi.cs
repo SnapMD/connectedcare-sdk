@@ -1,6 +1,6 @@
 ﻿using SnapMD.ConnectedCare.Sdk.Models;
 
-namespace SnapMD.Sdk
+namespace SnapMD.ConnectedCare.Sdk
 {
     public class AppointmentApi : ApiCall
     {

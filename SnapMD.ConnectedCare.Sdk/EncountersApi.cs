@@ -1,4 +1,4 @@
-﻿namespace SnapMD.Sdk
+﻿namespace SnapMD.ConnectedCare.Sdk
 {
     public class EncountersApi : ApiCall
     {
