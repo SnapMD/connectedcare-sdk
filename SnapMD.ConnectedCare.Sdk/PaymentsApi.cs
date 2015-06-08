@@ -21,17 +21,12 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public JObject GetCustomerProfile(int userId)
         {
-            //API looks so strange 
-
-
-            //hospital/{hospitalId}/payments/{userId}
-            var result = MakeCall(string.Format("hospital/{0}/payments", HospitalId));
+            var result = MakeCall(string.Format("patients/{0}/payments", userId));
             return result;
         }
 
         public JObject RegisterProfile(int userId, object paymentData)
         {
-            //hospital/{hospitalId}/payments/{userId}
             var result = Post(string.Format("patients/{0}/payments", userId), paymentData);
             return result;
         }
