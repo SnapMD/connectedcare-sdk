@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -69,6 +70,7 @@
     <Compile Include="Models\ApiResponse.cs" />
     <Compile Include="HospitalApi.cs" />
     <Compile Include="HospitalCall.cs" />
+    <Compile Include="Models\ConsultationStatusCode.cs" />
     <Compile Include="Models\ConsultationEvents.cs" />
     <Compile Include="Models\ConsultationEventType.cs" />
     <Compile Include="Models\IntakeConcern.cs" />
