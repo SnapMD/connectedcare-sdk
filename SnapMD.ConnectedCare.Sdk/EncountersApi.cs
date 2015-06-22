@@ -13,7 +13,7 @@ namespace SnapMD.ConnectedCare.Sdk
     public class EncountersApi : ApiCall
     {
         public EncountersApi(string baseUrl, string bearerToken, string developerId, string apiKey)
-            : base(baseUrl, bearerToken, developerId, apiKey)
+            : base(baseUrl, new SnapMD.ConnectedCare.Sdk.Wrappers.WebClientWrapper(new System.Net.WebClient()), bearerToken, developerId, apiKey)
         {
         }
 

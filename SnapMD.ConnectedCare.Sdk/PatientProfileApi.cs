@@ -9,13 +9,14 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 using Newtonsoft.Json.Linq;
+using SnapMD.ConnectedCare.Sdk.Interfaces;
 
 namespace SnapMD.ConnectedCare.Sdk
 {
     public class PatientProfileApi : ApiCall
     {
-        public PatientProfileApi(string baseUrl, string bearerToken, string developerId, string apiKey)
-            : base(baseUrl, bearerToken, developerId, apiKey)
+        public PatientProfileApi(string baseUrl, string bearerToken, string developerId, string apiKey, IWebClient webClient)
+            : base(baseUrl, webClient, bearerToken, developerId, apiKey)
         {
         }
 
