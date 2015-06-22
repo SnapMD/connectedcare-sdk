@@ -9,23 +9,28 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Newtonsoft.Json.Linq;
 
 namespace SnapMD.ConnectedCare.Sdk
 {
-    public class HospitalCall : ApiCall
+    public class IntakeApi: ApiCall
     {
-        private readonly Uri _baseUri;
-
-        public HospitalCall(string baseUrl, string bearerToken, string developerId, string apiKey)
-            : base(baseUrl, new SnapMD.ConnectedCare.Sdk.Wrappers.WebClientWrapper(new System.Net.WebClient()), bearerToken, developerId, apiKey)
+        public IntakeApi(string baseUrl, string bearerToken, string developerId, string apiKey, SnapMD.ConnectedCare.Sdk.Interfaces.IWebClient WebClient)
+            : base(baseUrl, WebClient, bearerToken, developerId, apiKey)
         {
-            _baseUri = new Uri(baseUrl);
+            
         }
 
-        public string GetHospitalAddress()
+        public JObject GetIntakeItems(int HospitalId)
         {
-            var o = MakeCall("hospital/address");
-            return Convert.ToString(o["data"]);
+            var result = MakeCall(string.Format("v2/codesets?hospitalId={0}&fields={1}",HospitalId,"medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"));
+
+            return result;
         }
     }
 }

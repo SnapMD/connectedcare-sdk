@@ -12,8 +12,8 @@ namespace SnapMD.ConnectedCare.Sdk
 {
     public class TokenApi : ApiCall
     {
-        public TokenApi(string baseUrl, int hospitalId, string developerId, string apiKey)
-            : base(baseUrl, developerId: developerId, apiKey: apiKey)
+        public TokenApi(string baseUrl, int hospitalId, string developerId, string apiKey, SnapMD.ConnectedCare.Sdk.Interfaces.IWebClient WebClient)
+            : base(baseUrl, WebClient, developerId: developerId, apiKey: apiKey)
         {
             HospitalId = hospitalId;
         }

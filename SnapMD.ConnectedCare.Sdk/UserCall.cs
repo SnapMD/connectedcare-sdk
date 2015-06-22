@@ -1,4 +1,4 @@
-﻿//    Copyright 2015 SnapMD, Inc.
+﻿﻿//    Copyright 2015 SnapMD, Inc.
 //    Licensed under the Apache License, Version 2.0 (the "License");
 //    you may not use this file except in compliance with the License.
 //    You may obtain a copy of the License at
@@ -15,7 +15,7 @@ namespace SnapMD.ConnectedCare.Sdk
     public class UserCall : ApiCall
     {
         public UserCall(string baseUrl, string bearerToken, string developerId, string apiKey)
-            : base(baseUrl, bearerToken, developerId, apiKey)
+            : base(baseUrl, new SnapMD.ConnectedCare.Sdk.Wrappers.WebClientWrapper(new System.Net.WebClient()), bearerToken, developerId, apiKey)
         {
         }
 

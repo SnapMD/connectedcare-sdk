@@ -11,12 +11,14 @@
 using System;
 using Newtonsoft.Json.Linq;
 
+using SnapMD.ConnectedCare.Sdk.Interfaces;
+
 namespace SnapMD.ConnectedCare.Sdk
 {
     public class HospitalApi : ApiCall
     {
-        public HospitalApi(string baseUrl, string bearerToken, string developerId, string apiKey)
-            : base(baseUrl, bearerToken, developerId, apiKey)
+        public HospitalApi(string baseUrl, string bearerToken, string developerId, string apiKey, IWebClient client)
+            : base(baseUrl, client, bearerToken, developerId, apiKey)
         {
         }
 

@@ -16,7 +16,7 @@ namespace SnapMD.ConnectedCare.Sdk.ReportApi
     public class SnapReportApi : ApiCall
     {
         public SnapReportApi(string baseUrl, string bearerToken, string developerId, string apiKey)
-            : base(baseUrl, bearerToken, developerId, apiKey)
+            : base(baseUrl, new SnapMD.ConnectedCare.Sdk.Wrappers.WebClientWrapper(new System.Net.WebClient()), bearerToken, developerId, apiKey)
         {
         }
 
