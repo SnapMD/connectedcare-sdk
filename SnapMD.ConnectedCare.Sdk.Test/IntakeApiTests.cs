@@ -17,6 +17,7 @@ using SnapMD.ConnectedCare.Sdk;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
 
 using System.Net;
+using SnapMD.ConnectedCare.Sdk.Test.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Test
 {

@@ -21,6 +21,7 @@ using SnapMD.ConnectedCare.Sdk;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
 
 using System.Net;
+using SnapMD.ConnectedCare.Sdk.Test.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
@@ -33,7 +34,9 @@ namespace SnapMD.ConnectedCare.Sdk.Test
             string url, token;
 
             Mock<IWebClient> mockWebClient = TokenandWebClientSetup(out url, out token);
-            mockWebClient.Setup(x => x.DownloadString(new Uri(@"http://snap.local/api/HospitalAddress/1"))).Returns("{\"data\":{\"addressText\":\"1000 wilshire blvd, los angeles, ca 90017\"}}");
+            mockWebClient.Setup(x => x.DownloadString(
+                new Uri(Settings.Default.BaseUrl + @"/HospitalAddress/1")))
+                .Returns("{\"data\":{\"addressText\":\"1000 wilshire blvd, los angeles, ca 90017\"}}");
 
             var api = new HospitalApi(url, null, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
             Assert.AreEqual("1000 wilshire blvd, los angeles, ca 90017", api.GetHospitalAddressById(1));

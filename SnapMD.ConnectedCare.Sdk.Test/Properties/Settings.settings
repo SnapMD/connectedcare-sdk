@@ -1,12 +1,21 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SnapMD.ConnectedCare.Sdk.Tests" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SnapMD.ConnectedCare.Sdk.Test.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="ApiDeveloperId" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">HexaDecimal Api Developer Id Here</Value>
+      <Value Profile="(Default)">************</Value>
     </Setting>
     <Setting Name="ApiKey" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">HexaDecimal Api Key Here</Value>
+      <Value Profile="(Default)">************</Value>
+    </Setting>
+    <Setting Name="TestUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">************</Value>
+    </Setting>
+    <Setting Name="TestPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">************</Value>
+    </Setting>
+    <Setting Name="BaseUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://sandbox.connectedcare.md/api</Value>
     </Setting>
   </Settings>
 </SettingsFile>

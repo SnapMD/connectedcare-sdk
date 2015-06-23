@@ -24,6 +24,7 @@ using FizzWare.NBuilder;
 using SnapMD.ConnectedCare.Sdk.Models;
 
 using System.Net;
+using SnapMD.ConnectedCare.Sdk.Test.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
