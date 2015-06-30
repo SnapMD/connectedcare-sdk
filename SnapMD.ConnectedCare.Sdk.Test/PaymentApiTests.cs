@@ -14,13 +14,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Newtonsoft.Json;
+
 using Moq;
 using NUnit.Framework;
 using SnapMD.ConnectedCare.Sdk;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
 
 using System.Net;
-using SnapMD.ConnectedCare.Sdk.Test.Properties;
+
+using FizzWare.NBuilder;
+
 
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
@@ -55,7 +59,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
 
             string url, token;
             var mockWebClient = TokenandWebClientSetup(out url, out token);
-            mockWebClient.Setup(x => x.UploadString(new Uri(@"http://snap.local/api/patients/payments"), "POST", "{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}")).Returns("{\"result\":\"hi\"}");
+            mockWebClient.Setup(x => x.UploadString(new Uri(@"http://snap.local/api/patients/payments"), "POST", "{\"CardNumber\":\"4111111111111111\",\"ExpiryMonth\":12,\"ExpiryYear\":2015}")).Returns("{\"profileId\":\"2\"}");
 
             var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
             var result = target.RegisterProfile(15, paymentData);

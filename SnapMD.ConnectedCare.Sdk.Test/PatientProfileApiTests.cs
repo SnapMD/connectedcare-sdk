@@ -24,7 +24,6 @@ using FizzWare.NBuilder;
 using SnapMD.ConnectedCare.Sdk.Models;
 
 using System.Net;
-using SnapMD.ConnectedCare.Sdk.Test.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
@@ -47,7 +46,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
 
             var sdk = new PatientProfileApi(url, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
             var result = sdk.AddPatient(mock);
-            Assert.IsNotNull(result[0]);
+            Assert.IsNotNull(result);
         }
     }
 }
