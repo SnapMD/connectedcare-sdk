@@ -40,7 +40,7 @@ namespace SnapMD.ConnectedCare.Sdk
             return result;
         }
 
-        public JObject RegisterProfile(int userId, object paymentData)
+        public JObject RegisterProfile(object paymentData)
         {
             //hospital/{hospitalId}/payments/{userId}
             var result = Post(string.Format("patients/payments"), paymentData);

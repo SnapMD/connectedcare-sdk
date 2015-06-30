@@ -58,13 +58,25 @@ namespace SnapMD.ConnectedCare.Sdk.Test
             };
 
             string url, token;
+            
             var mockWebClient = TokenandWebClientSetup(out url, out token);
-            mockWebClient.Setup(x => x.UploadString(new Uri(@"http://snap.local/api/patients/payments"), "POST", "{\"CardNumber\":\"4111111111111111\",\"ExpiryMonth\":12,\"ExpiryYear\":2015}")).Returns("{\"profileId\":\"2\"}");
+            mockWebClient.Setup(x => x.UploadString(new Uri(@"http://snap.local/api/patients/payments"), "POST", "{\"CardNumber\":\"4111111111111111\",\"ExpiryMonth\":12,\"ExpiryYear\":2015}")).Returns(
+                @"{" +
+                  "\"$id\": \"1\"," +
+                  "\"success\": true," +
+                  "\"data\": {" +
+                    "\"$id\": \"2\"," +
+                    "\"profileId\": \"31867556\"," +
+                    "\"paymentProfileId\": \"32565287\"" +
+                  "}," +
+                  "\"message\": \"Success\"" +
+                "}"
+            );
 
             var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
-            var result = target.RegisterProfile(15, paymentData);
+            var result = target.RegisterProfile(paymentData);
 
-            Assert.Greater(result.Value<int>("profileId"), 1);
+            Assert.Greater(Convert.ToInt32(result["data"]["profileId"]), 1);
         }
     }
 }
