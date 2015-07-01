@@ -8,37 +8,27 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Newtonsoft.Json;
-
-using Moq;
 using NUnit.Framework;
-using SnapMD.ConnectedCare.Sdk;
-using SnapMD.ConnectedCare.Sdk.Interfaces;
-
-using System.Net;
-
-using FizzWare.NBuilder;
-
+using SnapMD.ConnectedCare.Sdk.Test.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
     [TestFixture]
-    class PaymentApiTests : TestBase
+    internal class PaymentApiTests : TestBase
     {
         [Test]
         public void GetCustomer()
         {
             string url, token;
             var mockWebClient = TokenandWebClientSetup(out url, out token);
-            mockWebClient.Setup(x => x.DownloadString(new Uri(@"http://snap.local/api/hospital/1/payments"))).Returns("{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
+            mockWebClient.Setup(x => x.DownloadString(new Uri(@"http://snap.local/api/hospital/1/payments")))
+                .Returns(
+                    "{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
 
-            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
+            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
+                mockWebClient.Object);
             var actual = target.GetCustomerProfile(15);
 
             Assert.False(target.NotFound);
@@ -58,22 +48,26 @@ namespace SnapMD.ConnectedCare.Sdk.Test
             };
 
             string url, token;
-            
-            var mockWebClient = TokenandWebClientSetup(out url, out token);
-            mockWebClient.Setup(x => x.UploadString(new Uri(@"http://snap.local/api/patients/payments"), "POST", "{\"CardNumber\":\"4111111111111111\",\"ExpiryMonth\":12,\"ExpiryYear\":2015}")).Returns(
-                @"{" +
-                  "\"$id\": \"1\"," +
-                  "\"success\": true," +
-                  "\"data\": {" +
-                    "\"$id\": \"2\"," +
-                    "\"profileId\": \"31867556\"," +
-                    "\"paymentProfileId\": \"32565287\"" +
-                  "}," +
-                  "\"message\": \"Success\"" +
-                "}"
-            );
 
-            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
+            var mockWebClient = TokenandWebClientSetup(out url, out token);
+            mockWebClient.Setup(
+                x =>
+                    x.UploadString(new Uri(@"http://snap.local/api/patients/payments"), "POST",
+                        "{\"CardNumber\":\"4111111111111111\",\"ExpiryMonth\":12,\"ExpiryYear\":2015}")).Returns(
+                            @"{" +
+                            "\"$id\": \"1\"," +
+                            "\"success\": true," +
+                            "\"data\": {" +
+                            "\"$id\": \"2\"," +
+                            "\"profileId\": \"31867556\"," +
+                            "\"paymentProfileId\": \"32565287\"" +
+                            "}," +
+                            "\"message\": \"Success\"" +
+                            "}"
+                );
+
+            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
+                mockWebClient.Object);
             var result = target.RegisterProfile(paymentData);
 
             Assert.Greater(Convert.ToInt32(result["data"]["profileId"]), 1);
