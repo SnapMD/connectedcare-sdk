@@ -24,6 +24,7 @@ using SnapMD.ConnectedCare.Sdk.Interfaces;
 using System.Net;
 
 using FizzWare.NBuilder;
+using SnapMD.ConnectedCare.Sdk.Test.Properties;
 
 
 namespace SnapMD.ConnectedCare.Sdk.Test
@@ -76,7 +77,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
             var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
             var result = target.RegisterProfile(paymentData);
 
-            Assert.Greater(Convert.ToInt32(result["data"]["profileId"]), 1);
+            Assert.Greater((int)result["data"]["profileId"], 1);
         }
     }
 }
