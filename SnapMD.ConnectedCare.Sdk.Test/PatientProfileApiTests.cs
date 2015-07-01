@@ -13,6 +13,7 @@ using System;
 using FizzWare.NBuilder.Implementation;
 using NUnit.Framework;
 using SnapMD.ConnectedCare.Sdk.Test.Properties;
+using SnapMD.ConnectedCare.Sdk.Test.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
