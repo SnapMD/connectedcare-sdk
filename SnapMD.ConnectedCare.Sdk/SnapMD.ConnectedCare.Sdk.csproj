@@ -51,7 +51,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Moq">
-            <HintPath>..\..\..\src\packages\Moq.4.2.1506.2016\lib\net40\Moq.dll</HintPath>
+      <HintPath>..\..\..\src\packages\Moq.4.2.1506.2016\lib\net40\Moq.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -72,9 +72,15 @@
     <Compile Include="AppointmentApi.cs" />
     <Compile Include="IntakeApi.cs" />
     <Compile Include="Interfaces\IWebClient.cs" />
+    <Compile Include="MockWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Models\ApiResponse.cs" />
     <Compile Include="HospitalApi.cs" />
     <Compile Include="HospitalCall.cs" />
+    <Compile Include="Models\ConsultationEvents.cs" />
+    <Compile Include="Models\ConsultationEventType.cs" />
+    <Compile Include="Models\ConsultationStatusCode.cs" />
     <Compile Include="Models\IntakeConcern.cs" />
     <Compile Include="Models\OnDemandRequest.cs" />
     <Compile Include="Models\OnDemandResponse.cs" />
