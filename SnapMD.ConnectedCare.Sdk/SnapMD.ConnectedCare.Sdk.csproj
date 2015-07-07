@@ -22,7 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -53,7 +52,7 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\src\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -69,7 +68,6 @@
     <Compile Include="AppointmentApi.cs" />
     <Compile Include="Models\ApiResponse.cs" />
     <Compile Include="HospitalApi.cs" />
-    <Compile Include="HospitalCall.cs" />
     <Compile Include="Models\ConsultationStatusCode.cs" />
     <Compile Include="Models\ConsultationEvents.cs" />
     <Compile Include="Models\ConsultationEventType.cs" />
@@ -85,10 +83,15 @@
     <Compile Include="UserApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SnapSdkException.cs" />
-    <Compile Include="UserCall.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SnapMD.ConnectedCare.ApiModels\SnapMD.ConnectedCare.ApiModels.csproj">
+      <Project>{26b4f2ad-87ae-491b-801a-5d70fb0d2d74}</Project>
+      <Name>SnapMD.ConnectedCare.ApiModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

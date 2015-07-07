@@ -8,26 +8,18 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-using System;
-
-namespace SnapMD.ConnectedCare.Sdk
+namespace SnapMD.ConnectedCare.ApiModels
 {
-    public class UserCall : ApiCall
+    public class NewbornRecord //: IInfantData
     {
-        public UserCall(string baseUrl, string bearerToken, string developerId, string apiKey)
-            : base(baseUrl, bearerToken, developerId, apiKey)
-        {
-        }
+        public string DischargedWithMother { get; set; }
 
-        public int GetUserId()
-        {
-            int userId;
-            //var baseUrl = new Uri(_baseUrl);
-            //var url = new Uri(baseUrl, "account/user");
-            var o = MakeCall("account/user");
-            userId = Convert.ToInt32(o["id"]);
+        public string FullTerm { get; set; }
 
-            return userId;
-        }
+        public string PatientAgeUnderOneYear { get; set; }
+
+        public string VaccinationsCurrent { get; set; }
+
+        public string VaginalBirth { get; set; }
     }
 }

@@ -8,24 +8,14 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-using System;
-
-namespace SnapMD.ConnectedCare.Sdk
+namespace SnapMD.ConnectedCare.ApiModels
 {
-    public class HospitalCall : ApiCall
+    public struct SurgeryRecord
     {
-        private readonly Uri _baseUri;
+        public string Description { get; set; }
 
-        public HospitalCall(string baseUrl, string bearerToken, string developerId, string apiKey)
-            : base(baseUrl, bearerToken, developerId, apiKey)
-        {
-            _baseUri = new Uri(baseUrl);
-        }
+        public int Month { get; set; }
 
-        public string GetHospitalAddress()
-        {
-            var o = MakeCall("hospital/address");
-            return Convert.ToString(o["data"]);
-        }
+        public int Year { get; set; }
     }
 }

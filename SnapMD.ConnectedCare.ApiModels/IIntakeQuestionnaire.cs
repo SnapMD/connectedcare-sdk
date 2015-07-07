@@ -9,15 +9,22 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
-using SnapMD.ConnectedCare.ApiModels;
-using SnapMD.Sdk.Models;
+using System.Collections.Generic;
 
-namespace SnapMD.ConnectedCare.Sdk.Models
+namespace SnapMD.ConnectedCare.ApiModels
 {
-    public class OnDemandRequest
+    public interface IIntakeQuestionnaire
     {
-        public IntakeConcern[] Concerns { get; set; }
-        public string Phone { get; set; }
-        public int PatientId { get; set; }
+        List<EncounterConcern> Concerns { get; set; }
+
+        NewbornRecord InfantData { get; set; }
+
+        List<CustomCode> MedicalConditions { get; set; }
+
+        List<CustomCode> MedicationAllergies { get; set; }
+
+        List<CustomCode> Medications { get; set; }
+
+        List<SurgeryRecord> Surgeries { get; set; }
     }
 }

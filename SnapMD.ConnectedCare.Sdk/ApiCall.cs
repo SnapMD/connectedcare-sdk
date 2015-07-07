@@ -18,10 +18,13 @@ namespace SnapMD.ConnectedCare.Sdk
 {
     public class ApiCall
     {
-        private readonly string _apiKey;
         private readonly string _baseUrl;
+
         private readonly string _bearerToken;
+
         private readonly string _developerId;
+
+        private readonly string _apiKey;
 
         public ApiCall(string baseUrl, string bearerToken = null, string developerId = null, string apiKey = null)
         {
@@ -39,7 +42,9 @@ namespace SnapMD.ConnectedCare.Sdk
         }
 
         public bool RequiresAuthentication { get; set; }
+        
         public bool NotFound { get; private set; }
+        
         public bool ServerError { get; private set; }
 
         protected virtual T MakeCall<T>(string apiPath)
