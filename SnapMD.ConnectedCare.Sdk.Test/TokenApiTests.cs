@@ -34,7 +34,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
             
             Mock<IWebClient> mockWebClient = new Mock<IWebClient>();
 
-            mockWebClient.Setup(x => x.UploadString(new Uri(Settings.Default.BaseUrl + @"/account/token"), "POST", "{\"email\":\"aaron.lord+toddg@snap.md\",\"hospitalId\":1,\"password\":\"Password@123\",\"userTypeId\":1}")).Returns("{\"access_token\":\"" + tokenResult + "\"}");
+            mockWebClient.Setup(x => x.UploadString(new Uri(Settings.Default.BaseUrl + @"/account/tokenv2"), "POST", "{\"email\":\"aaron.lord+toddg@snap.md\",\"hospitalId\":1,\"password\":\"Password@123\",\"userTypeId\":1}")).Returns("{ \"$id\": \"1\", \"data\": [ { \"$id\": \"2\", \"access_token\": \"jq8_ntQSXkBFl8HaDX8dshTOjgweE6gbMQ-TgPmhZJ039ejlSFEmopkjIQdbfW3ymE96fkG7Jw2VjpaEc71CBta7ZGaUSncwi7bEO1d2c5wkwAQJ1d0Obk90rNRFcLaCn9QU7pfQlyJcCdRtS2icYmKfUzJmwlsuN7q2qyqtKRgWzM0aEPRL5E4hExwub5wEPdAIfpseFX6jCdEZeMuu_PScHdqdds5cVZtqA8_CHeQOD0YrHWYK11CPTJ0HoL8rz0HvZ-csnwo-KXcB1g3DNxrcbEtn2lq2LNn-1OkzvpFZ1ZpH5G1CKkEIfBw5wQgrihcG0m69vGizCn_ww2AgvelqXiM-uZOqer7VeQyimudhn22zc2CHQoLnknQzeJcX118eCjhcnND6yWDjiQXnSg\" } ] }");
             mockWebClient.Setup(x => x.Headers).Returns(new WebHeaderCollection());
 
             string url = Settings.Default.BaseUrl+ @"/";

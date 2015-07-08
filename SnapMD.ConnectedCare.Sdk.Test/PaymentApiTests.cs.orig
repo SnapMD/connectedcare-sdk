@@ -11,19 +11,9 @@
 
 using System;
 using NUnit.Framework;
-<<<<<<< HEAD
-using SnapMD.ConnectedCare.Sdk.Test.Properties;
-=======
-using SnapMD.ConnectedCare.Sdk;
-using SnapMD.ConnectedCare.Sdk.Interfaces;
-
-using System.Net;
-
-using FizzWare.NBuilder;
 using SnapMD.ConnectedCare.Sdk.Test.Properties;
 
->>>>>>> 6d9253073c46c2a99144adb6289fd919690fcc42
-
+using SnapMD.ConnectedCare.Sdk.Test.Properties;
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
     [TestFixture]
@@ -33,6 +23,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
         public void GetCustomer()
         {
             string url, token;
+<<<<<<< HEAD
             var mockWebClient = TokenandWebClientSetup(out url, out token);
             mockWebClient.Setup(x => x.DownloadString(new Uri(@"http://snap.local/api/hospital/1/payments")))
                 .Returns(
@@ -40,6 +31,15 @@ namespace SnapMD.ConnectedCare.Sdk.Test
 
             var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
                 mockWebClient.Object);
+=======
+
+            //var mockWebClient = TokenandWebClientSetup(out url, out token);
+            //mockWebClient.Setup(x => x.DownloadString(new Uri(@"http://snap.local/api/hospital/1/payments"))).Returns("{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
+            
+            var mockWebClient = TokenandWebClientSetupRemoteCall(out url, out token);
+            
+            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient);
+>>>>>>> sameer/develop
             var actual = target.GetCustomerProfile(15);
 
             Assert.False(target.NotFound);

@@ -9,6 +9,9 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 using System;
+using SnapMD.ConnectedCare.Sdk.Models;
+using Newtonsoft.Json.Linq;
+
 
 namespace SnapMD.ConnectedCare.Sdk
 {
@@ -21,13 +24,19 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public int GetUserId()
         {
-            int userId;
             //var baseUrl = new Uri(_baseUrl);
             //var url = new Uri(baseUrl, "account/user");
-            var o = MakeCall("account/user");
-            userId = Convert.ToInt32(o["id"]);
+            var o = MakeCall("account/userv2");
 
-            return userId;
+            //userId = Convert.ToInt32(o["id"]);
+
+            var dataEnumerator = ((JObject)o).ToObject<ApiResponseV2<SerializableUser>>().Data.GetEnumerator();
+
+            while (dataEnumerator.MoveNext())
+                if (dataEnumerator.Current.id > 0)
+                    return dataEnumerator.Current.id;
+
+            return 0;
         }
     }
 }
