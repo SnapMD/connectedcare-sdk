@@ -16,37 +16,47 @@ using Newtonsoft.Json;
 using NUnit.Framework;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
 using SnapMD.ConnectedCare.Sdk.Test.Properties;
+using SnapMD.ConnectedCare.Sdk.Wrappers;
 
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
     public abstract class TestBase
     {
-        public Mock<IWebClient> TokenandWebClientSetup(out string url, out string token)
+        public Uri BaseUri { get; set; }
+
+        protected TestBase()
+        {
+            BaseUri = new Uri(Settings.Default.BaseUrl);
+        }
+
+        public Mock<IWebClient> TokenandWebClientSetup(out string token)
         {
             string tokenResult = "Sample_Token";
 
             Mock<IWebClient> mockWebClient = new Mock<IWebClient>();
+            
+            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, @"/account/tokenv2"), "POST", 
+                "{\"email\":\"aaron.lord+toddg@snap.md\",\"password\":\"Password@123\",\"hospitalId\":1,\"userTypeId\":1}")).Returns("{\"$id\": \"1\",\"data\": [{\"$id\": \"2\",\"access_token\": \"" + tokenResult + "\"} ] }");
 
-            var request = JsonConvert.SerializeObject(new
-            {
-                email = Settings.Default.TestUsername,
-                password = Settings.Default.TestPassword,
-                hospitalId = 1,
-                userTypeId = 1
-            });
-            mockWebClient.Setup(x => x.UploadString(new Uri(Settings.Default.BaseUrl + @"account/token"), "POST", request));
             mockWebClient.Setup(x => x.Headers).Returns(new WebHeaderCollection());
 
-            url = Settings.Default.BaseUrl;
-
-            var apiCall = new TokenApi(url, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
-                mockWebClient.Object);
-
-            token = apiCall.GetToken(Settings.Default.TestUsername, Settings.Default.TestPassword);
+            var apiCall = new TokenApi(Settings.Default.BaseUrl, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
+            //token = apiCall.GetToken("sameerfairgoogl@gmai.com", "P@ssword123");
+            token = apiCall.GetToken("aaron.lord+toddg@snap.md", "Password@123");
 
             Assert.AreEqual(token, tokenResult);
 
             return mockWebClient;
+        }
+
+        public IWebClient TokenandWebClientSetupRemoteCall(out string token)
+        {
+            WebClientWrapper wclient = new WebClientWrapper(new MockWebClient());
+
+            var apiCall = new TokenApi(Settings.Default.BaseUrl, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, wclient);
+            token = apiCall.GetToken("sameerfairgoogl@gmail.com", "P@ssword123");
+
+            return wclient;
         }
     }
 }

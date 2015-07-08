@@ -22,14 +22,14 @@ namespace SnapMD.ConnectedCare.Sdk.Test
         [Test]
         public void GetCustomer()
         {
-            string url, token;
-            var mockWebClient = TokenandWebClientSetup(out url, out token);
-            mockWebClient.Setup(x => x.DownloadString(new Uri(@"http://snap.local/api/hospital/1/payments")))
-                .Returns(
-                    "{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
+            string token;
 
-            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
-                mockWebClient.Object);
+            var mockWebClient = TokenandWebClientSetup(out token);
+            
+            //var mockWebClient = TokenandWebClientSetupRemoteCall(out token);
+            mockWebClient.Setup(x => x.DownloadString(new Uri(BaseUri, "/hospital/1/payments"))).Returns("{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
+            
+            var target = new PaymentsApi(Settings.Default.BaseUrl, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
             var actual = target.GetCustomerProfile(15);
 
             Assert.False(target.NotFound);
@@ -48,12 +48,12 @@ namespace SnapMD.ConnectedCare.Sdk.Test
                 ExpiryYear = DateTime.Today.Year
             };
 
-            string url, token;
+            string token;
 
-            var mockWebClient = TokenandWebClientSetup(out url, out token);
+            var mockWebClient = TokenandWebClientSetup(out token);
             mockWebClient.Setup(
                 x =>
-                    x.UploadString(new Uri(@"http://snap.local/api/patients/payments"), "POST",
+                    x.UploadString(new Uri(BaseUri, @"/patients/payments"), "POST",
                         "{\"CardNumber\":\"4111111111111111\",\"ExpiryMonth\":12,\"ExpiryYear\":2015}")).Returns(
                             @"{" +
                             "\"$id\": \"1\"," +
@@ -67,7 +67,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
                             "}"
                 );
 
-            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
+            var target = new PaymentsApi(Settings.Default.BaseUrl, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
                 mockWebClient.Object);
             var result = target.RegisterProfile(paymentData);
 

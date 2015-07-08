@@ -23,19 +23,23 @@ namespace SnapMD.ConnectedCare.Sdk.Test
         public void GetCustomer()
         {
             string url, token;
+<<<<<<< HEAD
             var mockWebClient = TokenandWebClientSetup(out url, out token);
             mockWebClient.Setup(x => x.DownloadString(new Uri(@"http://snap.local/api/hospital/1/payments")))
                 .Returns(
                     "{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
 
-<<<<<<< HEAD
+            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
+                mockWebClient.Object);
+=======
+
+            //var mockWebClient = TokenandWebClientSetup(out url, out token);
+            //mockWebClient.Setup(x => x.DownloadString(new Uri(@"http://snap.local/api/hospital/1/payments"))).Returns("{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
+            
             var mockWebClient = TokenandWebClientSetupRemoteCall(out url, out token);
             
             var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient);
-=======
-            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
-                mockWebClient.Object);
->>>>>>> Sam-Merge
+>>>>>>> d1b30cf8ff51d5fe4aaaa8413c487e4259a8a9be
             var actual = target.GetCustomerProfile(15);
 
             Assert.False(target.NotFound);

@@ -23,23 +23,24 @@ namespace SnapMD.ConnectedCare.Sdk.Test
         [Test]
         public void TestPatientProfileInsert()
         {
-            string url, token;
-            var mockWebClient = TokenandWebClientSetup(out url, out token);
+            string token;
+            var mockWebClient = TokenandWebClientSetup(out token);
+            string testEmail = "test" + Guid.NewGuid() + "@test.com";
             mockWebClient.Setup(
                 x =>
-                    x.UploadString(new Uri(Settings.Default.BaseUrl + "/patients/profile"), "POST",
-                        "{\"EmailAddress\":\"test@test.com\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}"))
+                    x.UploadString(new Uri(BaseUri, "patients/profile"), "POST",
+                        "{\"EmailAddress\":\"" + testEmail + "\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}"))
                 .Returns(
-                    "{\"EmailAddress\":\"test@test.com\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}");
+                    "{\"EmailAddress\":\"" + testEmail + "\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}");
 
             var mock = new
             {
-                EmailAddress = "test" + Guid.NewGuid() + "@test.com",
+                EmailAddress = testEmail,
                 PatientUpdateRequest = new {Height = 2, Weight = 1},
                 PatientMedicalHistory = new {Height = 2, Weight = 1}
             };
 
-            var sdk = new PatientProfileApi(url, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
+            var sdk = new PatientProfileApi(Settings.Default.BaseUrl, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
                 mockWebClient.Object);
             var result = sdk.AddPatient(mock);
             Assert.IsNotNull(result);

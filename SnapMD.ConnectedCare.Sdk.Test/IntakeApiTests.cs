@@ -27,11 +27,11 @@ namespace SnapMD.ConnectedCare.Sdk.Test
         [Test]
         public void GetIntakes()
         {
-            string url, token;
+            string token;
 
-            Mock<IWebClient> mockWebClient = TokenandWebClientSetup(out url, out token);
-            //IWebClient mockWebClient = TokenandWebClientSetupRemoteCall(out url, out token);
-            mockWebClient.Setup(x => x.DownloadString(new Uri(Settings.Default.BaseUrl + @"/v2/codesets?hospitalId=1&fields=medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"))).Returns(@"{
+            Mock<IWebClient> mockWebClient = TokenandWebClientSetup(out token);
+
+            mockWebClient.Setup(x => x.DownloadString(new Uri(BaseUri, @"/v2/codesets?hospitalId=1&fields=medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"))).Returns(@"{
   ""$id"": ""1"",
   ""data"": [
     {
@@ -252,7 +252,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
   ""total"": 5
 }");
 
-            var api = new SnapMD.ConnectedCare.Sdk.IntakeApi(url, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
+            var api = new IntakeApi(Settings.Default.BaseUrl, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
             var val = api.GetIntakeItems(1);
 
             Assert.NotNull(val);
