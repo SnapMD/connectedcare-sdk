@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D0A122B-6634-4AEE-B5B7-C71FD58DF02F}</ProjectGuid>
+    <ProjectGuid>{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SnapMD.ConnectedCare.Sdk</RootNamespace>
@@ -50,8 +50,12 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Reference Include="Moq">
       <HintPath>..\..\..\src\packages\Moq.4.2.1506.2016\lib\net40\Moq.dll</HintPath>
+    </Reference>
+=======
+>>>>>>> 6981498aea28b8adc62ef2867c2441b222ed9040
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\src\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
