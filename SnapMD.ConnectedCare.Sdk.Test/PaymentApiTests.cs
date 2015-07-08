@@ -28,9 +28,8 @@ namespace SnapMD.ConnectedCare.Sdk.Test
                 .Returns(
                     "{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
 
-            var mockWebClient = TokenandWebClientSetupRemoteCall(out url, out token);
-            
-            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient);
+            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
+                mockWebClient.Object);
             var actual = target.GetCustomerProfile(15);
 
             Assert.False(target.NotFound);

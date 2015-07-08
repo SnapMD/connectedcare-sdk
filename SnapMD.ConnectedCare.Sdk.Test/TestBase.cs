@@ -16,7 +16,6 @@ using Newtonsoft.Json;
 using NUnit.Framework;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
 using SnapMD.ConnectedCare.Sdk.Test.Properties;
-using SnapMD.ConnectedCare.Sdk.Wrappers;
 
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
@@ -35,12 +34,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
                 hospitalId = 1,
                 userTypeId = 1
             });
-          
-            mockWebClient.Setup(
-                x =>
-                    x.UploadString(new Uri(@"http://snap.local/api/account/token"), "POST",
-                        request))
-                .Returns("{\"access_token\":\"" + tokenResult + "\"}");
+            mockWebClient.Setup(x => x.UploadString(new Uri(Settings.Default.BaseUrl + @"account/token"), "POST", request));
             mockWebClient.Setup(x => x.Headers).Returns(new WebHeaderCollection());
 
             url = Settings.Default.BaseUrl;
@@ -53,17 +47,6 @@ namespace SnapMD.ConnectedCare.Sdk.Test
             Assert.AreEqual(token, tokenResult);
 
             return mockWebClient;
-        }
-
-        public IWebClient TokenandWebClientSetupRemoteCall(out string url, out string token)
-        {
-            WebClientWrapper wclient = new SnapMD.ConnectedCare.Sdk.Wrappers.WebClientWrapper(new MockWebClient());
-
-            url = "http://snap.local/api/";
-            var apiCall = new TokenApi(url, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, wclient);
-            token = apiCall.GetToken("sameerfairgoogl@gmail.com", "P@ssword123");
-
-            return wclient;
         }
     }
 }
