@@ -34,7 +34,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
                 hospitalId = 1,
                 userTypeId = 1
             });
-            mockWebClient.Setup(x => x.UploadString(new Uri(Settings.Default.BaseUrl + @"/account/token"), "POST", request);
+            mockWebClient.Setup(x => x.UploadString(new Uri(Settings.Default.BaseUrl + @"account/token"), "POST", request));
             mockWebClient.Setup(x => x.Headers).Returns(new WebHeaderCollection());
 
             url = Settings.Default.BaseUrl;
