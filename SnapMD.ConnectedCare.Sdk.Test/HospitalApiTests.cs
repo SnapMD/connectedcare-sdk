@@ -26,7 +26,7 @@ using SnapMD.ConnectedCare.Sdk.Test.Properties;
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
     [TestFixture]
-    public class HospitalApiTests: TestBase
+    public class HospitalApiTests : TestBase
     {
         [Test]
         public void TestGetAddress()
@@ -34,9 +34,13 @@ namespace SnapMD.ConnectedCare.Sdk.Test
             string url, token;
 
             Mock<IWebClient> mockWebClient = TokenandWebClientSetup(out url, out token);
+
             mockWebClient.Setup(x => x.DownloadString(
                 new Uri(Settings.Default.BaseUrl + @"/HospitalAddress/1")))
-                .Returns("{\"data\":{\"addressText\":\"1000 wilshire blvd, los angeles, ca 90017\"}}");
+                .Returns("{\"$id\": \"1\",\"success\": true,\"data\": {\"$id\": \"2\",\"addressText\": \"1000 wilshire blvd, los angeles, ca 90017\"},\"message\": \"Success\"}");
+
+
+            //IWebClient webClient = TokenandWebClientSetupRemoteCall(out url, out token);
 
             var api = new HospitalApi(url, null, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
             Assert.AreEqual("1000 wilshire blvd, los angeles, ca 90017", api.GetHospitalAddressById(1));
@@ -60,10 +64,13 @@ namespace SnapMD.ConnectedCare.Sdk.Test
         {
             string url, token;
 
+            HospitalApi api = null;
+
             Mock<IWebClient> mockWebClient = TokenandWebClientSetup(out url, out token);
             mockWebClient.Setup(x => x.DownloadString(new Uri(Settings.Default.BaseUrl + @"/hospital"))).Returns("{\"hospitalId\":1}");
 
-            var api = new HospitalApi(url, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
+            api = new HospitalApi(url, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
+
             var result = api.GetHospital();
 
             Assert.AreEqual(result.Value<int>("hospitalId"), 1);
