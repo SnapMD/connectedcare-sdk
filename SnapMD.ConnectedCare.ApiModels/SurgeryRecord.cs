@@ -8,16 +8,14 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-
-using SnapMD.ConnectedCare.ApiModels;
-using SnapMD.Sdk.Models;
-
-namespace SnapMD.ConnectedCare.Sdk.Models
+namespace SnapMD.ConnectedCare.ApiModels
 {
-    public class OnDemandRequest
+    public struct SurgeryRecord
     {
-        public IntakeConcern[] Concerns { get; set; }
-        public string Phone { get; set; }
-        public int PatientId { get; set; }
+        public string Description { get; set; }
+
+        public int Month { get; set; }
+
+        public int Year { get; set; }
     }
 }

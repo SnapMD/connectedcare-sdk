@@ -36,7 +36,8 @@ namespace SnapMD.ConnectedCare.Sdk.Test
         {
             string url, token;
             var mockWebClient = TokenandWebClientSetup(out url, out token);
-            mockWebClient.Setup(x => x.UploadString(new Uri(@"http://snap.local/api/patients/profile"), "POST", "{\"EmailAddress\":\"test@test.com\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}")).Returns("{\"EmailAddress\":\"test@test.com\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}");
+            var uri = new Uri(Settings.Default.BaseUrl);
+            mockWebClient.Setup(x => x.UploadString(new Uri(uri, @"/patients/profile"), "POST", "{\"EmailAddress\":\"test@test.com\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}")).Returns("{\"EmailAddress\":\"test@test.com\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}");
 
             var mock = new
             {
