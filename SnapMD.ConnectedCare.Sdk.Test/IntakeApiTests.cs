@@ -32,7 +32,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
             string url, token;
             
             Mock<IWebClient> mockWebClient = TokenandWebClientSetup(out url, out token);
-            mockWebClient.Setup(x => x.DownloadString(new Uri(@"http://snap.local/api/v2/codesets?hospitalId=1&fields=medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"))).Returns("{\"data\":" + intakeItemResult + "}");
+            mockWebClient.Setup(x => x.DownloadString(new Uri(Settings.Default.BaseUrl + @"/v2/codesets?hospitalId=1&fields=medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"))).Returns("{\"data\":" + intakeItemResult + "}");
             
             var api = new SnapMD.ConnectedCare.Sdk.IntakeApi(url, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
             var val = api.GetIntakeItems(1);

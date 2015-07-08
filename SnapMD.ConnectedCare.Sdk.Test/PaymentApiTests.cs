@@ -13,6 +13,7 @@ using System;
 using NUnit.Framework;
 using SnapMD.ConnectedCare.Sdk.Test.Properties;
 
+using SnapMD.ConnectedCare.Sdk.Test.Properties;
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
     [TestFixture]
@@ -70,7 +71,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
                 mockWebClient.Object);
             var result = target.RegisterProfile(paymentData);
 
-            Assert.Greater(Convert.ToInt32(result["data"]["profileId"]), 1);
+            Assert.Greater((int)result["data"]["profileId"], 1);
         }
     }
 }

@@ -13,6 +13,7 @@ using System;
 using FizzWare.NBuilder.Implementation;
 using NUnit.Framework;
 using SnapMD.ConnectedCare.Sdk.Test.Properties;
+using SnapMD.ConnectedCare.Sdk.Test.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
@@ -24,17 +25,13 @@ namespace SnapMD.ConnectedCare.Sdk.Test
         {
             string url, token;
             var mockWebClient = TokenandWebClientSetup(out url, out token);
-            mockWebClient.Setup(
-                x =>
-                    x.UploadString(new Uri(Settings.Default.BaseUrl + "/patients/profile"), "POST",
-                        "{\"EmailAddress\":\"test@test.com\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}"))
-                .Returns(
-                    "{\"EmailAddress\":\"test@test.com\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}");
+            
+            mockWebClient.Setup(x => x.UploadString(new Uri(Settings.Default.BaseUrl+ @"/patients/profile"), "POST", "{\"EmailAddress\":\"test@test.com\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}")).Returns("{\"EmailAddress\":\"test@test.com\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}");
 
             var mock = new
             {
-                EmailAddress = "test" + Guid.NewGuid() + "@test.com",
-                PatientUpdateRequest = new {Height = 2, Weight = 1},
+                EmailAddress = "test@test.com",
+                PatientUpdateRequest = new { Height = 2, Weight = 1 },
                 PatientMedicalHistory = new {Height = 2, Weight = 1}
             };
 

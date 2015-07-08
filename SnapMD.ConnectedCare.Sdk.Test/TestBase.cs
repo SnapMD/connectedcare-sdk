@@ -34,7 +34,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
                 hospitalId = 1,
                 userTypeId = 1
             });
-
+          
             mockWebClient.Setup(
                 x =>
                     x.UploadString(new Uri(@"http://snap.local/api/account/token"), "POST",
