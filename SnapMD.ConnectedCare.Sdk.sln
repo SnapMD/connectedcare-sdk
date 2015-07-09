@@ -7,10 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.ConnectedCare.Sdk", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.ConnectedCare.Sdk.Test", "SnapMD.ConnectedCare.Sdk.Test\SnapMD.ConnectedCare.Sdk.Test.csproj", "{49F684C1-8787-49D7-9BFE-BA066658573D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.ConnectedCare.ApiModels", "SnapMD.ConnectedCare.ApiModels\SnapMD.ConnectedCare.ApiModels.csproj", "{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}"
+EndProject
 Global
-	GlobalSection(CodealikeProperties) = postSolution
-		SolutionGuid = c4edf793-fbed-46bc-bdad-cb344c06037e
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -32,8 +31,17 @@ Global
 		{49F684C1-8787-49D7-9BFE-BA066658573D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49F684C1-8787-49D7-9BFE-BA066658573D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{49F684C1-8787-49D7-9BFE-BA066658573D}.Release|x64.ActiveCfg = Release|Any CPU
+		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.Release|x64.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = c4edf793-fbed-46bc-bdad-cb344c06037e
 	EndGlobalSection
 EndGlobal
