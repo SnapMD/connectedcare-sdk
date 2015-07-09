@@ -43,12 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeSetResponse.cs" />
     <Compile Include="EncounterConcern.cs" />
     <Compile Include="CustomCode.cs" />
     <Compile Include="IIntakeQuestionnaire.cs" />
     <Compile Include="IntakeQuestionnaire.cs" />
     <Compile Include="NewbornRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerializableToken.cs" />
+    <Compile Include="SerializableUser.cs" />
     <Compile Include="SurgeryRecord.cs" />
   </ItemGroup>
   <ItemGroup>

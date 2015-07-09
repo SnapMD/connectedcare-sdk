@@ -192,21 +192,21 @@ namespace SnapMD.ConnectedCare.Sdk
         private JObject UploadData(string apiPath, string method, object data)
         {
             var baseUrl = new Uri(_baseUrl);
-            var url = new Uri(baseUrl, apiPath);
+            var url = new Uri(baseUrl, baseUrl.AbsolutePath + @"/" + apiPath);
             try
             {
                 return MakeCall(wc =>
                 {
                     // Allow domains we don't have a certificate for
                     ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-                    
+
                     if (RequiresAuthentication)
                     {
                         wc.Headers[HttpRequestHeader.Authorization] = "Bearer " + _bearerToken;
                     }
 
                     wc.Headers[HttpRequestHeader.ContentType] = "application/json";
-                    
+
                     return wc.UploadString(url, method, JsonConvert.SerializeObject(data));
                 });
             }

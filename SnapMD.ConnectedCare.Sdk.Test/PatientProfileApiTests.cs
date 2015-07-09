@@ -26,19 +26,20 @@ namespace SnapMD.ConnectedCare.Sdk.Test
             string token;
             var mockWebClient = TokenandWebClientSetup(out token);
             string testEmail = "test" + Guid.NewGuid() + "@test.com";
-            mockWebClient.Setup(
-                x =>
-                    x.UploadString(new Uri(BaseUri, "patients/profile"), "POST",
-                        "{\"EmailAddress\":\"" + testEmail + "\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}"))
-                .Returns(
-                    "{\"EmailAddress\":\"" + testEmail + "\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}");
+
+            DateTime mockDate = DateTime.UtcNow;
 
             var mock = new
             {
                 EmailAddress = testEmail,
-                PatientUpdateRequest = new {Height = 2, Weight = 1},
-                PatientMedicalHistory = new {Height = 2, Weight = 1}
+                PatientProfileData = new { PatientName = "p", LastName = "l", Enthicity = 1, Gender = "m", DOB = mockDate, Height = 1, Weight = 1 },
+                PatientUpdateRequest = new { Height = 2, Weight = 1 },
+                PatientMedicalHistoryData = new { Height = 2, Weight = 1 }
             };
+
+            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, BaseUri.AbsolutePath + "/patients/profile"), "POST",
+                Newtonsoft.Json.JsonConvert.SerializeObject(mock)))
+                .Returns("{ \"$id\": \"1\",\"patientID\": \"1429\",\"securityToken\": \"\" }");
 
             var sdk = new PatientProfileApi(Settings.Default.BaseUrl, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
                 mockWebClient.Object);

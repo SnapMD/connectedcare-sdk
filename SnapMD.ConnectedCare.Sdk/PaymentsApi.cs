@@ -36,7 +36,7 @@ namespace SnapMD.ConnectedCare.Sdk
 
 
             //hospital/{hospitalId}/payments/{userId}
-            var result = MakeCall(string.Format("hospital/{0}/payments", HospitalId));
+            var result = MakeCall(string.Format("api/hospital/{0}/payments", HospitalId));
             return result;
         }
 
