@@ -27,7 +27,8 @@ namespace SnapMD.ConnectedCare.Sdk.Test
             var mockWebClient = TokenandWebClientSetup(out token);
             
             //var mockWebClient = TokenandWebClientSetupRemoteCall(out token);
-            mockWebClient.Setup(x => x.DownloadString(new Uri(BaseUri, "/hospital/1/payments"))).Returns("{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
+            mockWebClient.Setup(x => x.DownloadString(new Uri(BaseUri, "hospital/1/payments")))
+                .Returns("{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
             
             var target = new PaymentsApi(Settings.Default.BaseUrl, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
             var actual = target.GetCustomerProfile(15);
@@ -53,7 +54,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
             var mockWebClient = TokenandWebClientSetup(out token);
             mockWebClient.Setup(
                 x =>
-                    x.UploadString(new Uri(BaseUri, @"/patients/payments"), "POST",
+                    x.UploadString(new Uri(BaseUri, @"patients/payments"), "POST",
                         "{\"CardNumber\":\"4111111111111111\",\"ExpiryMonth\":12,\"ExpiryYear\":2015}")).Returns(
                             @"{" +
                             "\"$id\": \"1\"," +
