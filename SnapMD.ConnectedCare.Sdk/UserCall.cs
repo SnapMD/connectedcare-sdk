@@ -10,6 +10,7 @@
 //    limitations under the License.
 using System;
 using SnapMD.ConnectedCare.Sdk.Models;
+using SnapMD.ConnectedCare.ApiModels;
 using Newtonsoft.Json.Linq;
 
 
