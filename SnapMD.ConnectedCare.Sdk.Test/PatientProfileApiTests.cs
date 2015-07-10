@@ -37,7 +37,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
                 PatientMedicalHistoryData = new { Height = 2, Weight = 1 }
             };
 
-            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, BaseUri.AbsolutePath + "/patients/profile"), "POST",
+            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, "patients/profile"), "POST",
                 Newtonsoft.Json.JsonConvert.SerializeObject(mock)))
                 .Returns("{ \"$id\": \"1\",\"patientID\": \"1429\",\"securityToken\": \"\" }");
 

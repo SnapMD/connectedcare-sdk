@@ -80,6 +80,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="SnapMD.ConnectedCare.Sdk.Test.Properties.Settings.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SnapMD.ConnectedCare.ApiModels\SnapMD.ConnectedCare.ApiModels.csproj">

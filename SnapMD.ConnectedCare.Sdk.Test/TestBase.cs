@@ -34,9 +34,10 @@ namespace SnapMD.ConnectedCare.Sdk.Test
             string tokenResult = "Sample_Token";
 
             Mock<IWebClient> mockWebClient = new Mock<IWebClient>();
-
-            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, BaseUri.AbsolutePath + "/" + "account/tokenv2"), "POST",
-                "{\"email\":\"aaron.lord+toddg@snap.md\",\"password\":\"Password@123\",\"hospitalId\":1,\"userTypeId\":1}")).Returns("{\"$id\": \"1\",\"data\": [{\"$id\": \"2\",\"access_token\": \"" + tokenResult + "\"} ] }");
+            
+            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, @"v2/account/token"), "POST", 
+                "{\"email\":\"aaron.lord+toddg@snap.md\",\"password\":\"Password@123\",\"hospitalId\":1,\"userTypeId\":1}"))
+                .Returns("{\"$id\": \"1\",\"data\": [{\"$id\": \"2\",\"access_token\": \"" + tokenResult + "\"} ] }");
 
             mockWebClient.Setup(x => x.Headers).Returns(new WebHeaderCollection());
 

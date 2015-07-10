@@ -204,3 +204,4 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+/SnapMD.ConnectedCare.Sdk.Test/SnapMD.ConnectedCare.Sdk.Test.Properties.Settings.config
