@@ -74,7 +74,6 @@
     </Compile>
     <Compile Include="Models\ApiResponse.cs" />
     <Compile Include="HospitalApi.cs" />
-    <Compile Include="Models\CodeSetResponse.cs" />
     <Compile Include="Models\ConsultationEvents.cs" />
     <Compile Include="Models\ConsultationEventType.cs" />
     <Compile Include="Models\ConsultationStatusCode.cs" />

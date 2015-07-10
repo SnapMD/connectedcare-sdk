@@ -82,6 +82,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SnapMD.ConnectedCare.ApiModels\SnapMD.ConnectedCare.ApiModels.csproj">
+      <Project>{26b4f2ad-87ae-491b-801a-5d70fb0d2d74}</Project>
+      <Name>SnapMD.ConnectedCare.ApiModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SnapMD.ConnectedCare.Sdk\SnapMD.ConnectedCare.Sdk.csproj">
       <Project>{7c7be4a0-39ac-4bd5-9a86-8d16d5258cfc}</Project>
       <Name>SnapMD.ConnectedCare.Sdk</Name>
