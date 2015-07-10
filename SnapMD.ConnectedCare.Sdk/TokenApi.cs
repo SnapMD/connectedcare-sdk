@@ -8,12 +8,16 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
+
+using SnapMD.ConnectedCare.Sdk.Models;
+using Newtonsoft.Json.Linq;
+
 namespace SnapMD.ConnectedCare.Sdk
 {
     public class TokenApi : ApiCall
     {
-        public TokenApi(string baseUrl, int hospitalId, string developerId, string apiKey, SnapMD.ConnectedCare.Sdk.Interfaces.IWebClient WebClient)
-            : base(baseUrl, WebClient, developerId: developerId, apiKey: apiKey)
+        public TokenApi(string baseUrl, int hospitalId, string developerId, string apiKey, Interfaces.IWebClient webClient)
+            : base(baseUrl, webClient, developerId: developerId, apiKey: apiKey)
         {
             HospitalId = hospitalId;
         }
@@ -22,16 +26,24 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public string GetToken(string email, string secret)
         {
+            //done V2ing
             var request = new
             {
                 email,
-                hospitalId = HospitalId,
                 password = secret,
+                hospitalId = HospitalId,
                 userTypeId = 1
             };
 
-            var result = Post("account/token", request);
-            return (string) result["access_token"];
+            var result = Post("account/tokenv2", request);
+            
+            var dataEnumerator = ((JObject)result).ToObject<ApiResponseV2<SerializableToken>>().Data.GetEnumerator();
+
+            while (dataEnumerator.MoveNext())
+                if (dataEnumerator.Current.access_token != null)
+                    return dataEnumerator.Current.access_token;
+
+            return null;
         }
     }
 }

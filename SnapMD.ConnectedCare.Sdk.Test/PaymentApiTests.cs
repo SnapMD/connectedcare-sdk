@@ -8,33 +8,26 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Moq;
 using NUnit.Framework;
-using SnapMD.ConnectedCare.Sdk;
-using SnapMD.ConnectedCare.Sdk.Interfaces;
-
-using System.Net;
 using SnapMD.ConnectedCare.Sdk.Test.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Test
 {
     [TestFixture]
-    class PaymentApiTests : TestBase
+    internal class PaymentApiTests : TestBase
     {
         [Test]
         public void GetCustomer()
         {
-            string url, token;
-            var mockWebClient = TokenandWebClientSetup(out url, out token);
-            mockWebClient.Setup(x => x.DownloadString(new Uri(@"http://snap.local/api/hospital/1/payments"))).Returns("{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
+            string token;
 
-            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
+            var mockWebClient = TokenandWebClientSetup(out token);
+            
+            mockWebClient.Setup(x => x.DownloadString(new Uri(BaseUri, BaseUri.AbsolutePath + "/hospital/1/payments"))).Returns("{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
+            
+            var target = new PaymentsApi(Settings.Default.BaseUrl, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
             var actual = target.GetCustomerProfile(15);
 
             Assert.False(target.NotFound);
@@ -48,19 +41,39 @@ namespace SnapMD.ConnectedCare.Sdk.Test
         {
             var paymentData = new
             {
+                FirstName = "FN",
+                LastName = "LN",
+                Cvv = "123",
                 CardNumber = "4111111111111111",
                 ExpiryMonth = 12,
                 ExpiryYear = DateTime.Today.Year
             };
 
-            string url, token;
-            var mockWebClient = TokenandWebClientSetup(out url, out token);
-            mockWebClient.Setup(x => x.UploadString(new Uri(@"http://snap.local/api/patients/payments"), "POST", "{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}")).Returns("{\"result\":\"hi\"}");
+            string token;
 
-            var target = new PaymentsApi(url, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
-            var result = target.RegisterProfile(15, paymentData);
+            var mockWebClient = TokenandWebClientSetup(out token);
+            mockWebClient.Setup(
+                x =>
+                    x.UploadString(new Uri(BaseUri, BaseUri.AbsolutePath + @"/patients/payments"), "POST",
+                    "{\"FirstName\":\"FN\",\"LastName\":\"LN\",\"Cvv\":\"123\",\"CardNumber\":\"4111111111111111\",\"ExpiryMonth\":12,\"ExpiryYear\":2015}"
+                    )).Returns(
+                            @"{" +
+                            "\"$id\": \"1\"," +
+                            "\"success\": true," +
+                            "\"data\": {" +
+                            "\"$id\": \"2\"," +
+                            "\"profileId\": \"31867556\"," +
+                            "\"paymentProfileId\": \"32565287\"" +
+                            "}," +
+                            "\"message\": \"Success\"" +
+                            "}"
+                );
 
-            Assert.Greater(result.Value<int>("profileId"), 1);
+            var target = new PaymentsApi(Settings.Default.BaseUrl, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
+                mockWebClient.Object);
+            var result = target.RegisterProfile(paymentData);
+
+            Assert.Greater((int)result["data"]["profileId"], 1);
         }
     }
 }

@@ -8,22 +8,11 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Moq;
+using FizzWare.NBuilder.Implementation;
 using NUnit.Framework;
-
-using SnapMD.ConnectedCare.Sdk;
-using SnapMD.ConnectedCare.Sdk.Interfaces;
-
-using FizzWare.NBuilder;
-using SnapMD.ConnectedCare.Sdk.Models;
-
-using System.Net;
+using SnapMD.ConnectedCare.Sdk.Test.Properties;
 using SnapMD.ConnectedCare.Sdk.Test.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Test
@@ -34,21 +23,28 @@ namespace SnapMD.ConnectedCare.Sdk.Test
         [Test]
         public void TestPatientProfileInsert()
         {
-            string url, token;
-            var mockWebClient = TokenandWebClientSetup(out url, out token);
-            var uri = new Uri(Settings.Default.BaseUrl);
-            mockWebClient.Setup(x => x.UploadString(new Uri(uri, @"/patients/profile"), "POST", "{\"EmailAddress\":\"test@test.com\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}")).Returns("{\"EmailAddress\":\"test@test.com\",\"PatientUpdateRequest\":{\"Height\":2,\"Weight\":1},\"PatientMedicalHistory\":{\"Height\":2,\"Weight\":1}}");
+            string token;
+            var mockWebClient = TokenandWebClientSetup(out token);
+            string testEmail = "test" + Guid.NewGuid() + "@test.com";
+
+            DateTime mockDate = DateTime.UtcNow;
 
             var mock = new
             {
-                EmailAddress = "test@test.com",
+                EmailAddress = testEmail,
+                PatientProfileData = new { PatientName = "p", LastName = "l", Enthicity = 1, Gender = "m", DOB = mockDate, Height = 1, Weight = 1 },
                 PatientUpdateRequest = new { Height = 2, Weight = 1 },
-                PatientMedicalHistory = new { Height = 2, Weight = 1 }
+                PatientMedicalHistoryData = new { Height = 2, Weight = 1 }
             };
 
-            var sdk = new PatientProfileApi(url, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
+            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, BaseUri.AbsolutePath + "/patients/profile"), "POST",
+                Newtonsoft.Json.JsonConvert.SerializeObject(mock)))
+                .Returns("{ \"$id\": \"1\",\"patientID\": \"1429\",\"securityToken\": \"\" }");
+
+            var sdk = new PatientProfileApi(Settings.Default.BaseUrl, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
+                mockWebClient.Object);
             var result = sdk.AddPatient(mock);
-            Assert.IsNotNull(result[0]);
+            Assert.IsNotNull(result);
         }
     }
 }

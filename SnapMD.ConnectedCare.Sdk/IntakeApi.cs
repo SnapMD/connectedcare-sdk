@@ -14,23 +14,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Linq;
+
 using Newtonsoft.Json.Linq;
+using SnapMD.ConnectedCare.ApiModels;
+using SnapMD.ConnectedCare.Sdk.Models;
 
 namespace SnapMD.ConnectedCare.Sdk
 {
     public class IntakeApi: ApiCall
     {
-        public IntakeApi(string baseUrl, string bearerToken, string developerId, string apiKey, SnapMD.ConnectedCare.Sdk.Interfaces.IWebClient WebClient)
+        public IntakeApi(string baseUrl, string bearerToken, string developerId, string apiKey, Interfaces.IWebClient WebClient)
             : base(baseUrl, WebClient, bearerToken, developerId, apiKey)
         {
             
         }
 
-        public JObject GetIntakeItems(int HospitalId)
+        public List<CodeSetResponse> GetIntakeItems(int HospitalId)
         {
             var result = MakeCall(string.Format("v2/codesets?hospitalId={0}&fields={1}",HospitalId,"medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"));
 
-            return result;
+            return ((JObject)result).ToObject<ApiResponseV2<CodeSetResponse>>().Data.ToList();
+
+            //while (dataEnumerator.MoveNext())
+            //    if (dataEnumerator.Current != null)
+            //        return dataEnumerator.Current.;
+
+            //return null;
         }
     }
 }

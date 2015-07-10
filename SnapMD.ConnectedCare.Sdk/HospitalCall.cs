@@ -9,28 +9,23 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 using System;
-using System.Net;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Cache;
-using System.Collections.Specialized;
-using System.ComponentModel;
 
-namespace SnapMD.ConnectedCare.Sdk.Interfaces
+namespace SnapMD.ConnectedCare.Sdk
 {
-    public interface IWebClient
+    public class HospitalCall : ApiCall
     {
-        WebHeaderCollection Headers { get; set; }
+        private readonly Uri _baseUri;
 
-        string UploadString(Uri address, string method, string data);
+        public HospitalCall(string baseUrl, string bearerToken, string developerId, string apiKey)
+            : base(baseUrl, new SnapMD.ConnectedCare.Sdk.Wrappers.WebClientWrapper(new System.Net.WebClient()), bearerToken, developerId, apiKey)
+        {
+            _baseUri = new Uri(baseUrl);
+        }
 
-        string DownloadString(string address);
-
-        string DownloadString(Uri address);
-
-        //WebResponse GetWebResponse(WebRequest request, IAsyncResult result);
+        public string GetHospitalAddress()
+        {
+            var o = MakeCall("hospital/address");
+            return Convert.ToString(o["data"]);
+        }
     }
 }
