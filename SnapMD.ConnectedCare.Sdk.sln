@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.ConnectedCare.Sdk", "SnapMD.ConnectedCare.Sdk\SnapMD.ConnectedCare.Sdk.csproj", "{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.ConnectedCare.Sdk.Test", "SnapMD.ConnectedCare.Sdk.Test\SnapMD.ConnectedCare.Sdk.Test.csproj", "{49F684C1-8787-49D7-9BFE-BA066658573D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.ConnectedCare.Sdk.Tests", "SnapMD.ConnectedCare.Sdk.Tests\SnapMD.ConnectedCare.Sdk.Tests.csproj", "{49F684C1-8787-49D7-9BFE-BA066658573D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.ConnectedCare.ApiModels", "SnapMD.ConnectedCare.ApiModels\SnapMD.ConnectedCare.ApiModels.csproj", "{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}"
 EndProject

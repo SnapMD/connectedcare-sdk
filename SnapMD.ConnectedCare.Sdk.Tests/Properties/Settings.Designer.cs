@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SnapMD.ConnectedCare.Sdk.Test.Properties {
+namespace SnapMD.ConnectedCare.Sdk.Tests.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
