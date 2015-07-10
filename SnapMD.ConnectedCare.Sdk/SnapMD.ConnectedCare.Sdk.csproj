@@ -69,12 +69,21 @@
     <Compile Include="AppointmentApi.cs" />
     <Compile Include="IntakeApi.cs" />
     <Compile Include="Interfaces\IWebClient.cs" />
+    <Compile Include="MockWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Models\ApiResponse.cs" />
     <Compile Include="HospitalApi.cs" />
+    <Compile Include="Models\CodeSetResponse.cs" />
+    <Compile Include="Models\ConsultationEvents.cs" />
+    <Compile Include="Models\ConsultationEventType.cs" />
+    <Compile Include="Models\ConsultationStatusCode.cs" />
     <Compile Include="Models\IntakeConcern.cs" />
     <Compile Include="Models\OnDemandRequest.cs" />
     <Compile Include="Models\OnDemandResponse.cs" />
     <Compile Include="Models\ResponseObservableItem.cs" />
+    <Compile Include="Models\SerializableToken.cs" />
+    <Compile Include="Models\SerializableUser.cs" />
     <Compile Include="PatientProfileApi.cs" />
     <Compile Include="PaymentsApi.cs" />
     <Compile Include="ReportApi\SnapReportApi.cs" />
