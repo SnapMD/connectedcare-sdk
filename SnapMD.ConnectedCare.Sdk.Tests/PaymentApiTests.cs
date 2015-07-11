@@ -11,9 +11,9 @@
 
 using System;
 using NUnit.Framework;
-using SnapMD.ConnectedCare.Sdk.Test.Properties;
+using SnapMD.ConnectedCare.Sdk.Tests.Properties;
 
-namespace SnapMD.ConnectedCare.Sdk.Test
+namespace SnapMD.ConnectedCare.Sdk.Tests
 {
     [TestFixture]
     internal class PaymentApiTests : TestBase

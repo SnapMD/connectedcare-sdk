@@ -15,10 +15,10 @@ using Moq;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
-using SnapMD.ConnectedCare.Sdk.Test.Properties;
+using SnapMD.ConnectedCare.Sdk.Tests.Properties;
 using SnapMD.ConnectedCare.Sdk.Wrappers;
 
-namespace SnapMD.ConnectedCare.Sdk.Test
+namespace SnapMD.ConnectedCare.Sdk.Tests
 {
     public abstract class TestBase
     {

@@ -20,9 +20,9 @@ using SnapMD.ConnectedCare.Sdk;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
 
 using System.Net;
-using SnapMD.ConnectedCare.Sdk.Test.Properties;
+using SnapMD.ConnectedCare.Sdk.Tests.Properties;
 
-namespace SnapMD.ConnectedCare.Sdk.Test
+namespace SnapMD.ConnectedCare.Sdk.Tests
 {
     [TestFixture]
     public class TokenApiTests : TestBase

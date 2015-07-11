@@ -12,10 +12,9 @@
 using System;
 using FizzWare.NBuilder.Implementation;
 using NUnit.Framework;
-using SnapMD.ConnectedCare.Sdk.Test.Properties;
-using SnapMD.ConnectedCare.Sdk.Test.Properties;
+using SnapMD.ConnectedCare.Sdk.Tests.Properties;
 
-namespace SnapMD.ConnectedCare.Sdk.Test
+namespace SnapMD.ConnectedCare.Sdk.Tests
 {
     [TestFixture]
     public class PatientProfileApiTests : TestBase
