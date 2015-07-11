@@ -33,10 +33,7 @@ namespace SnapMD.ConnectedCare.Sdk
         public JObject GetCustomerProfile(int userId)
         {
             //API looks so strange 
-
-
-            //hospital/{hospitalId}/payments/{userId}
-            var result = MakeCall(string.Format("api/hospital/{0}/payments", HospitalId));
+            var result = MakeCall(string.Format("hospital/{0}/payments", HospitalId));
             return result;
         }
 

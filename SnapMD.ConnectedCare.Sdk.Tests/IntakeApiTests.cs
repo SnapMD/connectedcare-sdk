@@ -18,7 +18,7 @@ using SnapMD.ConnectedCare.Sdk.Interfaces;
 using SnapMD.ConnectedCare.Sdk.Tests;
 using SnapMD.ConnectedCare.Sdk.Tests.Properties;
 
-namespace SnapMD.ConnectedCare.Sdk.Test
+namespace SnapMD.ConnectedCare.Sdk.Tests
 {
     [TestFixture]
     public class IntakeApiTests : TestBase
@@ -30,7 +30,7 @@ namespace SnapMD.ConnectedCare.Sdk.Test
 
             Mock<IWebClient> mockWebClient = TokenandWebClientSetup(out token);
 
-            mockWebClient.Setup(x => x.DownloadString(new Uri(BaseUri, @"/v2/codesets?hospitalId=1&fields=medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"))).Returns(@"{
+            mockWebClient.Setup(x => x.DownloadString(new Uri(BaseUri, @"v2/codesets?hospitalId=1&fields=medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"))).Returns(@"{
   ""$id"": ""1"",
   ""data"": [
     {

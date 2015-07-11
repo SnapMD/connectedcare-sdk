@@ -98,6 +98,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="SnapMD.ConnectedCare.Sdk.Tests.Properties.Settings.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SnapMD.ConnectedCare.ApiModels\SnapMD.ConnectedCare.ApiModels.csproj">

@@ -23,7 +23,7 @@ namespace SnapMD.ConnectedCare.Sdk
     public class ApiCall
     {
         private readonly string _apiKey;
-        private readonly string _baseUrl;
+        private readonly Uri _baseUri;
         private readonly string _bearerToken;
         private readonly string _developerId;
 
@@ -31,20 +31,20 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public ApiCall(string baseUrl, IWebClient client, string bearerToken = null, string developerId = null, string apiKey = null)
         {
-            _baseUrl = baseUrl;
+            _baseUri = new Uri(baseUrl);
             _bearerToken = bearerToken;
             _developerId = developerId;
             _apiKey = apiKey;
             RequiresAuthentication = true;
 
-            this.WebClientInstance = client;
+            WebClientInstance = client;
         }
 
         public ApiCall(string baseUrl, IWebClient client)
         {
-            _baseUrl = baseUrl;
+            _baseUri = new Uri(baseUrl);
             RequiresAuthentication = true;
-            this.WebClientInstance = client;
+            WebClientInstance = client;
         }
 
         public bool RequiresAuthentication { get; set; }
@@ -53,8 +53,7 @@ namespace SnapMD.ConnectedCare.Sdk
 
         protected virtual T MakeCall<T>(string apiPath)
         {
-            var baseUrl = new Uri(_baseUrl);
-            var url = new Uri(baseUrl, apiPath);
+            var url = new Uri(_baseUri, apiPath);
             try
             {
                 var data = MakeCall(wc => wc.DownloadString(url));
@@ -68,8 +67,7 @@ namespace SnapMD.ConnectedCare.Sdk
 
         protected virtual JObject MakeCall(string apiPath)
         {
-            var baseUrl = new Uri(_baseUrl);
-            var url = new Uri(baseUrl, apiPath);
+            var url = new Uri(_baseUri, apiPath);
             try
             {
                 return MakeCall(wc => wc.DownloadString(url));
@@ -80,7 +78,7 @@ namespace SnapMD.ConnectedCare.Sdk
             }
         }
 
-        public WebResponse Response(System.Net.WebRequest request)
+        public WebResponse Response(WebRequest request)
         {
             try
             {
@@ -191,8 +189,7 @@ namespace SnapMD.ConnectedCare.Sdk
 
         private JObject UploadData(string apiPath, string method, object data)
         {
-            var baseUrl = new Uri(_baseUrl);
-            var url = new Uri(baseUrl, baseUrl.AbsolutePath + @"/" + apiPath);
+            var url = new Uri(_baseUri, apiPath);
             try
             {
                 return MakeCall(wc =>

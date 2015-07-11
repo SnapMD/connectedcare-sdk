@@ -35,9 +35,9 @@ namespace SnapMD.ConnectedCare.Sdk
                 userTypeId = 1
             };
 
-            var result = Post("account/tokenv2", request);
+            var result = Post("v2/account/token", request);
             
-            var dataEnumerator = ((JObject)result).ToObject<ApiResponseV2<SerializableToken>>().Data.GetEnumerator();
+            var dataEnumerator = result.ToObject<ApiResponseV2<SerializableToken>>().Data.GetEnumerator();
 
             while (dataEnumerator.MoveNext())
                 if (dataEnumerator.Current.access_token != null)
