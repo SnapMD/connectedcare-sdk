@@ -13,7 +13,6 @@ using System;
 using NUnit.Framework;
 using SnapMD.ConnectedCare.Sdk.Tests.Properties;
 
-using SnapMD.ConnectedCare.Sdk.Test.Properties;
 namespace SnapMD.ConnectedCare.Sdk.Tests
 {
     [TestFixture]
