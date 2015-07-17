@@ -17,14 +17,14 @@ using System.Threading.Tasks;
 using System.Linq;
 
 using Newtonsoft.Json.Linq;
-
+using SnapMD.ConnectedCare.ApiModels;
 using SnapMD.ConnectedCare.Sdk.Models;
 
 namespace SnapMD.ConnectedCare.Sdk
 {
     public class IntakeApi: ApiCall
     {
-        public IntakeApi(string baseUrl, string bearerToken, string developerId, string apiKey, SnapMD.ConnectedCare.Sdk.Interfaces.IWebClient WebClient)
+        public IntakeApi(string baseUrl, string bearerToken, string developerId, string apiKey, Interfaces.IWebClient WebClient)
             : base(baseUrl, WebClient, bearerToken, developerId, apiKey)
         {
             

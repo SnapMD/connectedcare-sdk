@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<packages>
-<<<<<<< HEAD
-  <package id="Moq" version="4.2.1506.2016" targetFramework="net45" />
-=======
->>>>>>> 6981498aea28b8adc62ef2867c2441b222ed9040
-  <package id="Newtonsoft.Json" version="7.0.1" targetFramework="net45" />
-</packages>
