@@ -10,6 +10,7 @@
 //    limitations under the License.
 using System;
 using SnapMD.ConnectedCare.Sdk.Models;
+//using SnapMD.ConnectedCare.ApiModels;
 using Newtonsoft.Json.Linq;
 
 
@@ -26,7 +27,7 @@ namespace SnapMD.ConnectedCare.Sdk
         {
             //var baseUrl = new Uri(_baseUrl);
             //var url = new Uri(baseUrl, "account/user");
-            var o = MakeCall("account/userv2");
+            var o = MakeCall("v2/account/user");
 
             //userId = Convert.ToInt32(o["id"]);
 
