@@ -10,6 +10,7 @@
 //    limitations under the License.
 using System;
 using SnapMD.ConnectedCare.Sdk.Models;
+//using SnapMD.ConnectedCare.ApiModels;
 using Newtonsoft.Json.Linq;
 
 namespace SnapMD.ConnectedCare.Sdk
@@ -23,7 +24,7 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public int? GetUserId()
         {
-            var o = MakeCall("account/userv2");
+            var o = MakeCall("v2/account/user");
 
             var dataEnumerator = ((JObject)o).ToObject<ApiResponseV2<SerializableUser>>().Data.GetEnumerator();
 
