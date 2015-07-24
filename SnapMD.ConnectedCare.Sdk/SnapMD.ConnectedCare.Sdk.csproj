@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D0A122B-6634-4AEE-B5B7-C71FD58DF02F}</ProjectGuid>
+    <ProjectGuid>{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SnapMD.ConnectedCare.Sdk</RootNamespace>
