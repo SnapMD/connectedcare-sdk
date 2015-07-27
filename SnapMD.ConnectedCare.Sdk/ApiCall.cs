@@ -65,6 +65,11 @@ namespace SnapMD.ConnectedCare.Sdk
             }
         }
 
+        protected virtual JObject MakeCall(string pathFormat, params object[] arguments)
+        {
+            return MakeCall(string.Format(pathFormat, arguments));
+        }
+
         protected virtual JObject MakeCall(string apiPath)
         {
             var url = new Uri(_baseUri, apiPath);
@@ -78,38 +83,9 @@ namespace SnapMD.ConnectedCare.Sdk
             }
         }
 
-        public WebResponse Response(WebRequest request)
-        {
-            try
-            {
-                var response = request.GetResponse();
-
-                //var response = new System.Net.HttpWebResponse();
-
-                System.IO.Stream stream = response.GetResponseStream();
-
-                string val = "this is a response";
-
-                byte[] valByte = System.Text.Encoding.UTF8.GetBytes(val);
-                stream.Write(valByte, 0, valByte.Length);
-
-                return response;
-            }
-            catch (Exception ex) { return null; }
-        }
 
         protected JObject MakeCall(Func<IWebClient, string> executeFunc)
         {
-            //Make Injectible
-            //using (var wc = new MockWebClient(Response))
-            //{
-            //    // Allow domains we don't have a certificate for
-            //    ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            //    SetHeaders(wc);
-            //    return MakeCall(wc, executeFunc);
-            //}
-
-
             // Allow domains we don't have a certificate for
             ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
             SetHeaders(WebClientInstance);
@@ -118,7 +94,11 @@ namespace SnapMD.ConnectedCare.Sdk
 
         private void SetHeaders(IWebClient wc)
         {
-            AddHeader(wc, "Authorization", "Bearer " + _bearerToken);
+            if (RequiresAuthentication || _bearerToken != null)
+            {
+                AddHeader(wc, "Authorization", "Bearer " + _bearerToken);
+            }
+
             AddHeader(wc, "X-Developer-Id", _developerId);
             AddHeader(wc, "X-Api-Key", _apiKey);
         }

@@ -66,6 +66,7 @@
     <Compile Include="ApiCall.cs" />
     <Compile Include="EncountersApi.cs" />
     <Compile Include="AppointmentApi.cs" />
+    <Compile Include="DocumentsApi.cs" />
     <Compile Include="IntakeApi.cs" />
     <Compile Include="Interfaces\IWebClient.cs" />
     <Compile Include="MockWebClient.cs">
@@ -112,4 +113,3 @@
   </Target>
   -->
 </Project>
-

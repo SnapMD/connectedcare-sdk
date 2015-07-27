@@ -8,19 +8,17 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-namespace SnapMD.ConnectedCare.Sdk
-{
-    public class EncountersApi : ApiCall
-    {
-        public EncountersApi(string baseUrl, string bearerToken, string developerId, string apiKey)
-            : base(baseUrl, new Wrappers.WebClientWrapper(new System.Net.WebClient()), bearerToken, developerId, apiKey)
-        {
-        }
+using System;
 
-        public void UpdateIntakeQuestionnaire(int consultationId, object intakeData)
-        {
-            var url = string.Format("v2/patients/consultations/{0}/intake", consultationId);
-            var result = Put(url, intakeData);
-        }
+namespace SnapMD.ConnectedCare.ApiModels
+{
+    [Serializable]
+    public class DocumentsResponse
+    {
+        public DocumentTypes DocumentType { get; set; }
+
+        public int HospitalId { get; set; }
+
+        public string DocumentText { get; set; }
     }
 }

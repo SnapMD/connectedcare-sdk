@@ -78,6 +78,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="DocumentApiTests.cs" />
     <Compile Include="HospitalApiTests.cs" />
     <Compile Include="PatientProfileApiTests.cs" />
     <Compile Include="PaymentApiTests.cs" />
