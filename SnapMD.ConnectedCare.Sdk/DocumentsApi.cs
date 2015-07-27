@@ -24,7 +24,7 @@ namespace SnapMD.ConnectedCare.Sdk
             RequiresAuthentication = false;
         }
 
-        public ApiResponseV2<DocumentsResponse> GetDocument(DocumentTypes documentType, int hospitalId)
+        public ApiResponseV2<DocumentsResponse> GetDocument(DocumentTypeCode documentType, int hospitalId)
         {
             if (documentType == 0)
             {

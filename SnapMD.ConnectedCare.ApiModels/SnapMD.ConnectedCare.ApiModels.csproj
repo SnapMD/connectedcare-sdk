@@ -64,7 +64,7 @@
   <ItemGroup>
     <Compile Include="CodeSetResponse.cs" />
     <Compile Include="DocumentsResponse.cs" />
-    <Compile Include="DocumentTypes.cs" />
+    <Compile Include="DocumentTypeCode.cs" />
     <Compile Include="EncounterConcern.cs" />
     <Compile Include="CustomCode.cs" />
     <Compile Include="IIntakeQuestionnaire.cs" />

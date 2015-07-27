@@ -36,7 +36,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
                 Settings.Default.ApiDeveloperId,
                 Settings.Default.ApiKey,
                 mockWebClient.Object);
-            var actual = api.GetDocument(DocumentTypes.TermsAndConditions, 126);
+            var actual = api.GetDocument(DocumentTypeCode.TermsAndConditions, 126);
             Assert.IsNotNull(actual);
             Assert.AreEqual(1, actual.Data.Count());
             Assert.AreEqual("Lorem ipsum dolor sit amet", actual.Data.First().DocumentText);

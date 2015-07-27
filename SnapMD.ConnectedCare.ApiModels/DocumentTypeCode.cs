@@ -8,17 +8,12 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-using System;
-
 namespace SnapMD.ConnectedCare.ApiModels
 {
-    [Serializable]
-    public class DocumentsResponse
+    public enum DocumentTypeCode
     {
-        public DocumentTypeCode DocumentType { get; set; }
-
-        public int HospitalId { get; set; }
-
-        public string DocumentText { get; set; }
+        None,
+        TermsAndConditions,
+        ConsentToTreat
     }
 }
