@@ -10,7 +10,7 @@ This project uses [Json.NET](https://github.com/JamesNK/Newtonsoft.Json) for ser
 
 ## Configuration
 
-Unit tests require a separate config file stored next to the App.config, called `SnapMD.ConnectedCare.Sdk.Test.Properties.Settings.csproj`. This is in the `.gitignore` file so as to prevent users' credentials from being stored in the Git repository. The file should look like this:
+Unit tests require a separate config file stored next to the App.config, called `SnapMD.ConnectedCare.Sdk.Test.Properties.Settings.csproj`. This file is not in the `.gitignore` file because this creates compilation errors for new downloads or CI servers. The file should look like this:
 
     <?xml version="1.0"?>
     <SnapMD.ConnectedCare.Sdk.Tests.Properties.Settings>
@@ -31,6 +31,9 @@ Unit tests require a separate config file stored next to the App.config, called 
         </setting>
     </SnapMD.ConnectedCare.Sdk.Tests.Properties.Settings>
 
+It is crucial that we prevent users' credentials from being stored in the Git repository, so if your settings are discovered in your pull request, it will be rejected. In order to make local changes to this file, use the following Git command:
+
+    git update-index --assume-unchanged SnapMD.ConnectedCare.Sdk.Tests/SnapMD.ConnectedCare.Sdk.Tests.Properties.Settings.config
 
 ## Contributing
 
