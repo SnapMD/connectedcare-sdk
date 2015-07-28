@@ -8,12 +8,16 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
+
+using System.Net;
+using SnapMD.ConnectedCare.Sdk.Wrappers;
+
 namespace SnapMD.ConnectedCare.Sdk
 {
     public class EncountersApi : ApiCall
     {
         public EncountersApi(string baseUrl, string bearerToken, string developerId, string apiKey)
-            : base(baseUrl, new Wrappers.WebClientWrapper(new System.Net.WebClient()), bearerToken, developerId, apiKey)
+            : base(baseUrl, new WebClientWrapper(new WebClient()), bearerToken, developerId, apiKey)
         {
         }
 
