@@ -35,15 +35,7 @@ namespace SnapMD.ConnectedCare.Sdk.ReportApi
             var result = Convert.ToString(o["data"]);
             return result;
         }
-
-        public string GetPatientConsultationReport(int consultationId)
-        {
-            var url = string.Format("reports/consultationreport/{0}", consultationId);
-            var o = MakeCall(url);
-            var result = Convert.ToString(o["data"]);
-            return result;
-        }
-
+        
         public string GetCounsultationFiles(int consultationId)
         {
             var jsonObject = new JObject();

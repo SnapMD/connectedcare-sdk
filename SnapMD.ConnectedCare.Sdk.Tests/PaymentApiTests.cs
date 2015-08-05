@@ -26,7 +26,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             var mockWebClient = TokenandWebClientSetup(out token);
             
             //var mockWebClient = TokenandWebClientSetupRemoteCall(out token);
-            mockWebClient.Setup(x => x.DownloadString(new Uri(BaseUri, "hospital/1/payments")))
+            mockWebClient.Setup(x => x.DownloadString(new Uri(BaseUri, "patients/15/payments")))
                 .Returns("{\"PaymentProfile\":[{\"CardNumber\":\"4111111111111111\", \"ExpiryMonth\":\"12\", \"ExpiryYear\":\"2015\" }]}");
             
             var target = new PaymentsApi(Settings.Default.BaseUrl, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
