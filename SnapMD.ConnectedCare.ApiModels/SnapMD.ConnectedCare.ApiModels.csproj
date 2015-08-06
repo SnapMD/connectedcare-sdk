@@ -67,6 +67,7 @@
     <Compile Include="DocumentTypeCode.cs" />
     <Compile Include="EncounterConcern.cs" />
     <Compile Include="CustomCode.cs" />
+    <Compile Include="HospitalAddress.cs" />
     <Compile Include="IIntakeQuestionnaire.cs" />
     <Compile Include="IntakeQuestionnaire.cs" />
     <Compile Include="NewbornRecord.cs" />

@@ -34,9 +34,9 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public List<CodeSetResponse> GetIntakeItems(int HospitalId)
         {
-            var result = MakeCall(string.Format("v2/codesets?hospitalId={0}&fields={1}",HospitalId,"medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"));
+            var result = MakeCall<ApiResponseV2<CodeSetResponse>>(string.Format("v2/codesets?hospitalId={0}&fields={1}", HospitalId, "medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"));
 
-            return ((JObject)result).ToObject<ApiResponseV2<CodeSetResponse>>().Data.ToList();
+            return result.Data.ToList();
 
             //while (dataEnumerator.MoveNext())
             //    if (dataEnumerator.Current != null)
