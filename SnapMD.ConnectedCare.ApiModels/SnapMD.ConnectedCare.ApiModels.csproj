@@ -69,6 +69,7 @@
     <Compile Include="CustomCode.cs" />
     <Compile Include="HospitalAddress.cs" />
     <Compile Include="IIntakeQuestionnaire.cs" />
+    <Compile Include="IMedicalHistoryProfile.cs" />
     <Compile Include="IntakeQuestionnaire.cs" />
     <Compile Include="NewbornRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

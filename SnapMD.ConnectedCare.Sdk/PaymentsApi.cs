@@ -30,11 +30,10 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public int HospitalId { get; private set; }
 
-        public JObject GetCustomerProfile(int userId)
+        public JObject GetCustomerProfile(int patientUserId)
         {
             //API looks so strange 
-            //TODO: (Chris: No API corresponds to this path)
-            var result = MakeCall(string.Format("hospital/{0}/payments", HospitalId));
+            var result = MakeCall(string.Format("patients/{0}/payments", patientUserId));
             return result;
         }
 

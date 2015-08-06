@@ -13,7 +13,7 @@ using System.Collections.Generic;
 
 namespace SnapMD.ConnectedCare.ApiModels
 {
-    public interface IIntakeQuestionnaire
+    public interface IIntakeQuestionnaire : IMedicalHistoryProfile
     {
         List<EncounterConcern> Concerns { get; set; }
 
