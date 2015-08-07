@@ -23,26 +23,19 @@ namespace SnapMD.ConnectedCare.Sdk
         {
         }
 
-        //TODO: This should be a POST call instead of GET
         public string PostAddress(HospitalAddress newAddress)
         {
             //TODO: instead of bool, this could be a POCO, need to consult with Aaron
             var o = Post("hospitaladdress", newAddress);
             return Convert.ToString(o["data"]);
         }
-        
-        //TODO: This no longer exists
-        public string GetHospitalAddress()
-        {
-            var o = MakeCall("hospital/address");
-            return Convert.ToString(o["data"]);
-        }
+     
 
         //TODO: Convert to API Response?
-        public string GetHospitalAddressById(int hospitalId)
+        public string GetAddress(int hospitalId)
         {
-            var o = MakeCall<ApiResponse<HospitalAddress>>("hospitaladdress");
-            return o.Data.address;
+            var o = MakeCall("hospitaladdress/{0}", hospitalId);
+            return Convert.ToString(o["data"]["addressText"]);
         }
         
         //TODO: This no longer exists

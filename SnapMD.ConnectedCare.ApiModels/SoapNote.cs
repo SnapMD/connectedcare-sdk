@@ -10,7 +10,7 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
-namespace SnapMD.Web.Api.Models
+namespace SnapMD.ConnectedCare.ApiModels
 {
     public class SoapNote
     {
