@@ -10,8 +10,9 @@
 //    limitations under the License.
 using System;
 using Newtonsoft.Json.Linq;
-
+using SnapMD.ConnectedCare.ApiModels;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
+using SnapMD.ConnectedCare.Sdk.Models;
 
 namespace SnapMD.ConnectedCare.Sdk
 {
@@ -22,25 +23,29 @@ namespace SnapMD.ConnectedCare.Sdk
         {
         }
 
-        public string GetAddress()
+        //TODO: This should be a POST call instead of GET
+        public string PostAddress(HospitalAddress newAddress)
         {
-            var o = MakeCall("hospitaladdress");
+            //TODO: instead of bool, this could be a POCO, need to consult with Aaron
+            var o = Post("hospitaladdress", newAddress);
             return Convert.ToString(o["data"]);
         }
         
+        //TODO: This no longer exists
         public string GetHospitalAddress()
         {
             var o = MakeCall("hospital/address");
             return Convert.ToString(o["data"]);
         }
 
+        //TODO: Convert to API Response?
         public string GetHospitalAddressById(int hospitalId)
         {
-            var o = MakeCall("HospitalAddress/" + hospitalId);
-            var data = o["data"];
-            return Convert.ToString(data["addressText"]);
+            var o = MakeCall<ApiResponse<HospitalAddress>>("hospitaladdress");
+            return o.Data.address;
         }
-
+        
+        //TODO: This no longer exists
         public JObject GetHospital()
         {
             var o = MakeCall("hospital");
