@@ -77,9 +77,11 @@
     <Compile Include="IIntakeQuestionnaire.cs" />
     <Compile Include="IMedicalHistoryProfile.cs" />
     <Compile Include="IntakeQuestionnaire.cs" />
+    <Compile Include="IPatientMedicalHistoryProfile.cs" />
     <Compile Include="NewbornRecord.cs" />
     <Compile Include="PatientAccountInfo.cs" />
     <Compile Include="PatientConsultationInfo.cs" />
+    <Compile Include="PatientMedicalHistoryProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResponseObservableItem.cs" />
     <Compile Include="SerializableToken.cs" />
