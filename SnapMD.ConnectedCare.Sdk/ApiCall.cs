@@ -57,7 +57,7 @@ namespace SnapMD.ConnectedCare.Sdk
             try
             {
                 var data = MakeCall(wc => wc.DownloadString(url));
-                return JsonConvert.DeserializeObject<T>(data.ToString());
+                return data.ToObject<T>();
             }
             catch (Exception ex)
             {
