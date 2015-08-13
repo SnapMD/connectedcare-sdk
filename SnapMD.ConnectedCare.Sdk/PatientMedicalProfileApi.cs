@@ -22,18 +22,18 @@ namespace SnapMD.ConnectedCare.Sdk
         {
         }
 
-        public ApiResponseV2<IPatientMedicalHistoryProfile> GetPatientData(int patientId)
+        public ApiResponseV2<PatientMedicalHistoryProfile> GetPatientData(int patientId)
         {
             var url = string.Format("v2/patients/medicalprofile/{0}", patientId);
-            var result = MakeCall<ApiResponseV2<IPatientMedicalHistoryProfile>>(url);
+            var result = MakeCall<ApiResponseV2<PatientMedicalHistoryProfile>>(url);
             return result;
         }
 
-        public ApiResponseV2<IPatientMedicalHistoryProfile> UpdatePatientData(int patientId, IPatientMedicalHistoryProfile profile)
+        public ApiResponseV2<PatientMedicalHistoryProfile> UpdatePatientData(int patientId, IPatientMedicalHistoryProfile profile)
         {
             var url = string.Format("v2/patients/medicalprofile/{0}", patientId);
-            var result = Put<IPatientMedicalHistoryProfile>(url, profile);
-            return new ApiResponseV2<IPatientMedicalHistoryProfile>(result);
+            var result = Put(url, profile).ToObject<PatientMedicalHistoryProfile>();
+            return new ApiResponseV2<PatientMedicalHistoryProfile>(result);
         }
     }
 }
