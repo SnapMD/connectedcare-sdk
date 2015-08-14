@@ -47,14 +47,24 @@ namespace SnapMD.ConnectedCare.Sdk
             WebClientInstance = client;
         }
 
-        #region Properties
-
         public bool RequiresAuthentication { get; set; }
         public bool NotFound { get; private set; }
         public bool ServerError { get; private set; }
-        #endregion
 
-        #region JObject versions
+        protected virtual T MakeCall<T>(string apiPath)
+        {
+            var url = new Uri(_baseUri, apiPath);
+            try
+            {
+                var data = MakeCall(wc => wc.DownloadString(url));
+                return data.ToObject<T>();
+            }
+            catch (Exception ex)
+            {
+                throw new SnapSdkException("Unable to load api at url: " + url, ex);
+            }
+        }
+
         protected virtual JObject MakeCall(string pathFormat, params object[] arguments)
         {
             return MakeCall(string.Format(pathFormat, arguments));
@@ -73,12 +83,54 @@ namespace SnapMD.ConnectedCare.Sdk
             }
         }
 
-        protected virtual JObject MakeCall(Func<IWebClient, string> executeFunc)
+
+        protected JObject MakeCall(Func<IWebClient, string> executeFunc)
         {
             // Allow domains we don't have a certificate for
             ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
             SetHeaders(WebClientInstance);
             return MakeCall(WebClientInstance, executeFunc);
+        }
+
+        private void SetHeaders(IWebClient wc)
+        {
+            if (RequiresAuthentication || _bearerToken != null)
+            {
+                AddHeader(wc, "Authorization", "Bearer " + _bearerToken);
+            }
+
+            AddHeader(wc, "X-Developer-Id", _developerId);
+            AddHeader(wc, "X-Api-Key", _apiKey);
+        }
+
+        private void AddHeader(IWebClient wc, string name, string value)
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                wc.Headers[name] = value;
+            }
+        }
+
+        private void Parse404(WebException wex)
+        {
+            var response = wex.Response as HttpWebResponse;
+            if (response == null)
+            {
+                throw new Exception("No response from the API.", wex);
+            }
+
+            if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                Debug.WriteLine("Four, oh Four...");
+                NotFound = true;
+            }
+
+            if (response.StatusCode == HttpStatusCode.InternalServerError)
+            {
+                Debug.WriteLine("Piper down!");
+                ServerError = true;
+                throw new SnapSdkException("There was an error on the API service.", wex);
+            }
         }
 
         protected JObject MakeCall(IWebClient wc, Func<IWebClient, string> executeFunc)
@@ -140,130 +192,5 @@ namespace SnapMD.ConnectedCare.Sdk
                 throw new SnapSdkException("Unable to load api at url: " + url, ex);
             }
         }
-
-        #endregion
-
-        #region Generic versions
-
-        protected virtual T MakeCall<T>(string apiPath, params object[] arguments)
-        {
-            var url = new Uri(_baseUri, string.Format(apiPath, arguments));
-            try
-            {
-                var data = MakeCall(wc => wc.DownloadString(url));
-                return JsonConvert.DeserializeObject<T>(data.ToString());
-            }
-            catch (Exception ex)
-            {
-                throw new SnapSdkException("Unable to load api at url: " + url, ex);
-            }
-        }
-
-        protected virtual T MakeCall<T>(Func<IWebClient, T> executeFunc)
-        {
-            // Allow domains we don't have a certificate for
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            SetHeaders(WebClientInstance);
-            return MakeCall<T>(WebClientInstance, executeFunc);
-        }
-
-        protected virtual T MakeCall<T>(IWebClient wc, Func<IWebClient, T> executeFunc)
-        {
-            try
-            {
-                var responseObj = executeFunc.Invoke(wc);
-                return responseObj;
-            }
-            catch (WebException wex)
-            {
-                Parse404(wex);
-            }
-
-            return default(T);
-        }
-
-        protected virtual T Put<T>(string apiPath, object data)
-        {
-            return UploadData<T>(apiPath, "PUT", data);
-        }
-
-        protected virtual T Post<T>(string apiPath, object data)
-        {
-            return UploadData<T>(apiPath, "POST", data);
-        }
-
-        private T UploadData<T>(string apiPath, string method, object data)
-        {
-            var url = new Uri(_baseUri, apiPath);
-            try
-            {
-                return MakeCall<T>(wc =>
-                {
-                    // Allow domains we don't have a certificate for
-                    ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-
-                    if (RequiresAuthentication)
-                    {
-                        wc.Headers[HttpRequestHeader.Authorization] = "Bearer " + _bearerToken;
-                    }
-
-                    wc.Headers[HttpRequestHeader.ContentType] = "application/json";
-
-
-                    string result = wc.UploadString(url, method, JsonConvert.SerializeObject(data));
-                    return JsonConvert.DeserializeObject<T>(result);
-                });
-            }
-            catch (Exception ex)
-            {
-                throw new SnapSdkException("Unable to load api at url: " + url, ex);
-            }
-        }
-
-        #endregion
-
-        #region Helpers
-        private void SetHeaders(IWebClient wc)
-        {
-            if (RequiresAuthentication || _bearerToken != null)
-            {
-                AddHeader(wc, "Authorization", "Bearer " + _bearerToken);
-            }
-
-            AddHeader(wc, "X-Developer-Id", _developerId);
-            AddHeader(wc, "X-Api-Key", _apiKey);
-        }
-
-        private void AddHeader(IWebClient wc, string name, string value)
-        {
-            if (!string.IsNullOrEmpty(value))
-            {
-                wc.Headers[name] = value;
-            }
-        }
-
-        private void Parse404(WebException wex)
-        {
-            var response = wex.Response as HttpWebResponse;
-            if (response == null)
-            {
-                throw new Exception("No response from the API.", wex);
-            }
-
-            if (response.StatusCode == HttpStatusCode.NotFound)
-            {
-                Debug.WriteLine("Four, oh Four...");
-                NotFound = true;
-            }
-
-            if (response.StatusCode == HttpStatusCode.InternalServerError)
-            {
-                Debug.WriteLine("Piper down!");
-                ServerError = true;
-                throw new SnapSdkException("There was an error on the API service.", wex);
-            }
-        }
-
-        #endregion
     }
 }

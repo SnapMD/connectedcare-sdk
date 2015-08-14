@@ -24,19 +24,17 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public int? GetUserId()
         {
-            var o = MakeCall("v2/account/user");
+            var response = MakeCall("v2/account/user");
 
-            var dataEnumerator = o.ToObject<ApiResponseV2<SerializableUser>>().Data.GetEnumerator();
 
-            while (dataEnumerator.MoveNext())
-                if (dataEnumerator.Current.id > 0)
-                    return dataEnumerator.Current.id;
-            
-            //if (o != null && o["id"] != null)
-            //{
-            //    var userId = Convert.ToInt32(o["id"]);
-            //    return userId;
-            //}
+            var dataEnumerator = response.ToObject<ApiResponseV2<SerializableUser>>();
+            if (dataEnumerator.Data != null)
+            {
+                foreach (var entry in dataEnumerator.Data)
+                {
+                    return entry.id;
+                }
+            }
 
             return null;
         }
