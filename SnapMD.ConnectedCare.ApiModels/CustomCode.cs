@@ -18,6 +18,12 @@ namespace SnapMD.ConnectedCare.ApiModels
 {
     public struct CustomCode : ICustomCode
     {
+        public CustomCode(int code, string description) : this()
+        {
+            Code = code;
+            Description = description;
+        }
+
         public CustomCode(string singleLine = null) : this()
         {
             Description = "";

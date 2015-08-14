@@ -32,8 +32,8 @@ namespace SnapMD.ConnectedCare.Sdk
             }
 
             // v2/publicdocuments?documentType=1&hospitalId=126
-            var o = MakeCall<ApiResponseV2<DocumentsResponse>>("v2/publicdocuments?documentType={0}&hospitalId={1}", (int)documentType, hospitalId);
-            return o;
+            var o = MakeCall("v2/publicdocuments?documentType={0}&hospitalId={1}", (int)documentType, hospitalId);
+            return o.ToObject<ApiResponseV2<DocumentsResponse>>();
         }
     }
 

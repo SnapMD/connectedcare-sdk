@@ -34,14 +34,17 @@ namespace SnapMD.ConnectedCare.Sdk
                 hospitalId = HospitalId,
                 userTypeId = 1
             };
-
-            var result = Post("v2/account/token", request);
             
-            var dataEnumerator = result.ToObject<ApiResponseV2<SerializableToken>>().Data.GetEnumerator();
-
-            while (dataEnumerator.MoveNext())
-                if (dataEnumerator.Current.access_token != null)
-                    return dataEnumerator.Current.access_token;
+            var response = Post("v2/account/token", request);
+            
+            var dataEnumerator = response.ToObject<ApiResponseV2<SerializableToken>>();
+            if (dataEnumerator.Data != null)
+            {
+                foreach (var entry in dataEnumerator.Data)
+                {
+                    return entry.access_token;
+                }
+            }
 
             return null;
         }

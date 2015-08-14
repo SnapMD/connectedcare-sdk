@@ -30,7 +30,7 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public int HospitalId { get; private set; }
 
-        public JObject GetCustomerProfile(int patientUserId)
+        public JObject GetCustomerProfile(int? patientUserId)
         {
             //API looks so strange 
             var result = MakeCall(string.Format("patients/{0}/payments", patientUserId));
