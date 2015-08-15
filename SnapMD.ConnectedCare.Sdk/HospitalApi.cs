@@ -27,8 +27,8 @@ namespace SnapMD.ConnectedCare.Sdk
             var o = MakeCall("hospitaladdress");
             return Convert.ToString(o["data"]);
         }
-        
-        public string GetHospitalAddressById(int hospitalId)
+
+        public string GetAddress(int hospitalId)
         {
             var o = MakeCall("hospitaladdress/" + hospitalId);
             var data = o["data"];

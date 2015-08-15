@@ -42,7 +42,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             //IWebClient webClient = TokenandWebClientSetupRemoteCall(out url, out token);
 
             var api = new HospitalApi(Settings.Default.BaseUrl, null, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
-            Assert.AreEqual("1000 wilshire blvd, los angeles, ca 90017", api.GetHospitalAddressById(1));
+            Assert.AreEqual("1000 wilshire blvd, los angeles, ca 90017", api.GetAddress(1));
         }
 
         [Test]
