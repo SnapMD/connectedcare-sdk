@@ -8,19 +8,11 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
+using System;
 using Moq;
 using NUnit.Framework;
-
-using SnapMD.ConnectedCare.Sdk;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
-
-using System.Net;
 using SnapMD.ConnectedCare.Sdk.Tests.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Tests
