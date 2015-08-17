@@ -22,12 +22,21 @@ namespace SnapMD.ConnectedCare.Sdk
         {
         }
 
+        /// <summary>
+        /// Gets the hospital address based on the current logged-in user's provider ID.
+        /// </summary>
+        /// <returns></returns>
         public string GetAddress()
         {
             var o = MakeCall("hospitaladdress");
             return Convert.ToString(o["data"]);
         }
 
+        /// <summary>
+        /// Gets the hospital address based on provider ID.
+        /// </summary>
+        /// <param name="hospitalId"></param>
+        /// <returns></returns>
         public string GetAddress(int hospitalId)
         {
             var o = MakeCall("hospitaladdress/" + hospitalId);
