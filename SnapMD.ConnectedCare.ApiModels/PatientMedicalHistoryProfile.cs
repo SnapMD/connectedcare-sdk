@@ -19,7 +19,7 @@ namespace SnapMD.ConnectedCare.ApiModels
         {
             MedicalConditions = new List<CustomCode>();
             InfantData = new NewbornRecord();
-            MedicalConditions = new List<CustomCode>();
+            MedicationAllergies = new List<CustomCode>();
             Surgeries = new List<SurgeryRecord>();
             Medications = new List<CustomCode>();
         }
