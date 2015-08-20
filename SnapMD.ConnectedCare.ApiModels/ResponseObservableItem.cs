@@ -10,7 +10,7 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
-namespace SnapMD.ConnectedCare.Sdk.Models
+namespace SnapMD.ConnectedCare.ApiModels
 {
     /// <summary>
     ///     Simple object for IDs and text.
