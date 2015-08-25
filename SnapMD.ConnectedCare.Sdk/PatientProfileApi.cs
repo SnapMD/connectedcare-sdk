@@ -9,7 +9,9 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 using Newtonsoft.Json.Linq;
+using SnapMD.ConnectedCare.ApiModels;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
+using SnapMD.ConnectedCare.Sdk.Models;
 
 namespace SnapMD.ConnectedCare.Sdk
 {
@@ -27,10 +29,11 @@ namespace SnapMD.ConnectedCare.Sdk
         }
 
         // todo: short time implementatin. this has to remove eventually: Han
-        public JObject GetPatientData(int PatientId)
+        // chrisc: updated this with the V2 call from original V1 call
+        public ApiResponseV2<GetPatientsResponse> GetPatientData(int PatientId)
         {
-            var url = string.Format("patients/profile/{0}", PatientId);
-            var result = MakeCall(url);
+            var url = string.Format("v2/patients/profiles/{0}", PatientId);
+            var result = MakeCall<ApiResponseV2<GetPatientsResponse>>(url);
             return result;
         }
 

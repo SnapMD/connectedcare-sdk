@@ -67,13 +67,16 @@
     <Compile Include="ConsultationResult.cs" />
     <Compile Include="ConsultationStatusCode.cs" />
     <Compile Include="CopayPaymentResponse.cs" />
+    <Compile Include="CustomerPaymentInfo.cs" />
     <Compile Include="DocumentsResponse.cs" />
     <Compile Include="DocumentTypeCode.cs" />
     <Compile Include="EncounterConcern.cs" />
     <Compile Include="CustomCode.cs" />
     <Compile Include="FamilyMember.cs" />
     <Compile Include="GetPatientsResponse.cs" />
+    <Compile Include="HospitalInfo.cs" />
     <Compile Include="HospitalAddress.cs" />
+    <Compile Include="HospitalHours.cs" />
     <Compile Include="IIntakeQuestionnaire.cs" />
     <Compile Include="IMedicalHistoryProfile.cs" />
     <Compile Include="IntakeQuestionnaire.cs" />
@@ -82,6 +85,7 @@
     <Compile Include="PatientAccountInfo.cs" />
     <Compile Include="PatientConsultationInfo.cs" />
     <Compile Include="PatientMedicalHistoryProfile.cs" />
+    <Compile Include="PaymentProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResponseObservableItem.cs" />
     <Compile Include="SerializableToken.cs" />
