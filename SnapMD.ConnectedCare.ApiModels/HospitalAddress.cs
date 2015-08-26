@@ -8,15 +8,15 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-namespace SnapMD.ConnectedCare.Sdk.Models
+
+using System;
+
+namespace SnapMD.ConnectedCare.ApiModels
 {
-    /// <summary>
-    ///     Simple object for IDs and text.
-    /// </summary>
-    public class ResponseObservableItem
+    [Serializable]
+    public class HospitalAddress
     {
-        public int Id { get; set; }
-        public string Description { get; set; }
-        public string ShortName { get; set; }
+        public int hospitalId { get; set; }
+        public string address { get; set; }
     }
 }

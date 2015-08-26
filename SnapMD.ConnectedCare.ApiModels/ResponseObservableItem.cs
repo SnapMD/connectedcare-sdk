@@ -10,17 +10,15 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
-
-using System.Collections.Generic;
-
 namespace SnapMD.ConnectedCare.ApiModels
 {
-    public interface IMedicalHistoryProfile
+    /// <summary>
+    ///     Simple object for IDs and text.
+    /// </summary>
+    public class ResponseObservableItem
     {
-        List<CustomCode> MedicationAllergies { get; set; }
-        List<SurgeryRecord> Surgeries { get; set; }
-        List<CustomCode> MedicalConditions { get; set; }
-        List<CustomCode> Medications { get; set; }
-        NewbornRecord InfantData { get; set; }
+        public int Id { get; set; }
+        public string Description { get; set; }
+        public string ShortName { get; set; }
     }
 }

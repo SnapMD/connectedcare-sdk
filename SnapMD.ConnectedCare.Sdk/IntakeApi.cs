@@ -8,25 +8,19 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-using System;
+
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Linq;
-
 using Newtonsoft.Json.Linq;
 using SnapMD.ConnectedCare.ApiModels;
-using SnapMD.ConnectedCare.Sdk.Models;
-
+using SnapMD.ConnectedCare.Sdk.Interfaces;
 using SnapMD.ConnectedCare.Sdk.Models;
 
 namespace SnapMD.ConnectedCare.Sdk
 {
     public class IntakeApi: ApiCall
     {
-        public IntakeApi(string baseUrl, string bearerToken, string developerId, string apiKey, Interfaces.IWebClient WebClient)
+        public IntakeApi(string baseUrl, string bearerToken, string developerId, string apiKey, IWebClient WebClient)
             : base(baseUrl, WebClient, bearerToken, developerId, apiKey)
         {
             
@@ -36,13 +30,14 @@ namespace SnapMD.ConnectedCare.Sdk
         {
             var result = MakeCall(string.Format("v2/codesets?hospitalId={0}&fields={1}",HospitalId,"medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"));
 
-            return ((JObject)result).ToObject<ApiResponseV2<CodeSetResponse>>().Data.ToList();
+            return result.ToObject<ApiResponseV2<CodeSetResponse>>().Data.ToList();
 
             //while (dataEnumerator.MoveNext())
             //    if (dataEnumerator.Current != null)
             //        return dataEnumerator.Current.;
 
             //return null;
+
         }
     }
 }

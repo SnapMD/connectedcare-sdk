@@ -192,5 +192,76 @@ namespace SnapMD.ConnectedCare.Sdk
                 throw new SnapSdkException("Unable to load api at url: " + url, ex);
             }
         }
+
+        #region <T>
+
+        protected virtual T Put<T>(string apiPath, object data) where T : class
+        {
+            return UploadData<T>(apiPath, "PUT", data);
+        }
+
+        protected virtual T Post<T>(string apiPath, object data) where T : class
+        {
+            return UploadData<T>(apiPath, "POST", data);
+        }
+
+        protected T MakeCall<T>(Func<IWebClient, string> executeFunc) where T : class
+        {
+            // Allow domains we don't have a certificate for
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            SetHeaders(WebClientInstance);
+            return MakeCall<T>(WebClientInstance, executeFunc);
+        }
+        private T UploadData<T>(string apiPath, string method, object data) where T : class
+        {
+            var url = new Uri(_baseUri, apiPath);
+            try
+            {
+                return MakeCall<T>(wc =>
+                {
+                    // Allow domains we don't have a certificate for
+                    ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+
+                    if (RequiresAuthentication)
+                    {
+                        wc.Headers[HttpRequestHeader.Authorization] = "Bearer " + _bearerToken;
+                    }
+
+                    wc.Headers[HttpRequestHeader.ContentType] = "application/json";
+
+                    return wc.UploadString(url, method, JsonConvert.SerializeObject(data));
+                });
+            }
+            catch (Exception ex)
+            {
+                throw new SnapSdkException("Unable to load api at url: " + url, ex);
+            }
+        }
+
+        protected T MakeCall<T>(IWebClient wc, Func<IWebClient, string> executeFunc) where T : class
+        {
+            try
+            {
+                var responseBody = executeFunc.Invoke(wc);
+                if (!string.IsNullOrEmpty(responseBody))
+                {
+                    if (!responseBody.StartsWith("{"))
+                    {
+                        responseBody = string.Format("{{data:{0}}}", responseBody);
+                    }
+
+                    var o = JsonConvert.DeserializeObject<T>(responseBody);
+                    return o;
+                }
+            }
+            catch (WebException wex)
+            {
+                Parse404(wex);
+            }
+
+            return null;
+        }
+        #endregion
+
     }
 }

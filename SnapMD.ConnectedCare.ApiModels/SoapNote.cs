@@ -10,17 +10,14 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
-
-using System.Collections.Generic;
-
 namespace SnapMD.ConnectedCare.ApiModels
 {
-    public interface IMedicalHistoryProfile
+    public class SoapNote
     {
-        List<CustomCode> MedicationAllergies { get; set; }
-        List<SurgeryRecord> Surgeries { get; set; }
-        List<CustomCode> MedicalConditions { get; set; }
-        List<CustomCode> Medications { get; set; }
-        NewbornRecord InfantData { get; set; }
+        public string Subjective { get; set; }
+        public string Objective { get; set; }
+        public string Assessment { get; set; }
+        public string Plan { get; set; }
+        public string CptCode { get; set; }
     }
 }

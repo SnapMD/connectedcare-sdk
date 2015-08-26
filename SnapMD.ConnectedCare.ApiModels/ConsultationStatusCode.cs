@@ -10,17 +10,17 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
-
-using System.Collections.Generic;
-
-namespace SnapMD.ConnectedCare.ApiModels
+namespace SnapMD.ConnectedCare.Sdk.Models
 {
-    public interface IMedicalHistoryProfile
+    public enum ConsultationStatusCode
     {
-        List<CustomCode> MedicationAllergies { get; set; }
-        List<SurgeryRecord> Surgeries { get; set; }
-        List<CustomCode> MedicalConditions { get; set; }
-        List<CustomCode> Medications { get; set; }
-        NewbornRecord InfantData { get; set; }
-    }
+        PaymentDone = 68,
+        DoctorAssigned = 69,
+        CustomerInWaiting=82,
+        DoctorInitiatedConsultation = 70,
+        StartedConsultation = 71,
+        EndedConsultation = 72,
+        CancelConsultaion = 79,
+        InProgress = 80
+    };
 }

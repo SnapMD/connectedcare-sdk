@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.ConnectedCare.Sdk", "SnapMD.ConnectedCare.Sdk\SnapMD.ConnectedCare.Sdk.csproj", "{3D0A122B-6634-4AEE-B5B7-C71FD58DF02F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.ConnectedCare.Sdk", "SnapMD.ConnectedCare.Sdk\SnapMD.ConnectedCare.Sdk.csproj", "{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.ConnectedCare.Sdk.Tests", "SnapMD.ConnectedCare.Sdk.Tests\SnapMD.ConnectedCare.Sdk.Tests.csproj", "{49F684C1-8787-49D7-9BFE-BA066658573D}"
 EndProject
@@ -22,14 +22,14 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3D0A122B-6634-4AEE-B5B7-C71FD58DF02F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D0A122B-6634-4AEE-B5B7-C71FD58DF02F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D0A122B-6634-4AEE-B5B7-C71FD58DF02F}.Debug|x64.ActiveCfg = Debug|x64
-		{3D0A122B-6634-4AEE-B5B7-C71FD58DF02F}.Debug|x64.Build.0 = Debug|x64
-		{3D0A122B-6634-4AEE-B5B7-C71FD58DF02F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D0A122B-6634-4AEE-B5B7-C71FD58DF02F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D0A122B-6634-4AEE-B5B7-C71FD58DF02F}.Release|x64.ActiveCfg = Release|x64
-		{3D0A122B-6634-4AEE-B5B7-C71FD58DF02F}.Release|x64.Build.0 = Release|x64
+		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Debug|x64.ActiveCfg = Debug|x64
+		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Debug|x64.Build.0 = Debug|x64
+		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Release|x64.ActiveCfg = Release|x64
+		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Release|x64.Build.0 = Release|x64
 		{49F684C1-8787-49D7-9BFE-BA066658573D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{49F684C1-8787-49D7-9BFE-BA066658573D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49F684C1-8787-49D7-9BFE-BA066658573D}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -50,4 +50,3 @@ Global
 		SolutionGuid = c4edf793-fbed-46bc-bdad-cb344c06037e
 	EndGlobalSection
 EndGlobal
-

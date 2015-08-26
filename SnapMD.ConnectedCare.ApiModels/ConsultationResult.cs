@@ -11,16 +11,33 @@
 //    limitations under the License.
 #endregion
 
-using System.Collections.Generic;
+using System;
+using SnapMD.ConnectedCare.Sdk.Models;
 
 namespace SnapMD.ConnectedCare.ApiModels
 {
-    public interface IMedicalHistoryProfile
+    public class ConsultationResult
     {
-        List<CustomCode> MedicationAllergies { get; set; }
-        List<SurgeryRecord> Surgeries { get; set; }
-        List<CustomCode> MedicalConditions { get; set; }
-        List<CustomCode> Medications { get; set; }
-        NewbornRecord InfantData { get; set; }
+        public ResponseObservableItem AssignedDoctor { get; set; }
+
+        public string ConferenceKey { get; set; }
+
+        public ConsultationStatusCode ConsultationStatus { get; set; }
+
+        public int HospitalId { get; set; }
+
+        public int Id { get; set; }
+
+        public string IsScheduled { get; set; }
+
+        public string Note { get; set; }
+
+        public ResponseObservableItem Patient { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public ResponseObservableItem ResponsibleUser { get; set; }
+
+        public DateTime? Time { get; set; }
     }
 }

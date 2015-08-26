@@ -8,14 +8,15 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
+
 using System;
 using Newtonsoft.Json.Linq;
 
-namespace SnapMD.ConnectedCare.Sdk.ReportApi
+namespace SnapMD.ConnectedCare.Sdk.Reports
 {
-    public class SnapReportApi : ApiCall
+    public class SnapReportsApi : ApiCall
     {
-        public SnapReportApi(string baseUrl, string bearerToken, string developerId, string apiKey)
+        public SnapReportsApi(string baseUrl, string bearerToken, string developerId, string apiKey)
             : base(baseUrl, new SnapMD.ConnectedCare.Sdk.Wrappers.WebClientWrapper(new System.Net.WebClient()), bearerToken, developerId, apiKey)
         {
         }
@@ -35,15 +36,7 @@ namespace SnapMD.ConnectedCare.Sdk.ReportApi
             var result = Convert.ToString(o["data"]);
             return result;
         }
-
-        public string GetPatientConsultationReport(int consultationId)
-        {
-            var url = string.Format("reports/consultationreport/{0}", consultationId);
-            var o = MakeCall(url);
-            var result = Convert.ToString(o["data"]);
-            return result;
-        }
-
+        
         public string GetCounsultationFiles(int consultationId)
         {
             var jsonObject = new JObject();

@@ -10,6 +10,7 @@
 //    limitations under the License.
 
 using System;
+using System.Linq;
 using NUnit.Framework;
 using SnapMD.ConnectedCare.Sdk.Tests.Properties;
 
@@ -71,7 +72,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
                 mockWebClient.Object);
             var result = target.RegisterProfile(paymentData);
 
-            Assert.Greater((int)result["data"]["profileId"], 1);
+            Assert.Greater(result.Data.First().CustomerProfileID, 1);
         }
     }
 }

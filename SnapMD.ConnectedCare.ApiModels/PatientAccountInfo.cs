@@ -10,17 +10,20 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
-
-using System.Collections.Generic;
-
 namespace SnapMD.ConnectedCare.ApiModels
 {
-    public interface IMedicalHistoryProfile
+    /// <summary>
+    /// Represents patient details for administrator patient lists.
+    /// </summary>
+    public class PatientAccountInfo
     {
-        List<CustomCode> MedicationAllergies { get; set; }
-        List<SurgeryRecord> Surgeries { get; set; }
-        List<CustomCode> MedicalConditions { get; set; }
-        List<CustomCode> Medications { get; set; }
-        NewbornRecord InfantData { get; set; }
+        public int PatientId { get; set; }
+        public int? UserId { get; set; }
+        public string ProfileImagePath { get; set; }
+        public string FullName { get; set; }
+        public string Phone { get; set; }
+
+        public bool IsAuthorized { get; set; }
+        public bool IsActive { get; set; }
     }
 }

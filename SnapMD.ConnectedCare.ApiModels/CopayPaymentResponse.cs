@@ -10,17 +10,17 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
-
-using System.Collections.Generic;
-
 namespace SnapMD.ConnectedCare.ApiModels
 {
-    public interface IMedicalHistoryProfile
+
+    /// <summary>
+    /// The response returned when a call to MakePayment is made
+    /// </summary>
+    public struct CopayPaymentResponse
     {
-        List<CustomCode> MedicationAllergies { get; set; }
-        List<SurgeryRecord> Surgeries { get; set; }
-        List<CustomCode> MedicalConditions { get; set; }
-        List<CustomCode> Medications { get; set; }
-        NewbornRecord InfantData { get; set; }
+        /// <summary>
+        /// The confirmation # of the payment
+        /// </summary>
+        public string ConfirmationNumber { get; set; }
     }
 }

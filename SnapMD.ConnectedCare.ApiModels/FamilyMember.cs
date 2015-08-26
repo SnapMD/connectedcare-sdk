@@ -11,16 +11,23 @@
 //    limitations under the License.
 #endregion
 
-using System.Collections.Generic;
+using System;
 
 namespace SnapMD.ConnectedCare.ApiModels
 {
-    public interface IMedicalHistoryProfile
+    public class FamilyMember
     {
-        List<CustomCode> MedicationAllergies { get; set; }
-        List<SurgeryRecord> Surgeries { get; set; }
-        List<CustomCode> MedicalConditions { get; set; }
-        List<CustomCode> Medications { get; set; }
-        NewbornRecord InfantData { get; set; }
+        public int PatientId { get; set; }
+        public string PatientName { get; set; }
+        public string ProfileImagePath { get; set; }
+        public int RelationCode { get; set; }
+        public bool IsAuthorized { get; set; }
+        public DateTime? Birthdate { get; set; }
+        public string[] Addresses { get; set; }
+        public string PatientFirstName { get; set; }
+        public string PatientLastName { get; set; }
+        public string GuardianFirstName { get; set; }
+        public string GuardianLastName { get; set; }
+        public string GuardianName { get; set; }
     }
 }
