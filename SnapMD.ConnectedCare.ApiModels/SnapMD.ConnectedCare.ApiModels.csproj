@@ -78,6 +78,7 @@
     <Compile Include="IMedicalHistoryProfile.cs" />
     <Compile Include="IntakeQuestionnaire.cs" />
     <Compile Include="IPatientMedicalHistoryProfile.cs" />
+    <Compile Include="MedicalHistoryProfile.cs" />
     <Compile Include="NewbornRecord.cs" />
     <Compile Include="PatientAccountInfo.cs" />
     <Compile Include="PatientConsultationInfo.cs" />
