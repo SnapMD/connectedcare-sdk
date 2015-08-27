@@ -17,7 +17,7 @@ using System.Xml.Serialization;
 namespace SnapMD.ConnectedCare.ApiModels
 {
     [XmlRoot("IntakeQuestionnaire", Namespace = "https://snap.md/api/v2/xml/encounters")]
-    public class IntakeQuestionnaire : IIntakeQuestionnaire, IMedicalHistoryProfile
+    public class IntakeQuestionnaire : MedicalHistoryProfile, IIntakeQuestionnaire
     {
         public IntakeQuestionnaire()
         {
@@ -28,16 +28,6 @@ namespace SnapMD.ConnectedCare.ApiModels
             InfantData = new NewbornRecord();
             Concerns = new List<EncounterConcern>();
         }
-
-        public List<CustomCode> MedicationAllergies { get; set; }
-
-        public List<SurgeryRecord> Surgeries { get; set; }
-
-        public List<CustomCode> MedicalConditions { get; set; }
-
-        public List<CustomCode> Medications { get; set; }
-
-        public NewbornRecord InfantData { get; set; }
 
         [XmlArray("EncounterConcerns")]
         [XmlArrayItem("Concern")]
