@@ -54,16 +54,16 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             var mockWebClient = TokenandWebClientSetup(out token);
             mockWebClient.Setup(
                 x =>
-                    x.UploadString(new Uri(BaseUri, @"patients/payments"), "POST",
+                    x.UploadString(new Uri(BaseUri, @"v2/patients/payments"), "POST",
                         "{\"CardNumber\":\"4111111111111111\",\"ExpiryMonth\":12,\"ExpiryYear\":2015}")).Returns(
                             @"{" +
                             "\"$id\": \"1\"," +
                             "\"success\": true," +
-                            "\"data\": {" +
+                            "\"data\": [{" +
                             "\"$id\": \"2\"," +
-                            "\"profileId\": \"31867556\"," +
+                            "\"customerProfileID\": \"31867556\"," +
                             "\"paymentProfileId\": \"32565287\"" +
-                            "}," +
+                            "}]," +
                             "\"message\": \"Success\"" +
                             "}"
                 );
@@ -72,7 +72,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
                 mockWebClient.Object);
             var result = target.RegisterProfile(paymentData);
 
-            Assert.Greater(result.Data.First().CustomerProfileID, 1);
+            Assert.Greater(Convert.ToInt32(result.Data.First().CustomerProfileID), 1);
         }
     }
 }
