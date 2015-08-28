@@ -2,7 +2,7 @@
 {
     public class PaymentProfile
     {
-        public string CustomerProfileID { get; set; }
-        public object PaymentProfileID { get; set; }
+        public string CustomerProfileId { get; set; }
+        public object PaymentProfileId { get; set; }
     }
 }

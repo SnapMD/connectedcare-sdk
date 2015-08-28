@@ -72,7 +72,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
                 mockWebClient.Object);
             var result = target.RegisterProfile(paymentData);
 
-            Assert.Greater(Convert.ToInt32(result.Data.First().CustomerProfileID), 1);
+            Assert.Greater(Convert.ToInt32(result.Data.First().CustomerProfileId), 1);
         }
     }
 }
