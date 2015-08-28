@@ -10,7 +10,7 @@
 //    limitations under the License.
 using System;
 using Newtonsoft.Json.Linq;
-
+using SnapMD.ConnectedCare.ApiModels;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
 
 namespace SnapMD.ConnectedCare.Sdk
@@ -44,9 +44,9 @@ namespace SnapMD.ConnectedCare.Sdk
             return Convert.ToString(data["addressText"]);
         }
 
-        public JObject GetHospital()
+        public HospitalInfo GetHospital()
         {
-            var o = MakeCall("hospital");
+            var o = MakeCall<HospitalInfo>("hospital");
             return o;
         }
     }

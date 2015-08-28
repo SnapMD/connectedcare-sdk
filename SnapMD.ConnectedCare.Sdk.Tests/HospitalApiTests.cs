@@ -51,7 +51,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
 
             var result = api.GetHospital();
 
-            Assert.AreEqual(result.Value<int>("hospitalId"), 1);
+            Assert.AreEqual(result.HospitalId, 1);
         }
     }
 }
