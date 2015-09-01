@@ -28,9 +28,9 @@ namespace SnapMD.ConnectedCare.Sdk
         /// Gets the hospital address based on the current logged-in user's provider ID.
         /// </summary>
         /// <returns></returns>
-        public HospitalAddress GetAddress()
+        public ApiResponseV2<HospitalAddress> GetAddress()
         {
-            var o = MakeCall<HospitalAddress>("v2/hospitaladdress");
+            var o = MakeCall<ApiResponseV2<HospitalAddress>>("v2/hospitaladdress");
             return o;
         }
 
@@ -39,16 +39,16 @@ namespace SnapMD.ConnectedCare.Sdk
         /// </summary>
         /// <param name="hospitalId"></param>
         /// <returns></returns>
-        public HospitalAddress GetAddress(int hospitalId)
+        public ApiResponseV2<HospitalAddress> GetAddress(int hospitalId)
         {
             var o = MakeCall<ApiResponseV2<HospitalAddress>>("v2/hospitaladdress/" + hospitalId);
-            return o.Data.FirstOrDefault();
+            return o;
         }
 
-        public HospitalInfo GetHospital()
+        public ApiResponseV2<HospitalInfo> GetHospital()
         {
             var o = MakeCall<ApiResponseV2<HospitalInfo>>("v2/hospital");
-            return o.Data.FirstOrDefault();
+            return o;
         }
     }
 }

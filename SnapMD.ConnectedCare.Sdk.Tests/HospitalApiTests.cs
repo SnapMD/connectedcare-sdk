@@ -10,6 +10,7 @@
 //    limitations under the License.
 
 using System;
+using System.Linq;
 using Moq;
 using NUnit.Framework;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
@@ -51,7 +52,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
 
             var result = api.GetHospital();
 
-            Assert.AreEqual(result.HospitalId, 1);
+            Assert.AreEqual(result.Data.First().HospitalId, 1);
         }
     }
 }
