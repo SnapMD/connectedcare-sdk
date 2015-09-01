@@ -9,9 +9,11 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 using System;
+using System.Linq;
 using Newtonsoft.Json.Linq;
 using SnapMD.ConnectedCare.ApiModels;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
+using SnapMD.ConnectedCare.Sdk.Models;
 
 namespace SnapMD.ConnectedCare.Sdk
 {
@@ -26,10 +28,10 @@ namespace SnapMD.ConnectedCare.Sdk
         /// Gets the hospital address based on the current logged-in user's provider ID.
         /// </summary>
         /// <returns></returns>
-        public string GetAddress()
+        public HospitalAddress GetAddress()
         {
-            var o = MakeCall("hospitaladdress");
-            return Convert.ToString(o["data"]);
+            var o = MakeCall<HospitalAddress>("v2/hospitaladdress");
+            return o;
         }
 
         /// <summary>
@@ -37,17 +39,16 @@ namespace SnapMD.ConnectedCare.Sdk
         /// </summary>
         /// <param name="hospitalId"></param>
         /// <returns></returns>
-        public string GetAddress(int hospitalId)
+        public HospitalAddress GetAddress(int hospitalId)
         {
-            var o = MakeCall("hospitaladdress/" + hospitalId);
-            var data = o["data"];
-            return Convert.ToString(data["addressText"]);
+            var o = MakeCall<ApiResponseV2<HospitalAddress>>("v2/hospitaladdress/" + hospitalId);
+            return o.Data.FirstOrDefault();
         }
 
         public HospitalInfo GetHospital()
         {
-            var o = MakeCall<HospitalInfo>("hospital");
-            return o;
+            var o = MakeCall<ApiResponseV2<HospitalInfo>>("v2/hospital");
+            return o.Data.FirstOrDefault();
         }
     }
 }
