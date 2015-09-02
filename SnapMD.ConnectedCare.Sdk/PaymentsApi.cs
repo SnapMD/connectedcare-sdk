@@ -31,11 +31,10 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public int HospitalId { get; private set; }
 
-        public ApiResponse<CustomerPaymentInfo> GetCustomerProfile(int? patientUserId)
+        public ApiResponseV2<CustomerPaymentInfo> GetCustomerProfile(int? patientUserId)
         {
             //API looks so strange 
-            //chrisc: I converted this out of JObject, but needs to be converted to V2 (currently does not exist)
-            var result = MakeCall<ApiResponse<CustomerPaymentInfo>>(string.Format("patients/{0}/payments", patientUserId));
+            var result = MakeCall<ApiResponseV2<CustomerPaymentInfo>>(string.Format("v2/patients/{0}/payments", patientUserId));
             return result;
         }
 
@@ -46,9 +45,9 @@ namespace SnapMD.ConnectedCare.Sdk
             return result;
         }
 
-        public ApiResponse GetPaymentStatus(int consultationId)
+        public ApiResponseV2<bool> GetPaymentStatus(int consultationId)
         {
-            var result = MakeCall<ApiResponse>(string.Format("patients/copay/{0}/paymentstatus", consultationId));
+            var result = MakeCall<ApiResponseV2<bool>>(string.Format("v2/patients/copay/{0}/paymentstatus", consultationId));
             return result;
         }
     }

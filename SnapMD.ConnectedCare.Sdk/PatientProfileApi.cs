@@ -8,6 +8,8 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
+
+using System.Linq;
 using Newtonsoft.Json.Linq;
 using SnapMD.ConnectedCare.ApiModels;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
@@ -22,26 +24,26 @@ namespace SnapMD.ConnectedCare.Sdk
         {
         }
 
-        public JObject AddPatient(object newPatient)
+        public ApiResponseV2<PatientProfileResponse> AddPatient(object newPatient)
         {
             // Todo: Create a request object to pass the data.
-            return Post("patients/profile", newPatient);
+            // Todo: chrisc: the type passed is AddPatientProfileRequest, but it uses other classes that are heavily used in the WebApi 
+            return Post<ApiResponseV2<PatientProfileResponse>>("v2/patients/profile", newPatient);
         }
 
         // todo: short time implementatin. this has to remove eventually: Han
-        // chrisc: updated this with the V2 call from original V1 call
-        public ApiResponseV2<GetPatientsResponse> GetPatientData(int PatientId)
+        public ApiResponseV2<GetPatientsResponse> GetPatientData(int patientId)
         {
-            var url = string.Format("v2/patients/profiles/{0}", PatientId);
+            var url = string.Format("v2/patients/profiles/{0}", patientId);
             var result = MakeCall<ApiResponseV2<GetPatientsResponse>>(url);
             return result;
         }
 
         // todo: short time implementation: only update organization & location for user
-        public string UpdateUserProfile(object data)
+        public bool UpdateUserProfile(object data)
         {
-            var o = Post("patients/updateuserprofile", data);
-            return string.Empty;
+            var o = Post<ApiResponseV2<bool>>("v2/patients/updateuserprofile", data);
+            return o.Data.First();
         }
     }
 }
