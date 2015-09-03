@@ -29,13 +29,19 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             Mock<IWebClient> mockWebClient = TokenandWebClientSetup(out token);
 
             mockWebClient.Setup(x => x.DownloadString(
-                new Uri(BaseUri, @"hospitaladdress/1")))
-                .Returns("{\"$id\": \"1\",\"success\": true,\"data\": {\"$id\": \"2\",\"addressText\": \"1000 wilshire blvd, los angeles, ca 90017\"},\"message\": \"Success\"}");
+                new Uri(BaseUri, @"v2/hospitaladdress/1")))
+                .Returns("{\"$id\": \"1\",\"data\": [{\"$id\": \"2\", \"hospitalId\": \"1\", \"address\": \"1000 wilshire blvd, los angeles, ca 90017\"}]}");
             
             //IWebClient webClient = TokenandWebClientSetupRemoteCall(out url, out token);
 
             var api = new HospitalApi(Settings.Default.BaseUrl, null, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
-            Assert.AreEqual("1000 wilshire blvd, los angeles, ca 90017", api.GetAddress(1));
+
+            var response = api.GetAddress(1);
+            Assert.IsNotNull(response);
+            Assert.IsNotNull(response.Data);
+            Assert.IsNotNull(response.Data.FirstOrDefault());
+            var addressText = response.Data.First().address;
+            Assert.AreEqual("1000 wilshire blvd, los angeles, ca 90017", addressText);
         }
 
         [Test]
@@ -46,7 +52,10 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             HospitalApi api = null;
 
             Mock<IWebClient> mockWebClient = TokenandWebClientSetup(out token);
-            mockWebClient.Setup(x => x.DownloadString(new Uri(BaseUri, @"hospital"))).Returns("{\"hospitalId\":1}");
+            mockWebClient.Setup(x => x.DownloadString(
+                new Uri(BaseUri, @"v2/hospital")))
+                .Returns("{\"$id\": \"1\",\"data\": [{\"$id\": \"2\", \"hospitalId\": \"1\"}]}");
+                
 
             api = new HospitalApi(Settings.Default.BaseUrl, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
 

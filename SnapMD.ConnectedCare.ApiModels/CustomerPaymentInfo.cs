@@ -15,5 +15,9 @@ namespace SnapMD.ConnectedCare.ApiModels
         public string ID { get; set; }
         public string ProfileID { get; set; }
         public IList<string> ShippingAddresses { get; set; }
+
+        public string CardNumber { get; set; }
+        public int ExpiryMonth { get; set; }
+        public int ExpiryYear { get; set; }
     }
 }
