@@ -19,12 +19,16 @@ namespace SnapMD.ConnectedCare.ApiModels
         public string HospitalCode { get; set; }
         public string BrandName { get; set; }
         public string BrandTitle { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
         public int? StateId { get; set; }
         public double? ConsultationCharge { get; set; }
         public string HospitalDomainName { get; set; }
         public string BrandColor { get; set; }
         public string ITDepartmentContactNumber { get; set; }
         public string AppointmentsContactNumber { get; set; }
+        public string Locale { get; set; }
 
         public virtual IEnumerable<HospitalHours> OperatingHours { get; set; }
 
