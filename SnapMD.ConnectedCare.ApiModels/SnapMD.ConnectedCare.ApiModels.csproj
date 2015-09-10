@@ -95,6 +95,7 @@
     <Compile Include="SoapNote.cs" />
     <Compile Include="SurgeryRecord.cs" />
     <Compile Include="UserProfilesResult.cs" />
+    <Compile Include="UserRole.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
