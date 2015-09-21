@@ -83,6 +83,7 @@
     <Compile Include="Models\SerializableUser.cs" />
     <Compile Include="PatientMedicalProfileApi.cs" />
     <Compile Include="PatientProfileApi.cs" />
+    <Compile Include="ScheduleApi.cs" />
     <Compile Include="PaymentsApi.cs" />
     <Compile Include="Reports\SnapReportsApi.cs" />
     <Compile Include="SystemService\SystemServiceApi.cs" />
