@@ -205,6 +205,11 @@ namespace SnapMD.ConnectedCare.Sdk
             return UploadData<T>(apiPath, "POST", data);
         }
 
+        protected virtual T Delete<T>(string apiPath, object data) where T : class
+        {
+            return UploadData<T>(apiPath, "DELETE", data);
+        }
+
         protected T MakeCall<T>(Func<IWebClient, string> executeFunc) where T : class
         {
             // Allow domains we don't have a certificate for
