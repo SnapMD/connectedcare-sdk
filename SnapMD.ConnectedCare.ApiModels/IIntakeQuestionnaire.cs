@@ -21,6 +21,12 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         NewbornRecord InfantData { get; set; }
 
+        PatientRecord PatientRecord { get; set; }
+
+        DoctorRecord DoctorRecord { get; set; }
+        
+        HospitalRecord HospitalRecord { get; set; }
+
         List<CustomCode> MedicalConditions { get; set; }
 
         List<CustomCode> MedicationAllergies { get; set; }
