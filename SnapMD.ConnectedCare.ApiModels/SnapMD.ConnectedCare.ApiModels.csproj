@@ -66,8 +66,11 @@
     <Compile Include="CodeSetResponse.cs" />
     <Compile Include="ConsultationResult.cs" />
     <Compile Include="ConsultationStatusCode.cs" />
-    <Compile Include="CopayPaymentResponse.cs" />
-    <Compile Include="CustomerPaymentInfo.cs" />
+    <Compile Include="Payments\PaymentProfilePostResult.cs" />
+    <Compile Include="Payments\CopayPaymentResponse.cs" />
+    <Compile Include="Payments\PaymentProfile.cs" />
+    <Compile Include="Payments\CimAddress.cs" />
+    <Compile Include="Payments\CimCustomer.cs" />
     <Compile Include="DocumentsResponse.cs" />
     <Compile Include="DocumentTypeCode.cs" />
     <Compile Include="EncounterConcern.cs" />
