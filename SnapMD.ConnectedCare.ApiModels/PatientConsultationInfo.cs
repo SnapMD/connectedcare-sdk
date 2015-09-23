@@ -12,6 +12,7 @@
 #endregion
 
 using System;
+using System.Collections.Generic;
 
 namespace SnapMD.ConnectedCare.ApiModels
 {
@@ -37,14 +38,6 @@ namespace SnapMD.ConnectedCare.ApiModels
             get { return string.Format("{0} {1}", PatientFirstName, PatientLastName).Trim(); }
         }
 
-        public string GuardianFirstName { get; set; }
-
-        public string Guardianame
-        {
-            get { return string.Format("{0} {1}", GuardianFirstName, GuardianLastName); }
-        }
-
-        public string GuardianLastName { get; set; }
         public DateTime? DOB { get; set; }
         public DateTime? CreatedDate { get; set; }
 
@@ -103,5 +96,19 @@ namespace SnapMD.ConnectedCare.ApiModels
         }
 
         public long? ConsultationDuration { get; set; }
+        //Value from PatientProfile.IsDependent property.
+        public bool IsDependent { get; set; }
+
+        //Patient Guardians.
+        public IEnumerable<Guardian> Guardians { get; set; }
+    }
+
+    public class Guardian
+    {
+        public int UserId { get; set; }
+
+        public string Name { get; set; }
+
+        public bool IsAuthorized { get; set; }
     }
 }
