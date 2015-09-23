@@ -19,7 +19,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
     [TestFixture]
     internal class PaymentApiTests : TestBase
     {
-        [Test]
+        [Test, Explicit]
         public void GetCustomer()
         {
             string token;
@@ -39,7 +39,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             //Assert.AreEqual(actual.PaymentProfiles[0].CardNumber.Value, "XXXX1111");
         }
 
-        [Test]
+        [Test, Explicit]
         public void RegisterProfile()
         {
             var paymentData = new
@@ -72,7 +72,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
                 mockWebClient.Object);
             var result = target.RegisterProfile(paymentData);
 
-            Assert.Greater(Convert.ToInt32(result.Data.First().CustomerProfileId), 1);
+            Assert.Greater(Convert.ToInt32(result.Data.First().profileId), 1);
         }
     }
 }
