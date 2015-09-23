@@ -19,6 +19,7 @@ namespace SnapMD.ConnectedCare.ApiModels
     {
         public int ConsultationId { get; set; }
         public int PatientId { get; set; }
+        public string SessionId { get; set; }
         public int ConsultantUserId { get; set; }
         public int AssignedDoctorId { get; set; }
         public string AssignedDoctorFirstName { get; set; }
