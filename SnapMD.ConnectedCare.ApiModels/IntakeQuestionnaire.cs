@@ -32,5 +32,11 @@ namespace SnapMD.ConnectedCare.ApiModels
         [XmlArray("EncounterConcerns")]
         [XmlArrayItem("Concern")]
         public List<EncounterConcern> Concerns { get; set; }
+
+        public PatientRecord PatientRecord { get; set; }
+
+        public DoctorRecord DoctorRecord { get; set; }
+
+        public HospitalRecord HospitalRecord { get; set; }
     }
 }
