@@ -35,7 +35,7 @@ namespace SnapMD.ConnectedCare.Sdk
         public ApiResponseV2<CimCustomer> GetCustomerProfile(int? patientUserId)
         {
             //API looks so strange 
-            var result = MakeCall<ApiResponseV2<CimCustomer>>(string.Format("v2/patients/{0}/payments", patientUserId));
+            var result = MakeCall<ApiResponseV2<CimCustomer>>(string.Format("v2/patients/payments", patientUserId));
             return result;
         }
 
