@@ -51,18 +51,28 @@ namespace SnapMD.ConnectedCare.Sdk
         public bool NotFound { get; private set; }
         public bool ServerError { get; private set; }
 
-        protected virtual T MakeCall<T>(string apiPath)
+        protected virtual T MakeCall<T>(string apiPath) where T : class
         {
             var url = new Uri(_baseUri, apiPath);
             try
             {
                 var data = MakeCall(wc => wc.DownloadString(url));
-                return data.ToObject<T>();
+                if (data != null)
+                {
+                    return data.ToObject<T>();
+                }
             }
             catch (Exception ex)
             {
                 throw new SnapSdkException("Unable to load api at url: " + url, ex);
             }
+
+            if (!NotFound)
+            {
+                throw new SnapSdkException("GET call returned null instead of 404 at url: " + url);
+            }
+
+            return null;
         }
 
         protected virtual JObject MakeCall(string pathFormat, params object[] arguments)
