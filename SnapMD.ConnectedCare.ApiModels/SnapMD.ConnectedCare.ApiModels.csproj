@@ -64,6 +64,9 @@
   <ItemGroup>
     <Compile Include="ClinicianProfilesResult.cs" />
     <Compile Include="CodeSetResponse.cs" />
+    <Compile Include="DoctorRecord.cs" />
+    <Compile Include="HospitalRecord.cs" />
+    <Compile Include="PatientRecord.cs" />
     <Compile Include="ConsultationResult.cs" />
     <Compile Include="ConsultationStatusCode.cs" />
     <Compile Include="Payments\PaymentProfilePostResult.cs" />
