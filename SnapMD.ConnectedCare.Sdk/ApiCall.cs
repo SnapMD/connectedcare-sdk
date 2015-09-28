@@ -8,6 +8,7 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
+
 using System;
 using System.Diagnostics;
 using System.Net;
@@ -27,9 +28,11 @@ namespace SnapMD.ConnectedCare.Sdk
         private readonly string _bearerToken;
         private readonly string _developerId;
 
-        public IWebClient WebClientInstance { get; set; }
-
-        public ApiCall(string baseUrl, IWebClient client, string bearerToken = null, string developerId = null, string apiKey = null)
+        public ApiCall(string baseUrl,
+            IWebClient client,
+            string bearerToken = null,
+            string developerId = null,
+            string apiKey = null)
         {
             _baseUri = new Uri(baseUrl);
             _bearerToken = bearerToken;
@@ -47,9 +50,15 @@ namespace SnapMD.ConnectedCare.Sdk
             WebClientInstance = client;
         }
 
-        public bool RequiresAuthentication { get; set; }
         public bool NotFound { get; private set; }
+
+        public bool RequiresAuthentication { get; set; }
+
         public bool ServerError { get; private set; }
+
+        public bool Unauthorized { get; private set; }
+
+        public IWebClient WebClientInstance { get; set; }
 
         protected virtual T MakeCall<T>(string apiPath) where T : class
         {
@@ -65,11 +74,6 @@ namespace SnapMD.ConnectedCare.Sdk
             catch (Exception ex)
             {
                 throw new SnapSdkException("Unable to load api at url: " + url, ex);
-            }
-
-            if (!NotFound)
-            {
-                throw new SnapSdkException("GET call returned null instead of 404 at url: " + url);
             }
 
             return null;
@@ -121,7 +125,7 @@ namespace SnapMD.ConnectedCare.Sdk
             }
         }
 
-        private void Parse404(WebException wex)
+        private void ParseWebException(WebException wex)
         {
             var response = wex.Response as HttpWebResponse;
             if (response == null)
@@ -129,17 +133,32 @@ namespace SnapMD.ConnectedCare.Sdk
                 throw new Exception("No response from the API.", wex);
             }
 
-            if (response.StatusCode == HttpStatusCode.NotFound)
+            switch (response.StatusCode)
             {
-                Debug.WriteLine("Four, oh Four...");
-                NotFound = true;
-            }
+                case HttpStatusCode.NotFound:
+                {
+                    Debug.WriteLine("Four, oh Four...");
+                    NotFound = true;
+                    break;
+                }
 
-            if (response.StatusCode == HttpStatusCode.InternalServerError)
-            {
-                Debug.WriteLine("Piper down!");
-                ServerError = true;
-                throw new SnapSdkException("There was an error on the API service.", wex);
+                case HttpStatusCode.Unauthorized:
+                {
+                    Debug.WriteLine("Unauthorized");
+                    Unauthorized = true;
+                    break;
+                }
+
+                case HttpStatusCode.InternalServerError:
+                {
+                    Debug.WriteLine("Piper down!");
+                    ServerError = true;
+                    throw new SnapSdkException("There was an error on the API service.", wex);
+                }
+                default:
+                {
+                    throw new SnapSdkException("Unhandled exception when making API call", wex);
+                }
             }
         }
 
@@ -161,7 +180,7 @@ namespace SnapMD.ConnectedCare.Sdk
             }
             catch (WebException wex)
             {
-                Parse404(wex);
+                ParseWebException(wex);
             }
 
             return null;
@@ -227,6 +246,7 @@ namespace SnapMD.ConnectedCare.Sdk
             SetHeaders(WebClientInstance);
             return MakeCall<T>(WebClientInstance, executeFunc);
         }
+
         private T UploadData<T>(string apiPath, string method, object data) where T : class
         {
             var url = new Uri(_baseUri, apiPath);
@@ -271,12 +291,12 @@ namespace SnapMD.ConnectedCare.Sdk
             }
             catch (WebException wex)
             {
-                Parse404(wex);
+                ParseWebException(wex);
             }
 
             return null;
         }
-        #endregion
 
+        #endregion
     }
 }
