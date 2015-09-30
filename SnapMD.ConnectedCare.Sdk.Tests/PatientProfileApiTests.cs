@@ -10,6 +10,7 @@
 //    limitations under the License.
 
 using System;
+using System.Linq;
 using FizzWare.NBuilder.Implementation;
 using NUnit.Framework;
 using SnapMD.ConnectedCare.Sdk.Tests.Properties;
@@ -36,14 +37,17 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
                 PatientMedicalHistoryData = new { Height = 2, Weight = 1 }
             };
 
-            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, "patients/profile"), "POST",
+            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, "v2/patients/profile"), "POST",
                 Newtonsoft.Json.JsonConvert.SerializeObject(mock)))
-                .Returns("{ \"$id\": \"1\",\"patientID\": \"1429\",\"securityToken\": \"\" }");
+                .Returns("{\"$id\": \"1\",\"data\": [{\"$id\": \"2\", \"patientId\": \"1429\", \"securityToken\":\"\"}]}");
 
             var sdk = new PatientProfileApi(Settings.Default.BaseUrl, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
                 mockWebClient.Object);
             var result = sdk.AddPatient(mock);
             Assert.IsNotNull(result);
+            Assert.IsNotNull(result.Data);
+            Assert.IsNotNull(result.Data.FirstOrDefault());
+            Assert.IsTrue(result.Data.First().PatientId > 0);
         }
     }
 }

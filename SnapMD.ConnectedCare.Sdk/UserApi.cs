@@ -26,6 +26,10 @@ namespace SnapMD.ConnectedCare.Sdk
         {
             var response = MakeCall("v2/account/user");
 
+            if (response == null)
+            {
+                return null;
+            }
 
             var dataEnumerator = response.ToObject<ApiResponseV2<SerializableUser>>();
             if (dataEnumerator.Data != null)

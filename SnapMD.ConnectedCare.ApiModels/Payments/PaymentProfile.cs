@@ -11,28 +11,22 @@
 //    limitations under the License.
 #endregion
 
-using System.Collections.Generic;
-
-namespace SnapMD.ConnectedCare.ApiModels
+namespace SnapMD.ConnectedCare.ApiModels.Payments 
 {
-    public interface IIntakeQuestionnaire : IMedicalHistoryProfile
-    {
-        List<EncounterConcern> Concerns { get; set; }
 
-        NewbornRecord InfantData { get; set; }
+    /// 
+    /// <summary>
+    /// These models are for deserializing the responses from the Authorize.net API.
+    /// </summary>
+    public class PaymentProfile {
 
-        PatientRecord PatientRecord { get; set; }
-
-        DoctorRecord DoctorRecord { get; set; }
-        
-        HospitalRecord HospitalRecord { get; set; }
-
-        List<CustomCode> MedicalConditions { get; set; }
-
-        List<CustomCode> MedicationAllergies { get; set; }
-
-        List<CustomCode> Medications { get; set; }
-
-        List<SurgeryRecord> Surgeries { get; set; }
+        public CimAddress BillingAddress { get; set; }
+        public string ProfileID { get; set; }
+        public bool IsBusiness { get; set; }
+        public string CardNumber { get; set; }
+        public string CardType { get; set; }
+        public string CardExpiration { get; set; }
+        public string CardCode { get; set; }
     }
+
 }

@@ -1,4 +1,5 @@
-﻿//    Copyright 2015 SnapMD, Inc.
+﻿#region Copyright
+//    Copyright 2015 SnapMD, Inc.
 //    Licensed under the Apache License, Version 2.0 (the "License");
 //    you may not use this file except in compliance with the License.
 //    You may obtain a copy of the License at
@@ -8,16 +9,18 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-namespace SnapMD.ConnectedCare.Sdk.Models
+#endregion
+namespace SnapMD.ConnectedCare.ApiModels.Payments
 {
-    public enum ConsultationEvents
+
+    /// <summary>
+    /// The response returned when a call to MakePayment is made
+    /// </summary>
+    public struct CopayPaymentResponse
     {
-        ReviewConsultation = 116,
-        StartedConsultation = 117,
-        StoppedConsultation = 118,
-        EndedConsultation = 119,
-        WaitingConsultation = 120,
-        JoinConsultation = 121
+        /// <summary>
+        /// The confirmation # of the payment
+        /// </summary>
+        public string ConfirmationNumber { get; set; }
     }
-    
 }

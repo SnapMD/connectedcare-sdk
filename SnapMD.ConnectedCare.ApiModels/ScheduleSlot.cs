@@ -10,17 +10,19 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
+
+using System;
+
 namespace SnapMD.ConnectedCare.ApiModels
 {
-
-    /// <summary>
-    /// The response returned when a call to MakePayment is made
-    /// </summary>
-    public struct CopayPaymentResponse
+    public class ScheduleSlot
     {
-        /// <summary>
-        /// The confirmation # of the payment
-        /// </summary>
-        public string ConfirmationNumber { get; set; }
+        public int ScheduleSlotId { get; set; }
+        public int HospitalId { get; set; }
+        public int DocUserId { get; set; }
+        public DateTime SlotDate { get; set; }
+        public DateTime? SlotStartTime { get; set; }
+        public DateTime? SlotEndTime { get; set; }
+        public string SlotStatus { get; set; }
     }
 }

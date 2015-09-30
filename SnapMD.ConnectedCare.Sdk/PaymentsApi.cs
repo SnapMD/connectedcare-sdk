@@ -9,6 +9,8 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 using Newtonsoft.Json.Linq;
+using SnapMD.ConnectedCare.ApiModels;
+using SnapMD.ConnectedCare.ApiModels.Payments;
 using SnapMD.ConnectedCare.Sdk.Models;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
 
@@ -30,23 +32,23 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public int HospitalId { get; private set; }
 
-        public JObject GetCustomerProfile(int? patientUserId)
+        public ApiResponseV2<CimCustomer> GetCustomerProfile(int? patientUserId)
         {
             //API looks so strange 
-            var result = MakeCall(string.Format("patients/{0}/payments", patientUserId));
+            var result = MakeCall<ApiResponseV2<CimCustomer>>(string.Format("v2/patients/payments", patientUserId));
             return result;
         }
 
-        public JObject RegisterProfile(object paymentData)
+        public ApiResponseV2<PaymentProfilePostResult> RegisterProfile(object paymentData)
         {
             //hospital/{hospitalId}/payments/{userId}
-            var result = Post(string.Format("patients/payments"), paymentData);
+            var result = Post<ApiResponseV2<PaymentProfilePostResult>>(string.Format("v2/patients/payments"), paymentData);
             return result;
         }
 
-        public ApiResponse GetPaymentStatus(int consultationId)
+        public ApiResponseV2<bool> GetPaymentStatus(int consultationId)
         {
-            var result = MakeCall<ApiResponse>(string.Format("patients/copay/{0}/paymentstatus", consultationId));
+            var result = MakeCall<ApiResponseV2<bool>>(string.Format("v2/patients/copay/{0}/paymentstatus", consultationId));
             return result;
         }
     }
