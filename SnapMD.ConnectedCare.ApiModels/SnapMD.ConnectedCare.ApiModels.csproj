@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="ClinicianProfilesResult.cs" />
     <Compile Include="CodeSetResponse.cs" />
+    <Compile Include="ConsultationEvents.cs" />
     <Compile Include="DoctorRecord.cs" />
     <Compile Include="HospitalRecord.cs" />
     <Compile Include="PatientRecord.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="DocumentTypeCode.cs" />
     <Compile Include="EncounterConcern.cs" />
     <Compile Include="CustomCode.cs" />
+    <Compile Include="Sms\EncounterSms.cs" />
     <Compile Include="FamilyMember.cs" />
     <Compile Include="GetPatientsResponse.cs" />
     <Compile Include="HospitalInfo.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="ScheduleSlot.cs" />
     <Compile Include="SerializableToken.cs" />
     <Compile Include="SerializableUser.cs" />
+    <Compile Include="Sms\SmsStatus.cs" />
     <Compile Include="SoapNote.cs" />
     <Compile Include="SurgeryRecord.cs" />
     <Compile Include="UserProfilesResult.cs" />
