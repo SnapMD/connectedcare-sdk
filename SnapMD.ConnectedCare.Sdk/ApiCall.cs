@@ -35,7 +35,15 @@ namespace SnapMD.ConnectedCare.Sdk
             string apiKey = null)
         {
             _baseUri = new Uri(baseUrl);
+
+            if (bearerToken == string.Empty)
+            {
+                // Prevent users from bypassing null checks by setting empty strings instead.
+                throw new ArgumentException("Invalid value supplied for bearer token.", "bearerToken");
+            }
+
             _bearerToken = bearerToken;
+
             _developerId = developerId;
             _apiKey = apiKey;
             RequiresAuthentication = true;
@@ -108,7 +116,7 @@ namespace SnapMD.ConnectedCare.Sdk
 
         private void SetHeaders(IWebClient wc)
         {
-            if (RequiresAuthentication || _bearerToken != null)
+            if (RequiresAuthentication || !string.IsNullOrEmpty(_bearerToken))
             {
                 AddHeader(wc, "Authorization", "Bearer " + _bearerToken);
             }
