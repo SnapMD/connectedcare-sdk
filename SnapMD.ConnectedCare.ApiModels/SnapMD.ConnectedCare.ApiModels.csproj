@@ -66,6 +66,7 @@
     <Compile Include="CodeSetResponse.cs" />
     <Compile Include="ConsultationEvents.cs" />
     <Compile Include="DoctorRecord.cs" />
+    <Compile Include="HospitalOAuthSettings.cs" />
     <Compile Include="HospitalRecord.cs" />
     <Compile Include="PatientRecord.cs" />
     <Compile Include="ConsultationResult.cs" />
