@@ -9,6 +9,7 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
+using System.Linq;
 using SnapMD.ConnectedCare.Sdk.Models;
 using Newtonsoft.Json.Linq;
 
@@ -16,13 +17,13 @@ namespace SnapMD.ConnectedCare.Sdk
 {
     public class TokenApi : ApiCall
     {
-        public TokenApi(string baseUrl, int hospitalId, string developerId, string apiKey, Interfaces.IWebClient webClient)
+        public TokenApi(string baseUrl, int? hospitalId, string developerId, string apiKey, Interfaces.IWebClient webClient)
             : base(baseUrl, webClient, developerId: developerId, apiKey: apiKey)
         {
             HospitalId = hospitalId;
         }
 
-        public int HospitalId { get; private set; }
+        public int? HospitalId { get; private set; }
 
         public string GetToken(string email, string secret)
         {
@@ -44,6 +45,18 @@ namespace SnapMD.ConnectedCare.Sdk
                 {
                     return entry.access_token;
                 }
+            }
+
+            return null;
+        }
+
+        public string GetToken(string jwt)
+        {
+            var response = MakeCall<ApiResponseV2<SerializableToken>>("v2/account/token?jwt=" + jwt);
+
+            if (response.Data != null)
+            {
+                return response.Data.Select(entry => entry.access_token).FirstOrDefault();
             }
 
             return null;
