@@ -35,5 +35,12 @@ namespace SnapMD.ConnectedCare.ApiModels
         public virtual IEnumerable<HospitalHours> OperatingHours { get; set; }
 
         public List<string> EnabledModules { get; set; }
+
+        /// <summary>
+        /// Allowed values: No/Optional/Manditory ... todo: Create enum
+        /// </summary>
+        public string CustomerSso { get; set; }
+
+        public string CustomerSsoLinkText { get; set; }
     }
 }
