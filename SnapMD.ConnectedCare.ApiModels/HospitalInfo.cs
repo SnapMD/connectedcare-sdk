@@ -29,6 +29,8 @@ namespace SnapMD.ConnectedCare.ApiModels
         public string ITDepartmentContactNumber { get; set; }
         public string AppointmentsContactNumber { get; set; }
         public string Locale { get; set; }
+        public string PatientLogin { get; set; }
+        public string PatientConsultEndUrl { get; set; }
 
         public virtual IEnumerable<HospitalHours> OperatingHours { get; set; }
 

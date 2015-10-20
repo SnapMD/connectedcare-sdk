@@ -39,5 +39,9 @@ namespace SnapMD.ConnectedCare.ApiModels
         public ResponseObservableItem ResponsibleUser { get; set; }
 
         public DateTime? Time { get; set; }
+
+        public double? CopayAmount { get; set; }
+
+        public double? ConsultationAmount { get; set; }
     }
 }
