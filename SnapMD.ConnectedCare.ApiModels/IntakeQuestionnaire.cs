@@ -27,6 +27,7 @@ namespace SnapMD.ConnectedCare.ApiModels
             Medications = new List<CustomCode>();
             InfantData = new NewbornRecord();
             Concerns = new List<EncounterConcern>();
+            GuardiansRecords = new List<GuardianRecord>();
         }
 
         [XmlArray("EncounterConcerns")]
@@ -38,5 +39,7 @@ namespace SnapMD.ConnectedCare.ApiModels
         public DoctorRecord DoctorRecord { get; set; }
 
         public HospitalRecord HospitalRecord { get; set; }
+
+        public List<GuardianRecord> GuardiansRecords { get; set; }
     }
 }
