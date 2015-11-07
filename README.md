@@ -2,7 +2,7 @@
 
 An open-source .NET client wrapper for the SnapMD Connected Care REST API.
 
-General documentation for the REST API can be found at [https://sandbox.connectedcare.md/api/Help/](https://sandbox.connectedcare.md/api/Help/).
+General documentation for the REST API can be found at [https://sandbox.connectedcare.md/api/Help/](https://sandbox.connectedcare.md/api/Help/). Additional API documentation is available in [our GitHub wiki](https://github.com/SnapMD/connectedcare-sdk/wiki).
 
 ## Dependencies
 
