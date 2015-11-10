@@ -49,9 +49,9 @@ namespace SnapMD.ConnectedCare.Sdk
             return o;
         }
 
-        public void UpdateAddress(HospitalAddress address)
+        public HospitalAddress UpdateAddress(HospitalAddress address)
         {
-            Post("hospitaladdress", address);
+            return Put<HospitalAddress>("hospitaladdress", address);
         }
     }
 }
