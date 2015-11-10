@@ -8,9 +8,7 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-using System;
-using System.Linq;
-using Newtonsoft.Json.Linq;
+
 using SnapMD.ConnectedCare.ApiModels;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
 using SnapMD.ConnectedCare.Sdk.Models;
@@ -49,6 +47,11 @@ namespace SnapMD.ConnectedCare.Sdk
         {
             var o = MakeCall<ApiResponseV2<HospitalInfo>>("v2/hospital");
             return o;
+        }
+
+        public void UpdateAddress(HospitalAddress address)
+        {
+            Post("hospitaladdress", address);
         }
     }
 }
