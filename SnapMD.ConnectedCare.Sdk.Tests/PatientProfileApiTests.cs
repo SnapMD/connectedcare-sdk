@@ -37,13 +37,13 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
                 PatientMedicalHistoryData = new { Height = 2, Weight = 1 }
             };
 
-            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, "v2/patients/profile"), "POST",
+            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, "v2/familygroups/dependents"), "POST",
                 Newtonsoft.Json.JsonConvert.SerializeObject(mock)))
                 .Returns("{\"$id\": \"1\",\"data\": [{\"$id\": \"2\", \"patientId\": \"1429\", \"securityToken\":\"\"}]}");
 
             var sdk = new PatientProfileApi(Settings.Default.BaseUrl, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
                 mockWebClient.Object);
-            var result = sdk.AddPatient(mock);
+            var result = sdk.AddDependent(mock);
             Assert.IsNotNull(result);
             Assert.IsNotNull(result.Data);
             Assert.IsNotNull(result.Data.FirstOrDefault());
