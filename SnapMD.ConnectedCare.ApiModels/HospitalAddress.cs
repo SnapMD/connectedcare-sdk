@@ -16,7 +16,7 @@ namespace SnapMD.ConnectedCare.ApiModels
     [Serializable]
     public class HospitalAddress
     {
-        public int hospitalId { get; set; }
-        public string address { get; set; }
+        public int HospitalId { get; set; }
+        public string Address { get; set; }
     }
 }

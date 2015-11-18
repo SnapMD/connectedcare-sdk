@@ -81,6 +81,7 @@
     <Compile Include="DocumentTypeCode.cs" />
     <Compile Include="EncounterConcern.cs" />
     <Compile Include="CustomCode.cs" />
+    <Compile Include="ScheduledConsultationResult.cs" />
     <Compile Include="Sms\EncounterSms.cs" />
     <Compile Include="FamilyMember.cs" />
     <Compile Include="GetPatientsResponse.cs" />
