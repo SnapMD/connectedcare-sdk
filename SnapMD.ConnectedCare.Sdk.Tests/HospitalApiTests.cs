@@ -40,7 +40,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             Assert.IsNotNull(response);
             Assert.IsNotNull(response.Data);
             Assert.IsNotNull(response.Data.FirstOrDefault());
-            var addressText = response.Data.First().address;
+            var addressText = response.Data.First().Address;
             Assert.AreEqual("1000 wilshire blvd, los angeles, ca 90017", addressText);
         }
 
