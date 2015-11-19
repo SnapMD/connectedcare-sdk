@@ -42,9 +42,9 @@ namespace SnapMD.ConnectedCare.Sdk
             return result;
         }
 
-        public ApiResponseV2<ScheduledConsultationResult> GetScheduledConsultations()
+        public ApiResponseV2<UpcomingConsultationResult> GetScheduledConsultations()
         {
-            return MakeCall<ApiResponseV2<ScheduledConsultationResult>>("v2/patients/scheduledconsultations");
+            return MakeCall<ApiResponseV2<UpcomingConsultationResult>>("v2/patients/scheduledconsultations");
         }
     }
 }
