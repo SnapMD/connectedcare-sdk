@@ -24,11 +24,11 @@ namespace SnapMD.ConnectedCare.Sdk
         {
         }
 
-        public ApiResponseV2<PatientProfileResponse> AddPatient(object newPatient)
+        public ApiResponseV2<PatientProfileResponse> AddDependent(object newPatient)
         {
             // Todo: Create a request object to pass the data.
             // Todo: chrisc: the type passed is AddPatientProfileRequest, but it uses other classes that are heavily used in the WebApi 
-            return Post<ApiResponseV2<PatientProfileResponse>>("v2/patients/profile", newPatient);
+            return Post<ApiResponseV2<PatientProfileResponse>>("v2/familygroups/dependents", newPatient);
         }
 
         // todo: short time implementatin. this has to remove eventually: Han
