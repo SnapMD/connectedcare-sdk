@@ -10,13 +10,28 @@
 //    limitations under the License.
 
 using SnapMD.ConnectedCare.ApiModels;
+using SnapMD.ConnectedCare.Sdk.Interfaces;
 using SnapMD.ConnectedCare.Sdk.Wrappers;
 
 namespace SnapMD.ConnectedCare.Sdk
 {
     public class EncounterAdminApi : ApiCall
     {
-        public EncounterAdminApi(string baseUrl, string bearerToken, string developerId, string apiKey)
+        public EncounterAdminApi(
+            string baseUrl,
+            string bearerToken,
+            string developerId,
+            string apiKey,
+            IWebClient webClient)
+            : base(baseUrl, webClient, bearerToken, developerId, apiKey)
+        {
+        }
+
+        public EncounterAdminApi(
+            string baseUrl, 
+            string bearerToken, 
+            string developerId, 
+            string apiKey)
             : base(baseUrl, new WebClientWrapper(), bearerToken, developerId, apiKey)
         {
         }

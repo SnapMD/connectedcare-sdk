@@ -12,7 +12,9 @@
 using System;
 using System.Linq;
 using FizzWare.NBuilder.Implementation;
+using Moq;
 using NUnit.Framework;
+using SnapMD.ConnectedCare.Sdk.Interfaces;
 using SnapMD.ConnectedCare.Sdk.Tests.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Tests

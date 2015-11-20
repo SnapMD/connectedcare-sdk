@@ -20,6 +20,16 @@ namespace SnapMD.ConnectedCare.Sdk
     public class PatientAdminApi : ApiCall
     {
         public PatientAdminApi(
+            string baseUrl,
+            string bearerToken,
+            string developerId,
+            string apiKey,
+            IWebClient webClient)
+            : base(baseUrl, webClient, bearerToken, developerId, apiKey)
+        {
+        }
+
+        public PatientAdminApi(
             string baseUrl, 
             string bearerToken, 
             string developerId, 
