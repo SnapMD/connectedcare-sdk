@@ -68,13 +68,15 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public bool HasRequiredFields
         {
+            //address isn't required for dependents
+            // taking this out: !string.IsNullOrWhiteSpace(Address)
             get
             {
                 if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
                     Dob.HasValue && !string.IsNullOrWhiteSpace(Gender) &&
                     Enthicity.HasValue && !string.IsNullOrWhiteSpace(Height) &&
                     !string.IsNullOrWhiteSpace(Weight) &&
-                    !string.IsNullOrWhiteSpace(MobilePhone) && !string.IsNullOrWhiteSpace(Address) &&
+                    !string.IsNullOrWhiteSpace(MobilePhone) && 
                     !string.IsNullOrWhiteSpace(TimeZone))
                 {
                     return true;
