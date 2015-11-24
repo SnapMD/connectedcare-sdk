@@ -2,7 +2,7 @@
 
 An open-source .NET client wrapper for the SnapMD Connected Care REST API.
 
-General documentation for the REST API can be found at [https://sandbox.connectedcare.md/api/Help/](https://sandbox.connectedcare.md/api/Help/).
+General documentation for the REST API can be found at [https://sandbox.connectedcare.md/api/Help/](https://sandbox.connectedcare.md/api/Help/). Additional API documentation is available in [our GitHub wiki](https://github.com/SnapMD/connectedcare-sdk/wiki).
 
 ## Dependencies
 
@@ -10,7 +10,7 @@ This project uses [Json.NET](https://github.com/JamesNK/Newtonsoft.Json) for ser
 
 ## Configuration
 
-Unit tests require a separate config file stored next to the App.config, called `SnapMD.ConnectedCare.Sdk.Test.Properties.Settings.csproj`. This file is not in the `.gitignore` file because this creates compilation errors for new downloads or CI servers. The file should look like this:
+Unit tests require a separate config file stored next to the App.config, called `SnapMD.ConnectedCare.Sdk.Test.Properties.Settings.csproj`. This file is not in the `.gitignore` file because if it's not in the repository it can result in compilation errors for brand-new installations. The file should look like this:
 
     <?xml version="1.0"?>
     <SnapMD.ConnectedCare.Sdk.Tests.Properties.Settings>
