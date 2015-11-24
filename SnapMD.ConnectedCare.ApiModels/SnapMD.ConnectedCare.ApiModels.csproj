@@ -72,6 +72,8 @@
     <Compile Include="PatientRecord.cs" />
     <Compile Include="ConsultationResult.cs" />
     <Compile Include="ConsultationStatusCode.cs" />
+    <Compile Include="PatientOnBoardShortDetail.cs" />
+    <Compile Include="PatientShortInfo.cs" />
     <Compile Include="Payments\PaymentProfilePostResult.cs" />
     <Compile Include="Payments\CopayPaymentResponse.cs" />
     <Compile Include="Payments\PaymentProfile.cs" />
@@ -81,6 +83,7 @@
     <Compile Include="DocumentTypeCode.cs" />
     <Compile Include="EncounterConcern.cs" />
     <Compile Include="CustomCode.cs" />
+    <Compile Include="ScheduleConsultationByUsername.cs" />
     <Compile Include="ScheduledConsultationResult.cs" />
     <Compile Include="Sms\EncounterSms.cs" />
     <Compile Include="FamilyMember.cs" />
@@ -107,6 +110,7 @@
     <Compile Include="Sms\SmsStatus.cs" />
     <Compile Include="SoapNote.cs" />
     <Compile Include="SurgeryRecord.cs" />
+    <Compile Include="UpcomingConsultationResult.cs" />
     <Compile Include="UserProfilesResult.cs" />
     <Compile Include="UserRole.cs" />
   </ItemGroup>
