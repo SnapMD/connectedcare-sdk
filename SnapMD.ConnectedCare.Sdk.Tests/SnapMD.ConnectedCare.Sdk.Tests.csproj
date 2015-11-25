@@ -79,7 +79,10 @@
   </Choose>
   <ItemGroup>
     <Compile Include="DocumentApiTests.cs" />
+    <Compile Include="EncounterAdminApiTests.cs" />
+    <Compile Include="EncounterApiTests.cs" />
     <Compile Include="HospitalApiTests.cs" />
+    <Compile Include="PatientAdminApiTests.cs" />
     <Compile Include="PatientProfileApiTests.cs" />
     <Compile Include="PaymentApiTests.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

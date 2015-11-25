@@ -17,9 +17,9 @@ using SnapMD.ConnectedCare.Sdk.Wrappers;
 
 namespace SnapMD.ConnectedCare.Sdk
 {
-    public class EncountersApi : ApiCall
+    public class PatientAdminApi : ApiCall
     {
-        public EncountersApi(
+        public PatientAdminApi(
             string baseUrl,
             string bearerToken,
             string developerId,
@@ -29,7 +29,7 @@ namespace SnapMD.ConnectedCare.Sdk
         {
         }
 
-        public EncountersApi(
+        public PatientAdminApi(
             string baseUrl,
             string bearerToken,
             string developerId,
@@ -38,28 +38,20 @@ namespace SnapMD.ConnectedCare.Sdk
         {
         }
 
-        public void UpdateIntakeQuestionnaire(int consultationId, object intakeData)
+        public ApiResponse<PatientOnBoardShortDetail> GetPatient(string email)
         {
-            var url = string.Format("v2/patients/consultations/{0}/intake", consultationId);
-            var result = Put(url, intakeData);
+            var url = string.Format("v2/admin/patients?email={0}", email);
+            return MakeCall<ApiResponse<PatientOnBoardShortDetail>>(url);
         }
 
-        /// <summary>
-        /// Gets a list of running consultations for the user whether the user is a clinician or a patient.
-        /// There should be 0 or 1 results, but if there are more, this information can be used for
-        /// debugging.
-        /// </summary>
-        /// <returns></returns>
-        public ApiResponseV2<PatientConsultationInfo> GetUsersActiveConsultations()
+        public void AddPatient(PatientOnBoardShortDetail patient)
         {
-            const string url = "v2/consultations/running";
-            var result = MakeCall<ApiResponseV2<PatientConsultationInfo>>(url);
-            return result;
+            Post("v2/admin/patients", patient);
         }
 
-        public ApiResponseV2<UpcomingConsultationResult> GetScheduledConsultations()
+        public void DeletePatient(int patientId)
         {
-            return MakeCall<ApiResponseV2<UpcomingConsultationResult>>("v2/patients/scheduledconsultations");
+            Delete<PatientOnBoardShortDetail>(string.Format("v2/admin/patients/{0}", patientId), null);
         }
     }
 }
