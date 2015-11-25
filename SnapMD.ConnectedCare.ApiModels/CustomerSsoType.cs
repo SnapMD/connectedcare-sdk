@@ -13,7 +13,7 @@ namespace SnapMD.ConnectedCare.ApiModels
 {
     public enum CustomerSsoType
     {
-        No,
+        None,
         Optional,
         Mandatory
     }
