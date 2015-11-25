@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace SnapMD.ConnectedCare.ApiModels
 {
@@ -36,6 +38,7 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public List<string> EnabledModules { get; set; }
 
+        [JsonConverter(typeof(StringEnumConverter))]
         public CustomerSsoType CustomerSso { get; set; }
         public string CustomerSsoLinkText { get; set; }
     }
