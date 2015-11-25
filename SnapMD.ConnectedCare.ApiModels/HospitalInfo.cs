@@ -36,11 +36,7 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public List<string> EnabledModules { get; set; }
 
-        /// <summary>
-        /// Allowed values: No/Optional/Mandatory ... todo: Create enum
-        /// </summary>
-        public string CustomerSso { get; set; }
-
+        public CustomerSsoType CustomerSso { get; set; }
         public string CustomerSsoLinkText { get; set; }
     }
 }
