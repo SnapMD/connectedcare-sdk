@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace SnapMD.ConnectedCare.ApiModels
 {
@@ -36,11 +34,8 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public List<string> EnabledModules { get; set; }
 
-        /// <summary>
-        /// Allowed values: No/Optional/Mandatory ... todo: Create enum
-        /// </summary>
-        public string CustomerSso { get; set; }
-
+        [JsonConverter(typeof(StringEnumConverter))]
+        public CustomerSsoType CustomerSso { get; set; }
         public string CustomerSsoLinkText { get; set; }
     }
 }
