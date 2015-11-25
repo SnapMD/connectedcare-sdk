@@ -72,9 +72,7 @@ namespace SnapMD.ConnectedCare.ApiModels
             {
                 if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
                     Dob.HasValue && !string.IsNullOrWhiteSpace(Gender) &&
-                    Enthicity.HasValue && !string.IsNullOrWhiteSpace(Height) &&
-                    !string.IsNullOrWhiteSpace(Weight) &&
-                    !string.IsNullOrWhiteSpace(MobilePhone) && !string.IsNullOrWhiteSpace(Address) &&
+                    !string.IsNullOrWhiteSpace(MobilePhone) && 
                     !string.IsNullOrWhiteSpace(TimeZone))
                 {
                     return true;
