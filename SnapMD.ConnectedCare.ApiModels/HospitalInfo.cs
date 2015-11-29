@@ -33,6 +33,7 @@ namespace SnapMD.ConnectedCare.ApiModels
         public virtual IEnumerable<HospitalHours> OperatingHours { get; set; }
 
         public List<string> EnabledModules { get; set; }
+        public IDictionary<string, string> Settings { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]
         public CustomerSsoType CustomerSso { get; set; }
