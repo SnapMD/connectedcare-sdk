@@ -74,8 +74,6 @@
     <Compile Include="PatientRecord.cs" />
     <Compile Include="ConsultationResult.cs" />
     <Compile Include="ConsultationStatusCode.cs" />
-    <Compile Include="PatientOnBoardShortDetail.cs" />
-    <Compile Include="PatientShortInfo.cs" />
     <Compile Include="Payments\PaymentProfilePostResult.cs" />
     <Compile Include="Payments\CopayPaymentResponse.cs" />
     <Compile Include="Payments\PaymentProfile.cs" />

@@ -65,7 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiCall.cs" />
-    <Compile Include="EncounterAdminApi.cs" />
     <Compile Include="EncountersApi.cs" />
     <Compile Include="DocumentsApi.cs" />
     <Compile Include="IntakeApi.cs" />
@@ -81,7 +80,6 @@
     <Compile Include="Models\OnDemandResponse.cs" />
     <Compile Include="Models\SerializableToken.cs" />
     <Compile Include="Models\SerializableUser.cs" />
-    <Compile Include="PatientAdminApi.cs" />
     <Compile Include="PatientMedicalProfileApi.cs" />
     <Compile Include="PatientProfileApi.cs" />
     <Compile Include="ScheduleApi.cs" />

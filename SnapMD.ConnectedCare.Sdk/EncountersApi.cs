@@ -11,7 +11,6 @@
 
 using System.Net;
 using SnapMD.ConnectedCare.ApiModels;
-using SnapMD.ConnectedCare.Sdk.Interfaces;
 using SnapMD.ConnectedCare.Sdk.Models;
 using SnapMD.ConnectedCare.Sdk.Wrappers;
 
@@ -19,22 +18,8 @@ namespace SnapMD.ConnectedCare.Sdk
 {
     public class EncountersApi : ApiCall
     {
-        public EncountersApi(
-            string baseUrl,
-            string bearerToken,
-            string developerId,
-            string apiKey,
-            IWebClient webClient)
-            : base(baseUrl, webClient, bearerToken, developerId, apiKey)
-        {
-        }
-
-        public EncountersApi(
-            string baseUrl,
-            string bearerToken,
-            string developerId,
-            string apiKey)
-            : base(baseUrl, new WebClientWrapper(), bearerToken, developerId, apiKey)
+        public EncountersApi(string baseUrl, string bearerToken, string developerId, string apiKey)
+            : base(baseUrl, new WebClientWrapper(new WebClient()), bearerToken, developerId, apiKey)
         {
         }
 
@@ -55,11 +40,6 @@ namespace SnapMD.ConnectedCare.Sdk
             const string url = "v2/consultations/running";
             var result = MakeCall<ApiResponseV2<PatientConsultationInfo>>(url);
             return result;
-        }
-
-        public ApiResponseV2<UpcomingConsultationResult> GetScheduledConsultations()
-        {
-            return MakeCall<ApiResponseV2<UpcomingConsultationResult>>("v2/patients/scheduledconsultations");
         }
     }
 }
