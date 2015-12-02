@@ -25,5 +25,8 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public bool IsAuthorized { get; set; }
         public bool IsActive { get; set; }
+
+        public bool? IsPending { get; set; }
+        public string Email { get; set; }
     }
 }
