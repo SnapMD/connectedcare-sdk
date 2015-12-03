@@ -71,6 +71,7 @@
     <Compile Include="Function.cs" />
     <Compile Include="HospitalRecord.cs" />
     <Compile Include="GuardianRecord.cs" />
+    <Compile Include="PatientAccountStatus.cs" />
     <Compile Include="PatientRecord.cs" />
     <Compile Include="ConsultationResult.cs" />
     <Compile Include="ConsultationStatusCode.cs" />
