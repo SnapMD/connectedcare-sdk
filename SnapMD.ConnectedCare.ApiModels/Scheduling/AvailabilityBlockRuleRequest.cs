@@ -2,10 +2,10 @@
 
 namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 {
-    public class AvailabilityBlockRuleResponse : AvailabilityBlockRuleRequest
+    public class AvailabilityBlockRuleRequest
     {
-        public int Id { get; set; }
-
         public DateTime FromDate { get; set; }
+
+        public int[] RepeatOn { get; set; }
     }
 }
