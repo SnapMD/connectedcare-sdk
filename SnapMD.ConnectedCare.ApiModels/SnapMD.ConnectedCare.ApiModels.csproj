@@ -85,6 +85,9 @@
     <Compile Include="CustomCode.cs" />
     <Compile Include="PendingStaffProfileRequest.cs" />
     <Compile Include="ScheduledConsultationResult.cs" />
+    <Compile Include="Scheduling\AvailabilityBlockRequest.cs" />
+    <Compile Include="Scheduling\AvailabilityBlockResponse.cs" />
+    <Compile Include="Scheduling\AvailabilityBlockRuleResponse.cs" />
     <Compile Include="Sms\EncounterSms.cs" />
     <Compile Include="FamilyMember.cs" />
     <Compile Include="GetPatientsResponse.cs" />
