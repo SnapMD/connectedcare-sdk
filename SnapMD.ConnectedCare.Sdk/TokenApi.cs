@@ -54,7 +54,7 @@ namespace SnapMD.ConnectedCare.Sdk
         {
             var response = MakeCall<ApiResponseV2<SerializableToken>>("v2/account/token?jwt=" + jwt);
 
-            if (response.Data != null)
+            if (response != null && response.Data != null)
             {
                 return response.Data.Select(entry => entry.access_token).FirstOrDefault();
             }
