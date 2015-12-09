@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppointmentStatusCode.cs" />
     <Compile Include="BaseProfile.cs" />
     <Compile Include="ClinicianProfilesResult.cs" />
     <Compile Include="CodeSetResponse.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="CustomerSsoType.cs" />
     <Compile Include="DoctorRecord.cs" />
     <Compile Include="Function.cs" />
+    <Compile Include="GlobalStatusCode.cs" />
     <Compile Include="HospitalRecord.cs" />
     <Compile Include="GuardianRecord.cs" />
     <Compile Include="PatientRecord.cs" />
