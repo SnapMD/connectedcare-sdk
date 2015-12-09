@@ -73,9 +73,13 @@
     <Compile Include="GlobalStatusCode.cs" />
     <Compile Include="HospitalRecord.cs" />
     <Compile Include="GuardianRecord.cs" />
+    <Compile Include="PatientOnBoardShortDetail.cs" />
+    <Compile Include="PatientOnBoardStatus.cs" />
+    <Compile Include="PatientAccountStatus.cs" />
     <Compile Include="PatientRecord.cs" />
     <Compile Include="ConsultationResult.cs" />
     <Compile Include="ConsultationStatusCode.cs" />
+    <Compile Include="PatientShortDetail.cs" />
     <Compile Include="Payments\PaymentProfilePostResult.cs" />
     <Compile Include="Payments\CopayPaymentResponse.cs" />
     <Compile Include="Payments\PaymentProfile.cs" />
@@ -86,6 +90,8 @@
     <Compile Include="EncounterConcern.cs" />
     <Compile Include="CustomCode.cs" />
     <Compile Include="PendingStaffProfileRequest.cs" />
+    <Compile Include="ScheduleConsultationDetailByUsername.cs" />
+    <Compile Include="ScheduledConsultation.cs" />
     <Compile Include="ScheduledConsultationResult.cs" />
     <Compile Include="Scheduling\AvailabilityBlockRequest.cs" />
     <Compile Include="Scheduling\AvailabilityBlockResponse.cs" />
