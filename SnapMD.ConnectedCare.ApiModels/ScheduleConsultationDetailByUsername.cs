@@ -15,32 +15,40 @@ namespace SnapMD.ConnectedCare.ApiModels
 {
     public class ScheduleConsultationDetailByUsername
     {
-        public int Id { get; set; }
-        public int? ConsultationId { get; set; }
-
         /// <summary>
-        /// Doctor's email
+        ///     Doctor's email
         /// </summary>
         public string AssignedDoctorUsername { get; set; }
 
+        public int? ConsultationId { get; set; }
+
+        public string DoctorName { get; set; }
+
+        public int Id { get; set; }
+
+        public bool IsNoCharge { get; set; }
+
+        public string Note { get; set; }
+
+        public PatientShortInfo Patient { get; set; }
+
         /// <summary>
-        /// Patient's email
+        ///     Patient's email
         /// </summary>
         public string PatientUsername { get; set; }
 
-        public PatientShortInfo Patient { get; set; }
-        public bool IsNoCharge { get; set; }
+        public int? PrevConsultationID { get; set; }
 
         public string PrimaryConsern { get; set; }
-        public string SecondaryConsern { get; set; }
-        public string Note { get; set; }
 
-        public DateTime? ScheduledTime { get; set; }
-        public string DoctorName { get; set; }
         public string ProfileImagePath { get; set; }
 
-        public int? SchedulingReasonType { get; set; }
-        public int? PrevConsultationID { get; set; }
         public string ScheduledFrom { get; set; }
+
+        public DateTime? ScheduledTime { get; set; }
+
+        public int? SchedulingReasonType { get; set; }
+
+        public string SecondaryConsern { get; set; }
     }
 }
