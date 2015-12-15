@@ -8,6 +8,7 @@
         None,
         Active,
         Deleted,
-        Suspended
+        Suspended,
+        Inactive
     }
 }
