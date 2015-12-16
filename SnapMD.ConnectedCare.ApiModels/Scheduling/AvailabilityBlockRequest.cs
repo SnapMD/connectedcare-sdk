@@ -15,6 +15,8 @@ namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 
         public int? AvailabilityBlockRuleId { get; set; }
 
+        public short OptimizationTypeCodeId { get; set; }
+
         public DateTime? EndTime { get; set; }
 
         public bool IsAllDay { get; set; }

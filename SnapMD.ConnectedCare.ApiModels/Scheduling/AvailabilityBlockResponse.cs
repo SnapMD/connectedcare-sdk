@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 {
@@ -15,5 +16,7 @@ namespace SnapMD.ConnectedCare.ApiModels.Scheduling
         public DateTime? ModifiedDate { get; set; }
 
         public AvailabilityBlockRuleResponse Rule { get; set; }
+
+        public IEnumerable<AvailabilityBlockClinician> AvailabilityBlockClinicians { get; set; } 
     }
 }
