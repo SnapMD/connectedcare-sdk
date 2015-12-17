@@ -12,6 +12,7 @@
 using System.Linq;
 using SnapMD.ConnectedCare.Sdk.Models;
 using Newtonsoft.Json.Linq;
+using SnapMD.ConnectedCare.ApiModels.Enums;
 
 namespace SnapMD.ConnectedCare.Sdk
 {
@@ -25,7 +26,7 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public int? HospitalId { get; private set; }
 
-        public string GetToken(string email, string secret)
+        public string GetToken(string email, string secret, UserType userType = UserType.Customer)
         {
             //done V2ing
             var request = new
@@ -33,7 +34,7 @@ namespace SnapMD.ConnectedCare.Sdk
                 email,
                 password = secret,
                 hospitalId = HospitalId,
-                userTypeId = 1
+                userTypeId = (int) userType
             };
             
             var response = Post("v2/account/token", request);
