@@ -1,6 +1,6 @@
 ﻿namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 {
-    public class AvailabilityBlockClinician
+    public class AvailabilityBlockClinicianInfo
     {
         public int AvailabilityBlockId { get; set; }
         public int ClinicianId { get; set; }
