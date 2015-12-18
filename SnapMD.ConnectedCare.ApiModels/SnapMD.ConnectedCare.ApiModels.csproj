@@ -94,7 +94,8 @@
     <Compile Include="ScheduleConsultationDetailByUsername.cs" />
     <Compile Include="ScheduledConsultation.cs" />
     <Compile Include="ScheduledConsultationResult.cs" />
-    <Compile Include="Scheduling\AvailabilityBlockClinician.cs" />
+    <Compile Include="Scheduling\AvailabilityBlockClinicianRequest.cs" />
+    <Compile Include="Scheduling\AvailabilityBlockClinicianResponse.cs" />
     <Compile Include="Scheduling\AvailabilityBlockRequest.cs" />
     <Compile Include="Scheduling\AvailabilityBlockResponse.cs" />
     <Compile Include="Scheduling\AvailabilityBlockRuleRequest.cs" />
