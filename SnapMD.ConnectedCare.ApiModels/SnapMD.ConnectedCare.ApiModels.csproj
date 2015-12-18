@@ -68,6 +68,7 @@
     <Compile Include="ConsultationEvents.cs" />
     <Compile Include="CustomerSsoType.cs" />
     <Compile Include="DoctorRecord.cs" />
+    <Compile Include="Enums\UserType.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="HospitalRecord.cs" />
     <Compile Include="GuardianRecord.cs" />
