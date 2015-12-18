@@ -17,6 +17,6 @@ namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 
         public AvailabilityBlockRuleResponse Rule { get; set; }
 
-        public IEnumerable<AvailabilityBlockClinician> AvailabilityBlockClinicians { get; set; } 
+        public IEnumerable<AvailabilityBlockClinicianInfo> AvailabilityBlockClinicians { get; set; } 
     }
 }
