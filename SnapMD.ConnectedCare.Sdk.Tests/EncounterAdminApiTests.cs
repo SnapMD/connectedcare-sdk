@@ -10,11 +10,13 @@
 //    limitations under the License.
 
 using System;
+using System.Linq;
 using Moq;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using SnapMD.ConnectedCare.ApiModels;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
+using SnapMD.ConnectedCare.Sdk.Models;
 using SnapMD.ConnectedCare.Sdk.Tests.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Tests
@@ -71,7 +73,17 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
         [Test]
         public void TestScheduleConsultation()
         {
-            api.ScheduleEncounter(encounterData);
+            var response = new ApiResponseV2<ScheduledConsultationResult>(new ScheduledConsultationResult
+            {
+                ConsultationId = 3
+            });
+
+            mockWebClient.Setup(c => c.UploadString(It.IsAny<Uri>(), "POST", It.IsAny<string>()))
+                .Returns(JsonConvert.SerializeObject(response));
+
+            var result = api.ScheduleEncounter(encounterData);
+
+            Assert.AreEqual(response.Data.First().ConsultationId, result.ConsultationId);
 
             mockWebClient.Verify(client => client.UploadString(
                 It.Is<Uri>(uri => uri.ToString().Contains("v2/admin/schedule/consultations")),
