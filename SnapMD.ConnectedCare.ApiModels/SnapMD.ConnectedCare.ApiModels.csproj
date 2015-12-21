@@ -91,6 +91,7 @@
     <Compile Include="EncounterConcern.cs" />
     <Compile Include="CustomCode.cs" />
     <Compile Include="PendingStaffProfileRequest.cs" />
+    <Compile Include="ResetPasswordRequest.cs" />
     <Compile Include="ScheduleConsultationDetailByUsername.cs" />
     <Compile Include="ScheduledConsultation.cs" />
     <Compile Include="ScheduledConsultationResult.cs" />
