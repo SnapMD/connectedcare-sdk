@@ -8,21 +8,13 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-using System;
-using System.Net;
 
-namespace SnapMD.ConnectedCare.Sdk.Interfaces
+namespace SnapMD.ConnectedCare.ApiModels
 {
-    public interface IWebClient
+    public class FirstLast
     {
-        WebHeaderCollection Headers { get; set; }
+        public string First { get; set; }
 
-        string UploadString(Uri address, string method, string data);
-
-        string DownloadString(string address);
-
-        string DownloadString(Uri address);
-
-        //WebResponse GetWebResponse(WebRequest request, IAsyncResult result);
+        public string Last { get; set; }
     }
 }
