@@ -43,5 +43,44 @@ namespace SnapMD.ConnectedCare.ApiModels
         public string Gender { get; set; }
         public PatientOnBoardStatus? Status { get; set; }
         public bool? PreventSendingInvitation { get; set; }
+
+        public bool ValidateModel(Func<string, Exception> exceptionToThrow = null)
+        {
+            if (exceptionToThrow == null)
+            {
+                exceptionToThrow = message => new ArgumentException(message);
+            }
+
+            if (string.IsNullOrEmpty(FirstName))
+            {
+                // error: first name required.
+                throw exceptionToThrow("First name required.");
+            }
+
+            if (string.IsNullOrEmpty(Email))
+            {
+                // error: email required.
+                throw exceptionToThrow("Email address required.");
+            }
+            
+            if (Dob == null)
+            {
+                // error: date of birth required.
+                throw exceptionToThrow("Date of birth required.");
+            }
+            if (string.IsNullOrEmpty(Address))
+            {
+                // error: address required.
+                throw exceptionToThrow("Address required.");
+            }
+
+            if (string.IsNullOrEmpty(MobileNumberWithCountryCode))
+            {
+                // error: mobile number required.
+                throw exceptionToThrow("Mobile number required.");
+            }
+
+            return true;
+        }
     }
 }

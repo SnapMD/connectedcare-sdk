@@ -82,6 +82,8 @@
     <Compile Include="EncounterAdminApiTests.cs" />
     <Compile Include="EncounterApiTests.cs" />
     <Compile Include="HospitalApiTests.cs" />
+    <Compile Include="ModelTests\NewPatientRequestValidationTest.cs" />
+    <Compile Include="ModelTests\PatientOnBoardShortDetailValidationTests.cs" />
     <Compile Include="PatientAdminApiTests.cs" />
     <Compile Include="PatientProfileApiTests.cs" />
     <Compile Include="PaymentApiTests.cs" />

@@ -39,9 +39,14 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public ApiResponseV2<NewPatientResponse> NewPatient(NewPatientRequest request)
         {
-            var url = "v2/patients";
-            var result = Post<ApiResponseV2<NewPatientResponse>>(url, request);
-            return result;
+            if (request.ValidateModel())
+            {
+                var url = "v2/patients";
+                var result = Post<ApiResponseV2<NewPatientResponse>>(url, request);
+                return result;
+            }
+
+            throw new SnapSdkException("Model invalid");
         }
     }
 }
