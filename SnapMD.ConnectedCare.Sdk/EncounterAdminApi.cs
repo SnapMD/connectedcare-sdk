@@ -9,8 +9,10 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
+using System.Linq;
 using SnapMD.ConnectedCare.ApiModels;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
+using SnapMD.ConnectedCare.Sdk.Models;
 using SnapMD.ConnectedCare.Sdk.Wrappers;
 
 namespace SnapMD.ConnectedCare.Sdk
@@ -36,9 +38,21 @@ namespace SnapMD.ConnectedCare.Sdk
         {
         }
 
-        public void ScheduleEncounter(ScheduleConsultationDetailByUsername encounterData)
+        public ScheduledConsultationResult ScheduleEncounter(ScheduleConsultationDetailByUsername encounterData)
         {
-            Post("v2/admin/schedule/consultations", encounterData);
+            var response = Post("v2/admin/schedule/consultations", encounterData);
+
+            if (response != null)
+            {
+                var apiResponse = response.ToObject<ApiResponseV2<ScheduledConsultationResult>>();
+
+                if (apiResponse != null && apiResponse.Data != null && apiResponse.Data.Any())
+                {
+                    return apiResponse.Data.First();
+                }
+            }
+
+            return null;
         }
     }
 }
