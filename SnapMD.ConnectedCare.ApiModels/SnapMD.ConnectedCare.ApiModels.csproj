@@ -76,10 +76,8 @@
     <Compile Include="GuardianRecord.cs" />
     <Compile Include="NewPatientProfileRequest.cs" />
     <Compile Include="PatientMedicalHistoryRequest.cs" />
-=======
     <Compile Include="NewPatientResponse.cs" />
     <Compile Include="FIrstLast.cs" />
->>>>>>> develop
     <Compile Include="PatientOnBoardShortDetail.cs" />
     <Compile Include="PatientOnBoardStatus.cs" />
     <Compile Include="PatientAccountStatus.cs" />
