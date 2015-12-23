@@ -271,8 +271,8 @@ namespace SnapMD.ConnectedCare.Sdk
                     }
 
                     wc.Headers[HttpRequestHeader.ContentType] = "application/json";
-
-                    return wc.UploadString(url, method, JsonConvert.SerializeObject(data));
+                    var request = JsonConvert.SerializeObject(data);
+                    return wc.UploadString(url, method, request);
                 });
             }
             catch (Exception ex)

@@ -74,12 +74,15 @@
     <Compile Include="GlobalStatusCode.cs" />
     <Compile Include="HospitalRecord.cs" />
     <Compile Include="GuardianRecord.cs" />
+    <Compile Include="NewPatientResponse.cs" />
+    <Compile Include="FIrstLast.cs" />
     <Compile Include="PatientOnBoardShortDetail.cs" />
     <Compile Include="PatientOnBoardStatus.cs" />
     <Compile Include="PatientAccountStatus.cs" />
     <Compile Include="PatientRecord.cs" />
     <Compile Include="ConsultationResult.cs" />
     <Compile Include="ConsultationStatusCode.cs" />
+    <Compile Include="NewPatientRequest.cs" />
     <Compile Include="PatientShortDetail.cs" />
     <Compile Include="Payments\PaymentProfilePostResult.cs" />
     <Compile Include="Payments\CopayPaymentResponse.cs" />

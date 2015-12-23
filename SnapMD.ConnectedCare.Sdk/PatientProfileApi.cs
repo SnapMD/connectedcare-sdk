@@ -9,8 +9,6 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
-using System.Linq;
-using Newtonsoft.Json.Linq;
 using SnapMD.ConnectedCare.ApiModels;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
 using SnapMD.ConnectedCare.Sdk.Models;
@@ -39,11 +37,16 @@ namespace SnapMD.ConnectedCare.Sdk
             return result;
         }
 
-        // todo: short time implementation: only update organization & location for user
-        public bool UpdateUserProfile(object data)
+        public ApiResponseV2<NewPatientResponse> NewPatient(NewPatientRequest request)
         {
-            var o = Post<ApiResponseV2<bool>>("v2/patients/updateuserprofile", data);
-            return o.Data.First();
+            if (request.ValidateModel())
+            {
+                var url = "v2/patients";
+                var result = Post<ApiResponseV2<NewPatientResponse>>(url, request);
+                return result;
+            }
+
+            throw new SnapSdkException("Model invalid");
         }
     }
 }

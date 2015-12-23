@@ -46,7 +46,10 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public void AddPatient(PatientOnBoardShortDetail patient)
         {
-            Post("v2/admin/patients", patient);
+            if (patient.ValidateModel())
+            {
+                Post("v2/admin/patients", patient);
+            }
         }
 
         public void DeletePatient(int patientId)
