@@ -11,8 +11,10 @@
 
 using System;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using FizzWare.NBuilder.Implementation;
 using NUnit.Framework;
+using SnapMD.ConnectedCare.ApiModels;
 using SnapMD.ConnectedCare.Sdk.Tests.Properties;
 
 namespace SnapMD.ConnectedCare.Sdk.Tests
@@ -21,7 +23,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
     public class PatientProfileApiTests : TestBase
     {
         [Test]
-        public void TestPatientProfileInsert()
+        public void TestAddDependentProfile()
         {
             string token;
             var mockWebClient = TokenandWebClientSetup(out token);
@@ -49,5 +51,46 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             Assert.IsNotNull(result.Data.FirstOrDefault());
             Assert.IsTrue(result.Data.First().PatientId > 0);
         }
+
+
+        [Test]
+        public void TestNewPatient()
+        {
+            string token;
+            var mockWebClient = TokenandWebClientSetup(out token);
+            const string mockRequest = "{\"Address\":\"my address\",\"Dob\":\"2015-12-01T00:00:00\",\"Email\":\"mock@mail.com\",\"Name\":{\"First\":\"test\",\"Last\":\"user\"},\"Password\":\"password\",\"ProviderId\":1}";
+
+            const string testResponse = @"{
+                'data': [{
+                'providerId':1,
+                'patientId':129,
+                'name': {'first':'test', 'last':'user'},
+                'email' : 'mock@mail.com',
+                'address' : 'my address',
+                'dob' : '2015-12-01T00:00:00',
+                'userLoginId':16577
+                }]
+            }";
+
+            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, "v2/patients"), "POST", mockRequest))
+                .Returns(testResponse);
+
+            var api = new PatientProfileApi(Settings.Default.BaseUrl, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
+                mockWebClient.Object);
+            var result = api.NewPatient(new NewPatientRequest
+            {
+                ProviderId = 1,
+                Name = new FirstLast { First = "test", Last = "user" },
+                Email = "mock@mail.com",
+                Address = "my address",
+                Dob = new DateTime(2015,12,1),
+                Password = "password"
+            });
+            Assert.IsNotNull(result);
+            Assert.IsNotNull(result.Data);
+            Assert.IsNotNull(result.Data.FirstOrDefault());
+            Assert.AreEqual(result.Data.First().PatientId, 129);
+        }
+
     }
 }

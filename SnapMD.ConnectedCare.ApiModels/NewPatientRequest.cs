@@ -13,36 +13,19 @@ using System;
 
 namespace SnapMD.ConnectedCare.ApiModels
 {
-    public class PatientOnBoardShortDetail
+    public class NewPatientRequest
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
+        public string Address { get; set; }
 
         public DateTime? Dob { get; set; }
 
-        /// <summary>
-        /// Full address in free-form.
-        /// </summary>
-        public string Address { get; set; }
+        public string Email { get; set; }
 
-        /// <summary>
-        /// GET 'api/countrycode'
-        /// </summary>
-        public int? CountryId { get; set; }
+        public FirstLast Name { get; set; }
 
-        /// <summary>
-        /// GET 'api/timezone'
-        /// </summary>
-        public int? TimeZoneId { get; set; }
-        public string MobileNumberWithCountryCode { get; set; }
+        public string Password { get; set; }
 
-        /// <summary>
-        /// M/F
-        /// </summary>
-        public string Gender { get; set; }
-        public PatientOnBoardStatus? Status { get; set; }
-        public bool? PreventSendingInvitation { get; set; }
+        public int ProviderId { get; set; }
 
         public bool ValidateModel(Func<string, Exception> exceptionToThrow = null)
         {
@@ -51,7 +34,12 @@ namespace SnapMD.ConnectedCare.ApiModels
                 exceptionToThrow = message => new ArgumentException(message);
             }
 
-            if (string.IsNullOrEmpty(FirstName))
+            if (Name == null)
+            {
+                throw exceptionToThrow("Name is required");
+            }
+
+            if (string.IsNullOrEmpty(Name.First))
             {
                 // error: first name required.
                 throw exceptionToThrow("First name required.");
@@ -62,7 +50,7 @@ namespace SnapMD.ConnectedCare.ApiModels
                 // error: email required.
                 throw exceptionToThrow("Email address required.");
             }
-            
+
             if (Dob == null)
             {
                 // error: date of birth required.
@@ -74,10 +62,10 @@ namespace SnapMD.ConnectedCare.ApiModels
                 throw exceptionToThrow("Address required.");
             }
 
-            if (string.IsNullOrEmpty(MobileNumberWithCountryCode))
+            if (ProviderId <= 0)
             {
                 // error: mobile number required.
-                throw exceptionToThrow("Mobile number required.");
+                throw exceptionToThrow("ProviderId required.");
             }
 
             return true;
