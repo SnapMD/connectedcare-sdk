@@ -130,7 +130,7 @@
     <Compile Include="SoapNote.cs" />
     <Compile Include="StaffProfileRequest.cs" />
     <Compile Include="SurgeryRecord.cs" />
-    <Compile Include="TelecomResponse.cs" />
+    <Compile Include="Telecom.cs" />
     <Compile Include="UserProfilesResult.cs" />
     <Compile Include="UserRole.cs" />
   </ItemGroup>
