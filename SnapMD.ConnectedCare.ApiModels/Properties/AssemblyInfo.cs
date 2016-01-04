@@ -1,5 +1,5 @@
 ﻿#region Copyright
-//    Copyright 2015 SnapMD, Inc.
+//    Copyright 2016 SnapMD, Inc.
 //    Licensed under the Apache License, Version 2.0 (the "License");
 //    you may not use this file except in compliance with the License.
 //    You may obtain a copy of the License at
@@ -21,9 +21,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SnapMD.ConnectedCare.ApiModels")]
 [assembly: AssemblyDescription("API Models")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SnapMD")]
+[assembly: AssemblyCompany("SnapMD, Inc.")]
 [assembly: AssemblyProduct("SnapMD.ConnectedCare.ApiModels")]
-[assembly: AssemblyCopyright("Copyright © 2015")]
+[assembly: AssemblyCopyright("Copyright © 2016 SnapMD, Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SnapMD.ConnectedCare.Sdk")]
 [assembly: AssemblyDescription("Open-source wrapper for the REST API")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SnapMD")]
+[assembly: AssemblyCompany("SnapMD, Inc.")]
 [assembly: AssemblyProduct("SnapMD.ConnectedCare")]
-[assembly: AssemblyCopyright("Copyright © 2015 SnapMD, Inc.")]
+[assembly: AssemblyCopyright("Copyright © 2016 SnapMD, Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
