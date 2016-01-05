@@ -18,9 +18,7 @@ namespace SnapMD.ConnectedCare.ApiModels
     public interface IIntakeQuestionnaire : IMedicalHistoryProfile
     {
         List<EncounterConcern> Concerns { get; set; }
-
-        NewbornRecord InfantData { get; set; }
-
+        
         PatientRecord PatientRecord { get; set; }
 
         DoctorRecord DoctorRecord { get; set; }
@@ -28,13 +26,5 @@ namespace SnapMD.ConnectedCare.ApiModels
         HospitalRecord HospitalRecord { get; set; }
 
         List<GuardianRecord> GuardiansRecords { get; set; }
-
-        List<CustomCode> MedicalConditions { get; set; }
-
-        List<CustomCode> MedicationAllergies { get; set; }
-
-        List<CustomCode> Medications { get; set; }
-
-        List<SurgeryRecord> Surgeries { get; set; }
     }
 }
