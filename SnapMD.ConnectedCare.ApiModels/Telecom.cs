@@ -2,7 +2,7 @@
 
 namespace SnapMD.ConnectedCare.ApiModels
 {
-    public class TelecomResponse
+    public class Telecom
     {
         public Guid Id { get; set; }
         public string Zip { get; set; }
