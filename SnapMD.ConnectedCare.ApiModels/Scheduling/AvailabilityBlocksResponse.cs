@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SnapMD.ConnectedCare.ApiModels.Scheduling
+﻿namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 {
     public class AvailabilityBlocksResponse
     {
-        public AvailabilityBlockResponse[] availabilityBlocks;
-        public AvailabilityBlockRuleResponse[] availabilityBlockRules;
+        public AvailabilityBlockResponse[] AvailabilityBlocks;
+        public AvailabilityBlockRuleResponse[] AvailabilityBlockRules;
     }
 }
