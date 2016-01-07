@@ -86,6 +86,7 @@
     <Compile Include="ModelTests\PatientOnBoardShortDetailValidationTests.cs" />
     <Compile Include="PatientAdminApiTests.cs" />
     <Compile Include="PatientProfileApiTests.cs" />
+    <Compile Include="PatientProfileRequestTests.cs" />
     <Compile Include="PaymentApiTests.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <DependentUpon>Settings.settings</DependentUpon>
