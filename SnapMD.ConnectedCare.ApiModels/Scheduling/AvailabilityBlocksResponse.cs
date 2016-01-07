@@ -2,7 +2,8 @@
 {
     public class AvailabilityBlocksResponse
     {
-        public AvailabilityBlockResponse[] AvailabilityBlocks;
-        public AvailabilityBlockRuleResponse[] AvailabilityBlockRules;
+        public AvailabilityBlockResponse[] AvailabilityBlocks { get; set; }
+
+        public AvailabilityBlockRuleResponse[] AvailabilityBlockRules { get; set; }
     }
 }
