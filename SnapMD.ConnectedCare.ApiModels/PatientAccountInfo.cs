@@ -25,7 +25,7 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public bool IsAuthorized { get; set; }
         public PatientAccountStatus Status { get; set; }
-        public string IsDependent { get; set; }
+        public bool IsDependent { get; set; }
         public int? GuardianId { get; set; }
         public string Email { get; set; }
     }
