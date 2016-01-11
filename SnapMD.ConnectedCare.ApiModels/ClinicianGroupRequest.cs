@@ -10,9 +10,7 @@
 
         public string Description { get; set; }
 
-        public int HospitalId { get; set; }
-
-        public GlobalStatusCode StatusCode { get; set; }
+        public GlobalStatusCode? StatusCode { get; set; }
 
         public int? ParentGroupId { get; set; }
     }
