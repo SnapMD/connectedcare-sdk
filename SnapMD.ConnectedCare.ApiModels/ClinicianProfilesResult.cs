@@ -17,6 +17,8 @@ namespace SnapMD.ConnectedCare.ApiModels
     /// </summary>
     public class ClinicianProfilesResult
     {
+        public int? ClinicianId { get; set; }
+
         public string BusinessAddress { get; set; }
 
         public string FirstName { get; set; }

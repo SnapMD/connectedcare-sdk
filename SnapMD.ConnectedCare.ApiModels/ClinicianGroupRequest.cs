@@ -2,7 +2,7 @@
 {
     public class ClinicianGroupRequest
     {
-        public int? ClinicianId { get; set; }
+        public int[] ClinicianIds { get; set; }
 
         public int? GroupId { get; set; }
 
