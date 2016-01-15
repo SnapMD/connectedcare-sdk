@@ -27,6 +27,10 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public int ProviderId { get; set; }
 
+        public string Country { get; set; }
+
+        public string ZipCode { get; set; }
+
         public bool ValidateModel(Func<string, Exception> exceptionToThrow = null)
         {
             if (exceptionToThrow == null)
