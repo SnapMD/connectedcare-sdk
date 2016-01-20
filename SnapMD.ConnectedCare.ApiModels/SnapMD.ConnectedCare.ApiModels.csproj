@@ -62,7 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppointmentStatusCode.cs" />
+    <Compile Include="Scheduling\AppointmentStatusCode.cs" />
     <Compile Include="BaseProfile.cs" />
     <Compile Include="ClinicianProfilesResult.cs" />
     <Compile Include="CodeSetResponse.cs" />
@@ -99,6 +99,8 @@
     <Compile Include="ScheduleConsultationDetailByUsername.cs" />
     <Compile Include="ScheduledConsultation.cs" />
     <Compile Include="ScheduledConsultationResult.cs" />
+    <Compile Include="Scheduling\Appointment.cs" />
+    <Compile Include="Scheduling\AppointmentTypeCode.cs" />
     <Compile Include="Scheduling\AvailabilityBlockClinicianRequest.cs" />
     <Compile Include="Scheduling\AvailabilityBlockClinicianResponse.cs" />
     <Compile Include="Scheduling\AvailabilityBlockRequest.cs" />
