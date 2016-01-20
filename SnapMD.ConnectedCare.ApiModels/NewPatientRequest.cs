@@ -9,6 +9,7 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
+using Newtonsoft.Json;
 using System;
 
 namespace SnapMD.ConnectedCare.ApiModels
@@ -27,8 +28,10 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public int ProviderId { get; set; }
 
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string Country { get; set; }
 
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string ZipCode { get; set; }
 
         public bool ValidateModel(Func<string, Exception> exceptionToThrow = null)
