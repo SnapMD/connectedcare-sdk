@@ -14,9 +14,9 @@ using SnapMD.Sdk.Models;
 
 namespace SnapMD.ConnectedCare.Sdk.Models
 {
-    public class OnDemandRequest
+    public class OnDemandConsultationRequest
     {
-        public OnDemandRequest()
+        public OnDemandConsultationRequest()
         {
             Concerns = new List<IntakeConcern>();
         }
