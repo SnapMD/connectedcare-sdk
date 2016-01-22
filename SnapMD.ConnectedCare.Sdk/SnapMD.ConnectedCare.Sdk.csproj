@@ -77,7 +77,7 @@
     <Compile Include="HospitalApi.cs" />
     <Compile Include="Models\ConsultationEventType.cs" />
     <Compile Include="Models\IntakeConcern.cs" />
-    <Compile Include="Models\OnDemandRequest.cs" />
+    <Compile Include="Models\OnDemandConsultationRequest.cs" />
     <Compile Include="Models\OnDemandResponse.cs" />
     <Compile Include="Models\SerializableToken.cs" />
     <Compile Include="Models\SerializableUser.cs" />

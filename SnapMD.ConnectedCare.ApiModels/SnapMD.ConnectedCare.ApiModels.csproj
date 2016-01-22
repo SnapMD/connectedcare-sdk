@@ -64,6 +64,8 @@
   <ItemGroup>
     <Compile Include="Scheduling\AppointmentStatusCode.cs" />
     <Compile Include="BaseProfile.cs" />
+    <Compile Include="ClinicianGroupRequest.cs" />
+    <Compile Include="ClinicianGroupResponse.cs" />
     <Compile Include="ClinicianProfilesResult.cs" />
     <Compile Include="CodeSetResponse.cs" />
     <Compile Include="ConsultationEvents.cs" />
