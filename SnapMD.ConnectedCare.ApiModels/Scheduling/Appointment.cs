@@ -8,8 +8,8 @@ namespace SnapMD.ConnectedCare.ApiModels.Scheduling
         public int? AvailabilityBlockId { get; set; }
         public DateTime? StartTime { get; set; }
         public DateTime? EndTime { get; set; }
-        public int? OnDemandRequestId { get; set; }
-        public int EncounterMetadataId { get; set; }
+        public Guid? OnDemandRequestId { get; set; }
+        public Guid IntakeMetadataId { get; set; }
         public AppointmentStatusCode AppointmentStatusCode { get; set; }
         public AppointmentTypeCode AppointmentTypeCode { get; set; }
     }
