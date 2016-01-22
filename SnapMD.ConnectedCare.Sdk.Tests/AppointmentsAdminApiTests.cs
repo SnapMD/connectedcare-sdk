@@ -103,7 +103,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             Assert.AreEqual(expected.AppointmentId, actual.AppointmentId);
             Assert.AreEqual(expected.AppointmentStatusCode, actual.AppointmentStatusCode);
             Assert.AreEqual(expected.AppointmentTypeCode, actual.AppointmentTypeCode);
-            Assert.AreEqual(expected.EncounterMetadataId, actual.EncounterMetadataId);
+            Assert.AreEqual(expected.IntakeMetadataId, actual.IntakeMetadataId);
             Assert.AreEqual(expected.StartTime, actual.StartTime);
             Assert.AreEqual(expected.EndTime, actual.EndTime);
             Assert.AreEqual(expected.OnDemandRequestId, actual.OnDemandRequestId);
