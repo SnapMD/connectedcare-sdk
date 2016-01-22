@@ -204,6 +204,11 @@ namespace SnapMD.ConnectedCare.Sdk
             return UploadData(apiPath, "POST", data);
         }
 
+        protected virtual JObject Delete(string apiPath, object data = null)
+        {
+            return UploadData(apiPath, "DELETE", data);
+        }
+
         private JObject UploadData(string apiPath, string method, object data)
         {
             var url = new Uri(_baseUri, apiPath);
