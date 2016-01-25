@@ -78,6 +78,8 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="AppointmentsAdminApiTests.cs" />
+    <Compile Include="AppointmentsApiTests.cs" />
     <Compile Include="DocumentApiTests.cs" />
     <Compile Include="EncounterAdminApiTests.cs" />
     <Compile Include="EncounterApiTests.cs" />
