@@ -2,9 +2,8 @@
 
 namespace SnapMD.ConnectedCare.ApiModels
 {
-    public class ConsultationParticipantResponse
+    public class ConsultationParticipantResponse: ConsultationParticipantRequest
     {
-        public Guid ParticipantId { get; set; }
         public Guid PersonId { get; set; }
     }
 }
