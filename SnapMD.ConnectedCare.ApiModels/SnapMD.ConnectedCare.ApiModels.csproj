@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmailInvitationRequest.cs" />
     <Compile Include="Scheduling\AppointmentStatusCode.cs" />
     <Compile Include="BaseProfile.cs" />
     <Compile Include="ClinicianGroupRequest.cs" />
