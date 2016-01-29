@@ -22,6 +22,6 @@ namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 
         public byte StartTimeMinute { get; set; }
 
-        public DateTime ToDate { get; set; }
+        public DateTime? ToDate { get; set; }
     }
 }
