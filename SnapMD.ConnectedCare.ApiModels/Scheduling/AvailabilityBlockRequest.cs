@@ -1,4 +1,5 @@
 ﻿using System;
+using SnapMD.Core.Models.Scheduling;
 
 namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 {
@@ -15,7 +16,7 @@ namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 
         public int? AvailabilityBlockRuleId { get; set; }
 
-        public short OptimizationTypeCodeId { get; set; }
+        public AppointmentOptimizationCode OptimizationTypeCode { get; set; }
 
         public DateTime? EndTime { get; set; }
 
