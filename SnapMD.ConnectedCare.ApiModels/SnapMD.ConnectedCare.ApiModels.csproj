@@ -116,6 +116,7 @@
     <Compile Include="Scheduling\AvailabilityBlockRuleResponse.cs" />
     <Compile Include="Scheduling\AvailabilityBlocksRequest.cs" />
     <Compile Include="Scheduling\AvailabilityBlocksResponse.cs" />
+    <Compile Include="Scheduling\RepeatPeriodCode.cs" />
     <Compile Include="Sms\EncounterSms.cs" />
     <Compile Include="FamilyMember.cs" />
     <Compile Include="GetPatientsResponse.cs" />

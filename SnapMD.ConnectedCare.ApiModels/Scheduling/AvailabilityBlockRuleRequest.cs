@@ -16,7 +16,7 @@ namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 
         public int RepeatInterval { get; set; }
         public int[] RepeatOn { get; set; }
-        public int RepeatPeriod { get; set; }
+        public RepeatPeriodCode RepeatPeriod { get; set; }
 
         public bool AllowOnDemandAppt { get; set; }
         public bool AllowProviderAppt { get; set; }
