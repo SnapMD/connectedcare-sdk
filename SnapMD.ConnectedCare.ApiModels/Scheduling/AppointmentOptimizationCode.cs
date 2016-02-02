@@ -1,4 +1,4 @@
-﻿namespace SnapMD.Core.Models.Scheduling
+﻿namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 {
     public enum AppointmentOptimizationCode
     {
