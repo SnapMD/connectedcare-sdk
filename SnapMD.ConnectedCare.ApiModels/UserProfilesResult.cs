@@ -48,6 +48,10 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public string ProfileImagePath { get; set; }
 
+        public int? OrganizationId { get; set; }
+
+        public int? LocationId { get; set; }
+
         public string TimeZone { get; set; }
 
         public int TimeZoneId { get; set; }
@@ -62,7 +66,15 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public string Height { get; set; }
 
+        public string HomePhone { get; set; }
+
         public string MobilePhone { get; set; }
+
+        public int? HairColor { get; set; }
+
+        public int? EyeColor { get; set; }
+
+        public int? BloodType { get; set; }
 
         public int? Enthicity { get; set; }
 
