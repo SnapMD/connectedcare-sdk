@@ -4,7 +4,9 @@ using FizzWare.NBuilder;
 using Moq;
 using Newtonsoft.Json;
 using NUnit.Framework;
+using SnapMD.ConnectedCare.ApiModels;
 using SnapMD.ConnectedCare.ApiModels.Scheduling;
+using SnapMD.ConnectedCare.ApiModels.Scheduling.SnapMD.Core.Models.Scheduling;
 using SnapMD.ConnectedCare.Sdk.Interfaces;
 using SnapMD.ConnectedCare.Sdk.Models;
 using SnapMD.ConnectedCare.Sdk.Tests.Properties;
@@ -50,6 +52,39 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
                 It.Is<Uri>(uri => uri.ToString().EndsWith("v2/patients/appointments")),
                 "POST",
                 JsonConvert.SerializeObject(_appointment)));
+        }
+
+        [Test]
+        public void AddParticipantsTest()
+        {
+            var expected = new ApiResponseV2<AppointmentParticipantResponse>(Builder<AppointmentParticipantResponse>.CreateNew()
+                .With(c => c.Person = Builder<PersonRecord>.CreateNew().Build())
+                .Build());
+
+            _mockWebClient.Setup(c => c.UploadString(It.IsAny<Uri>(), "POST", It.IsAny<string>()))
+                .Returns(JsonConvert.SerializeObject(expected));
+
+            var request = Builder<AppointmentParticipantResponse>.CreateNew()
+                 .With(c => c.Person = Builder<PersonRecord>.CreateNew().Build())
+                 .Build();
+            var appointmentId = Guid.NewGuid();
+            var actual = _api.AddParticipant(appointmentId, request);
+            Assert.AreEqual(request.Person.FamilyName, actual.Data.First().Person.FamilyName);
+        }
+
+        [Test]
+        public void GetParticipantsTest()
+        {
+            var expected = new ApiResponseV2<AppointmentParticipantResponse>(Builder<AppointmentParticipantResponse>.CreateListOfSize(3)
+                .All().With(c => c.Person = Builder<PersonRecord>.CreateNew().Build())
+                .Build());
+
+            _mockWebClient.Setup(c => c.DownloadString(It.IsAny<Uri>()))
+                .Returns(JsonConvert.SerializeObject(expected));
+            
+            var appointmentId = Guid.NewGuid();
+            var actual = _api.GetParticipants(appointmentId);
+            Assert.AreEqual(actual.Data.First().Person.FamilyName, actual.Data.First().Person.FamilyName);
         }
 
         [Test]
