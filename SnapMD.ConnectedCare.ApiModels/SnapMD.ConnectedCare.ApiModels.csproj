@@ -67,6 +67,8 @@
     <Compile Include="ConsultationParticipantRequest.cs" />
     <Compile Include="ConsultationParticipantResponse.cs" />
     <Compile Include="Scheduling\AppointmentOptimizationCode.cs" />
+    <Compile Include="Scheduling\AppointmentParticipantResponse.cs" />
+    <Compile Include="Scheduling\AppointmentParticipantRequest.cs" />
     <Compile Include="Scheduling\AppointmentStatusCode.cs" />
     <Compile Include="BaseProfile.cs" />
     <Compile Include="ClinicianGroupRequest.cs" />
@@ -108,6 +110,7 @@
     <Compile Include="ScheduledConsultationResult.cs" />
     <Compile Include="Scheduling\Appointment.cs" />
     <Compile Include="Scheduling\AppointmentTypeCode.cs" />
+    <Compile Include="Scheduling\AttendenceCode.cs" />
     <Compile Include="Scheduling\AvailabilityBlockClinicianRequest.cs" />
     <Compile Include="Scheduling\AvailabilityBlockClinicianResponse.cs" />
     <Compile Include="Scheduling\AvailabilityBlockRequest.cs" />
@@ -116,6 +119,7 @@
     <Compile Include="Scheduling\AvailabilityBlockRuleResponse.cs" />
     <Compile Include="Scheduling\AvailabilityBlocksRequest.cs" />
     <Compile Include="Scheduling\AvailabilityBlocksResponse.cs" />
+    <Compile Include="Scheduling\ParticipantTypeCode.cs" />
     <Compile Include="Scheduling\RepeatPeriodCode.cs" />
     <Compile Include="Sms\EncounterSms.cs" />
     <Compile Include="FamilyMember.cs" />
