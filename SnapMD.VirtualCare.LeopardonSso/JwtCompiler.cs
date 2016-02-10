@@ -9,9 +9,11 @@ namespace SnapMD.VirtualCare.LeopardonSso
     {
         private readonly RSA _rsa;
         private bool _disposed;
+        private readonly string _issuer;
 
-        public JwtCompiler(RSA rsa)
+        public JwtCompiler(string issuer, RSA rsa)
         {
+            _issuer = issuer;
             _rsa = rsa;
         }
 
@@ -39,12 +41,12 @@ namespace SnapMD.VirtualCare.LeopardonSso
         private string BuildJwt(string name, string email)
         {
             // Decrypt with private key using Jose JWT library
-            var jwtToken = new WaltherJwt("snapmd", _rsa);
+            var jwtToken = new WaltherJwt(_issuer, _rsa);
             var identity = jwtToken.Encode(name, email);
             return identity;
         }
 
-        protected void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
             if (!disposing || _disposed)
             {
