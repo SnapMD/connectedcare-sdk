@@ -38,6 +38,9 @@ namespace SnapMD.ConnectedCare.ApiModels
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string Token { get; set; }
 
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public bool? ResendRegistrationEmail { get; set; }
+
         public bool ValidateModel(Func<string, Exception> exceptionToThrow = null)
         {
             if (exceptionToThrow == null)
