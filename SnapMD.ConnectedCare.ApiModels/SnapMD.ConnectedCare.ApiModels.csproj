@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\ModelNameAttribute.cs" />
     <Compile Include="NewCoUserRequest.cs" />
     <Compile Include="ParticipantEmailInvitationRequest.cs" />
     <Compile Include="CoUserEmailInvitationRequest.cs" />
@@ -142,7 +143,6 @@
     <Compile Include="PatientConsultationInfo.cs" />
     <Compile Include="PatientMedicalHistoryProfile.cs" />
     <Compile Include="PatientProfileResponse.cs" />
-    <Compile Include="PaymentProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResponseObservableItem.cs" />
     <Compile Include="ScheduleSlot.cs" />

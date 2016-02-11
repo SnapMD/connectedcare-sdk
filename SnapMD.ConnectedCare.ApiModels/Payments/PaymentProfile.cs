@@ -11,13 +11,15 @@
 //    limitations under the License.
 #endregion
 
+using SnapMD.ConnectedCare.ApiModels.Attributes;
+
 namespace SnapMD.ConnectedCare.ApiModels.Payments 
 {
-
     /// 
     /// <summary>
     /// These models are for deserializing the responses from the Authorize.net API.
     /// </summary>
+    [ModelName("ApiModels.PaymentProfile")]
     public class PaymentProfile {
 
         public CimAddress BillingAddress { get; set; }
