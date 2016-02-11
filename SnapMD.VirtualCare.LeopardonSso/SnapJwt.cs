@@ -8,12 +8,12 @@ namespace SnapMD.VirtualCare.LeopardonSso
     {
         private const string Role = "patient";
         private readonly string _issuer;
-        private readonly SecurityKey _securityKey;
+        protected readonly SecurityKey SecurityKey;
 
         public SnapJwt(string issuer, SecurityKey securityKey)
         {
             _issuer = issuer;
-            _securityKey = securityKey;
+            SecurityKey = securityKey;
         }
 
         protected override string Audience => @"snapmd";
@@ -21,8 +21,8 @@ namespace SnapMD.VirtualCare.LeopardonSso
         protected override string Issuer => _issuer; 
 
         protected override SigningCredentials SigningCredentials =>
-            new SigningCredentials(_securityKey,
-                "http://www.w3.org/2001/04/xmldsig-more#rsa-sha512",
+            new SigningCredentials(SecurityKey,
+                "http://www.w3.org/2001/04/xmldsig-more#hmac-sha512",
                 "http://www.w3.org/2001/04/xmlenc#sha512");
 
         protected override TokenValidationParameters TokenValidationParameters
@@ -30,7 +30,7 @@ namespace SnapMD.VirtualCare.LeopardonSso
             get
             {
                 var parameters = base.TokenValidationParameters;
-                parameters.IssuerSigningKey = _securityKey;
+                parameters.IssuerSigningKey = SecurityKey;
                 return parameters;
             }
         }
