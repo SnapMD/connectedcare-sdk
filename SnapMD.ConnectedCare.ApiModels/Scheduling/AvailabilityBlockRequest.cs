@@ -7,8 +7,8 @@ namespace SnapMD.ConnectedCare.ApiModels.Scheduling
     /// </summary>
     public class AvailabilityBlockRequest
     {
-        public DateTime? EndTime { get; set; }
-        public DateTime? StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public DateTime StartTime { get; set; }
 
         public bool AllowOnDemandAppt { get; set; }
         public bool AllowProviderAppt { get; set; }

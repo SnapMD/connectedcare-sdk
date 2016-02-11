@@ -4,6 +4,11 @@
         <name>SnapMD.ConnectedCare.ApiModels</name>
     </assembly>
     <members>
+        <member name="T:SnapMD.ConnectedCare.ApiModels.Attributes.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="!:ModelDescription"/> generated for a type.
+            </summary>
+        </member>
         <member name="T:SnapMD.ConnectedCare.ApiModels.Scheduling.SnapMD.Core.Models.Scheduling.AppointmentParticipantResponse">
             <summary>
                 Request type for appointment participants.
