@@ -32,36 +32,32 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public string ImgPath { get; set; }
 
+        // ReSharper disable once InconsistentNaming
         public string DOB { get; set; }
 
-        public int? yearPracticing { get; set; }
+        public int? YearPracticing { get; set; }
+        
+        public string Department { get; set; }
+        
+        public string MedSpeciality { get; set; }
+        
+        public string SubSpeciality { get; set; }
 
-        //public string departmentID { get; set; }
+        public string MedLicense { get; set; }
 
-        public string department { get; set; }
+        public string StatesLicensed { get; set; }
 
-        //public string medSpecialityId { get; set; }
+        public string Schmedicine { get; set; }
 
-        public string medSpeciality { get; set; }
-
-        //public string subSpecialityID { get; set; }
-
-        public string subSpeciality { get; set; }
-
-        public string medLicense { get; set; }
-
-        public string statesLicensed { get; set; }
-
-        public string schmedicine { get; set; }
-
-        public string preMedEducation { get; set; }
+        public string PreMedEducation { get; set; }
 
         public string Internship { get; set; }
 
-        public string residency { get; set; }
+        public string Residency { get; set; }
 
-        public string bussAddress { get; set; }
+        public string BussAddress { get; set; }
 
+        // ReSharper disable once InconsistentNaming
         public int TimeZoneID { get; set; }
 
         public string Gender { get; set; }
