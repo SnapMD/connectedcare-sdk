@@ -9,9 +9,9 @@ namespace SnapMD.VirtualCare.LeopardonSso
     {
         protected readonly JwtSecurityTokenHandler SecurityTokenHandler = new JwtSecurityTokenHandler();
 
-        protected abstract string Audience { get; }
+        protected virtual string Audience { get; }
 
-        protected abstract string Issuer { get; }
+        protected virtual string Issuer { get; }
 
         protected virtual SignatureProvider SignatureProvider => null;
 
