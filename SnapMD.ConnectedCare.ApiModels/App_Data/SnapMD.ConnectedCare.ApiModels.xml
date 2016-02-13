@@ -9,6 +9,20 @@
             Use this attribute to change the name of the <see cref="!:ModelDescription"/> generated for a type.
             </summary>
         </member>
+        <member name="M:SnapMD.ConnectedCare.ApiModels.Attributes.ModelNameAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SnapMD.ConnectedCare.ApiModels.Attributes.ModelNameAttribute"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Attributes.ModelNameAttribute.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
         <member name="T:SnapMD.ConnectedCare.ApiModels.Scheduling.SnapMD.Core.Models.Scheduling.AppointmentParticipantResponse">
             <summary>
                 Request type for appointment participants.
