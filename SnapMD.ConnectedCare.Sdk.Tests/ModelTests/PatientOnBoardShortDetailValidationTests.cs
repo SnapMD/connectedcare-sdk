@@ -38,5 +38,20 @@ namespace SnapMD.ConnectedCare.Sdk.Tests.ModelTests
             bool actual = target.ValidateModel(m => new Exception(m));
             Assert.IsTrue(actual);
         }
+
+        [Test]
+        public void TestModelValidationAllowsNullEmail()
+        {
+            var target = new PatientOnBoardShortDetail
+            {
+                FirstName = "First Name",
+                Email = null,
+                Dob = new DateTime(2015, 1, 1),
+                Address = "I.R. Address",
+                MobileNumberWithCountryCode = "12345678900"
+            };
+            bool actual = target.ValidateModel(m => new Exception(m), true);
+            Assert.IsTrue(actual);
+        }
     }
 }
