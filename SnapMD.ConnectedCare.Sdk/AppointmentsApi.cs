@@ -56,7 +56,7 @@ namespace SnapMD.ConnectedCare.Sdk
 
         private static string GetParticipantsPath(Guid appointmentId)
         {
-            var path = string.Format("v2/clinicians/appointments/{0}/participants", appointmentId);
+            var path = string.Format("v2.1/clinicians/appointments/{0}/participants", appointmentId);
             return path;
         }
     }

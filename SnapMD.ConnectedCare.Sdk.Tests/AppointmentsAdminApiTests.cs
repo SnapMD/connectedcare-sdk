@@ -40,7 +40,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             var expectedResponse = new ApiResponseV2<Appointment>(_appointmentBuilder.Build());
 
             _mockWebClient.Setup(c => c.DownloadString(
-                It.Is<Uri>(uri => uri.ToString().EndsWith("v2/clinicians/appointments/" + _appointment.AppointmentId))))
+                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments/" + _appointment.AppointmentId))))
                 .Returns(JsonConvert.SerializeObject(expectedResponse));
 
             var response = _api.GetAppointment(_appointment.AppointmentId);
@@ -48,7 +48,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             AssertAppointments(expectedResponse.Data.First(), response.Data.First());
 
             _mockWebClient.Verify(client => client.DownloadString(
-                It.Is<Uri>(uri => uri.ToString().EndsWith("v2/clinicians/appointments/" + _appointment.AppointmentId))));
+                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments/" + _appointment.AppointmentId))));
         }
 
         [Test]
@@ -64,7 +64,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             AssertAppointments(expectedResponse.Data.First(), response.Data.First());
 
             _mockWebClient.Verify(client => client.UploadString(
-                It.Is<Uri>(uri => uri.ToString().EndsWith("v2/clinicians/appointments")),
+                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments")),
                 "POST",
                 JsonConvert.SerializeObject(_appointment)));
         }
@@ -82,7 +82,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             AssertAppointments(expectedResponse.Data.First(), response.Data.First());
 
             _mockWebClient.Verify(client => client.UploadString(
-                It.Is<Uri>(uri => uri.ToString().EndsWith("v2/clinicians/appointments")),
+                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments")),
                 "PUT",
                 JsonConvert.SerializeObject(_appointment)));
         }
@@ -93,7 +93,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             _api.DeleteAppointment(_appointment.AppointmentId);
 
             _mockWebClient.Verify(client => client.UploadString(
-                It.Is<Uri>(uri => uri.ToString().EndsWith("v2/clinicians/appointments/" + _appointment.AppointmentId)),
+                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments/" + _appointment.AppointmentId)),
                 "DELETE", It.IsAny<string>()));
         }
 

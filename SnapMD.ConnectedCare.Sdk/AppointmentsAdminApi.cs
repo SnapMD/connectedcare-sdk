@@ -29,22 +29,22 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public ApiResponseV2<Appointment> CreateAppointment(Appointment appointment)
         {
-            return Post<ApiResponseV2<Appointment>>("v2/clinicians/appointments", appointment);
+            return Post<ApiResponseV2<Appointment>>("v2.1/clinicians/appointments", appointment);
         }
 
         public ApiResponseV2<Appointment> UpdateAppointment(Appointment appointment)
         {
-            return Put<ApiResponseV2<Appointment>>("v2/clinicians/appointments", appointment);
+            return Put<ApiResponseV2<Appointment>>("v2.1/clinicians/appointments", appointment);
         }
 
         public ApiResponseV2<Appointment> GetAppointment(Guid appointmentId)
         {
-            return MakeCall<ApiResponseV2<Appointment>>("v2/clinicians/appointments/" + appointmentId);
+            return MakeCall<ApiResponseV2<Appointment>>("v2.1/clinicians/appointments/" + appointmentId);
         }
 
         public void DeleteAppointment(Guid appointmentId)
         {
-            Delete("v2/clinicians/appointments/" + appointmentId);
+            Delete("v2.1/clinicians/appointments/" + appointmentId);
         }
     }
 }
