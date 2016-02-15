@@ -30,13 +30,13 @@ namespace SnapMD.ConnectedCare.Sdk
 
         public ApiResponseV2<Appointment> CreateAppointment(Appointment appointment)
         {
-            var response = Post<ApiResponseV2<Appointment>>("v2/patients/appointments", appointment);
+            var response = Post<ApiResponseV2<Appointment>>("v2.1/patients/appointments", appointment);
             return response;
         }
 
         public void CancelAppointment(Guid appointmentId)
         {
-            Delete("v2/patients/appointments/" + appointmentId);
+            Delete("v2.1/patients/appointments/" + appointmentId);
         }
 
         public ApiResponseV2<AppointmentParticipantResponse> AddParticipant(Guid appointmentId,

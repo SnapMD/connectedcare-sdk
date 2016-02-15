@@ -49,7 +49,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             AssertAppointments(expectedResponse.Data.First(), response.Data.First());
 
             _mockWebClient.Verify(client => client.UploadString(
-                It.Is<Uri>(uri => uri.ToString().EndsWith("v2/patients/appointments")),
+                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/patients/appointments")),
                 "POST",
                 JsonConvert.SerializeObject(_appointment)));
         }
@@ -93,7 +93,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             _api.CancelAppointment(_appointment.AppointmentId);
 
             _mockWebClient.Verify(client => client.UploadString(
-                It.Is<Uri>(uri => uri.ToString().EndsWith("v2/patients/appointments/" + _appointment.AppointmentId)),
+                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/patients/appointments/" + _appointment.AppointmentId)),
                 "DELETE", It.IsAny<string>()));
         }
 
