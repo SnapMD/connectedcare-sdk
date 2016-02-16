@@ -23,6 +23,35 @@
             The name.
             </value>
         </member>
+        <member name="T:SnapMD.ConnectedCare.ApiModels.EmailUserRequest">
+            <summary>
+            Request Model for sending email to user. 
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.EmailUserRequest.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+            <value>
+            The email.
+            </value>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.EmailUserRequest.HospitalId">
+            <summary>
+            Gets or sets the hospital identifier.
+            </summary>
+            <value>
+            The hospital identifier.
+            </value>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.EmailUserRequest.UserTypeId">
+            <summary>
+            Gets or sets the user type identifier.
+            </summary>
+            <value>
+            The user type identifier.
+            </value>
+        </member>
         <member name="T:SnapMD.ConnectedCare.ApiModels.Scheduling.SnapMD.Core.Models.Scheduling.AppointmentParticipantResponse">
             <summary>
                 Request type for appointment participants.
@@ -154,6 +183,12 @@
                 Example: 82?SampleText
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:SnapMD.ConnectedCare.ApiModels.ResetPassWordRequest">
+            <summary>
+            Request Model for sending Reset Password Email.
+            </summary>
+            <seealso cref="T:SnapMD.ConnectedCare.ApiModels.EmailUserRequest" />
         </member>
         <member name="P:SnapMD.ConnectedCare.ApiModels.ScheduleConsultationDetailByUsername.AssignedDoctorUsername">
             <summary>
