@@ -77,12 +77,13 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
             _mockWebClient.Setup(c => c.UploadString(It.IsAny<Uri>(), "PUT", It.IsAny<string>()))
                 .Returns(JsonConvert.SerializeObject(expectedResponse));
 
-            var response = _api.UpdateAppointment(expectedResponse.Data.First().AppointmentId, _appointment);
+            var appointmentId = expectedResponse.Data.First().AppointmentId;
+            var response = _api.UpdateAppointment(appointmentId, _appointment);
 
             AssertAppointments(expectedResponse.Data.First(), response.Data.First());
 
             _mockWebClient.Verify(client => client.UploadString(
-                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments")),
+                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments/" + appointmentId)),
                 "PUT",
                 JsonConvert.SerializeObject(_appointment)));
         }
