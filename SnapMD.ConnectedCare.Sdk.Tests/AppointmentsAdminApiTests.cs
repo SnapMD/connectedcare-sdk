@@ -14,9 +14,9 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
     [TestFixture]
     public class AppointmentsAdminApiTests : TestBase
     {
-        private readonly ISingleObjectBuilder<Appointment> _appointmentBuilder = Builder<Appointment>.CreateNew();
+        private readonly ISingleObjectBuilder<AppointmentResponse> _appointmentBuilder = Builder<AppointmentResponse>.CreateNew();
         private AppointmentsAdminApi _api;
-        private Appointment _appointment;
+        private AppointmentResponse _appointment;
         private Mock<IWebClient> _mockWebClient;
         private string _accessToken;
 
@@ -37,7 +37,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
         [Test]
         public void GetAppointmentTest()
         {
-            var expectedResponse = new ApiResponseV2<Appointment>(_appointmentBuilder.Build());
+            var expectedResponse = new ApiResponseV2<AppointmentResponse>(_appointmentBuilder.Build());
 
             _mockWebClient.Setup(c => c.DownloadString(
                 It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments/" + _appointment.AppointmentId))))
@@ -54,7 +54,7 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
         [Test]
         public void CreateAppointmentTest()
         {
-            var expectedResponse = new ApiResponseV2<Appointment>(_appointmentBuilder.Build());
+            var expectedResponse = new ApiResponseV2<AppointmentResponse>(_appointmentBuilder.Build());
 
             _mockWebClient.Setup(c => c.UploadString(It.IsAny<Uri>(), "POST", It.IsAny<string>()))
                 .Returns(JsonConvert.SerializeObject(expectedResponse));
@@ -72,12 +72,12 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
         [Test]
         public void UpdateAppointmentTest()
         {
-            var expectedResponse = new ApiResponseV2<Appointment>(_appointmentBuilder.Build());
+            var expectedResponse = new ApiResponseV2<AppointmentResponse>(_appointmentBuilder.Build());
 
             _mockWebClient.Setup(c => c.UploadString(It.IsAny<Uri>(), "PUT", It.IsAny<string>()))
                 .Returns(JsonConvert.SerializeObject(expectedResponse));
 
-            var response = _api.UpdateAppointment(_appointment);
+            var response = _api.UpdateAppointment(expectedResponse.Data.First().AppointmentId, _appointment);
 
             AssertAppointments(expectedResponse.Data.First(), response.Data.First());
 
@@ -97,13 +97,12 @@ namespace SnapMD.ConnectedCare.Sdk.Tests
                 "DELETE", It.IsAny<string>()));
         }
 
-        private static void AssertAppointments(Appointment expected, Appointment actual)
+        private static void AssertAppointments(AppointmentResponse expected, AppointmentResponse actual)
         {
             Assert.AreEqual(expected.AvailabilityBlockId, actual.AvailabilityBlockId);
             Assert.AreEqual(expected.AppointmentId, actual.AppointmentId);
             Assert.AreEqual(expected.AppointmentStatusCode, actual.AppointmentStatusCode);
             Assert.AreEqual(expected.AppointmentTypeCode, actual.AppointmentTypeCode);
-            Assert.AreEqual(expected.IntakeMetadataId, actual.IntakeMetadataId);
             Assert.AreEqual(expected.StartTime, actual.StartTime);
             Assert.AreEqual(expected.EndTime, actual.EndTime);
             Assert.AreEqual(expected.OnDemandRequestId, actual.OnDemandRequestId);

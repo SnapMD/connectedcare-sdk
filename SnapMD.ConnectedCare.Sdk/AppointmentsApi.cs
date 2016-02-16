@@ -28,9 +28,9 @@ namespace SnapMD.ConnectedCare.Sdk
         {
         }
 
-        public ApiResponseV2<Appointment> CreateAppointment(Appointment appointment)
+        public ApiResponseV2<AppointmentResponse> CreateAppointment(AppointmentRequest appointment)
         {
-            var response = Post<ApiResponseV2<Appointment>>("v2.1/patients/appointments", appointment);
+            var response = Post<ApiResponseV2<AppointmentResponse>>("v2.1/patients/appointments", appointment);
             return response;
         }
 

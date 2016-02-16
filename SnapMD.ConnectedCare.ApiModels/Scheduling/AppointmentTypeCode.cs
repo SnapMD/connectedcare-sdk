@@ -1,5 +1,8 @@
 ﻿namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 {
+    /// <summary>
+    /// Types of appointments.
+    /// </summary>
     public enum AppointmentTypeCode
     {
         /// <summary>
