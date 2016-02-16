@@ -184,7 +184,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:SnapMD.ConnectedCare.ApiModels.ResetPassWordRequest">
+        <member name="T:SnapMD.ConnectedCare.ApiModels.ResetPasswordRequest">
             <summary>
             Request Model for sending Reset Password Email.
             </summary>
