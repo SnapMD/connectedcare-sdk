@@ -1,6 +1,6 @@
 ﻿namespace SnapMD.ConnectedCare.ApiModels.Scheduling
 {
-    public enum AppointmentOptimizationCode
+    public enum AppointmentOptimizationCode : short
     {
         SingleBooking,
         DoubleBooking

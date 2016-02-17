@@ -23,6 +23,21 @@
             The name.
             </value>
         </member>
+        <member name="T:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentIntakeMetadata">
+            <summary>
+            Appointment creation questionnaire (IntakeMetadata).
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentIntakeMetadata.Concerns">
+            <summary>
+            Patient concerns.
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentIntakeMetadata.AdditionalNotes">
+            <summary>
+            Additioal text information.
+            </summary>
+        </member>
         <member name="T:SnapMD.ConnectedCare.ApiModels.Scheduling.SnapMD.Core.Models.Scheduling.AppointmentParticipantResponse">
             <summary>
                 Request type for appointment participants.
@@ -31,6 +46,21 @@
         <member name="T:SnapMD.ConnectedCare.ApiModels.Scheduling.SnapMD.Core.Models.Scheduling.AppointmentParticipantRequest">
             <summary>
                 Request type for appointment participants.
+            </summary>
+        </member>
+        <member name="T:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentResponse">
+            <summary>
+            Appointment response model.
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentResponse.AppointmentId">
+            <summary>
+            Appointment id.
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentResponse.AppointmentStatusCode">
+            <summary>
+            Appointment status.
             </summary>
         </member>
         <member name="F:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentStatusCode.Scheduled">
@@ -61,6 +91,46 @@
         <member name="F:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentStatusCode.Transferred">
             <summary>
             The patient was transferred to a different doctor.
+            </summary>
+        </member>
+        <member name="T:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentRequest">
+            <summary>
+            Appointment creation request model.
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentRequest.AvailabilityBlockId">
+            <summary>
+            Availability block id.
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentRequest.StartTime">
+            <summary>
+            Appointment start time.
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentRequest.EndTime">
+            <summary>
+            Appointment end time.
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentRequest.OnDemandRequestId">
+            <summary>
+            On demand request id.
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentRequest.AppointmentTypeCode">
+            <summary>
+            Appointment type.
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentRequest.IntakeMetadata">
+            <summary>
+            Intake metadata (Concerns and additional notes).
+            </summary>
+        </member>
+        <member name="T:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentTypeCode">
+            <summary>
+            Types of appointments.
             </summary>
         </member>
         <member name="F:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentTypeCode.None">
@@ -173,6 +243,11 @@
         <member name="P:SnapMD.ConnectedCare.ApiModels.ScheduledConsultationResult.ConsultationId">
             <summary>
             The ID of the newly-created consultation.
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.IntakeQuestionnaire.AdditionalNotes">
+            <summary>
+            Additional appointment notes
             </summary>
         </member>
         <member name="T:SnapMD.ConnectedCare.ApiModels.PatientAccountInfo">

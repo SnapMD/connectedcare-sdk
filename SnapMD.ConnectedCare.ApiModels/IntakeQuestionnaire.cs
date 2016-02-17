@@ -41,5 +41,10 @@ namespace SnapMD.ConnectedCare.ApiModels
         public HospitalRecord HospitalRecord { get; set; }
 
         public List<GuardianRecord> GuardiansRecords { get; set; }
+
+        /// <summary>
+        /// Additional appointment notes
+        /// </summary>
+        public string AdditionalNotes { get; set; }
     }
 }

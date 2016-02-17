@@ -72,9 +72,11 @@
     <Compile Include="CoUserEmailInvitationRequest.cs" />
     <Compile Include="ConsultationParticipantRequest.cs" />
     <Compile Include="ConsultationParticipantResponse.cs" />
+    <Compile Include="Scheduling\AppointmentIntakeMetadata.cs" />
     <Compile Include="Scheduling\AppointmentOptimizationCode.cs" />
     <Compile Include="Scheduling\AppointmentParticipantResponse.cs" />
     <Compile Include="Scheduling\AppointmentParticipantRequest.cs" />
+    <Compile Include="Scheduling\AppointmentResponse.cs" />
     <Compile Include="Scheduling\AppointmentStatusCode.cs" />
     <Compile Include="BaseProfile.cs" />
     <Compile Include="ClinicianGroupRequest.cs" />
@@ -114,7 +116,7 @@
     <Compile Include="ScheduleConsultationDetailByUsername.cs" />
     <Compile Include="ScheduledConsultation.cs" />
     <Compile Include="ScheduledConsultationResult.cs" />
-    <Compile Include="Scheduling\Appointment.cs" />
+    <Compile Include="Scheduling\AppointmentRequest.cs" />
     <Compile Include="Scheduling\AppointmentTypeCode.cs" />
     <Compile Include="Scheduling\AttendenceCode.cs" />
     <Compile Include="Scheduling\AvailabilityBlockClinicianRequest.cs" />
