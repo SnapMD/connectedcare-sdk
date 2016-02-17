@@ -15,22 +15,38 @@ namespace SnapMD.ConnectedCare.ApiModels
 {
     public class ScheduledConsultation
     {
-        public DateTimeOffset ScheduledTime { get; set; }
-        public int ExpiryTime { get; set; }
-        public int ConsultantUserId { get; set; }
-        public int ConsultationId { get; set; }
-        public string PatientFirstName { get; set; }
-        public string PatientLastName { get; set; }
-        public TimeZoneInfo UserTimeZone { get; set; }
-        public int PatientId { get; set; }
         public string AssignedDoctorFirstName { get; set; }
+
         public string AssignedDoctorLastName { get; set; }
-        public string AssignedDoctorName { get;set; }
-        public string PatientName { get; set; }
-        public int? PatientUserId { get; set; }
-        public int ScheduledId { get; set; }
+
+        public string AssignedDoctorName { get; set; }
+
+        public int ConsultantUserId { get; set; }
+
         public double? ConsultationAmount { get; set; }
-        public double? CopayAmount { get; set; }
+
+        public int ConsultationId { get; set; }
+
         public int? ConsultationStatus { get; set; }
+
+        public double? CopayAmount { get; set; }
+
+        public int ExpiryTime { get; set; }
+
+        public string PatientFirstName { get; set; }
+
+        public int PatientId { get; set; }
+
+        public string PatientLastName { get; set; }
+
+        public string PatientName { get; set; }
+
+        public int? PatientUserId { get; set; }
+
+        public int ScheduledId { get; set; }
+
+        public DateTimeOffset ScheduledTime { get; set; }
+
+        public TimeZoneInfo UserTimeZone { get; set; }
     }
 }
