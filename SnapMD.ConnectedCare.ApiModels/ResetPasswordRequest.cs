@@ -2,10 +2,11 @@
 
 namespace SnapMD.ConnectedCare.ApiModels
 {
-    public class ResetPasswordRequest
+    /// <summary>
+    /// Request Model for sending Reset Password Email.
+    /// </summary>
+    /// <seealso cref="SnapMD.ConnectedCare.ApiModels.EmailUserRequest" />
+    public class ResetPasswordRequest : EmailUserRequest
     {
-        public string Email { get; set; }
-        public int HospitalId { get; set; }
-        public UserType? UserTypeId { get; set; }
     }
 }
