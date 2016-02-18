@@ -10,7 +10,6 @@
 //    limitations under the License.
 
 using System.Collections.Generic;
-using SnapMD.Sdk.Models;
 
 namespace SnapMD.ConnectedCare.Sdk.Models
 {
