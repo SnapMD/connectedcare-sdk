@@ -10,10 +10,10 @@ This project uses [Json.NET](https://github.com/JamesNK/Newtonsoft.Json) for ser
 
 ## Configuration
 
-Unit tests require a separate config file stored next to the App.config, called `SnapMD.ConnectedCare.Sdk.Test.Properties.Settings.csproj`. This file is not in the `.gitignore` file because if it's not in the repository it can result in compilation errors for brand-new installations. The file should look like this:
+Unit tests require a separate config file stored next to the App.config, called `SnapMD.VirtualCare.Sdk.Test.Properties.Settings.csproj`. This file is not in the `.gitignore` file because if it's not in the repository it can result in compilation errors for brand-new installations. The file should look like this:
 
     <?xml version="1.0"?>
-    <SnapMD.ConnectedCare.Sdk.Tests.Properties.Settings>
+    <SnapMD.VirtualCare.Sdk.Tests.Properties.Settings>
         <setting name="ApiDeveloperId" serializeAs="String">
             <value>******</value>
         </setting>
@@ -29,11 +29,11 @@ Unit tests require a separate config file stored next to the App.config, called 
         <setting name="BaseUrl" serializeAs="String">
             <value>https://sandbox.connectedcare.md/api/</value>
         </setting>
-    </SnapMD.ConnectedCare.Sdk.Tests.Properties.Settings>
+    </SnapMD.VirtualCare.Sdk.Tests.Properties.Settings>
 
 It is crucial that we prevent users' credentials from being stored in the Git repository, so if your settings are discovered in your pull request, it will be rejected. In order to make local changes to this file, use the following Git command:
 
-    git update-index --assume-unchanged SnapMD.ConnectedCare.Sdk.Tests/SnapMD.ConnectedCare.Sdk.Tests.Properties.Settings.config
+    git update-index --assume-unchanged SnapMD.VirtualCare.Sdk.Tests/SnapMD.VirtualCare.Sdk.Tests.Properties.Settings.config
 
 ## Contributing
 

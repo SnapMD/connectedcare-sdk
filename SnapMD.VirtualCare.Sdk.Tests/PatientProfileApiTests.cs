@@ -1,0 +1,96 @@
+﻿//    Copyright 2016 SnapMD, Inc.
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//        http://www.apache.org/licenses/LICENSE-2.0
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+
+using System;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using FizzWare.NBuilder.Implementation;
+using NUnit.Framework;
+using SnapMD.VirtualCare.ApiModels;
+using SnapMD.VirtualCare.Sdk.Tests.Properties;
+
+namespace SnapMD.VirtualCare.Sdk.Tests
+{
+    [TestFixture]
+    public class PatientProfileApiTests : TestBase
+    {
+        [Test]
+        public void TestAddDependentProfile()
+        {
+            string token;
+            var mockWebClient = TokenandWebClientSetup(out token);
+            string testEmail = "test" + Guid.NewGuid() + "@test.com";
+
+            DateTime mockDate = DateTime.UtcNow;
+
+            var mock = new
+            {
+                EmailAddress = testEmail,
+                PatientProfileData = new { PatientName = "p", LastName = "l", Enthicity = 1, Gender = "m", DOB = mockDate, Height = 1, Weight = 1 },
+                PatientUpdateRequest = new { Height = 2, Weight = 1 },
+                PatientMedicalHistoryData = new { Height = 2, Weight = 1 }
+            };
+
+            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, "v2/familygroups/dependents"), "POST",
+                Newtonsoft.Json.JsonConvert.SerializeObject(mock)))
+                .Returns("{\"$id\": \"1\",\"data\": [{\"$id\": \"2\", \"patientId\": \"1429\", \"securityToken\":\"\"}]}");
+
+            var sdk = new PatientProfileApi(Settings.Default.BaseUrl, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
+                mockWebClient.Object);
+            var result = sdk.AddDependent(mock);
+            Assert.IsNotNull(result);
+            Assert.IsNotNull(result.Data);
+            Assert.IsNotNull(result.Data.FirstOrDefault());
+            Assert.IsTrue(result.Data.First().PatientId > 0);
+        }
+
+
+        [Test]
+        public void TestNewPatient()
+        {
+            string token;
+            var mockWebClient = TokenandWebClientSetup(out token);
+            const string mockRequest = "{\"Address\":\"my address\",\"Dob\":\"2015-12-01T00:00:00\",\"Email\":\"mock@mail.com\",\"Name\":{\"First\":\"test\",\"Last\":\"user\"},\"Password\":\"password\",\"ProviderId\":1}";
+
+            const string testResponse = @"{
+                'data': [{
+                'providerId':1,
+                'patientId':129,
+                'name': {'first':'test', 'last':'user'},
+                'email' : 'mock@mail.com',
+                'address' : 'my address',
+                'dob' : '2015-12-01T00:00:00',
+                'userLoginId':16577
+                }]
+            }";
+
+            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, "v2/patients"), "POST", mockRequest))
+                .Returns(testResponse);
+
+            var api = new PatientProfileApi(Settings.Default.BaseUrl, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
+                mockWebClient.Object);
+            var result = api.NewPatient(new NewPatientRequest
+            {
+                ProviderId = 1,
+                Name = new FirstLast { First = "test", Last = "user" },
+                Email = "mock@mail.com",
+                Address = "my address",
+                Dob = new DateTime(2015,12,1),
+                Password = "password"
+            });
+            Assert.IsNotNull(result);
+            Assert.IsNotNull(result.Data);
+            Assert.IsNotNull(result.Data.FirstOrDefault());
+            Assert.AreEqual(result.Data.First().PatientId, 129);
+        }
+
+    }
+}

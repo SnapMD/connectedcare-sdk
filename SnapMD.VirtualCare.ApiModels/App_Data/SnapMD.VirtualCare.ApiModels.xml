@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SnapMD.VirtualCare.ApiModels</name>
+    </assembly>
+    <members>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Attributes.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="!:ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="M:SnapMD.VirtualCare.ApiModels.Attributes.ModelNameAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SnapMD.VirtualCare.ApiModels.Attributes.ModelNameAttribute"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Attributes.ModelNameAttribute.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.EmailUserRequest">
+            <summary>
+            Request Model for sending email to user. 
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.EmailUserRequest.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+            <value>
+            The email.
+            </value>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.EmailUserRequest.HospitalId">
+            <summary>
+            Gets or sets the hospital identifier.
+            </summary>
+            <value>
+            The hospital identifier.
+            </value>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.EmailUserRequest.UserTypeId">
+            <summary>
+            Gets or sets the user type identifier.
+            </summary>
+            <value>
+            The user type identifier.
+            </value>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentIntakeMetadata">
+            <summary>
+            Appointment creation questionnaire (IntakeMetadata).
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentIntakeMetadata.Concerns">
+            <summary>
+            Patient concerns.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentIntakeMetadata.AdditionalNotes">
+            <summary>
+            Additioal text information.
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Scheduling.SnapMD.Core.Models.Scheduling.AppointmentParticipantResponse">
+            <summary>
+                Request type for appointment participants.
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Scheduling.SnapMD.Core.Models.Scheduling.AppointmentParticipantRequest">
+            <summary>
+                Request type for appointment participants.
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentResponse">
+            <summary>
+            Appointment response model.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentResponse.AppointmentId">
+            <summary>
+            Appointment id.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentResponse.AppointmentStatusCode">
+            <summary>
+            Appointment status.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentStatusCode.Scheduled">
+            <summary>
+            A future appointment.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentStatusCode.Waiting">
+            <summary>
+            The patient for this appointment arrived to the clinic.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentStatusCode.CancelledByPatient">
+            <summary>
+            The patient cancelled the appointment.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentStatusCode.CancelledByProvider">
+            <summary>
+            The appointment was cancelled by the Provider.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentStatusCode.InProgress">
+            <summary>
+            The appointment is currently taking place.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentStatusCode.Transferred">
+            <summary>
+            The patient was transferred to a different doctor.
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentRequest">
+            <summary>
+            Appointment creation request model.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentRequest.AvailabilityBlockId">
+            <summary>
+            Availability block id.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentRequest.StartTime">
+            <summary>
+            Appointment start time.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentRequest.EndTime">
+            <summary>
+            Appointment end time.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentRequest.OnDemandRequestId">
+            <summary>
+            On demand request id.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentRequest.AppointmentTypeCode">
+            <summary>
+            Appointment type.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentRequest.IntakeMetadata">
+            <summary>
+            Intake metadata (Concerns and additional notes).
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentTypeCode">
+            <summary>
+            Types of appointments.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentTypeCode.None">
+            <summary>
+            Not specified
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentTypeCode.Future">
+            <summary>
+            Future appointment
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentTypeCode.OnDemand">
+            <summary>
+            Appointments on-demand
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Scheduling.AvailabilityBlockRequest">
+            <summary>
+                This payload does not include ID field, creator user, created time, etc.
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.ClinicianProfilesResult">
+            <summary>
+                Represents public information for a clinician that is suitable for patient use.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.ClinicianProfilesResult.ProfileImage">
+            <summary>
+                Get Doctor profile image or default one.
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.GlobalStatusCode">
+            <summary>
+            Requested by daniel.bouganim@snap.md
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.PatientOnBoardShortDetail.Address">
+            <summary>
+            Full address in free-form.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.PatientOnBoardShortDetail.CountryId">
+            <summary>
+            GET 'api/countrycode'
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.PatientOnBoardShortDetail.TimeZoneId">
+            <summary>
+            GET 'api/timezone'
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.PatientOnBoardShortDetail.Gender">
+            <summary>
+            M/F
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Payments.CopayPaymentResponse">
+            <summary>
+            The response returned when a call to MakePayment is made
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Payments.CopayPaymentResponse.ConfirmationNumber">
+            <summary>
+            The confirmation # of the payment
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Payments.PaymentProfile">
+            
+            <summary>
+            These models are for deserializing the responses from the Authorize.net API.
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Payments.CimAddress">
+            <summary>
+            These models are for deserializing the responses from the Authorize.net API.
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Payments.CimCustomer">
+            <summary>
+            These models are for deserializing the responses from the Authorize.net API.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.EncounterConcern.CustomCodeSerializable">
+            <summary>
+                To avoid compiler error with serializing an Interface. #3515
+            </summary>
+        </member>
+        <member name="M:SnapMD.VirtualCare.ApiModels.CustomCode.ToString">
+            <summary>
+                Example: 82?SampleText
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.ResetPasswordRequest">
+            <summary>
+            Request Model for sending Reset Password Email.
+            </summary>
+            <seealso cref="T:SnapMD.VirtualCare.ApiModels.EmailUserRequest" />
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.ScheduleConsultationDetailByUsername.AssignedDoctorUsername">
+            <summary>
+                Doctor's email
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.ScheduleConsultationDetailByUsername.PatientUsername">
+            <summary>
+                Patient's email
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.ScheduledConsultationResult">
+            <summary>
+            Wraps a consultation ID in a response for scheduled consultation POST APIs.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.ScheduledConsultationResult.ConsultationId">
+            <summary>
+            The ID of the newly-created consultation.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.IntakeQuestionnaire.AdditionalNotes">
+            <summary>
+            Additional appointment notes
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.PatientAccountInfo">
+            <summary>
+            Represents patient details for administrator patient lists.
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.ResponseObservableItem">
+            <summary>
+                Simple object for IDs and text.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.StaffProfileRequest.rxntUserName">
+            <summary>
+            Optional doctor setting.
+            Doctor setting: RXNT user name,
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.StaffProfileRequest.rxntUserPassword">
+            <summary>
+            Optional doctor setting.
+            Doctor setting: RXNT user password,
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.UserProfilesResult">
+            <summary>
+                Represents public information for a clinician that is suitable for patient use.
+            </summary>
+        </member>
+    </members>
+</doc>
