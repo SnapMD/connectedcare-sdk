@@ -14,14 +14,33 @@ using System.Linq;
 
 namespace SnapMD.ConnectedCare.Sdk.Models
 {
+    /// <summary>
+    /// Basic api response model.
+    /// </summary>
     public class ApiResponse : ApiResponse<object>
     {
     }
 
+    /// <summary>
+    /// Generic api response with strongly-typed model.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class ApiResponse<T>
     {
+        /// <summary>
+        /// Indicates if request was successfully processed.
+        /// </summary>
         public bool Success { get; set; }
+
+        /// <summary>
+        /// The payload being returned to the requestor.
+        /// </summary>
         public T Data { get; set; }
+
+        /// <summary>
+        /// An optional message that may be useful if the response code is greater than 200 and less than 300 but needs more
+        /// explanation.
+        /// </summary>
         public string Message { get; set; }
     }
 

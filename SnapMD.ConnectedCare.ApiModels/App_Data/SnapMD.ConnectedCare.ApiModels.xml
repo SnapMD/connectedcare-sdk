@@ -23,21 +23,6 @@
             The name.
             </value>
         </member>
-        <member name="T:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentIntakeMetadata">
-            <summary>
-            Appointment creation questionnaire (IntakeMetadata).
-            </summary>
-        </member>
-        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentIntakeMetadata.Concerns">
-            <summary>
-            Patient concerns.
-            </summary>
-        </member>
-        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentIntakeMetadata.AdditionalNotes">
-            <summary>
-            Additioal text information.
-            </summary>
-        </member>
         <member name="T:SnapMD.ConnectedCare.ApiModels.EmailUserRequest">
             <summary>
             Request Model for sending email to user. 
@@ -66,6 +51,21 @@
             <value>
             The user type identifier.
             </value>
+        </member>
+        <member name="T:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentIntakeMetadata">
+            <summary>
+            Appointment creation questionnaire (IntakeMetadata).
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentIntakeMetadata.Concerns">
+            <summary>
+            Patient concerns.
+            </summary>
+        </member>
+        <member name="P:SnapMD.ConnectedCare.ApiModels.Scheduling.AppointmentIntakeMetadata.AdditionalNotes">
+            <summary>
+            Additioal text information.
+            </summary>
         </member>
         <member name="T:SnapMD.ConnectedCare.ApiModels.Scheduling.SnapMD.Core.Models.Scheduling.AppointmentParticipantResponse">
             <summary>
