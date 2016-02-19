@@ -73,6 +73,9 @@
     <Compile Include="CoUserEmailInvitationRequest.cs" />
     <Compile Include="ConsultationParticipantRequest.cs" />
     <Compile Include="ConsultationParticipantResponse.cs" />
+    <Compile Include="ProviderBase.cs" />
+    <Compile Include="ProviderRequest.cs" />
+    <Compile Include="ProviderResponse.cs" />
     <Compile Include="Scheduling\AppointmentIntakeMetadata.cs" />
     <Compile Include="Scheduling\AppointmentOptimizationCode.cs" />
     <Compile Include="Scheduling\AppointmentParticipantResponse.cs" />
@@ -153,6 +156,7 @@
     <Compile Include="SerializableUser.cs" />
     <Compile Include="Sms\SmsStatus.cs" />
     <Compile Include="SoapNote.cs" />
+    <Compile Include="SsoSettings.cs" />
     <Compile Include="StaffProfileRequest.cs" />
     <Compile Include="SurgeryRecord.cs" />
     <Compile Include="Telecom.cs" />
