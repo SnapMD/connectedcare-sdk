@@ -9,6 +9,7 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
+using Newtonsoft.Json;
 using System;
 
 namespace SnapMD.ConnectedCare.ApiModels
@@ -27,6 +28,16 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public int ProviderId { get; set; }
 
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public string Country { get; set; }
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public string ZipCode { get; set; }
+
+        //Token is used for co-user only
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public string Token { get; set; }
+
         public bool ValidateModel(Func<string, Exception> exceptionToThrow = null)
         {
             if (exceptionToThrow == null)
@@ -34,33 +45,37 @@ namespace SnapMD.ConnectedCare.ApiModels
                 exceptionToThrow = message => new ArgumentException(message);
             }
 
-            if (Name == null)
+            if (Token == null)
             {
-                throw exceptionToThrow("Name is required");
-            }
+                if (Name == null)
+                {
+                    throw exceptionToThrow("Name is required");
+                }
 
-            if (string.IsNullOrEmpty(Name.First))
-            {
-                // error: first name required.
-                throw exceptionToThrow("First name required.");
-            }
+                if (string.IsNullOrEmpty(Name.First))
+                {
+                    // error: first name required.
+                    throw exceptionToThrow("First name required.");
+                }
 
-            if (string.IsNullOrEmpty(Email))
-            {
-                // error: email required.
-                throw exceptionToThrow("Email address required.");
-            }
+                if (string.IsNullOrEmpty(Email))
+                {
+                    // error: email required.
+                    throw exceptionToThrow("Email address required.");
+                }
 
+                if (string.IsNullOrEmpty(Address))
+                {
+                    // error: address required.
+                    throw exceptionToThrow("Address required.");
+                }
+            }
             if (Dob == null)
             {
                 // error: date of birth required.
                 throw exceptionToThrow("Date of birth required.");
             }
-            if (string.IsNullOrEmpty(Address))
-            {
-                // error: address required.
-                throw exceptionToThrow("Address required.");
-            }
+
 
             if (ProviderId <= 0)
             {

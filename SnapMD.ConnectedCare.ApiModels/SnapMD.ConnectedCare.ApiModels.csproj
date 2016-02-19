@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\src\packages\Microsoft.Net.Compilers.1.1.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\..\src\packages\Microsoft.Net.Compilers.1.1.1\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\src\</SolutionDir>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,8 +65,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NewCoUserRequest.cs" />
+    <Compile Include="ParticipantEmailInvitationRequest.cs" />
+    <Compile Include="CoUserEmailInvitationRequest.cs" />
+    <Compile Include="ConsultationParticipantRequest.cs" />
+    <Compile Include="ConsultationParticipantResponse.cs" />
+    <Compile Include="Scheduling\AppointmentOptimizationCode.cs" />
+    <Compile Include="Scheduling\AppointmentParticipantResponse.cs" />
+    <Compile Include="Scheduling\AppointmentParticipantRequest.cs" />
     <Compile Include="Scheduling\AppointmentStatusCode.cs" />
     <Compile Include="BaseProfile.cs" />
+    <Compile Include="ClinicianGroupRequest.cs" />
+    <Compile Include="ClinicianGroupResponse.cs" />
     <Compile Include="ClinicianProfilesResult.cs" />
     <Compile Include="CodeSetResponse.cs" />
     <Compile Include="ConsultationEvents.cs" />
@@ -101,6 +114,7 @@
     <Compile Include="ScheduledConsultationResult.cs" />
     <Compile Include="Scheduling\Appointment.cs" />
     <Compile Include="Scheduling\AppointmentTypeCode.cs" />
+    <Compile Include="Scheduling\AttendenceCode.cs" />
     <Compile Include="Scheduling\AvailabilityBlockClinicianRequest.cs" />
     <Compile Include="Scheduling\AvailabilityBlockClinicianResponse.cs" />
     <Compile Include="Scheduling\AvailabilityBlockRequest.cs" />
@@ -109,6 +123,8 @@
     <Compile Include="Scheduling\AvailabilityBlockRuleResponse.cs" />
     <Compile Include="Scheduling\AvailabilityBlocksRequest.cs" />
     <Compile Include="Scheduling\AvailabilityBlocksResponse.cs" />
+    <Compile Include="Scheduling\ParticipantTypeCode.cs" />
+    <Compile Include="Scheduling\RepeatPeriodCode.cs" />
     <Compile Include="Sms\EncounterSms.cs" />
     <Compile Include="FamilyMember.cs" />
     <Compile Include="GetPatientsResponse.cs" />
@@ -143,6 +159,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\src\packages\Microsoft.Net.Compilers.1.1.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\src\packages\Microsoft.Net.Compilers.1.1.1\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

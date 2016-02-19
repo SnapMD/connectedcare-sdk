@@ -44,7 +44,7 @@ namespace SnapMD.ConnectedCare.ApiModels
         public PatientOnBoardStatus? Status { get; set; }
         public bool? PreventSendingInvitation { get; set; }
 
-        public bool ValidateModel(Func<string, Exception> exceptionToThrow = null)
+        public bool ValidateModel(Func<string, Exception> exceptionToThrow = null, bool allowNullEmail = false)
         {
             if (exceptionToThrow == null)
             {
@@ -57,7 +57,7 @@ namespace SnapMD.ConnectedCare.ApiModels
                 throw exceptionToThrow("First name required.");
             }
 
-            if (string.IsNullOrEmpty(Email))
+            if (!allowNullEmail && string.IsNullOrWhiteSpace(Email))
             {
                 // error: email required.
                 throw exceptionToThrow("Email address required.");
