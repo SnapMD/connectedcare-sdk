@@ -5,7 +5,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
     public class AvailabilityBlockResponse : AvailabilityBlockRequest
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public AvailabilityBlockRuleResponse Rule { get; set; }
         public IEnumerable<AvailabilityBlockClinicianResponse> AvailabilityBlockClinicians { get; set; }

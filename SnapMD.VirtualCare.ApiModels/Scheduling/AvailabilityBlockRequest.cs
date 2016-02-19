@@ -16,7 +16,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public bool IsAllDay { get; set; }
         public bool IsAvailable { get; set; }
 
-        public int? AvailabilityBlockRuleId { get; set; }
+        public Guid? AvailabilityBlockRuleId { get; set; }
 
         public AppointmentOptimizationCode OptimizationTypeCode { get; set; }
     }

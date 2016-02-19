@@ -4,8 +4,6 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
     public class AvailabilityBlockRuleRequest
     {
-        public int Id { get; set; }
-
         public byte StartTimeHour { get; set; }
         public byte StartTimeMinute { get; set; }
         public byte EndTimeHour { get; set; }
