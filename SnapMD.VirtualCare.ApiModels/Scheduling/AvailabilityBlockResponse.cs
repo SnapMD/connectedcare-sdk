@@ -11,7 +11,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <summary>
         /// Availability block id.
         /// </summary>
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         /// <summary>
         /// Availability block clinicians.
