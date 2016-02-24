@@ -18,14 +18,44 @@ namespace SnapMD.VirtualCare.ApiModels
 {
     public class BaseProfile
     {
+        /// <summary>
+        /// Gets or sets the first name.
+        /// </summary>
+        /// <value>
+        /// The fname.
+        /// </value>
         public string Fname { get; set; }
 
+        /// <summary>
+        /// Gets or sets the last name.
+        /// </summary>
+        /// <value>
+        /// The lname.
+        /// </value>
         public string Lname { get; set; }
 
+        /// <summary>
+        /// Gets or sets the email.
+        /// </summary>
+        /// <value>
+        /// The email.
+        /// </value>
         public string Email { get; set; }
 
+        /// <summary>
+        /// Gets or sets the phone number.
+        /// </summary>
+        /// <value>
+        /// The ph number.
+        /// </value>
         public string PhNumber { get; set; }
 
+        /// <summary>
+        /// Gets or sets the cell number.
+        /// </summary>
+        /// <value>
+        /// The cell number.
+        /// </value>
         public string CellNumber { get; set; }
 
         public string TextAlerts { get; set; }
@@ -36,7 +66,13 @@ namespace SnapMD.VirtualCare.ApiModels
         public string DOB { get; set; }
 
         public int? YearPracticing { get; set; }
-        
+
+        /// <summary>
+        /// Gets or sets the department.
+        /// </summary>
+        /// <value>
+        /// The department.
+        /// </value>
         public string Department { get; set; }
         
         public string MedSpeciality { get; set; }

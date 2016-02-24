@@ -4,11 +4,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
     public class AvailabilityBlocksRequest
     {
-        public int HospitalId { get; set; }
-
-        public bool SearchByGroups { get; set; }
-
+        public int ProviderId { get; set; }
+        
         public int[] ClinicianIds { get; set; }
+
+        public Guid[] Groups { get; set; }
 
         public DateTime? StartDate { get; set; }
 
