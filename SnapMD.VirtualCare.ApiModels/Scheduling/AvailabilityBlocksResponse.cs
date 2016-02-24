@@ -4,6 +4,6 @@
     {
         public AvailabilityBlockResponse[] AvailabilityBlocks { get; set; }
 
-        public AvailabilityBlockRuleResponse[] AvailabilityBlockRules { get; set; }
+        public AvailabilityBlockRuleRequest[] AvailabilityBlockRules { get; set; }
     }
 }
