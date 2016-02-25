@@ -48,5 +48,10 @@ namespace SnapMD.VirtualCare.Sdk
 
             throw new SnapSdkException("Model invalid");
         }
+
+        public ApiResponseV2<string> ResendOnboardingEmail(EmailUserRequest emailUserRequest)
+        {
+            return Post<ApiResponseV2<string>>("v2/patients/single-trip-registration/resend-onboarding-email", emailUserRequest);
+        }
     }
 }
