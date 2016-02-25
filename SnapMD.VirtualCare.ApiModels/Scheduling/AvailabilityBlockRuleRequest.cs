@@ -2,23 +2,34 @@
 
 namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
+    /// <summary>
+    /// Availability block rule defines availability blocks repeating configuration.
+    /// </summary>
     public class AvailabilityBlockRuleRequest
     {
-        public byte StartTimeHour { get; set; }
-        public byte StartTimeMinute { get; set; }
-        public byte EndTimeHour { get; set; }
-        public byte EndTimeMinute { get; set; }
-
+        /// <summary>
+        /// Repeat from.
+        /// </summary>
         public DateTime FromDate { get; set; }
+
+        /// <summary>
+        /// Repeat to.
+        /// </summary>
         public DateTime? ToDate { get; set; }
 
+        /// <summary>
+        /// Create availability blocks every {repeat interval} {repeat period}.
+        /// </summary>
         public int RepeatInterval { get; set; }
-        public int[] RepeatOn { get; set; }
-        public RepeatPeriodCode RepeatPeriod { get; set; }
 
-        public bool AllowOnDemandAppt { get; set; }
-        public bool AllowProviderAppt { get; set; }
-        public bool AllowSelfAppt { get; set; }
-        public bool IsAllDay { get; set; }
+        /// <summary>
+        /// For monthly rule - days of a month, for weekly rules - days of the week.
+        /// </summary>
+        public int[] RepeatOn { get; set; }
+
+        /// <summary>
+        /// Repeat daily/weekly/monthly.
+        /// </summary>
+        public RepeatPeriodCode RepeatPeriod { get; set; }
     }
 }
