@@ -13,9 +13,13 @@ using System;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using FizzWare.NBuilder.Implementation;
+using Newtonsoft.Json;
 using NUnit.Framework;
 using SnapMD.VirtualCare.ApiModels;
+using SnapMD.VirtualCare.ApiModels.Enums;
+using SnapMD.VirtualCare.Sdk.Models;
 using SnapMD.VirtualCare.Sdk.Tests.Properties;
+using SnapMD.VirtualCare.Sdk.Wrappers;
 
 namespace SnapMD.VirtualCare.Sdk.Tests
 {
@@ -40,7 +44,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
             };
 
             mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, "v2/familygroups/dependents"), "POST",
-                Newtonsoft.Json.JsonConvert.SerializeObject(mock)))
+                JsonConvert.SerializeObject(mock)))
                 .Returns("{\"$id\": \"1\",\"data\": [{\"$id\": \"2\", \"patientId\": \"1429\", \"securityToken\":\"\"}]}");
 
             var sdk = new PatientProfileApi(Settings.Default.BaseUrl, token, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
@@ -51,7 +55,6 @@ namespace SnapMD.VirtualCare.Sdk.Tests
             Assert.IsNotNull(result.Data.FirstOrDefault());
             Assert.IsTrue(result.Data.First().PatientId > 0);
         }
-
 
         [Test]
         public void TestNewPatient()
@@ -92,5 +95,29 @@ namespace SnapMD.VirtualCare.Sdk.Tests
             Assert.AreEqual(result.Data.First().PatientId, 129);
         }
 
+        [Test]
+        public void TestResendOnboardingEmail()
+        {
+            var request = new EmailUserRequest
+            {
+                HospitalId = 126,
+                Email = "john.doe@example.com"
+            };
+            var expectedResponse = new ApiResponseV2<string>(request.Email);
+
+            string token;
+            var mockWebClient = TokenandWebClientSetup(out token);
+
+            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, "v2/patients/single-trip-registration/resend-onboarding-email"), "POST", JsonConvert.SerializeObject(request)))
+                .Returns(JsonConvert.SerializeObject(expectedResponse));
+
+            var api = new PatientProfileApi(Settings.Default.BaseUrl, null, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey,
+                mockWebClient.Object);
+
+            var response = api.ResendOnboardingEmail(request);
+
+            Assert.NotNull(response);
+            Assert.AreEqual(request.Email, response.Data.First());
+        }
     }
 }
