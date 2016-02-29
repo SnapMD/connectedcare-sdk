@@ -7,7 +7,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public Guid Id { get; set; }
 
         public string NameSuffix { get; set; }
-        public string NamePerfix { get; set; }
+        public string NamePrefix { get; set; }
         public string FamilyName { get; set; }
         public string GivenName { get; set; }
 
