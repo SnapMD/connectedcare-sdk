@@ -1,4 +1,4 @@
-namespace SnapMD.VirtualCare.ApiModels.Scheduling
+﻿namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
     public enum AttendenceCode
     {

@@ -1,4 +1,4 @@
-#region Copyright
+﻿#region Copyright
 
 //    Copyright 2016 SnapMD, Inc.
 //    Licensed under the Apache License, Version 2.0 (the "License");
