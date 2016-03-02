@@ -28,7 +28,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
             
             //var mockWebClient = TokenandWebClientSetupRemoteCall(out token);
             mockWebClient.Setup(x => x.DownloadString(new Uri(BaseUri, "v2/patients/15/payments")))
-                .Returns("{\"$id\": \"1\",\"data\": [{\"$id\": \"2\", \"billingAddress\":\"555 Pine St.\", \"description\":\"\", \"Email\":\"abc@abc.com\"}]}");
+                .Returns("{\"$id\": \"1\",\"data\": [{\"$id\": \"2\", \"billingAddress\":{\"street\":\"555 Pine St.\"}, \"description\":\"\", \"Email\":\"abc@abc.com\"}]}");
             
             var target = new PaymentsApi(Settings.Default.BaseUrl, token, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
             var actual = target.GetCustomerProfile(15);
