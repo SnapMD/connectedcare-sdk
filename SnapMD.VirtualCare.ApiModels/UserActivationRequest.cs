@@ -6,6 +6,14 @@
     public class UserActivationRequest
     {
         /// <summary>
+        /// Gets or sets the provider identifier.
+        /// </summary>
+        /// <value>
+        /// The provider identifier.
+        /// </value>
+        public int ProviderId { get; set; }
+
+        /// <summary>
         /// Gets or sets the email.
         /// </summary>
         /// <value>
