@@ -34,14 +34,13 @@ namespace SnapMD.VirtualCare.Sdk
 
         public ApiResponseV2<CimCustomer> GetCustomerProfile(int? patientUserId)
         {
-            //API looks so strange 
-            var result = MakeCall<ApiResponseV2<CimCustomer>>(string.Format("v2/patients/payments", patientUserId));
+            //fixed to match the unit test
+            var result = MakeCall<ApiResponseV2<CimCustomer>>(string.Format("v2/patients/{0}/payments", patientUserId));
             return result;
         }
 
         public ApiResponseV2<PaymentProfilePostResult> RegisterProfile(object paymentData)
         {
-            //hospital/{hospitalId}/payments/{userId}
             var result = Post<ApiResponseV2<PaymentProfilePostResult>>(string.Format("v2/patients/payments"), paymentData);
             return result;
         }
