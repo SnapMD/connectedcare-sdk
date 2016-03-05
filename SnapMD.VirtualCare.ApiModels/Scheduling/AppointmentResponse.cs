@@ -18,6 +18,12 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// </summary>
         public AppointmentStatusCode AppointmentStatusCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the participants.
+        /// </summary>
+        /// <value>
+        /// The participants.
+        /// </value>
         public List<AppointmentParticipantResponse> Participants { get; set; }
     }
 }
