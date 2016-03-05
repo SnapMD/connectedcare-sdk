@@ -6,7 +6,6 @@ using Newtonsoft.Json;
 using NUnit.Framework;
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.ApiModels.Scheduling;
-using SnapMD.VirtualCare.ApiModels.Scheduling.SnapMD.Core.Models.Scheduling;
 using SnapMD.VirtualCare.Sdk.Interfaces;
 using SnapMD.VirtualCare.Sdk.Models;
 using SnapMD.VirtualCare.Sdk.Tests.Properties;

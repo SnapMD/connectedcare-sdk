@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
@@ -16,5 +17,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// Appointment status.
         /// </summary>
         public AppointmentStatusCode AppointmentStatusCode { get; set; }
+
+        public List<AppointmentParticipantResponse> Participants { get; set; }
     }
 }
