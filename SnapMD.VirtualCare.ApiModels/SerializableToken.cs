@@ -11,10 +11,14 @@
 //    limitations under the License.
 #endregion
 
+using System;
+
 namespace SnapMD.VirtualCare.ApiModels
 {
     public class SerializableToken
     {
         public string access_token { get; set; }
+
+        public DateTimeOffset? expires { get; set; }
     }
 }
