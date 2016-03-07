@@ -12,9 +12,14 @@
 #endregion
 
 using System;
+// ReSharper disable InconsistentNaming
+#pragma warning disable 1591
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class SerializableToken
     {
         public string access_token { get; set; }
