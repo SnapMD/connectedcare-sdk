@@ -68,7 +68,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
                  .Build();
             var appointmentId = Guid.NewGuid();
             var actual = _api.AddParticipant(appointmentId, request);
-            Assert.AreEqual(request.Person.FamilyName, actual.Data.First().Person.FamilyName);
+            Assert.AreEqual(request.Person.Name.Family, actual.Data.First().Person.Name.Family);
         }
 
         [Test]
@@ -83,7 +83,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
             
             var appointmentId = Guid.NewGuid();
             var actual = _api.GetParticipants(appointmentId);
-            Assert.AreEqual(actual.Data.First().Person.FamilyName, actual.Data.First().Person.FamilyName);
+            Assert.AreEqual(actual.Data.First().Person.Name.Family, actual.Data.First().Person.Name.Family);
         }
 
         [Test]
