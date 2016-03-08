@@ -48,14 +48,7 @@ namespace SnapMD.VirtualCare.Sdk
             _apiKey = apiKey;
             RequiresAuthentication = true;
 
-            WebClientInstance = client;
-        }
-
-        public ApiCall(string baseUrl, IWebClient client)
-        {
-            _baseUri = new Uri(baseUrl);
-            RequiresAuthentication = true;
-            WebClientInstance = client;
+           WebClientInstance = client;
         }
 
         public bool NotFound { get; private set; }
