@@ -15,7 +15,7 @@
         /// Public information about doctor. 
         /// This information required only for staff who has doctor roles.
         /// </summary>
-        public StaffProfileDetailsRequest DoctorProfileDetailsRequest { get; set; }
+        public StaffProfileDetailsRequest DoctorProfileDetails { get; set; }
 
 
         /// <summary>

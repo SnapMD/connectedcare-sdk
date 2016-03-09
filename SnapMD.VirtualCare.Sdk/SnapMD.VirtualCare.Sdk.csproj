@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="ApiCall.cs" />
     <Compile Include="AppointmentsAdminApi.cs" />
+    <Compile Include="Interfaces\IStaffApi.cs" />
     <Compile Include="NotificationsApi.cs" />
     <Compile Include="AppointmentsApi.cs" />
     <Compile Include="EncounterAdminApi.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="ScheduleApi.cs" />
     <Compile Include="PaymentsApi.cs" />
     <Compile Include="Reports\SnapReportsApi.cs" />
+    <Compile Include="StaffApi.cs" />
     <Compile Include="SystemService\SystemServiceApi.cs" />
     <Compile Include="TokenApi.cs" />
     <Compile Include="UserApi.cs" />
