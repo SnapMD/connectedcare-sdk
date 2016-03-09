@@ -164,10 +164,13 @@
     <Compile Include="Sms\SmsStatus.cs" />
     <Compile Include="SoapNote.cs" />
     <Compile Include="SsoSettings.cs" />
+    <Compile Include="StaffAccountModelRequest.cs" />
+    <Compile Include="StaffProfileDetailsRequest.cs" />
     <Compile Include="StaffProfileRequest.cs" />
     <Compile Include="SurgeryRecord.cs" />
     <Compile Include="Telecom.cs" />
     <Compile Include="UserActivationResponse.cs" />
+    <Compile Include="UserDetailsRequest.cs" />
     <Compile Include="UserProfilesResult.cs" />
     <Compile Include="UserRole.cs" />
   </ItemGroup>

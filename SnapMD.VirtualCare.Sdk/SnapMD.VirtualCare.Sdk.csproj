@@ -72,6 +72,7 @@
     <Compile Include="EncountersApi.cs" />
     <Compile Include="DocumentsApi.cs" />
     <Compile Include="IntakeApi.cs" />
+    <Compile Include="Interfaces\ITokenApi.cs" />
     <Compile Include="Interfaces\IWebClient.cs" />
     <Compile Include="MockWebClient.cs">
       <SubType>Component</SubType>

@@ -13,10 +13,11 @@ using System.Linq;
 using SnapMD.VirtualCare.Sdk.Models;
 using Newtonsoft.Json.Linq;
 using SnapMD.VirtualCare.ApiModels.Enums;
+using SnapMD.VirtualCare.Sdk.Interfaces;
 
 namespace SnapMD.VirtualCare.Sdk
 {
-    public class TokenApi : ApiCall
+    public class TokenApi : ApiCall, ITokenApi
     {
         public TokenApi(string baseUrl, int? hospitalId, string developerId, string apiKey, Interfaces.IWebClient webClient)
             : base(baseUrl, webClient, developerId: developerId, apiKey: apiKey)
