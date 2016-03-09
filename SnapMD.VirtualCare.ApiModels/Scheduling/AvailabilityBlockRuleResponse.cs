@@ -23,6 +23,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public int? ModifiedByUserId { get; set; }
 
         /// <summary>
+        /// Indicates that rule is in state of processing (creating availability blocks).
+        /// </summary>
+        public DateTime? ServiceLockDate { get; set; }
+
+        /// <summary>
         /// Created date.
         /// </summary>
         public DateTime CreatedDate { get; set; }

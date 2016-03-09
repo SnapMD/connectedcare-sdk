@@ -1,5 +1,4 @@
-﻿using System;
-using SnapMD.VirtualCare.ApiModels;
+﻿using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.Sdk.Interfaces;
 using SnapMD.VirtualCare.Sdk.Wrappers;
 
@@ -30,14 +29,12 @@ namespace SnapMD.VirtualCare.Sdk
         {
         }
 
-        public void CreateAppointment(SiteNotificationRequest notificationRequest)
+        /// <summary>
+        /// Send notification to connected SignalR user.
+        /// </summary>
+        public void SendSiteNotification(SiteNotificationRequest notificationRequest)
         {
             Post("v2.1/site-notifications", notificationRequest);
-        }
-
-        public void CancelAppointment(Guid appointmentId)
-        {
-            Delete("v2.1/patients/appointments/" + appointmentId);
         }
     }
 }
