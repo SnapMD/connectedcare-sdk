@@ -1,4 +1,4 @@
-﻿using SnapMD.VirtualCare.ApiModels;
+﻿using SnapMD.VirtualCare.ApiModels.SiteNotifications;
 using SnapMD.VirtualCare.Sdk.Interfaces;
 using SnapMD.VirtualCare.Sdk.Wrappers;
 
@@ -30,11 +30,19 @@ namespace SnapMD.VirtualCare.Sdk
         }
 
         /// <summary>
-        /// Send notification to connected SignalR user.
+        ///     Send notification to connected SignalR user.
         /// </summary>
-        public void SendSiteNotification(SiteNotificationRequest notificationRequest)
+        public void SendSiteNotification(UserSiteNotificationRequest notificationRequest)
         {
             Post("v2.1/site-notifications", notificationRequest);
+        }
+
+        /// <summary>
+        ///     Send notification to all connected SignalR users of a particular provider.
+        /// </summary>
+        public void SendProviderSiteNotification(int providerId, SiteNotificationRequest notificationRequest)
+        {
+            Post($"v2.1/site-notifications/{providerId}", notificationRequest);
         }
     }
 }
