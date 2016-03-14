@@ -16,9 +16,9 @@ namespace SnapMD.VirtualCare.Sdk
         }
 
 
-        public ApiResponseV2<CreateStaffProfileResponse> NewStaffProfile(StaffProfileRequest request)
+        public ApiResponseV2<CreateStaffProfileResponse> NewStaffProfile(StaffAccountModelRequest request)
         {
-            var result = MakeCall<ApiResponseV2<CreateStaffProfileResponse>>("v2/clinicians/staffprofile");
+            var result = Post<ApiResponseV2<CreateStaffProfileResponse>>("v2/clinicians/staffprofile", request);
             return result;
         }
     }

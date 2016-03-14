@@ -63,5 +63,19 @@ namespace SnapMD.VirtualCare.Sdk
 
             return null;
         }
+
+        /// <summary>
+        /// Gets a token based on the token & agent from the Ping Identity sso service
+        /// </summary>
+        /// <param name="ssoToken">SSO token</param>
+        /// <param name="agentId">Agent ID</param>
+        /// <returns>Token, null or the bad request</returns>
+        public string GetTokenForSso(string ssoToken, string agentId)
+        {
+            var response = MakeCall<ApiResponseV2<SerializableToken>>(
+                $"v2/account/token?ssoToken={ssoToken}&agentId={agentId}");
+
+            return response.Data?.Select(entry => entry.access_token).FirstOrDefault();
+        }
     }
 }

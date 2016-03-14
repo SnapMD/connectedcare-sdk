@@ -15,6 +15,6 @@ namespace SnapMD.VirtualCare.Sdk.Interfaces
         /// </summary>
         /// <param name="request">Request to create the new staff profile</param>
         /// <returns></returns>
-        ApiResponseV2<CreateStaffProfileResponse> NewStaffProfile(StaffProfileRequest request);
+        ApiResponseV2<CreateStaffProfileResponse> NewStaffProfile(StaffAccountModelRequest request);
     }
 }
