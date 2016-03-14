@@ -23,8 +23,9 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
+SnapMD.VirtualCare.ApiModels/App_Data/SnapMD.VirtualCare.ApiModels.xml
 
-# Visual Studio 2015 cache/options directory
+# Visual Studio 2015 cache/options directoryg
 .vs/
 
 # MSTest test Results
@@ -206,3 +207,6 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 
+# Project-specific
+# Auto-generated XML docs modified at compile time
+SnapMD.VirtualCare.ApiModels/App_Data/*.xml
