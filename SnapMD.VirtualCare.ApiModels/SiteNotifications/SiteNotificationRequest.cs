@@ -1,4 +1,4 @@
-﻿namespace SnapMD.VirtualCare.ApiModels
+﻿namespace SnapMD.VirtualCare.ApiModels.SiteNotifications
 {
     /// <summary>
     ///     Request payload for site notifications.

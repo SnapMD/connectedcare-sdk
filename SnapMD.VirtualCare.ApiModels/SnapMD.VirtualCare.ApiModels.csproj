@@ -71,11 +71,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\ModelNameAttribute.cs" />
+    <Compile Include="CreateStaffProfileResponse.cs" />
     <Compile Include="EmailUserRequest.cs" />
     <Compile Include="NewCoUserRequest.cs" />
     <Compile Include="PatientPersonResponse.cs" />
     <Compile Include="PersonName.cs" />
-    <Compile Include="SiteNotificationRequest.cs" />
+    <Compile Include="SiteNotifications\SiteNotificationRequest.cs" />
+    <Compile Include="SiteNotifications\UserSiteNotificationRequest.cs" />
     <Compile Include="UserActivationRequest.cs" />
     <Compile Include="ParticipantEmailInvitationRequest.cs" />
     <Compile Include="CoUserEmailInvitationRequest.cs" />
@@ -165,10 +167,13 @@
     <Compile Include="Sms\SmsStatus.cs" />
     <Compile Include="SoapNote.cs" />
     <Compile Include="SsoSettings.cs" />
+    <Compile Include="StaffAccountModelRequest.cs" />
+    <Compile Include="StaffProfileDetailsRequest.cs" />
     <Compile Include="StaffProfileRequest.cs" />
     <Compile Include="SurgeryRecord.cs" />
     <Compile Include="Telecom.cs" />
     <Compile Include="UserActivationResponse.cs" />
+    <Compile Include="UserDetailsRequest.cs" />
     <Compile Include="UserProfilesResult.cs" />
     <Compile Include="UserRole.cs" />
   </ItemGroup>
