@@ -21,5 +21,13 @@
         ///     "warning", and "error".
         /// </value>
         public string MessageType { get; set; }
+
+        /// <summary>
+        ///     The username of the logged-in user.  This is typically an email address.
+        /// </summary>
+        /// <value>
+        ///     The user.
+        /// </value>
+        public string User { get; set; }
     }
 }
