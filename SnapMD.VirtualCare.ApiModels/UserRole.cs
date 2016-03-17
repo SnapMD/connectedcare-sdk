@@ -11,13 +11,34 @@
 //    limitations under the License.
 #endregion
 
+using SnapMD.VirtualCare.ApiModels.Attributes;
+
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// User role model.
+    /// </summary>
+    [ModelName("ApiModels.UserRole")]
     public class UserRole
     {
+        /// <summary>
+        /// Role id.
+        /// </summary>
         public int RoleId { get; set; }
+
+        /// <summary>
+        /// Role description.
+        /// </summary>
         public string Description { get; set; }
-        public string Status { get; set; }              // Active/Inactive enum
+
+        /// <summary>
+        /// Role status. A - active, I - inactive.
+        /// </summary>
+        public string Status { get; set; }
+
+        /// <summary>
+        /// Role code.
+        /// </summary>
         public string RoleCode { get; set; }
     }
 }
