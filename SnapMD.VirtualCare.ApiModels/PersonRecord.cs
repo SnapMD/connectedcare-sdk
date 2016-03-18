@@ -52,6 +52,11 @@ namespace SnapMD.VirtualCare.ApiModels
         ///     The status code.
         /// </value>
         public GlobalStatusCode StatusCode { get; set; }
+
+        /// <summary>
+        /// Contact type code.
+        /// </summary>
+        public ContactTypeCode ContactTypeCode { get; set; }
         
         /// <summary>
         ///     Gets or sets the phones.
