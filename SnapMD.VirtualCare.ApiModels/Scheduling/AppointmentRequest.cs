@@ -13,6 +13,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public Guid? AvailabilityBlockId { get; set; }
 
         /// <summary>
+        /// Waive fee.
+        /// </summary>
+        public bool WaiveFee { get; set; }
+
+        /// <summary>
         /// Appointment start time.
         /// </summary>
         public DateTime? StartTime { get; set; }
