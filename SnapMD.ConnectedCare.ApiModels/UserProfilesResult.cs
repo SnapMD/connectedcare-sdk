@@ -54,7 +54,7 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public string TimeZone { get; set; }
 
-        public int TimeZoneId { get; set; }
+        public int? TimeZoneId { get; set; }
 
         public int UserId { get; set; }
 
