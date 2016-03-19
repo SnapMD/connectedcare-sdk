@@ -62,7 +62,7 @@ namespace SnapMD.ConnectedCare.ApiModels
 
         public string bussAddress { get; set; }
 
-        public int TimeZoneID { get; set; }
+        public int? TimeZoneID { get; set; }
 
         public string Gender { get; set; }
 
