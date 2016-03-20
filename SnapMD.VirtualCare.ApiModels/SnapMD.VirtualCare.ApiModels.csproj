@@ -77,6 +77,9 @@
     <Compile Include="NewCoUserRequest.cs" />
     <Compile Include="PatientPersonResponse.cs" />
     <Compile Include="PersonName.cs" />
+    <Compile Include="Routing\GeoCoordinate.cs" />
+    <Compile Include="Routing\PatientRoutingRequest.cs" />
+    <Compile Include="Routing\PatientRoutingResponse.cs" />
     <Compile Include="Routing\RoutingEnums.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityRequest.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityResponse.cs" />
