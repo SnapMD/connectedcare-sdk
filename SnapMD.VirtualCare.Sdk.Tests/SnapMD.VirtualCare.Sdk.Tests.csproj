@@ -101,6 +101,7 @@
     <Compile Include="EncounterAdminApiTests.cs" />
     <Compile Include="EncounterApiTests.cs" />
     <Compile Include="HospitalApiTests.cs" />
+    <Compile Include="ModelTests\GeoCoordinateTests.cs" />
     <Compile Include="ModelTests\NewPatientRequestValidationTest.cs" />
     <Compile Include="ModelTests\PatientOnBoardShortDetailValidationTests.cs" />
     <Compile Include="PatientAdminApiTests.cs" />
