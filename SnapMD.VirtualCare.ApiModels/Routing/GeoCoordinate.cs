@@ -1,4 +1,6 @@
-﻿namespace SnapMD.VirtualCare.ApiModels.Routing
+﻿using System;
+
+namespace SnapMD.VirtualCare.ApiModels.Routing
 {
     /// <summary>
     /// GeoCoordinate
@@ -94,6 +96,56 @@
         public static bool operator !=(GeoCoordinate a, GeoCoordinate b)
         {
             return !(a == b);
+        }
+
+
+        /// <summary>
+        /// Distance between 2 geo locations.
+        /// </summary>
+        /// <param name="first">The first location.</param>
+        /// <param name="second">The second location.</param>
+        /// <param name="unit">The desired unit.</param>
+        /// <returns></returns>
+        public static decimal Distance(GeoCoordinate first, GeoCoordinate second, RoutingDistanceUnit unit)
+        {
+            var latFirst = (double)(first.Latitude ?? 0);
+            var lonFirst = (double)(first.Longitude ?? 0);
+            var latSecond = (double)(second.Latitude ?? 0);
+            var lonSecond = (double)(second.Longitude ?? 0);
+            var theta = lonFirst - lonSecond;
+            var dist = Math.Sin(Deg2Rad(latFirst))
+                * Math.Sin(Deg2Rad(latSecond))
+                + Math.Cos(Deg2Rad(latFirst))
+                * Math.Cos(Deg2Rad(latSecond))
+                * Math.Cos(Deg2Rad(theta));
+            dist = Math.Acos(dist);
+            dist = Rad2Deg(dist);
+            dist = Convert(dist * 60 * 1.1515, unit);
+
+            return (decimal)dist;
+        }
+
+        private static double Deg2Rad(double deg)
+        {
+            return (deg * Math.PI / 180.0);
+        }
+
+        private static double Rad2Deg(double rad)
+        {
+            return (rad / Math.PI * 180.0);
+        }
+
+        private static double Convert(double dist, RoutingDistanceUnit unit)
+        {
+            if (unit == RoutingDistanceUnit.Kilometer)
+            {
+                dist = dist * 1.609344;
+            }
+            else if (unit == RoutingDistanceUnit.NauticalMile)
+            {
+                dist = dist * 0.8684;
+            }
+            return dist;
         }
     }
 }
