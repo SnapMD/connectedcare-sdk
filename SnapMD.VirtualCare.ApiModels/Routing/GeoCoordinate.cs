@@ -108,34 +108,20 @@ namespace SnapMD.VirtualCare.ApiModels.Routing
         /// <returns></returns>
         public static decimal Distance(GeoCoordinate first, GeoCoordinate second, RoutingDistanceUnit unit)
         {
-            var latFirst = (double)(first.Latitude ?? 0);
-            var lonFirst = (double)(first.Longitude ?? 0);
-            var latSecond = (double)(second.Latitude ?? 0);
-            var lonSecond = (double)(second.Longitude ?? 0);
-            var theta = lonFirst - lonSecond;
-            var dist = Math.Sin(Deg2Rad(latFirst))
-                * Math.Sin(Deg2Rad(latSecond))
-                + Math.Cos(Deg2Rad(latFirst))
-                * Math.Cos(Deg2Rad(latSecond))
-                * Math.Cos(Deg2Rad(theta));
-            dist = Math.Acos(dist);
-            dist = Rad2Deg(dist);
-            dist = Convert(dist * 60 * 1.1515, unit);
+            const double rad = Math.PI / 180.0;
+            var latFirst = Convert.ToDouble(first.Latitude ?? 0) * rad;
+            var latSecond = Convert.ToDouble(second.Latitude ?? 0) * rad;
+            var deltaLong = Convert.ToDouble((first.Longitude ?? 0) - (second.Longitude ?? 0)) * rad;
 
-            return (decimal)dist;
+            var dist = Math.Sin(latFirst) * Math.Sin(latSecond)
+                + Math.Cos(latFirst) * Math.Cos(latSecond) * Math.Cos(deltaLong);
+            dist = Math.Acos(dist) / rad;
+            dist = UnitConvert(dist * 60 * 1.1515, unit);
+
+            return Convert.ToDecimal(dist);
         }
 
-        private static double Deg2Rad(double deg)
-        {
-            return (deg * Math.PI / 180.0);
-        }
-
-        private static double Rad2Deg(double rad)
-        {
-            return (rad / Math.PI * 180.0);
-        }
-
-        private static double Convert(double dist, RoutingDistanceUnit unit)
+        private static double UnitConvert(double dist, RoutingDistanceUnit unit)
         {
             if (unit == RoutingDistanceUnit.Kilometer)
             {
