@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\ModelNameAttribute.cs" />
+    <Compile Include="ClinicianSpecialty.cs" />
     <Compile Include="ContactTypeCode.cs" />
     <Compile Include="CreateStaffProfileResponse.cs" />
     <Compile Include="EmailUserRequest.cs" />
