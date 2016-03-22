@@ -94,7 +94,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public string BussAddress { get; set; }
 
         // ReSharper disable once InconsistentNaming
-        public int TimeZoneID { get; set; }
+        public int? TimeZoneID { get; set; }
 
         public string Gender { get; set; }
 
