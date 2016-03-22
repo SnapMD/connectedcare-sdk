@@ -81,6 +81,7 @@
     <Compile Include="Scheduling\OnDemandAvailabilityResponse.cs" />
     <Compile Include="SiteNotifications\SiteNotificationRequest.cs" />
     <Compile Include="SiteNotifications\UserSiteNotificationRequest.cs" />
+    <Compile Include="SmallTelecom.cs" />
     <Compile Include="UserActivationRequest.cs" />
     <Compile Include="ParticipantEmailInvitationRequest.cs" />
     <Compile Include="CoUserEmailInvitationRequest.cs" />
