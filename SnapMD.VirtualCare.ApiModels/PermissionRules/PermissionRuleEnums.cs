@@ -1,9 +1,9 @@
-﻿namespace SnapMD.VirtualCare.ApiModels.Routing
+﻿namespace SnapMD.VirtualCare.ApiModels.PermissionRules
 {
     /// <summary>
-    /// Type of RoutingRule
+    /// Category of PermissionRule
     /// </summary>
-    public enum RoutingRuleType
+    public enum PermissionRuleCategory
     {
         /// <summary>
         /// The unknown type
@@ -11,9 +11,19 @@
         Unknown,
 
         /// <summary>
-        /// The patient routing type
+        /// The registration availability: Allow patients to register if
         /// </summary>
-        PatientRouting
+        RegistrationAvailability,
+
+        /// <summary>
+        /// The patient visibility: Patient can see providers if/where/when.
+        /// </summary>
+        PatientVisibility,
+
+        /// <summary>
+        /// The provider visibility: Provider can see patients if/where/when.
+        /// </summary>
+        ProviderVisibility
     }
 
     /// <summary>
@@ -60,18 +70,23 @@
         /// <summary>
         /// The postal code
         /// </summary>
-        PostalCode,
+        Address,
 
         /// <summary>
         /// The distance
         /// </summary>
-        Distance
+        Distance,
+
+        /// <summary>
+        /// The patient organization
+        /// </summary>
+        PatientOrganization
     }
 
     /// <summary>
-    /// Type of RoutingCondition
+    /// Type of PermissionRuleLogic
     /// </summary>
-    public enum RoutingConditionType
+    public enum PermissionRuleLogicType
     {
         /// <summary>
         /// The unknown type
@@ -79,20 +94,20 @@
         Unknown,
 
         /// <summary>
-        /// The allow type
+        /// Is the subject in criteria
         /// </summary>
-        Allow,
+        In,
 
         /// <summary>
-        /// The disallow type
+        /// Is the subject not in criteria
         /// </summary>
-        Disallow
+        NotIn
     }
 
     /// <summary>
-    /// Unit of Routing Distance
+    /// Unit of Geo Distance
     /// </summary>
-    public enum RoutingDistanceUnit
+    public enum GeoDistanceUnit
     {
         /// <summary>
         /// The unkown unit

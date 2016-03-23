@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using SnapMD.VirtualCare.ApiModels.Routing;
+using SnapMD.VirtualCare.ApiModels.PermissionRules;
 
 namespace SnapMD.VirtualCare.Sdk.Tests.ModelTests
 {
@@ -69,9 +69,9 @@ namespace SnapMD.VirtualCare.Sdk.Tests.ModelTests
                 Latitude = 35.12m,
                 Longitude = -179.11m,
             };
-            var distKm = GeoCoordinate.Distance(c1, c2, RoutingDistanceUnit.Kilometer);
-            var distNm = GeoCoordinate.Distance(c1, c2, RoutingDistanceUnit.NauticalMile);
-            var distSm = GeoCoordinate.Distance(c1, c2, RoutingDistanceUnit.StatuteMile);
+            var distKm = GeoCoordinate.Distance(c1, c2, GeoDistanceUnit.Kilometer);
+            var distNm = GeoCoordinate.Distance(c1, c2, GeoDistanceUnit.NauticalMile);
+            var distSm = GeoCoordinate.Distance(c1, c2, GeoDistanceUnit.StatuteMile);
 
             Assert.AreEqual(140.16, Math.Round(distKm, 2));
             Assert.AreEqual(75.63, Math.Round(distNm, 2));

@@ -77,10 +77,10 @@
     <Compile Include="NewCoUserRequest.cs" />
     <Compile Include="PatientPersonResponse.cs" />
     <Compile Include="PersonName.cs" />
-    <Compile Include="Routing\GeoCoordinate.cs" />
-    <Compile Include="Routing\PatientRoutingRequest.cs" />
-    <Compile Include="Routing\PatientRoutingResponse.cs" />
-    <Compile Include="Routing\RoutingEnums.cs" />
+    <Compile Include="PermissionRules\GeoCoordinate.cs" />
+    <Compile Include="PermissionRules\RegistrationAvailabilityRequest.cs" />
+    <Compile Include="PermissionRules\RegistrationAvailabilityResponse.cs" />
+    <Compile Include="PermissionRules\PermissionRuleEnums.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityRequest.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityResponse.cs" />
     <Compile Include="SiteNotifications\SiteNotificationRequest.cs" />

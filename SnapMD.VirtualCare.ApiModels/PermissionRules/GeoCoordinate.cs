@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SnapMD.VirtualCare.ApiModels.Routing
+namespace SnapMD.VirtualCare.ApiModels.PermissionRules
 {
     /// <summary>
     /// GeoCoordinate
@@ -106,7 +106,7 @@ namespace SnapMD.VirtualCare.ApiModels.Routing
         /// <param name="second">The second location.</param>
         /// <param name="unit">The desired unit.</param>
         /// <returns></returns>
-        public static decimal Distance(GeoCoordinate first, GeoCoordinate second, RoutingDistanceUnit unit)
+        public static decimal Distance(GeoCoordinate first, GeoCoordinate second, GeoDistanceUnit unit)
         {
             const double rad = Math.PI / 180.0;
             var latFirst = Convert.ToDouble(first.Latitude ?? 0) * rad;
@@ -121,13 +121,13 @@ namespace SnapMD.VirtualCare.ApiModels.Routing
             return Convert.ToDecimal(dist);
         }
 
-        private static double UnitConvert(double dist, RoutingDistanceUnit unit)
+        private static double UnitConvert(double dist, GeoDistanceUnit unit)
         {
-            if (unit == RoutingDistanceUnit.Kilometer)
+            if (unit == GeoDistanceUnit.Kilometer)
             {
                 dist = dist * 1.609344;
             }
-            else if (unit == RoutingDistanceUnit.NauticalMile)
+            else if (unit == GeoDistanceUnit.NauticalMile)
             {
                 dist = dist * 0.8684;
             }
