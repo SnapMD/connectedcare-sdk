@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
@@ -56,5 +57,13 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Contact type code.
         /// </summary>
         public ContactTypeCode ContactTypeCode { get; set; }
+        
+        /// <summary>
+        ///     Gets or sets the phones.
+        /// </summary>
+        /// <value>
+        ///     The phones.
+        /// </value>
+        public ICollection<SmallTelecom> Phones { get; set; } = new List<SmallTelecom>();
     }
 }

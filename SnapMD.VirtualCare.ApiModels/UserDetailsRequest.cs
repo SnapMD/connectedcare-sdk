@@ -34,7 +34,7 @@
         /// User time zone Id.
         /// Use TimeZoneId = 83 for Pacific Standard Time.
         /// </summary>
-        public int TimeZoneId { get; set; }
+        public int? TimeZoneId { get; set; }
 
         /// <summary>
         /// Path to doctor profile image in SnapMD system.
