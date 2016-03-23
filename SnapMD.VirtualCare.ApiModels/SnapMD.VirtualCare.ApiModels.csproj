@@ -71,15 +71,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\ModelNameAttribute.cs" />
+    <Compile Include="ClinicianSpecialty.cs" />
+    <Compile Include="ContactTypeCode.cs" />
     <Compile Include="CreateStaffProfileResponse.cs" />
     <Compile Include="EmailUserRequest.cs" />
     <Compile Include="NewCoUserRequest.cs" />
+    <Compile Include="ClinicianPersonResponse.cs" />
     <Compile Include="PatientPersonResponse.cs" />
     <Compile Include="PersonName.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityRequest.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityResponse.cs" />
     <Compile Include="SiteNotifications\SiteNotificationRequest.cs" />
     <Compile Include="SiteNotifications\UserSiteNotificationRequest.cs" />
+    <Compile Include="SmallTelecom.cs" />
     <Compile Include="UserActivationRequest.cs" />
     <Compile Include="ParticipantEmailInvitationRequest.cs" />
     <Compile Include="CoUserEmailInvitationRequest.cs" />
