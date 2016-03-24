@@ -12,16 +12,34 @@
 #endregion
 namespace SnapMD.VirtualCare.ApiModels
 {
-    public class NewbornRecord //: IInfantData
+    /// <summary>
+    ///     Patient newbord record.
+    /// </summary>
+    public class NewbornRecord
     {
+        /// <summary>
+        ///     Discharged with mother.
+        /// </summary>
         public string DischargedWithMother { get; set; }
 
+        /// <summary>
+        ///     Full term.
+        /// </summary>
         public string FullTerm { get; set; }
 
+        /// <summary>
+        ///     Patient age under one year.
+        /// </summary>
         public string PatientAgeUnderOneYear { get; set; }
 
+        /// <summary>
+        ///     Vaccinations current.
+        /// </summary>
         public string VaccinationsCurrent { get; set; }
 
+        /// <summary>
+        ///     Vaginal birth.
+        /// </summary>
         public string VaginalBirth { get; set; }
     }
 }

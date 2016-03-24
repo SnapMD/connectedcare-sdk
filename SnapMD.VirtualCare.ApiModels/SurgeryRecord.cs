@@ -12,12 +12,24 @@
 #endregion
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    ///     Patient surgery record.
+    /// </summary>
     public struct SurgeryRecord
     {
+        /// <summary>
+        ///     Surgery description.
+        /// </summary>
         public string Description { get; set; }
 
+        /// <summary>
+        ///     Surgery month.
+        /// </summary>
         public int Month { get; set; }
 
+        /// <summary>
+        ///     Surgery year.
+        /// </summary>
         public int Year { get; set; }
     }
 }

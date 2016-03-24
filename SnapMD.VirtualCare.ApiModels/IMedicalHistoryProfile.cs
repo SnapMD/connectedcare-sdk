@@ -15,12 +15,34 @@ using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    ///     Patient medical history profile.
+    /// </summary>
     public interface IMedicalHistoryProfile
     {
+        /// <summary>
+        ///     Medical allergies.
+        /// </summary>
         List<CustomCode> MedicationAllergies { get; set; }
+
+        /// <summary>
+        ///     Patient surgeries.
+        /// </summary>
         List<SurgeryRecord> Surgeries { get; set; }
+
+        /// <summary>
+        ///     Patient medical conditions.
+        /// </summary>
         List<CustomCode> MedicalConditions { get; set; }
+
+        /// <summary>
+        ///     Medications.
+        /// </summary>
         List<CustomCode> Medications { get; set; }
+
+        /// <summary>
+        ///     Infra data.
+        /// </summary>
         NewbornRecord InfantData { get; set; }
     }
 }
