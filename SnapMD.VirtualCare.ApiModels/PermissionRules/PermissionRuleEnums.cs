@@ -58,9 +58,9 @@
     }
 
     /// <summary>
-    /// Source of Routing Condition
+    /// Source of Rule Matching Condition
     /// </summary>
-    public enum RoutingConditionSource
+    public enum PermissionRuleConditionSource
     {
         /// <summary>
         /// The unknown source
@@ -68,9 +68,19 @@
         Unknown,
 
         /// <summary>
-        /// The postal code
+        /// The address country
         /// </summary>
-        Address,
+        AddressCountry,
+
+        /// <summary>
+        /// The address country + state
+        /// </summary>
+        AddressState,
+
+        /// <summary>
+        /// The address country + state + postal code
+        /// </summary>
+        AddressPostalCode,
 
         /// <summary>
         /// The distance
@@ -80,7 +90,12 @@
         /// <summary>
         /// The patient organization
         /// </summary>
-        PatientOrganization
+        PatientOrganization,
+
+        /// <summary>
+        /// The patient organization + location
+        /// </summary>
+        PatientOrganizationLocation
     }
 
     /// <summary>
