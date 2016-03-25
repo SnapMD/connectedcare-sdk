@@ -128,7 +128,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// The time zone identifier.
         /// </value>
-        public int TimeZoneId { get; set; }
+        public int? TimeZoneId { get; set; }
 
         /// <summary>
         /// Gets or sets the user identifier.
@@ -211,12 +211,12 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? BloodType { get; set; }
 
         /// <summary>
-        /// Gets or sets the enthicity.
+        /// Gets or sets the ethnicity.
         /// </summary>
         /// <value>
-        /// The enthicity.
+        /// The ethnicity.
         /// </value>
-        public int? Enthicity { get; set; }
+        public int? Ethnicity { get; set; }
 
         /// <summary>
         /// Gets a value indicating whether this instance has required fields.

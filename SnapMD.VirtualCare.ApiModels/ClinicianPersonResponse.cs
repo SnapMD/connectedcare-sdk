@@ -1,20 +1,10 @@
-using System.Collections.Generic;
-
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
     ///     Items representing the person's identity.
     /// </summary>
-    public class PatientPersonResponse
+    public class ClinicianPersonResponse
     {
-        /// <summary>
-        ///     Gets or sets the patient identifier.
-        /// </summary>
-        /// <value>
-        ///     The patient identifier.
-        /// </value>
-        public int PatientId { get; set; }
-
         /// <summary>
         ///     Gets or sets the person.
         /// </summary>
@@ -22,7 +12,7 @@ namespace SnapMD.VirtualCare.ApiModels
         ///     The person.
         /// </value>
         public PersonRecord Person { get; set; }
-        
+
         /// <summary>
         ///     Gets or sets the provider identifier.
         /// </summary>
@@ -30,5 +20,21 @@ namespace SnapMD.VirtualCare.ApiModels
         ///     The provider identifier.
         /// </value>
         public int ProviderId { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the specialty.
+        /// </summary>
+        /// <value>
+        ///     The specialty.
+        /// </value>
+        public ClinicianSpecialty Specialty { get; set; } = new ClinicianSpecialty();
+
+        /// <summary>
+        ///     Gets or sets the user identifier.
+        /// </summary>
+        /// <value>
+        ///     The user identifier.
+        /// </value>
+        public int UserId { get; set; }
     }
 }
