@@ -56,5 +56,29 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Contact type code.
         /// </summary>
         public ContactTypeCode ContactTypeCode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user identifier.
+        /// </summary>
+        /// <value>
+        /// The user identifier.
+        /// </value>
+        public int? UserId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the patient identifier.
+        /// </summary>
+        /// <value>
+        /// The patient identifier.
+        /// </value>
+        public int? PatientId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the staff identifier.
+        /// </summary>
+        /// <value>
+        /// The staff identifier.
+        /// </value>
+        public int? StaffId { get; set; }
     }
 }
