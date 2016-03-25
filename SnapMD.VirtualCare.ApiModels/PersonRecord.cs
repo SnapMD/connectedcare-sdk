@@ -74,11 +74,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? PatientId { get; set; }
 
         /// <summary>
-        /// Gets or sets the staff identifier.
+        /// Gets or sets the clinician identifier.
         /// </summary>
         /// <value>
-        /// The staff identifier.
+        /// The clinician identifier.
         /// </value>
-        public int? StaffId { get; set; }
+        public int? ClinicianId { get; set; }
     }
 }
