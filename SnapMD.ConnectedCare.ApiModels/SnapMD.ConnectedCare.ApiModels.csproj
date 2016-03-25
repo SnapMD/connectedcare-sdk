@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\ModelNameAttribute.cs" />
     <Compile Include="NewCoUserRequest.cs" />
     <Compile Include="ParticipantEmailInvitationRequest.cs" />
     <Compile Include="CoUserEmailInvitationRequest.cs" />
