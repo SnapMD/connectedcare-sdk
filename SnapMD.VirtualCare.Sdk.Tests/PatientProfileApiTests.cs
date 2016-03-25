@@ -38,7 +38,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
             var mock = new
             {
                 EmailAddress = testEmail,
-                PatientProfileData = new { PatientName = "p", LastName = "l", Enthicity = 1, Gender = "m", DOB = mockDate, Height = 1, Weight = 1 },
+                PatientProfileData = new { PatientName = "p", LastName = "l", Ethnicity = 1, Gender = "m", DOB = mockDate, Height = 1, Weight = 1 },
                 PatientUpdateRequest = new { Height = 2, Weight = 1 },
                 PatientMedicalHistoryData = new { Height = 2, Weight = 1 }
             };
