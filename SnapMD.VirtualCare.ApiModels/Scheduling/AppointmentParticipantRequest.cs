@@ -16,6 +16,5 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public PersonRecord Person { get; set; }
 
         public ParticipantTypeCode ParticipantTypeCode { get; set; }
-
     }
 }
