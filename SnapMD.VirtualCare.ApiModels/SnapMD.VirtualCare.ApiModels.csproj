@@ -79,10 +79,10 @@
     <Compile Include="ClinicianPersonResponse.cs" />
     <Compile Include="PatientPersonResponse.cs" />
     <Compile Include="PersonName.cs" />
-    <Compile Include="PermissionRules\GeoCoordinate.cs" />
-    <Compile Include="PermissionRules\RegistrationAvailabilityRequest.cs" />
-    <Compile Include="PermissionRules\RegistrationAvailabilityResponse.cs" />
-    <Compile Include="PermissionRules\PermissionRuleEnums.cs" />
+    <Compile Include="Rules\GeoCoordinate.cs" />
+    <Compile Include="Rules\RegistrationAvailabilityRequest.cs" />
+    <Compile Include="Rules\RegistrationAvailabilityResponse.cs" />
+    <Compile Include="Rules\RuleEnums.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityRequest.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityResponse.cs" />
     <Compile Include="SiteNotifications\SiteNotificationRequest.cs" />

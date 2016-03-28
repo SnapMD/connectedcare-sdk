@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SnapMD.VirtualCare.ApiModels.PermissionRules
+namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
     /// GeoCoordinate

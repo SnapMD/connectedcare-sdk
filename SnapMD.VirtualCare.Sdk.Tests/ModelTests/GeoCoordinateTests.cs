@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using SnapMD.VirtualCare.ApiModels.PermissionRules;
+using SnapMD.VirtualCare.ApiModels.Rules;
 
 namespace SnapMD.VirtualCare.Sdk.Tests.ModelTests
 {

@@ -1,9 +1,9 @@
-﻿namespace SnapMD.VirtualCare.ApiModels.PermissionRules
+﻿namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
     /// Response model for RegistrationAvailability
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.PermissionRules.RegistrationAvailabilityRequest" />
+    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.RegistrationAvailabilityRequest" />
     public class RegistrationAvailabilityResponse: RegistrationAvailabilityRequest
     {
         /// <summary>

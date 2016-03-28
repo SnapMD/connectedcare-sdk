@@ -1,9 +1,9 @@
-﻿namespace SnapMD.VirtualCare.ApiModels.PermissionRules
+﻿namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
-    /// Category of PermissionRule
+    /// Category of the Rules
     /// </summary>
-    public enum PermissionRuleCategory
+    public enum RuleCategoryCode
     {
         /// <summary>
         /// The unknown type
@@ -27,9 +27,35 @@
     }
 
     /// <summary>
-    /// Type of RoutingRuleDecision
+    /// Code for Type of Rules 
     /// </summary>
-    public enum RoutingRuleDecisionType
+    public enum RuleTypeCode
+    {
+        /// <summary>
+        /// The unknown, undefined rule
+        /// </summary>
+        Unknown,
+
+        /// <summary>
+        /// The address rule
+        /// </summary>
+        AddressRule,
+
+        /// <summary>
+        /// The distance rule
+        /// </summary>
+        DistanceRule,
+
+        /// <summary>
+        /// The patient organization rule
+        /// </summary>
+        PatientOrganizationRule,
+    }
+
+    /// <summary>
+    /// Type of Rule Decisions
+    /// </summary>
+    public enum RuleDecisionTypeCode
     {
         /// <summary>
         /// No decision
@@ -60,7 +86,7 @@
     /// <summary>
     /// Source of Rule Matching Condition
     /// </summary>
-    public enum PermissionRuleConditionSource
+    public enum RuleConditionSource
     {
         /// <summary>
         /// The unknown source
@@ -99,9 +125,9 @@
     }
 
     /// <summary>
-    /// Type of PermissionRuleLogic
+    /// Type of Rule Logic
     /// </summary>
-    public enum PermissionRuleLogicType
+    public enum RuleLogicTypeCode
     {
         /// <summary>
         /// The unknown type

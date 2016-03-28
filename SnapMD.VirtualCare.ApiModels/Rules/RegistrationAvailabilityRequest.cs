@@ -1,4 +1,4 @@
-﻿namespace SnapMD.VirtualCare.ApiModels.PermissionRules
+﻿namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
     /// Request model for RegistrationAvailability
