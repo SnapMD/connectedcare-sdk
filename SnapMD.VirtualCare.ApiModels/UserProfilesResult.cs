@@ -128,7 +128,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// The time zone identifier.
         /// </value>
-        public int TimeZoneId { get; set; }
+        public int? TimeZoneId { get; set; }
 
         /// <summary>
         /// Gets or sets the user identifier.
