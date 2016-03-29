@@ -6,7 +6,7 @@ using SnapMD.VirtualCare.Sdk.Wrappers;
 
 namespace SnapMD.VirtualCare.Sdk
 {
-    public class AppointmentsAdminApi : ApiCall
+    public class AppointmentsAdminApi : ApiCall, IAppointmentsAdminApi
     {
         public AppointmentsAdminApi(
             string baseUrl,

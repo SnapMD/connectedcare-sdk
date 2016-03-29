@@ -66,6 +66,8 @@
   <ItemGroup>
     <Compile Include="ApiCall.cs" />
     <Compile Include="AppointmentsAdminApi.cs" />
+    <Compile Include="Interfaces\IAppointmentsAdminApi.cs" />
+    <Compile Include="Interfaces\IPersonApi.cs" />
     <Compile Include="Interfaces\IStaffApi.cs" />
     <Compile Include="NotificationsApi.cs" />
     <Compile Include="AppointmentsApi.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="PatientAdminApi.cs" />
     <Compile Include="PatientMedicalProfileApi.cs" />
     <Compile Include="PatientProfileApi.cs" />
+    <Compile Include="PersonApi.cs" />
     <Compile Include="ScheduleApi.cs" />
     <Compile Include="PaymentsApi.cs" />
     <Compile Include="Reports\SnapReportsApi.cs" />
