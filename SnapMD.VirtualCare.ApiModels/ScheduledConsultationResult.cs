@@ -1,4 +1,4 @@
-﻿using SnapMD.ConnectedCare.ApiModels.Attributes;
+﻿using SnapMD.VirtualCare.ApiModels.Attributes;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
