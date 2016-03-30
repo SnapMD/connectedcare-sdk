@@ -65,5 +65,29 @@ namespace SnapMD.VirtualCare.ApiModels
         ///     The phones.
         /// </value>
         public ICollection<SmallTelecom> Phones { get; set; } = new List<SmallTelecom>();
+
+        /// <summary>
+        /// Gets or sets the user identifier.
+        /// </summary>
+        /// <value>
+        /// The user identifier.
+        /// </value>
+        public int? UserId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the patient identifier.
+        /// </summary>
+        /// <value>
+        /// The patient identifier.
+        /// </value>
+        public int? PatientId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the clinician identifier.
+        /// </summary>
+        /// <value>
+        /// The clinician identifier.
+        /// </value>
+        public int? ClinicianId { get; set; }
     }
 }
