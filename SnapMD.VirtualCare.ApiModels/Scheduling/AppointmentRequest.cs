@@ -20,12 +20,12 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <summary>
         /// Appointment start time.
         /// </summary>
-        public DateTime? StartTime { get; set; }
+        public DateTimeOffset? StartTime { get; set; }
 
         /// <summary>
         /// Appointment end time.
         /// </summary>
-        public DateTime? EndTime { get; set; }
+        public DateTimeOffset? EndTime { get; set; }
 
         /// <summary>
         /// On demand request id.

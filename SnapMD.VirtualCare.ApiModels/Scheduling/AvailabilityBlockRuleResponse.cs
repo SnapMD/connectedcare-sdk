@@ -25,7 +25,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <summary>
         /// Indicates that rule is in state of processing (creating availability blocks).
         /// </summary>
-        public DateTime? ServiceLockDate { get; set; }
+        public DateTimeOffset? ServiceLockDate { get; set; }
 
         /// <summary>
         /// Created date.

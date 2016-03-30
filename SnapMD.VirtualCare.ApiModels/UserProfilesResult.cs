@@ -131,6 +131,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? TimeZoneId { get; set; }
 
         /// <summary>
+        /// Gets or sets time zone string identifier. Example: 'Eastern Standard Time'.
+        /// </summary>
+        public string TimeZoneSystemId { get; set; }
+
+        /// <summary>
         /// Gets or sets the user identifier.
         /// </summary>
         /// <value>

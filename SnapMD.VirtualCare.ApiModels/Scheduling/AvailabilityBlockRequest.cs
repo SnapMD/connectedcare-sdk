@@ -10,12 +10,12 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <summary>
         /// Availability block start time.
         /// </summary>
-        public DateTime EndTime { get; set; }
+        public DateTimeOffset EndTime { get; set; }
 
         /// <summary>
         /// Availability block end time.
         /// </summary>
-        public DateTime StartTime { get; set; }
+        public DateTimeOffset StartTime { get; set; }
 
         /// <summary>
         /// Indicates if on demand appointments are allowed.

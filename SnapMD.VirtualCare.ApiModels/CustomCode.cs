@@ -11,23 +11,30 @@
 //    limitations under the License.
 #endregion
 
-using System;
 using System.Xml.Serialization;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    ///     FHIR HL7 Coding concept, custom code.
+    /// </summary>
     public struct CustomCode : ICustomCode
     {
+        /// <summary>
+        ///     Initialize custom code from code and description.
+        /// </summary>
         public CustomCode(int code, string description) : this()
         {
             Code = code;
             Description = description;
         }
 
+        /// <summary>
+        ///     Initialize custom code from string line.
+        /// </summary>
         public CustomCode(string singleLine = null) : this()
         {
-            Description = "";
-
+            Description = string.Empty;
 
             if (!string.IsNullOrWhiteSpace(singleLine))
             {
@@ -40,8 +47,8 @@ namespace SnapMD.VirtualCare.ApiModels
                 var tokens = singleLine.Split(splitChar);
                 if (tokens.Length > 1)
                 {
-                    var temp = 0;
-                    Int32.TryParse(tokens[0], out temp);
+                    int temp;
+                    int.TryParse(tokens[0], out temp);
                     Code = temp;
                     Description = tokens[1];
                 }
@@ -52,9 +59,15 @@ namespace SnapMD.VirtualCare.ApiModels
             }
         }
 
+        /// <summary>
+        ///     Code number.
+        /// </summary>
         [XmlAttribute("Code")]
         public int Code { get; set; }
 
+        /// <summary>
+        ///     Code description.
+        /// </summary>
         [XmlElement("Description")]
         public string Description { get; set; }
 
@@ -64,15 +77,24 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <returns></returns>
         public override string ToString()
         {
-            var description = Description ?? "";
-            return Code > 0 ? string.Format("{0}?{1}", Code, Description) : description;
+            var description = Description ?? string.Empty;
+            return Code > 0 ? $"{Code}?{Description}" : description;
         }
     }
 
+    /// <summary>
+    ///     FHIR HL7 Coding concept, custom code.
+    /// </summary>
     public interface ICustomCode
     {
+        /// <summary>
+        ///     Code number.
+        /// </summary>
         int Code { get; set; }
 
+        /// <summary>
+        ///     Code description.
+        /// </summary>
         string Description { get; set; }
     }
 }

@@ -36,11 +36,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <summary>
         /// Created date.
         /// </summary>
-        public DateTime CreatedDate { get; set; }
+        public DateTimeOffset CreatedDate { get; set; }
 
         /// <summary>
         /// Last modified date.
         /// </summary>
-        public DateTime? ModifiedDate { get; set; }
+        public DateTimeOffset? ModifiedDate { get; set; }
     }
 }
