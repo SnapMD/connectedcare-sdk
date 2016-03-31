@@ -79,6 +79,10 @@
     <Compile Include="ClinicianPersonResponse.cs" />
     <Compile Include="PatientPersonResponse.cs" />
     <Compile Include="PersonName.cs" />
+    <Compile Include="Rules\GeoCoordinate.cs" />
+    <Compile Include="Rules\RegistrationAvailabilityRequest.cs" />
+    <Compile Include="Rules\RegistrationAvailabilityResponse.cs" />
+    <Compile Include="Rules\RuleEnums.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityRequest.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityResponse.cs" />
     <Compile Include="SiteNotifications\SiteNotificationRequest.cs" />
@@ -189,6 +193,7 @@
   <ItemGroup>
     <Content Include="App_Data\SnapMD.VirtualCare.ApiModels.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
