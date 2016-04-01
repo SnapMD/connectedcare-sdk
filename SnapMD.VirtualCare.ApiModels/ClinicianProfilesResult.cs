@@ -30,6 +30,12 @@ namespace SnapMD.VirtualCare.ApiModels
             get { return FirstName + " " + LastName; }
         }
 
+        /// <summary>
+        /// Gets or sets the gender.
+        /// </summary>
+        /// <value>
+        /// The gender: "M" for Male, "F" for Female.
+        /// </value>
         public string Gender { get; set; }
 
         public int HospitalId { get; set; }
