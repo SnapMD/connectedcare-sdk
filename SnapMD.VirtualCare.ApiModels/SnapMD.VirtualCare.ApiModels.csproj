@@ -77,6 +77,7 @@
     <Compile Include="EmailUserRequest.cs" />
     <Compile Include="NewCoUserRequest.cs" />
     <Compile Include="ClinicianPersonResponse.cs" />
+    <Compile Include="PatientAdminResponseShort.cs" />
     <Compile Include="PatientPersonResponse.cs" />
     <Compile Include="PersonName.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityRequest.cs" />
