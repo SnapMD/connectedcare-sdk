@@ -10,7 +10,7 @@ namespace SnapMD.VirtualCare.Sdk.Interfaces
 {
     public interface IPatientProfileApi
     {
-        ApiResponseV2<GetPatientsResponse> GetPatientData(int patientId)
+        ApiResponseV2<GetPatientsResponse> GetPatientData(int patientId);
 
         ApiResponseV2<NewPatientResponse> NewPatient(NewPatientRequest request);
         

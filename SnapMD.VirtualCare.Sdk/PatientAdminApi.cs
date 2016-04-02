@@ -50,6 +50,9 @@ namespace SnapMD.VirtualCare.Sdk
             {
                 return Post<ApiResponseV2<AddPatientAdminResponseShort>>("v2/admin/patients", patient);
             }
+            
+            throw new SnapSdkException("Patient model is missing values");
+            
         }
 
         public void DeletePatient(int patientId)
