@@ -70,6 +70,8 @@
     <Compile Include="Interfaces\IAppointmentsAdminApi.cs" />
     <Compile Include="Interfaces\IAvailabilityBlockAdminApi.cs" />
     <Compile Include="Interfaces\IParticipantApi.cs" />
+    <Compile Include="Interfaces\IPatientAdminApi.cs" />
+    <Compile Include="Interfaces\IPatientProfileApi.cs" />
     <Compile Include="Interfaces\IPersonApi.cs" />
     <Compile Include="Interfaces\IStaffApi.cs" />
     <Compile Include="NotificationsApi.cs" />
