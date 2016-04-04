@@ -15,7 +15,7 @@ using SnapMD.VirtualCare.Sdk.Models;
 
 namespace SnapMD.VirtualCare.Sdk
 {
-    public class PatientProfileApi : ApiCall
+    public class PatientProfileApi : ApiCall, IPatientProfileApi
     {
         public PatientProfileApi(string baseUrl, string bearerToken, string developerId, string apiKey, IWebClient webClient)
             : base(baseUrl, webClient, bearerToken, developerId, apiKey)
