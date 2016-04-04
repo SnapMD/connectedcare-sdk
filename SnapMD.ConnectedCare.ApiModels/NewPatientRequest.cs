@@ -38,9 +38,6 @@ namespace SnapMD.ConnectedCare.ApiModels
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string Token { get; set; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public int? TimeZoneId { get; set; }
-
         public bool ValidateModel(Func<string, Exception> exceptionToThrow = null)
         {
             if (exceptionToThrow == null)
@@ -84,12 +81,6 @@ namespace SnapMD.ConnectedCare.ApiModels
             {
                 // error: mobile number required.
                 throw exceptionToThrow("ProviderId required.");
-            }
-
-            if (TimeZoneId == null)
-            {
-                // error: timezone required.
-                throw exceptionToThrow("TimeZoneId required.");
             }
 
             return true;
