@@ -37,6 +37,10 @@ namespace SnapMD.VirtualCare.Sdk.Tests.ModelTests
             Assert.AreEqual("ProviderId required.", thrown.Message);
 
             target.ProviderId = 1;
+            thrown = Assert.Throws<Exception>(() => target.ValidateModel(m => new Exception(m)));
+            Assert.AreEqual("TimeZoneId required.", thrown.Message);
+
+            target.TimeZoneId = 1;
             bool actual = target.ValidateModel(m => new Exception(m));
             Assert.IsTrue(actual);
         }

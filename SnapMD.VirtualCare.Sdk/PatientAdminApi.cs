@@ -17,7 +17,7 @@ using SnapMD.VirtualCare.Sdk.Wrappers;
 
 namespace SnapMD.VirtualCare.Sdk
 {
-    public class PatientAdminApi : ApiCall
+    public class PatientAdminApi : ApiCall, IPatientAdminApi
     {
         public PatientAdminApi(
             string baseUrl,
@@ -44,17 +44,20 @@ namespace SnapMD.VirtualCare.Sdk
             return MakeCall<ApiResponse<PatientOnBoardShortDetail>>(url);
         }
 
-        public void AddPatient(PatientOnBoardShortDetail patient)
+        public ApiResponseV2<AddPatientAdminResponseShort> AddPatient(PatientOnBoardShortDetail patient)
         {
             if (patient.ValidateModel())
             {
-                Post("v2/admin/patients", patient);
+                return Post<ApiResponseV2<AddPatientAdminResponseShort>>("v2/admin/patients", patient);
             }
+            
+            throw new SnapSdkException("Patient model is missing values");
+            
         }
 
         public void DeletePatient(int patientId)
         {
-            Delete<PatientOnBoardShortDetail>(string.Format("v2/admin/patients/{0}", patientId), null);
+            Delete<PatientOnBoardShortDetail>($"v2/admin/patients/{patientId}", null);
         }
     }
 }
