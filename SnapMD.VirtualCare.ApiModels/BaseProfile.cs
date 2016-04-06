@@ -96,6 +96,12 @@ namespace SnapMD.VirtualCare.ApiModels
         // ReSharper disable once InconsistentNaming
         public int? TimeZoneID { get; set; }
 
+        /// <summary>
+        /// Gets or sets the gender.
+        /// </summary>
+        /// <value>
+        /// The gender: "M" for Male, "F" for Female.
+        /// </value>
         public string Gender { get; set; }
 
         public string YearOfStateRegistration { get; set; }

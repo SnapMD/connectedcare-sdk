@@ -21,6 +21,13 @@ namespace SnapMD.VirtualCare.ApiModels
         public string Address { get; set; }
         public string City { get; set; }
         public string ZipCode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the gender.
+        /// </summary>
+        /// <value>
+        /// The gender: "M" for Male, "F" for Female.
+        /// </value>
         public string Gender { get; set; }
         public DateTime? Dob { get; set; }
     }
