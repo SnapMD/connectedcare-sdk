@@ -29,5 +29,6 @@ namespace SnapMD.VirtualCare.ApiModels
         public string GuardianFirstName { get; set; }
         public string GuardianLastName { get; set; }
         public string GuardianName { get; set; }
+        public Guid? PersonId { get; set; }
     }
 }

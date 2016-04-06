@@ -10,12 +10,12 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <summary>
         /// Repeat from.
         /// </summary>
-        public DateTime FromDate { get; set; }
+        public DateTimeOffset FromDate { get; set; }
 
         /// <summary>
         /// Repeat to.
         /// </summary>
-        public DateTime? ToDate { get; set; }
+        public DateTimeOffset? ToDate { get; set; }
 
         /// <summary>
         /// Create availability blocks every {repeat interval} {repeat period}.

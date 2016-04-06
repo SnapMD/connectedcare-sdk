@@ -11,8 +11,14 @@
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    ///     Patient medical history profile.
+    /// </summary>
     public interface IPatientMedicalHistoryProfile : IMedicalHistoryProfile
     {
+        /// <summary>
+        ///     Profile id.
+        /// </summary>
         int PatientId { get; set; }
     }
 }
