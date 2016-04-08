@@ -3,7 +3,7 @@
     /// <summary>
     /// Appointment optimization code.
     /// </summary>
-    public enum AppointmentOptimizationCode
+    public enum AppointmentOptimizationCode : int
     {
         /// <summary>
         /// Single booking.

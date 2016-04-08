@@ -51,7 +51,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Gets or sets the gender.
         /// </summary>
         /// <value>
-        /// The gender.
+        /// The gender: "M" for Male, "F" for Female.
         /// </value>
         public string Gender { get; set; }
 
@@ -128,7 +128,12 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// The time zone identifier.
         /// </value>
-        public int TimeZoneId { get; set; }
+        public int? TimeZoneId { get; set; }
+
+        /// <summary>
+        /// Gets or sets time zone string identifier. Example: 'Eastern Standard Time'.
+        /// </summary>
+        public string TimeZoneSystemId { get; set; }
 
         /// <summary>
         /// Gets or sets the user identifier.

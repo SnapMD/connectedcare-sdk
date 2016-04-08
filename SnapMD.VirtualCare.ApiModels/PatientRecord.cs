@@ -20,6 +20,12 @@ namespace SnapMD.VirtualCare.ApiModels
 
         public DateTime? Dob { get; set; }
 
+        /// <summary>
+        /// Gets or sets the gender.
+        /// </summary>
+        /// <value>
+        /// The gender: "M" for Male, "F" for Female.
+        /// </value>
         public string Gender { get; set; }
 
         public string OrganizationName { get; set; }

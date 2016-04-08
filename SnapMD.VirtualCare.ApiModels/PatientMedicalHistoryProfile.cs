@@ -13,8 +13,14 @@ using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    ///     Patient medical history profile.
+    /// </summary>
     public class PatientMedicalHistoryProfile : IPatientMedicalHistoryProfile
     {
+        /// <summary>
+        ///     Default constructor.
+        /// </summary>
         public PatientMedicalHistoryProfile()
         {
             MedicalConditions = new List<CustomCode>();
@@ -24,17 +30,34 @@ namespace SnapMD.VirtualCare.ApiModels
             Medications = new List<CustomCode>();
         }
 
+        /// <summary>
+        ///     Medical allergies.
+        /// </summary>
         public List<CustomCode> MedicationAllergies { get; set; }
 
+        /// <summary>
+        ///     Patient surgeries.
+        /// </summary>
         public List<SurgeryRecord> Surgeries { get; set; }
 
+        /// <summary>
+        ///     Patient medical conditions.
+        /// </summary>
         public List<CustomCode> MedicalConditions { get; set; }
 
+        /// <summary>
+        ///     Medications.
+        /// </summary>
         public List<CustomCode> Medications { get; set; }
 
+        /// <summary>
+        ///     Infra data.
+        /// </summary>
         public NewbornRecord InfantData { get; set; }
 
+        /// <summary>
+        ///     Profile id.
+        /// </summary>
         public int PatientId { get; set; }
-
     }
 }
