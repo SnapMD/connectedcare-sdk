@@ -8,6 +8,8 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     public class RuleResponse : RuleRequest
     {
+        public string DetailsJson { get; set; }
+
         public int? Version { get; set; }
 
         public DateTime CreatedDate { get; set; }
