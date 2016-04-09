@@ -63,14 +63,14 @@
         None,
 
         /// <summary>
-        /// The allow
+        /// The yes
         /// </summary>
-        Allow,
+        Yes,
 
         /// <summary>
-        /// The disallow
+        /// The no
         /// </summary>
-        Disallow,
+        No,
 
         /// <summary>
         /// The require
