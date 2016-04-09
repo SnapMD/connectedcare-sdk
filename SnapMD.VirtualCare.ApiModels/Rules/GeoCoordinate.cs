@@ -108,16 +108,19 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// <returns></returns>
         public static decimal Distance(GeoCoordinate first, GeoCoordinate second, GeoDistanceUnit unit)
         {
-            const double rad = Math.PI / 180.0;
-            var latFirst = Convert.ToDouble(first.Latitude ?? 0) * rad;
-            var latSecond = Convert.ToDouble(second.Latitude ?? 0) * rad;
-            var deltaLong = Convert.ToDouble((first.Longitude ?? 0) - (second.Longitude ?? 0)) * rad;
+            var dist = 1E10; //far away
+            if (first != null && second != null)
+            {
+                const double rad = Math.PI / 180.0;
+                var latFirst = Convert.ToDouble(first.Latitude ?? 0) * rad;
+                var latSecond = Convert.ToDouble(second.Latitude ?? 0) * rad;
+                var deltaLong = Convert.ToDouble((first.Longitude ?? 0) - (second.Longitude ?? 0)) * rad;
 
-            var dist = Math.Sin(latFirst) * Math.Sin(latSecond)
-                + Math.Cos(latFirst) * Math.Cos(latSecond) * Math.Cos(deltaLong);
-            dist = Math.Acos(dist) / rad;
-            dist = UnitConvert(dist * 60 * 1.1515, unit);
-
+                dist = Math.Sin(latFirst) * Math.Sin(latSecond)
+                    + Math.Cos(latFirst) * Math.Cos(latSecond) * Math.Cos(deltaLong);
+                dist = Math.Acos(dist) / rad;
+                dist = UnitConvert(dist * 60 * 1.1515, unit);
+            }
             return Convert.ToDecimal(dist);
         }
 
