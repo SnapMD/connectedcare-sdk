@@ -99,14 +99,14 @@
         AddressCountry,
 
         /// <summary>
-        /// The address country + state
+        /// The address country + states
         /// </summary>
-        AddressState,
+        AddressStates,
 
         /// <summary>
-        /// The address country + state + postal code
+        /// The address country + postalcodes
         /// </summary>
-        AddressPostalCode,
+        AddressPostalCodes,
 
         /// <summary>
         /// The distance
