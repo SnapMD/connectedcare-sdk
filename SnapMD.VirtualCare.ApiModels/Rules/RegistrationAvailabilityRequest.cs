@@ -59,6 +59,6 @@
         /// <value>
         ///   <c>true</c> if debug; otherwise, <c>false</c>.
         /// </value>
-        public bool Debug { get; set; }
+        public bool? Debug { get; set; }
     }
 }
