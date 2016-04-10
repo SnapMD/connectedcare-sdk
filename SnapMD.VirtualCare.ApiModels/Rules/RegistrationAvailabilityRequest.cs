@@ -52,5 +52,13 @@
         /// The location identifier.
         /// </value>
         public int? LocationId { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="RegistrationAvailabilityRequest"/> is debug.
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if debug; otherwise, <c>false</c>.
+        /// </value>
+        public bool Debug { get; set; }
     }
 }
