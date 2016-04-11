@@ -61,7 +61,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
         {
             string token;
             var mockWebClient = TokenandWebClientSetup(out token);
-            const string mockRequest = "{\"Address\":\"my address\",\"Dob\":\"2015-12-01T00:00:00\",\"Email\":\"mock@mail.com\",\"Name\":{\"First\":\"test\",\"Last\":\"user\"},\"Password\":\"password\",\"ProviderId\":1,\"TimeZoneId\":1}";
+            const string mockRequest = "{\"Address\":\"my address\",\"Dob\":\"2015-12-01T00:00:00\",\"Email\":\"mock@mail.com\",\"Name\":{\"First\":\"test\",\"Last\":\"user\"},\"Password\":\"password\",\"ProviderId\":1}";
 
             const string testResponse = @"{
                 'data': [{
@@ -87,8 +87,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
                 Email = "mock@mail.com",
                 Address = "my address",
                 Dob = new DateTime(2015,12,1),
-                Password = "password",
-                TimeZoneId = 1
+                Password = "password"
             });
             Assert.IsNotNull(result);
             Assert.IsNotNull(result.Data);
