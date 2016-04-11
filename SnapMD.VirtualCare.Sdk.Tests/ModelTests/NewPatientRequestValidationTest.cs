@@ -13,7 +13,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests.ModelTests
         {
             var target = new NewPatientRequest();
             var thrown = Assert.Throws<Exception>(() => target.ValidateModel(m => new Exception(m)));
-            Assert.AreEqual("Name is required", thrown.Message);
+            Assert.AreEqual("Name is required.", thrown.Message);
 
             target.Name = new FirstLast();
             thrown = Assert.Throws<Exception>(() => target.ValidateModel(m => new Exception(m)));
