@@ -49,7 +49,7 @@ namespace SnapMD.VirtualCare.ApiModels
             {
                 if (Name == null)
                 {
-                    throw exceptionToThrow("Name is required");
+                    throw exceptionToThrow("Name is required.");
                 }
 
                 if (string.IsNullOrEmpty(Name.First))
