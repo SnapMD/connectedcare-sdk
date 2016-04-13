@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
@@ -21,6 +23,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <summary>
         /// Appointment status.
         /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
         public AppointmentStatusCode AppointmentStatusCode { get; set; }
 
         /// <summary>

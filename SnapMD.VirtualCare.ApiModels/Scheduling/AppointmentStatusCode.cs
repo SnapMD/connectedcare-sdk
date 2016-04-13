@@ -1,7 +1,13 @@
 ﻿namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
+    /// <summary>
+    /// Represents statuses of an <see cref="AppointmentRequest"/> or <seealso cref="AppointmentResponse"/> object.
+    /// </summary>
     public enum AppointmentStatusCode
     {
+        /// <summary>
+        /// The variable has not been initialized.
+        /// </summary>
         NotSpecified,
 
         /// <summary>
