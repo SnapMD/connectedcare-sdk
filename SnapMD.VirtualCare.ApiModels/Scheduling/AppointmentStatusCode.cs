@@ -31,9 +31,9 @@
         CancelledByProvider,
 
         /// <summary>
-        /// The appointment is currently taking place.
+        /// The appointment has taken place.
         /// </summary>
-        InProgress,
+        Fulfilled,
 
         /// <summary>
         /// The patient was transferred to a different doctor.
