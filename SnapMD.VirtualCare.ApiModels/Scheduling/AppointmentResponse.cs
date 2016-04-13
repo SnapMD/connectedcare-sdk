@@ -30,5 +30,13 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// The participants.
         /// </value>
         public List<AppointmentParticipantResponse> Participants { get; set; }
+
+        /// <summary>
+        /// Gets or sets the consultation identifier.
+        /// </summary>
+        /// <value>
+        /// The consultation identifier.
+        /// </value>
+        public int? ConsultationId { get; set; }
     }
 }
