@@ -32,6 +32,16 @@
         /// <summary>
         /// The patient was transferred to a different doctor.
         /// </summary>
-        Transferred
+        Transferred,
+
+        /// <summary>
+        /// The appointment was ended.
+        /// </summary>
+        Ended,
+
+        /// <summary>
+        /// The appointment was dropped.
+        /// </summary>
+        Dropped
     }
 }
