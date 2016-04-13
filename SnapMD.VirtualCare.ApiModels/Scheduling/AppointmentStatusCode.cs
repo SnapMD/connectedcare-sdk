@@ -31,7 +31,7 @@
         CancelledByProvider,
 
         /// <summary>
-        /// The appointment has taken place.
+        /// The event which the appointment represented has been initialized and the appointment is therefore fulfilled.
         /// </summary>
         Fulfilled,
 
