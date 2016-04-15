@@ -40,7 +40,7 @@ namespace SnapMD.VirtualCare.Sdk
             
             var response = Post("v2/account/token", request);
             
-            var dataEnumerator = response.ToObject<ApiResponseV2<SerializableToken>>();
+            var dataEnumerator = response.ToObject<ApiModels.ApiResponseV2<SerializableToken>>();
             if (dataEnumerator.Data != null)
             {
                 foreach (var entry in dataEnumerator.Data)
@@ -54,7 +54,7 @@ namespace SnapMD.VirtualCare.Sdk
 
         public string GetToken(string jwt)
         {
-            var response = MakeCall<ApiResponseV2<SerializableToken>>("v2/account/token?jwt=" + jwt);
+            var response = MakeCall<ApiModels.ApiResponseV2<SerializableToken>>("v2/account/token?jwt=" + jwt);
 
             if (response.Data != null)
             {
@@ -72,7 +72,7 @@ namespace SnapMD.VirtualCare.Sdk
         /// <returns>Token, null or the bad request</returns>
         public string GetTokenForSso(string ssoToken, string agentId)
         {
-            var response = MakeCall<ApiResponseV2<SerializableToken>>(
+            var response = MakeCall<ApiModels.ApiResponseV2<SerializableToken>>(
                 $"v2/account/token?ssoToken={ssoToken}&agentId={agentId}");
 
             return response.Data?.Select(entry => entry.access_token).FirstOrDefault();
