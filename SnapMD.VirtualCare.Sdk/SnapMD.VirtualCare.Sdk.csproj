@@ -85,7 +85,6 @@
     <Compile Include="MockWebClient.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Models\ApiResponse.cs" />
     <Compile Include="HospitalApi.cs" />
     <Compile Include="Models\ConsultationEventType.cs" />
     <Compile Include="Models\IntakeConcern.cs" />

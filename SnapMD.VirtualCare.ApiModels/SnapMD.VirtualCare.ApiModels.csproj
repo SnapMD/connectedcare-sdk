@@ -74,16 +74,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiResponse.cs" />
     <Compile Include="Attributes\ModelNameAttribute.cs" />
     <Compile Include="ClinicianSpecialty.cs" />
     <Compile Include="ContactTypeCode.cs" />
     <Compile Include="CreateStaffProfileResponse.cs" />
     <Compile Include="EmailUserRequest.cs" />
+    <Compile Include="ImageUploadResponse.cs" />
     <Compile Include="NewCoUserRequest.cs" />
     <Compile Include="ClinicianPersonResponse.cs" />
     <Compile Include="PatientAdminResponseShort.cs" />
     <Compile Include="PatientPersonResponse.cs" />
     <Compile Include="PersonName.cs" />
+    <Compile Include="ProfileImageResponse.cs" />
     <Compile Include="Scheduling\AppointmentsRequest.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityRequest.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityResponse.cs" />
