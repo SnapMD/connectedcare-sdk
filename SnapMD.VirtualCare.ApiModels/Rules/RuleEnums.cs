@@ -1,4 +1,6 @@
-﻿namespace SnapMD.VirtualCare.ApiModels.Rules
+﻿using System.ComponentModel;
+
+namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
     /// Category of the Rules
@@ -8,21 +10,25 @@
         /// <summary>
         /// The unknown type
         /// </summary>
+        [Description("Undefined")]
         Unknown,
 
         /// <summary>
         /// The registration availability: Allow patients to register if
         /// </summary>
+        [Description("Allow Patients to Register if")]
         RegistrationAvailability,
 
         /// <summary>
         /// The patient visibility: Patient can see providers if/where/when.
         /// </summary>
+        [Description("Patient can see providers if/where/when")]
         PatientVisibility,
 
         /// <summary>
         /// The provider visibility: Provider can see patients if/where/when.
         /// </summary>
+        [Description("Provider can see patients if/where/when")]
         ProviderVisibility
     }
 
