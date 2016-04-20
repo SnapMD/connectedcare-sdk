@@ -102,6 +102,8 @@ namespace SnapMD.VirtualCare.ApiModels
 
         //Patient Guardians.
         public IEnumerable<Guardian> Guardians { get; set; }
+
+        public Guid? AppointmentId { get; set; }
     }
 
     public class Guardian
