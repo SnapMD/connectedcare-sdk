@@ -33,6 +33,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public int? PatientUserId { get; set; }
 
         /// <summary>
+        /// Patient Identifiers, Filter for searching appointments for list of patients.
+        /// </summary>
+        public int[] PatientIds { get; set; }
+
+        /// <summary>
         /// Flag indicates search should include patient dependents or not.
         /// </summary>
         /// <value>
