@@ -16,9 +16,14 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public Guid AppointmentId { get; set; }
 
         /// <summary>
-        /// Patient id who appointment is for
+        /// Patient identifier who appointment is for
         /// </summary>
-        public int PatientId { get; set; }
+        public int? PatientId { get; set; }
+
+        /// <summary>
+        /// Clinician identifier
+        /// </summary>
+        public int? ClinicianId { get; set; }
 
         /// <summary>
         /// Appointment status.
