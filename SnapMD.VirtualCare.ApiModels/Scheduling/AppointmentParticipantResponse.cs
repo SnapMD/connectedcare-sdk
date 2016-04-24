@@ -13,6 +13,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public Guid ParticipantId { get; set; }
 
         /// <summary>
+        ///     Participant person record.
+        /// </summary>
+        public PersonRecord Person { get; set; }
+
+        /// <summary>
         ///     Participant status.
         /// </summary>
         public virtual GlobalStatusCode Status { get; set; }
