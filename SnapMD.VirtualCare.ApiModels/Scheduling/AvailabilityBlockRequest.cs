@@ -51,5 +51,10 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// Rule should be set if block is repeating. Rule defines repeating configuration.
         /// </summary>
         public AvailabilityBlockRuleRequest Rule { get; set; }
+
+        /// <summary>
+        /// Availability block clinician.
+        /// </summary>
+        public AvailabilityBlockClinicianRequest Clinician { get; set; }
     }
 }

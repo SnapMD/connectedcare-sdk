@@ -30,7 +30,7 @@ namespace SnapMD.VirtualCare.Sdk
 
             var result = MakeCall<ApiResponseV2<AvailabilityBlockResponse>>
                 (
-                    $"v2.1/clinicians/availability-blocks?ProviderId={request.ProviderId}&ClinicianIds={clinicianIds}&Groups={groups}&StartDate={request.StartDate.Value.ToString("yyyy-MM-dd")}&EndDate={(request.EndDate.HasValue ? request.EndDate.Value.ToString("yyyy-MM-dd") : "")}"
+                    $"v2.1/clinicians/availability-blocks?ClinicianIds={clinicianIds}&Groups={groups}&StartDate={request.StartDate.Value.ToString("yyyy-MM-dd")}&EndDate={(request.EndDate.HasValue ? request.EndDate.Value.ToString("yyyy-MM-dd") : "")}"
                 );
 
             return result;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
@@ -41,5 +42,10 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// Intake metadata (Concerns and additional notes).
         /// </summary>
         public AppointmentIntakeMetadata IntakeMetadata { get; set; }
+
+        /// <summary>
+        /// Appointment participants.
+        /// </summary>
+        public List<AppointmentParticipantRequest> Participants { get; set; }
     }
 }
