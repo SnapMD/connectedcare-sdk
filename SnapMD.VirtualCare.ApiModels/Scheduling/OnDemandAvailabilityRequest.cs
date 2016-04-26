@@ -16,7 +16,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public int? ProviderId { get; set; }
 
         /// <summary>
-        /// The start time of the OnDeamand request (default to Now).
+        /// The start time of the OnDemand request (default to Now).
         /// </summary>
         /// <value>
         /// The start time.
@@ -24,7 +24,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public DateTime? StartTime { get; set; }
 
         /// <summary>
-        /// The end time of the OnDeamand request (default to Now + MinAppointmentLength).
+        /// The end time of the OnDemand request (default to Now + MinAppointmentLength).
         /// </summary>
         /// <value>
         /// The end time.
