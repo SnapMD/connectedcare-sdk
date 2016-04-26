@@ -30,5 +30,20 @@ namespace SnapMD.VirtualCare.ApiModels
         public string GuardianLastName { get; set; }
         public string GuardianName { get; set; }
         public Guid? PersonId { get; set; }
+
+        public string EmailId { get; set; }
+        public string Gender { get; set; }
+        public int? Enthicity { get; set; }
+        public int? BloodType { get; set; }
+        public int? HairColor { get; set; }
+        public int? EyeColor { get; set; }
+        public string Height { get; set; }
+        public string Weight { get; set; }
+        public int? HeightUnit { get; set; }
+        public int? WeightUnit { get; set; }
+        public string HomePhone { get; set; }
+        public string MobilePhone { get; set; }
+        public int? OrganationId { get; set; }
+        public int? LocationId { get; set; }
     }
 }
