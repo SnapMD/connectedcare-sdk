@@ -44,5 +44,13 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// The include patient dependents.
         /// </value>
         public bool? IncludePatientDependents { get; set; }
+
+        /// <summary>
+        /// Flag indicates search should include patient co-users or not.
+        /// </summary>
+        /// <value>
+        /// The include patient co-userss.
+        /// </value>
+        public bool? IncludePatientCoUsers { get; set; }
     }
 }
