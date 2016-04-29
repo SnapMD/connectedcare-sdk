@@ -24,6 +24,10 @@ namespace SnapMD.VirtualCare.Sdk.Tests.ModelTests
 
             target.Email = "test@mail.com";
             thrown = Assert.Throws<Exception>(() => target.ValidateModel(m => new Exception(m)));
+            Assert.AreEqual("Unknown gender. Expected gender any [M, F]", thrown.Message);
+
+            target.Gender = "F";
+            thrown = Assert.Throws<Exception>(() => target.ValidateModel(m => new Exception(m)));
             Assert.AreEqual("Date of birth required.", thrown.Message);
 
             target.Dob = new DateTime(2015, 1, 1);
@@ -48,7 +52,8 @@ namespace SnapMD.VirtualCare.Sdk.Tests.ModelTests
                 Email = null,
                 Dob = new DateTime(2015, 1, 1),
                 Address = "I.R. Address",
-                MobileNumberWithCountryCode = "12345678900"
+                MobileNumberWithCountryCode = "12345678900",
+                Gender = "F"
             };
             bool actual = target.ValidateModel(m => new Exception(m), true);
             Assert.IsTrue(actual);
