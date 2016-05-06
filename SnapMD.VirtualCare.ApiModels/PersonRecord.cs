@@ -20,15 +20,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The name.
         /// </value>
         public PersonName Name { get; set; } = new PersonName();
-
-        /// <summary>
-        ///     Gets or sets the content of the photo.
-        /// </summary>
-        /// <value>
-        ///     The content of the photo.
-        /// </value>
-        public byte[] PhotoContent { get; set; }
-
+        
         /// <summary>
         ///     Gets or sets the photo URL.
         /// </summary>
