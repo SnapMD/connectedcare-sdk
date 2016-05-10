@@ -8,10 +8,10 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
     public class OnDemandAvailabilityRequest
     {
         /// <summary>
-        /// The provider identifier (default to login user's providerId) for the request.
+        /// The hospital identifier (default to login user's providerId) for the request.
         /// </summary>
         /// <value>
-        /// The provider identifier.
+        /// The hospital identifier.
         /// </value>
         public int? ProviderId { get; set; }
 
