@@ -7,14 +7,19 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
     /// </summary>
     public class AppointmentParticipantRequest
     {
-        public Guid AppointmentId { get; set; }
-
+        /// <summary>
+        ///     Attendence type.
+        /// </summary>
         public AttendenceCode AttendenceCode { get; set; }
 
-        public string ReferenceType => @"AppointmentParticipantRequest";
+        /// <summary>
+        ///     Participant person id.
+        /// </summary>
+        public Guid PersonId { get; set; }
 
-        public PersonRecord Person { get; set; }
-
+        /// <summary>
+        ///     Participant type.
+        /// </summary>
         public ParticipantTypeCode ParticipantTypeCode { get; set; }
     }
 }

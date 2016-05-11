@@ -14,14 +14,14 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public Guid Id { get; set; }
 
         /// <summary>
-        /// Availability block clinicians.
-        /// </summary>
-        public IEnumerable<AvailabilityBlockClinicianResponse> AvailabilityBlockClinicians { get; set; }
-
-        /// <summary>
         /// Rule should be set if block is repeating. Rule defines repeating configuration.
         /// </summary>
         public new AvailabilityBlockRuleResponse Rule { get; set; }
+
+        /// <summary>
+        /// Availability block clinician.
+        /// </summary>
+        public new AvailabilityBlockClinicianResponse Clinician { get; set; }
 
         /// <summary>
         /// Created by user id.

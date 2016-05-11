@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using SnapMD.VirtualCare.ApiModels;
 
@@ -23,6 +19,10 @@ namespace SnapMD.VirtualCare.Sdk.Tests.ModelTests
             Assert.AreEqual("Email address required.", thrown.Message);
 
             target.Email = "test@mail.com";
+            thrown = Assert.Throws<Exception>(() => target.ValidateModel(m => new Exception(m)));
+            Assert.AreEqual("Unknown gender. Expected gender any [M, F]", thrown.Message);
+
+            target.Gender = "F";
             thrown = Assert.Throws<Exception>(() => target.ValidateModel(m => new Exception(m)));
             Assert.AreEqual("Date of birth required.", thrown.Message);
 
@@ -48,7 +48,8 @@ namespace SnapMD.VirtualCare.Sdk.Tests.ModelTests
                 Email = null,
                 Dob = new DateTime(2015, 1, 1),
                 Address = "I.R. Address",
-                MobileNumberWithCountryCode = "12345678900"
+                MobileNumberWithCountryCode = "12345678900",
+                Gender = "F"
             };
             bool actual = target.ValidateModel(m => new Exception(m), true);
             Assert.IsTrue(actual);

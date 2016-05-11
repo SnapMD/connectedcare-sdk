@@ -9,29 +9,22 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 using System;
-using System.Text;
 using System.Net;
-using System.IO;
-using System.Threading.Tasks;
-using System.Net.Cache;
-using System.Collections.Specialized;
-using System.ComponentModel;
-
 
 namespace SnapMD.VirtualCare.Sdk.Wrappers
 {
+    /// <summary>
+    /// As ApiCall can call all the necessary function calls,
+    /// so should the wrapper be able to do the same.
+    /// </summary>
+    /// <seealso cref="System.Net.WebClient" />
+    /// <seealso cref="SnapMD.VirtualCare.Sdk.Interfaces.IWebClient" />
     public class WebClientWrapper : WebClient, Interfaces.IWebClient
     {
-        //public WebClient webClient { get; set; }
-
-        //as ApiCall can call all the necessary function calls, 
-        //so should the wrapper be able to do the same.
-
         public WebClientWrapper() { }
 
         public WebClientWrapper(WebClient webClient)
         {
-            //this.webClient = webClient;
         }
 
         public new WebHeaderCollection Headers
@@ -39,19 +32,16 @@ namespace SnapMD.VirtualCare.Sdk.Wrappers
             get
             {
                 return base.Headers;
-                //return webClient.Headers;
             }
             set
             {
                 base.Headers = value;
-                //webClient.Headers = value;
             }
         }
 
         public new string UploadString(Uri address, string method, string data)
         {
             return base.UploadString(address, method, data);
-            //return webClient.UploadString(address, method, data);
         }
     }
 }

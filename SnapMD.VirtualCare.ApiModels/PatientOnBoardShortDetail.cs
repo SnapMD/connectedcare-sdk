@@ -10,6 +10,7 @@
 //    limitations under the License.
 
 using System;
+using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
@@ -63,6 +64,13 @@ namespace SnapMD.VirtualCare.ApiModels
                 throw exceptionToThrow("Email address required.");
             }
             
+            var genders = new List<string> { "M", "F" };
+            if (string.IsNullOrEmpty(Gender) || !genders.Contains(Gender))
+            {
+                // error: gender unknown.
+                throw exceptionToThrow(string.Format("Unknown gender. Expected gender any [{0}]", string.Join(", ", genders.ToArray())));
+            }
+
             if (Dob == null)
             {
                 // error: date of birth required.

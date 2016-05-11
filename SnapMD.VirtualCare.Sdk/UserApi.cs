@@ -31,7 +31,7 @@ namespace SnapMD.VirtualCare.Sdk
                 return null;
             }
 
-            var dataEnumerator = response.ToObject<ApiResponseV2<SerializableUser>>();
+            var dataEnumerator = response.ToObject<ApiModels.ApiResponseV2<SerializableUser>>();
             if (dataEnumerator.Data != null)
             {
                 foreach (var entry in dataEnumerator.Data)

@@ -1,7 +1,13 @@
 ﻿namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
+    /// <summary>
+    /// Represents statuses of an <see cref="AppointmentRequest"/> or <seealso cref="AppointmentResponse"/> object.
+    /// </summary>
     public enum AppointmentStatusCode
     {
+        /// <summary>
+        /// The variable has not been initialized.
+        /// </summary>
         NotSpecified,
 
         /// <summary>
@@ -25,9 +31,9 @@
         CancelledByProvider,
 
         /// <summary>
-        /// The appointment is currently taking place.
+        /// The event which the appointment represented has been initialized and the appointment is therefore fulfilled.
         /// </summary>
-        InProgress,
+        Fulfilled,
 
         /// <summary>
         /// The patient was transferred to a different doctor.

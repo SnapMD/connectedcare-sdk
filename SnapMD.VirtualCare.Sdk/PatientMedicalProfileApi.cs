@@ -11,7 +11,6 @@
 
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.Sdk.Interfaces;
-using SnapMD.VirtualCare.Sdk.Models;
 
 namespace SnapMD.VirtualCare.Sdk
 {

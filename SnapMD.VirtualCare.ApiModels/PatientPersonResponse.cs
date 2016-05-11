@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
@@ -24,10 +22,10 @@ namespace SnapMD.VirtualCare.ApiModels
         public PersonRecord Person { get; set; }
         
         /// <summary>
-        ///     Gets or sets the provider identifier.
+        ///     Gets or sets the hospital identifier.
         /// </summary>
         /// <value>
-        ///     The provider identifier.
+        ///     The hospital identifier.
         /// </value>
         public int ProviderId { get; set; }
     }

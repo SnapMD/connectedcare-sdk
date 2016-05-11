@@ -10,10 +10,11 @@
 //    limitations under the License.
 
 using System.Linq;
-using SnapMD.VirtualCare.Sdk.Models;
 using Newtonsoft.Json.Linq;
+using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.ApiModels.Enums;
 using SnapMD.VirtualCare.Sdk.Interfaces;
+using SerializableToken = SnapMD.VirtualCare.Sdk.Models.SerializableToken;
 
 namespace SnapMD.VirtualCare.Sdk
 {
@@ -40,7 +41,7 @@ namespace SnapMD.VirtualCare.Sdk
             
             var response = Post("v2/account/token", request);
             
-            var dataEnumerator = response.ToObject<ApiResponseV2<SerializableToken>>();
+            var dataEnumerator = response.ToObject<ApiModels.ApiResponseV2<SerializableToken>>();
             if (dataEnumerator.Data != null)
             {
                 foreach (var entry in dataEnumerator.Data)
@@ -54,7 +55,7 @@ namespace SnapMD.VirtualCare.Sdk
 
         public string GetToken(string jwt)
         {
-            var response = MakeCall<ApiResponseV2<SerializableToken>>("v2/account/token?jwt=" + jwt);
+            var response = MakeCall<ApiModels.ApiResponseV2<SerializableToken>>("v2/account/token?jwt=" + jwt);
 
             if (response.Data != null)
             {
@@ -70,12 +71,15 @@ namespace SnapMD.VirtualCare.Sdk
         /// <param name="ssoToken">SSO token</param>
         /// <param name="agentId">Agent ID</param>
         /// <returns>Token, null or the bad request</returns>
-        public string GetTokenForSso(string ssoToken, string agentId)
+        public SsoSerializableToken GetTokenForSso(string ssoToken, string agentId)
         {
-            var response = MakeCall<ApiResponseV2<SerializableToken>>(
+            var response = MakeCall<ApiModels.ApiResponseV2<SsoSerializableToken>>(
                 $"v2/account/token?ssoToken={ssoToken}&agentId={agentId}");
 
-            return response.Data?.Select(entry => entry.access_token).FirstOrDefault();
+            if (response == null || !response.Data.Any())
+                throw new SnapSdkException("The SSO token call returned empty, login is not possible");
+
+            return response.Data.First();
         }
     }
 }

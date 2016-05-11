@@ -8,15 +8,15 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
     public class OnDemandAvailabilityRequest
     {
         /// <summary>
-        /// Gets or sets the provider identifier.
+        /// The hospital identifier (default to login user's providerId) for the request.
         /// </summary>
         /// <value>
-        /// The provider identifier.
+        /// The hospital identifier.
         /// </value>
         public int? ProviderId { get; set; }
 
         /// <summary>
-        /// Gets or sets the start time.
+        /// The start time of the OnDemand request (default to Now).
         /// </summary>
         /// <value>
         /// The start time.
@@ -24,7 +24,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public DateTime? StartTime { get; set; }
 
         /// <summary>
-        /// Gets or sets the end time.
+        /// The end time of the OnDemand request (default to Now + MinAppointmentLength).
         /// </summary>
         /// <value>
         /// The end time.

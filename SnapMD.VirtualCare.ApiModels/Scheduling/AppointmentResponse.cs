@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
@@ -14,13 +16,19 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public Guid AppointmentId { get; set; }
 
         /// <summary>
-        /// Patient id who appointment is for
+        /// Patient identifier who appointment is for
         /// </summary>
-        public int PatientId { get; set; }
+        public int? PatientId { get; set; }
+
+        /// <summary>
+        /// Clinician identifier
+        /// </summary>
+        public int? ClinicianId { get; set; }
 
         /// <summary>
         /// Appointment status.
         /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
         public AppointmentStatusCode AppointmentStatusCode { get; set; }
 
         /// <summary>
@@ -29,6 +37,14 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <value>
         /// The participants.
         /// </value>
-        public List<AppointmentParticipantResponse> Participants { get; set; }
+        public new List<AppointmentParticipantResponse> Participants { get; set; }
+
+        /// <summary>
+        /// Gets or sets the consultation identifier.
+        /// </summary>
+        /// <value>
+        /// The consultation identifier.
+        /// </value>
+        public int? ConsultationId { get; set; }
     }
 }
