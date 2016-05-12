@@ -31,7 +31,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
         {
             string token;
             var mockWebClient = TokenandWebClientSetup(out token);
-            string testEmail = "test" + Guid.NewGuid() + "@test.com";
+            string testEmail = "test" + Guid.NewGuid() + "@example.com";
 
             DateTime mockDate = DateTime.UtcNow;
 

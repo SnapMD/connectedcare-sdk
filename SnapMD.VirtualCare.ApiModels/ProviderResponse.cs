@@ -32,10 +32,10 @@ namespace SnapMD.VirtualCare.ApiModels
         public List<string> EnabledModules { get; set; }
 
         /// <summary>
-        ///     Gets or sets the provider identifier.
+        ///     Gets or sets the hospital identifier.
         /// </summary>
         /// <value>
-        ///     The provider identifier.
+        ///     The hospital identifier.
         /// </value>
         public int ProviderId { get; set; }
 
