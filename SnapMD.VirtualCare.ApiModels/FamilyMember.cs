@@ -33,7 +33,7 @@ namespace SnapMD.VirtualCare.ApiModels
 
         public string EmailId { get; set; }
         public string Gender { get; set; }
-        public int? Enthicity { get; set; }
+        public int? Ethnicity { get; set; }
         public int? BloodType { get; set; }
         public int? HairColor { get; set; }
         public int? EyeColor { get; set; }
