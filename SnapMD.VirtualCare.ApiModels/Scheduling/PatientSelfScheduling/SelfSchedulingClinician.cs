@@ -14,6 +14,16 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling.PatientSelfScheduling
         public int UserId { get; set; }
 
         /// <summary>
+        /// Person id.
+        /// </summary>
+        public Guid PersonId { get; set; }
+
+        /// <summary>
+        /// Person profile image.
+        /// </summary>
+        public string ProfilePhoto { get; set; }
+
+        /// <summary>
         /// First name.
         /// </summary>
         public string Name { get; set; }
