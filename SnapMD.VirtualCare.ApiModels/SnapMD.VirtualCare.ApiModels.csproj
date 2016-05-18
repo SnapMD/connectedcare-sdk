@@ -93,6 +93,7 @@
     <Compile Include="Scheduling\PatientSelfScheduling\AppointmentSlot.cs" />
     <Compile Include="Scheduling\PatientSelfScheduling\SelfSchedulingClinician.cs" />
     <Compile Include="Scheduling\PatientSelfScheduling\SelfSchedulingClinicianSearchRequest.cs" />
+    <Compile Include="Scheduling\PatientSelfScheduling\SelfSchedulingClinicianSearchResult.cs" />
     <Compile Include="SiteNotifications\SiteNotificationRequest.cs" />
     <Compile Include="SiteNotifications\UserSiteNotificationRequest.cs" />
     <Compile Include="SmallTelecom.cs" />

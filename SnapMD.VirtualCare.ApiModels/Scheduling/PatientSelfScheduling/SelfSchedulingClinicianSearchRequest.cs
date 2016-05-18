@@ -18,6 +18,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling.PatientSelfScheduling
         public DateTime Date { get; set; }
 
         /// <summary>
+        /// Return only clinicians, that are available on target date.
+        /// </summary>
+        public bool AvailableOnly { get; set; }
+
+        /// <summary>
         /// Search for user's my providers.
         /// </summary>
         public bool OnlyMyProviders { get; set; }
