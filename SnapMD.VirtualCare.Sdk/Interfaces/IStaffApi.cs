@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SnapMD.VirtualCare.ApiModels;
-using SnapMD.VirtualCare.Sdk.Models;
+﻿using SnapMD.VirtualCare.ApiModels;
 
 namespace SnapMD.VirtualCare.Sdk.Interfaces
 {
