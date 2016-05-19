@@ -44,6 +44,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling.PatientSelfScheduling
         public string StatesLicenced { get; set; }
 
         /// <summary>
+        /// Is my provider.
+        /// </summary>
+        public bool IsFavorite { get; set; }
+
+        /// <summary>
         /// Address.
         /// </summary>
         public string Address { get; set; }
