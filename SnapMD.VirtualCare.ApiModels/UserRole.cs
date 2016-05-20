@@ -24,7 +24,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <summary>
         /// Role id.
         /// </summary>
-        public int RoleId { get; set; }
+        public int? RoleId { get; set; }
 
         /// <summary>
         /// Role description.

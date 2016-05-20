@@ -10,6 +10,8 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
+using System;
+
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
@@ -69,5 +71,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public string StatesLicenced { get; set; }
 
         public string SubSpeciality { get; set; }
+
+        public DateTime? Dob { get; set; }
     }
 }
