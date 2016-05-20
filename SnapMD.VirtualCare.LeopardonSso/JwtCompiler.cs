@@ -23,6 +23,8 @@ namespace SnapMD.VirtualCare.LeopardonSso
         private bool _disposed;
         private readonly string _issuer;
 
+        public string JwtSignOnUrl { get; set; }
+
         public JwtCompiler(string issuer, RSA rsa)
         {
             _issuer = issuer;
@@ -37,8 +39,9 @@ namespace SnapMD.VirtualCare.LeopardonSso
 
         public async Task<string> GetRedirectPath(string name, string email)
         {
+            var signonUrl = JwtSignOnUrl ?? Settings.Default.JwtSignOnUrl;
             var token = await BuildJwtAsync(name, email);
-            return string.Format(Settings.Default.JwtSignOnUrl, token);
+            return string.Format(signonUrl, token);
         }
 
         private Task<string> BuildJwtAsync(string name, string email)

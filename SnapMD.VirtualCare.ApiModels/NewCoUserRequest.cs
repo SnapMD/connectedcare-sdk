@@ -15,16 +15,76 @@ namespace SnapMD.VirtualCare.ApiModels
 {
     public class NewCoUserRequest : PatientRecord
     {
+        /// <summary>
+        /// Gets or sets the email.
+        /// </summary>
+        /// <value>
+        /// The email.
+        /// </value>
         public string Email { get; set; }
 
+        /// <summary>
+        /// Gets or sets the family group identifier.
+        /// </summary>
+        /// <value>
+        /// The family group identifier.
+        /// </value>
         public int FamilyGroupId { get; set; }
 
+        /// <summary>
+        /// Gets or sets the relationship identifier.
+        /// </summary>
+        /// <value>
+        /// The relationship identifier.
+        /// </value>
         public int? RelationshipId { get; set; }
 
+        /// <summary>
+        /// Gets or sets the height unit identifier.
+        /// </summary>
+        /// <value>
+        /// The height unit identifier.
+        /// </value>
         public int? HeightUnitId { get; set; }
 
+        /// <summary>
+        /// Gets or sets the weight unit identifier.
+        /// </summary>
+        /// <value>
+        /// The weight unit identifier.
+        /// </value>
         public int? WeightUnitId { get; set; }
 
-        public byte[] Photo { get; set; }
+        /// <summary>
+        /// Gets or sets the type of the blood.
+        /// </summary>
+        /// <value>
+        /// The type of the blood.
+        /// </value>
+        public int? BloodType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the color of the eye.
+        /// </summary>
+        /// <value>
+        /// The color of the eye.
+        /// </value>
+        public int? EyeColor { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ethnicity.
+        /// </summary>
+        /// <value>
+        /// The ethnicity.
+        /// </value>
+        public int? Ethnicity { get; set; }
+
+        /// <summary>
+        /// Gets or sets the color of the hair.
+        /// </summary>
+        /// <value>
+        /// The color of the hair.
+        /// </value>
+        public int? HairColor { get; set; }
     }
 }
