@@ -11,6 +11,8 @@
 //    limitations under the License.
 #endregion
 
+using System;
+
 namespace SnapMD.VirtualCare.ApiModels
 {
     public class NewCoUserRequest : PatientRecord
@@ -25,6 +27,13 @@ namespace SnapMD.VirtualCare.ApiModels
 
         public int? WeightUnitId { get; set; }
 
+        /// <summary>
+        /// Not used.  Please use the new Images APIs.
+        /// </summary>
+        /// <value>
+        /// The photo.
+        /// </value>
+        [Obsolete("No longer used.  Please use the new Images APIs.", true)]
         public byte[] Photo { get; set; }
     }
 }
