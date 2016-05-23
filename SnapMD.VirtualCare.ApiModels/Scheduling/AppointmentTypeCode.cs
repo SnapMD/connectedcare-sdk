@@ -6,18 +6,23 @@
     public enum AppointmentTypeCode
     {
         /// <summary>
-        /// Not specified
+        /// Not specified.
         /// </summary>
         None,
 
         /// <summary>
-        /// Future appointment
+        /// Clinician scheduled.
         /// </summary>
-        Future,
+        ClinicianScheduled,
 
         /// <summary>
-        /// Appointments on-demand
+        /// Appointments on-demand.
         /// </summary>
-        OnDemand
+        OnDemand,
+
+        /// <summary>
+        /// Patient self-scheduled.
+        /// </summary>
+        PatientScheduled
     }
 }
