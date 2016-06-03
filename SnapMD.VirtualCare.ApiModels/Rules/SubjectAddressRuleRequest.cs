@@ -12,9 +12,18 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.RuleRequest" />
     public class SubjectAddressRuleRequest : RuleRequest
     {
+        /// <summary>
+        /// Gets or sets the subject addresses.
+        /// </summary>
+        /// <value>
+        /// The subject addresses.
+        /// </value>
         public List<SubjectAddress> SubjectAddresses { get; set; }
     }
 
+    /// <summary>
+    /// SubjectAddress model.
+    /// </summary>
     public class SubjectAddress
     {
         /// <summary>
@@ -33,8 +42,20 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// </value>
         public string State { get; set; }
 
+        /// <summary>
+        /// Gets or sets the city.
+        /// </summary>
+        /// <value>
+        /// The city.
+        /// </value>
         public string City { get; set; }
 
+        /// <summary>
+        /// Gets or sets the postal code.
+        /// </summary>
+        /// <value>
+        /// The postal code.
+        /// </value>
         public string PostalCode { get; set; }
     }
 }
