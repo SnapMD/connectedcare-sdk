@@ -100,19 +100,9 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         Unknown,
 
         /// <summary>
-        /// The address country
+        /// The address
         /// </summary>
-        AddressCountry,
-
-        /// <summary>
-        /// The address country + states
-        /// </summary>
-        AddressStates,
-
-        /// <summary>
-        /// The address country + postalcodes
-        /// </summary>
-        AddressPostalCodes,
+        Address,
 
         /// <summary>
         /// The distance
