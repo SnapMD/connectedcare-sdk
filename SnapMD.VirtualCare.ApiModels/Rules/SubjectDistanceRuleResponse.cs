@@ -9,9 +9,18 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <summary>
     /// Response model for SubjectDistance.
     /// </summary>
+    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.IRuleResponse" />
     /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.SubjectDistanceRuleRequest" />
-    public class SubjectDistanceRuleResponse : SubjectDistanceRuleRequest
+    public class SubjectDistanceRuleResponse : SubjectDistanceRuleRequest, IRuleResponse
     {
+        /// <summary>
+        /// Gets or sets the version.
+        /// </summary>
+        /// <value>
+        /// The version.
+        /// </value>
+        public int? Version { get; set; }
+
         /// <summary>
         /// Gets or sets the created date.
         /// </summary>
