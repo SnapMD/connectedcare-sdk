@@ -9,6 +9,14 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public interface IRuleResponse
     {
         /// <summary>
+        /// Gets or sets the rule template.
+        /// </summary>
+        /// <value>
+        /// The rule template.
+        /// </value>
+        RuleTemplateResponse RuleTemplate { get; set; }
+
+        /// <summary>
         /// Gets or sets the version.
         /// </summary>
         /// <value>
@@ -56,6 +64,14 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.RuleRequest" />
     public class RuleResponse : RuleRequest, IRuleResponse
     {
+        /// <summary>
+        /// Gets or sets the rule template.
+        /// </summary>
+        /// <value>
+        /// The rule template.
+        /// </value>
+        public RuleTemplateResponse RuleTemplate { get; set; }
+
         /// <summary>
         /// Gets or sets the details json.
         /// </summary>
