@@ -50,6 +50,14 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// The status code.
         /// </value>
         public GlobalStatusCode? StatusCode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the maximum rows should be returned from the search results.
+        /// </summary>
+        /// <value>
+        /// The maximum rows.
+        /// </value>
+        public int? MaxRows { get; set; }
     }
 
     /// <summary>
