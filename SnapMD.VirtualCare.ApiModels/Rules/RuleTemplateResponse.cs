@@ -13,6 +13,14 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class RuleTemplateResponse : RuleTemplateRequest
     {
         /// <summary>
+        /// Gets or sets the rule set.
+        /// </summary>
+        /// <value>
+        /// The rule set.
+        /// </value>
+        public RuleSetResponse RuleSet { get; set; }
+
+        /// <summary>
         /// Gets or sets the created date.
         /// </summary>
         /// <value>
