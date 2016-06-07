@@ -80,6 +80,7 @@
     <Compile Include="ContactTypeCode.cs" />
     <Compile Include="CreateStaffProfileResponse.cs" />
     <Compile Include="EmailUserRequest.cs" />
+    <Compile Include="IHospitalResponse.cs" />
     <Compile Include="ImageUploadResponse.cs" />
     <Compile Include="NewCoUserRequest.cs" />
     <Compile Include="ClinicianPersonResponse.cs" />

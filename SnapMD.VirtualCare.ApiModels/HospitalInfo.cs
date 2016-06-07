@@ -17,7 +17,7 @@ using Newtonsoft.Json.Converters;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
-    public class HospitalInfo : ProviderBase
+    public class HospitalInfo : ProviderBase, IHospitalResponse
     {
         public string City { get; set; }
 

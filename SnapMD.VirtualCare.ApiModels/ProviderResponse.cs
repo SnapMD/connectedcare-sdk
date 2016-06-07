@@ -21,7 +21,7 @@ namespace SnapMD.VirtualCare.ApiModels
     ///     Provider data model for API responses.
     /// </summary>
     /// <seealso cref="SnapMD.VirtualCare.ApiModels.ProviderRequest" />
-    public class ProviderResponse : ProviderRequest
+    public class ProviderResponse : ProviderRequest, IHospitalResponse
     {
         /// <summary>
         ///     Gets or sets the enabled modules.
