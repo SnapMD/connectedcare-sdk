@@ -6,6 +6,14 @@
     public class RegistrationAvailabilityRequest : SubjectAddress
     {
         /// <summary>
+        /// The hospital identifier for the request.
+        /// </summary>
+        /// <value>
+        /// The hospital identifier.
+        /// </value>
+        public int HospitalId { get; set; }
+
+        /// <summary>
         /// Gets or sets the geo location.
         /// </summary>
         /// <value>

@@ -43,6 +43,14 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string State { get; set; }
 
         /// <summary>
+        /// The state abbreviation code.
+        /// </summary>
+        /// <value>
+        /// The state code.
+        /// </value>
+        public string StateCode { get; set; }
+
+        /// <summary>
         /// Gets or sets the city.
         /// </summary>
         /// <value>
