@@ -14,7 +14,7 @@
         public RuleCategoryCode Category => RuleCategoryCode.RegistrationAvailability;
 
         /// <summary>
-        /// The hospital identifier for the request.
+        /// The hospital identifier for filtering the rules.
         /// </summary>
         /// <value>
         /// The hospital identifier.
