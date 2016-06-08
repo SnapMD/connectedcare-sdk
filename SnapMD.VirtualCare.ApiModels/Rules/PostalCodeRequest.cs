@@ -9,14 +9,6 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class PostalCodeRequest : SubjectAddress
     {
         /// <summary>
-        /// The state abbreviation code.
-        /// </summary>
-        /// <value>
-        /// The state code.
-        /// </value>
-        public string StateCode { get; set; }
-
-        /// <summary>
         /// Gets or sets the postal code identifier.
         /// </summary>
         /// <value>
