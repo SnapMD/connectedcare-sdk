@@ -3,8 +3,16 @@
     /// <summary>
     /// Request model for RegistrationAvailability
     /// </summary>
-    public class RegistrationAvailabilityRequest : SubjectAddress
+    public class RegistrationAvailabilityRequest : SubjectAddress, IRuleExecutionRequest
     {
+        /// <summary>
+        /// The category of the rule for the request.
+        /// </summary>
+        /// <value>
+        /// The category.
+        /// </value>
+        public RuleCategoryCode Category => RuleCategoryCode.RegistrationAvailability;
+
         /// <summary>
         /// The hospital identifier for the request.
         /// </summary>

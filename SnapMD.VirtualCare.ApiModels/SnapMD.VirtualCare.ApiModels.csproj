@@ -87,6 +87,7 @@
     <Compile Include="PatientPersonResponse.cs" />
     <Compile Include="PersonName.cs" />
     <Compile Include="Rules\GeoCoordinate.cs" />
+    <Compile Include="Rules\IRuleExecutionRequest.cs" />
     <Compile Include="Rules\PatientOrganizationRuleRequest.cs" />
     <Compile Include="Rules\PatientOrganizationRuleResponse.cs" />
     <Compile Include="Rules\PostalCodeRequest.cs" />
