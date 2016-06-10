@@ -19,14 +19,21 @@ namespace SnapMD.VirtualCare.LeopardonSso
 {
     public class JwtCompiler : IDisposable
     {
+        private readonly string _role;
         private readonly RSA _rsa;
         private bool _disposed;
         private readonly string _issuer;
 
         public string JwtSignOnUrl { get; set; }
 
-        public JwtCompiler(string issuer, RSA rsa)
+        public JwtCompiler(string issuer, RSA rsa) : this(issuer, rsa, SnapJwt.Roles[0])
         {
+        }
+
+        public JwtCompiler(string issuer, RSA rsa, string role)
+        {
+            SnapJwt.ValidateRole(role);
+            _role = role;
             _issuer = issuer;
             _rsa = rsa;
         }
@@ -39,10 +46,15 @@ namespace SnapMD.VirtualCare.LeopardonSso
 
         public async Task<string> GetRedirectPath(string name, string email)
         {
-            var signonUrl = JwtSignOnUrl ?? Settings.Default.JwtSignOnUrl;
+            var signonUrl = JwtSignOnUrl ?? DefaultJwtSignOnUrl;
             var token = await BuildJwtAsync(name, email);
             return string.Format(signonUrl, token);
         }
+
+        private string DefaultJwtSignOnUrl =>
+            _role == SnapJwt.Roles[0] ?
+                Settings.Default.JwtSignOnUrl :
+                Settings.Default.JwtClincianSignOnUrl;
 
         private Task<string> BuildJwtAsync(string name, string email)
         {
@@ -56,7 +68,7 @@ namespace SnapMD.VirtualCare.LeopardonSso
         private string BuildJwt(string name, string email)
         {
             // Decrypt with private key using Jose JWT library
-            var jwtToken = new WaltherJwt(_issuer, _rsa);
+            var jwtToken = new WaltherJwt(_issuer, _rsa, _role);
             var identity = jwtToken.Encode(name, email);
             return identity;
         }

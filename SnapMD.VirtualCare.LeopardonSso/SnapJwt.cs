@@ -10,14 +10,18 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
+using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens;
+using System.Linq;
 using System.Security.Claims;
 
 namespace SnapMD.VirtualCare.LeopardonSso
 {
     public class SnapJwt : AbstractJwt
     {
+        public static readonly string[] Roles = new[] { "patient", "clinician" };
+
         private const string Role = "patient";
         private readonly string _issuer;
         protected readonly SecurityKey SecurityKey;
@@ -65,6 +69,14 @@ namespace SnapMD.VirtualCare.LeopardonSso
                 new Claim(ClaimTypes.Email, email),
                 new Claim(ClaimTypes.Role, Role)
             };
+        }
+
+        public static void ValidateRole(string role)
+        {
+            if (!Roles.Contains(role))
+            {
+                throw new ArgumentOutOfRangeException("Invalid Role");
+            }
         }
     }
 }
