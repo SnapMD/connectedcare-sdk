@@ -95,27 +95,27 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public enum RuleConditionSource
     {
         /// <summary>
-        /// The unknown source
+        /// The metadata for creating rules.
         /// </summary>
-        Unknown,
+        Metadata,
 
         /// <summary>
-        /// The address
+        /// The address data.
         /// </summary>
         Address,
 
         /// <summary>
-        /// The distance
+        /// The distance data.
         /// </summary>
         Distance,
 
         /// <summary>
-        /// The patient organization
+        /// The patient organization data.
         /// </summary>
         PatientOrganization,
 
         /// <summary>
-        /// The patient organization + location
+        /// The patient organization + location data.
         /// </summary>
         PatientOrganizationLocation
     }
