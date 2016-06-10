@@ -35,5 +35,13 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// The priority.
         /// </value>
         public int? Priority { get; set; }
+
+        /// <summary>
+        /// Gets or sets the image path.
+        /// </summary>
+        /// <value>
+        /// The image path.
+        /// </value>
+        public string ImagePath { get; set; }
     }
 }
