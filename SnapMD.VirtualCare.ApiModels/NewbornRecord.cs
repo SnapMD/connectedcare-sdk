@@ -42,7 +42,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public string PatientAgeUnderOneYear { get; set; }
 
         /// <summary>
-        ///     Vaccinations current.
+        /// Vaccinations current. "Y"/"N"
         /// </summary>
         /// <value>
         /// "Y" or "N"
