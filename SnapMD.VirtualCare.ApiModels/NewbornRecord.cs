@@ -13,33 +13,48 @@
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
-    ///     Patient newbord record.
+    /// Patient newbord record.
     /// </summary>
     public class NewbornRecord
     {
         /// <summary>
-        ///     Discharged with mother.
+        /// Discharged with mother. "Y"/"N"
         /// </summary>
+        /// <value>
+        /// "Y" or "N"
+        /// </value>
         public string DischargedWithMother { get; set; }
 
         /// <summary>
-        ///     Full term.
+        /// Full term. "Y"/"N"
         /// </summary>
+        /// <value>
+        /// "Y" or "N"
+        /// </value>
         public string FullTerm { get; set; }
 
         /// <summary>
-        ///     Patient age under one year.
+        /// Patient age under one year. "Y"/"N"
         /// </summary>
+        /// <value>
+        /// "Y" or "N"
+        /// </value>
         public string PatientAgeUnderOneYear { get; set; }
 
         /// <summary>
         ///     Vaccinations current.
         /// </summary>
+        /// <value>
+        /// "Y" or "N"
+        /// </value>
         public string VaccinationsCurrent { get; set; }
 
         /// <summary>
-        ///     Vaginal birth.
+        /// Vaginal birth. "Y"/"N"
         /// </summary>
+        /// <value>
+        /// "Y" or "N"
+        /// </value>
         public string VaginalBirth { get; set; }
     }
 }
