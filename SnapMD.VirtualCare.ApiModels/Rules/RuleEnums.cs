@@ -95,9 +95,9 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public enum RuleConditionSource
     {
         /// <summary>
-        /// The metadata for creating rules.
+        /// No matching condition.
         /// </summary>
-        Metadata,
+        None,
 
         /// <summary>
         /// The address data.
