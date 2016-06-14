@@ -9,10 +9,8 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
-using System.Net;
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.Sdk.Interfaces;
-using SnapMD.VirtualCare.Sdk.Models;
 using SnapMD.VirtualCare.Sdk.Wrappers;
 
 namespace SnapMD.VirtualCare.Sdk
@@ -41,13 +39,13 @@ namespace SnapMD.VirtualCare.Sdk
         public void UpdateIntakeQuestionnaire(int consultationId, object intakeData)
         {
             var url = string.Format("v2/patients/consultations/{0}/intake", consultationId);
-            var result = Put(url, intakeData);
+            Put(url, intakeData);
         }
 
         /// <summary>
-        /// Gets a list of running consultations for the user whether the user is a clinician or a patient.
-        /// There should be 0 or 1 results, but if there are more, this information can be used for
-        /// debugging.
+        ///     Gets a list of running consultations for the user whether the user is a clinician or a patient.
+        ///     There should be 0 or 1 results, but if there are more, this information can be used for
+        ///     debugging.
         /// </summary>
         /// <returns></returns>
         public ApiResponseV2<PatientConsultationInfo> GetUsersActiveConsultations()
