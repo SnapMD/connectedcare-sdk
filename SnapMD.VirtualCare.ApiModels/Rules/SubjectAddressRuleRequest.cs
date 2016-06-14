@@ -35,6 +35,14 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string Country { get; set; }
 
         /// <summary>
+        /// Gets or sets the country code.
+        /// </summary>
+        /// <value>
+        /// The country code.
+        /// </value>
+        public string CountryCode { get; set; }
+
+        /// <summary>
         /// Gets or sets the state.
         /// </summary>
         /// <value>
