@@ -9,7 +9,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <summary>
     /// Request model for RuleSet
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.RuleRequestBase" />
+    /// <seealso cref="RuleRequestBase" />
     public class RuleSetRequest : RuleRequestBase
     {
         /// <summary>

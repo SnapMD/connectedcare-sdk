@@ -9,8 +9,8 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <summary>
     /// Response Model for PatientOrganizationRule
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.IRuleResponse" />
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.PatientOrganizationRuleRequest" />
+    /// <seealso cref="IRuleResponse" />
+    /// <seealso cref="PatientOrganizationRuleRequest" />
     public class PatientOrganizationRuleResponse : PatientOrganizationRuleRequest, IRuleResponse
     {
         /// <summary>

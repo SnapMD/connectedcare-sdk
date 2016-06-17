@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SnapMD.VirtualCare.ApiModels.Rules
 {
@@ -65,9 +61,9 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <summary>
     /// Response model for Rule
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.IRuleResponse" />
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.RuleRequest" />
-    public class RuleResponse : RuleRequest, IRuleResponse
+    /// <seealso cref="RuleDetailsRequest" />
+    /// <seealso cref="IRuleResponse" />
+    public class RuleResponse : RuleDetailsRequest, IRuleResponse
     {
         /// <summary>
         /// The rule template of the rule.
@@ -77,14 +73,6 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// The rule template.
         /// </value>
         public RuleTemplateResponse RuleTemplate { get; set; }
-
-        /// <summary>
-        /// The rule details content in json.
-        /// </summary>
-        /// <value>
-        /// The details json.
-        /// </value>
-        public string DetailsJson { get; set; }
 
         /// <summary>
         /// The version of the rule.

@@ -95,6 +95,7 @@
     <Compile Include="Rules\PostalCodeResponse.cs" />
     <Compile Include="Rules\RegistrationAvailabilityRequest.cs" />
     <Compile Include="Rules\RegistrationAvailabilityResponse.cs" />
+    <Compile Include="Rules\RuleDetailsRequest.cs" />
     <Compile Include="Rules\RuleEnums.cs" />
     <Compile Include="Rules\RuleRequest.cs" />
     <Compile Include="Rules\RuleResponse.cs" />

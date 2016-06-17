@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
     /// Response model for SubjectAddressRule.
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.IRuleResponse" />
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.SubjectAddressRuleRequest" />
+    /// <seealso cref="IRuleResponse" />
+    /// <seealso cref="SubjectAddressRuleRequest" />
     public class SubjectAddressRuleResponse : SubjectAddressRuleRequest, IRuleResponse
     {
         /// <summary>

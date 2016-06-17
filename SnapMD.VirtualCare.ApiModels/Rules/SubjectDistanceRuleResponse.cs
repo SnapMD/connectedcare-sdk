@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
     /// Response model for SubjectDistance.
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.IRuleResponse" />
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.SubjectDistanceRuleRequest" />
+    /// <seealso cref="IRuleResponse" />
+    /// <seealso cref="SubjectDistanceRuleRequest" />
     public class SubjectDistanceRuleResponse : SubjectDistanceRuleRequest, IRuleResponse
     {
         /// <summary>

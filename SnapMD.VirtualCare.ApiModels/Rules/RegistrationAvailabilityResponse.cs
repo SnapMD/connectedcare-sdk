@@ -3,7 +3,7 @@
     /// <summary>
     /// Response model for RegistrationAvailability
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.RegistrationAvailabilityRequest" />
+    /// <seealso cref="RegistrationAvailabilityRequest" />
     public class RegistrationAvailabilityResponse: RegistrationAvailabilityRequest
     {
         /// <summary>

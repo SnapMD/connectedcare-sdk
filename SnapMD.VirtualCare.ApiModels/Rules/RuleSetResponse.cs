@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
     /// Response model for RuleSet
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.RuleSetRequest" />
+    /// <seealso cref="RuleSetRequest" />
     public class RuleSetResponse : RuleSetRequest
     {
         /// <summary>
