@@ -44,7 +44,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string UnsatisfiedMessage { get; set; }
 
         /// <summary>
-        /// Gets or sets the status code.
+        /// The status code of request filter or respose object.
         /// </summary>
         /// <value>
         /// The status code.
@@ -52,7 +52,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public GlobalStatusCode? StatusCode { get; set; }
 
         /// <summary>
-        /// Gets or sets the maximum rows should be returned from the search results.
+        /// The maximum rows should be returned from the search results.
         /// </summary>
         /// <value>
         /// The maximum rows.
