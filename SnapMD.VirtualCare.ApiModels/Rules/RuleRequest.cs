@@ -67,7 +67,8 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class RuleRequest : RuleRequestBase
     {
         /// <summary>
-        /// Gets or sets the rule template identifier.
+        /// The rule template identifier of the rule.
+        /// A rule template define the logic of the rules.
         /// </summary>
         /// <value>
         /// The rule template identifier.
@@ -75,7 +76,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public Guid? RuleTemplateId { get; set; }
 
         /// <summary>
-        /// Gets or sets the provider identifier.
+        /// The provider identifier that the rule belongs to.
         /// </summary>
         /// <value>
         /// The provider identifier.
@@ -83,7 +84,10 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public int? ProviderId { get; set; }
 
         /// <summary>
-        /// Gets or sets the condition type identifier.
+        /// The condition type identifier.
+        /// In (+) / NotIn (-) * rule evaluation result.
+        /// e.g. For subject address rule: NotIn US CA Los Angeles,
+        /// a subject address in anywhere other than Los Angeles will satisfy this rule.
         /// </summary>
         /// <value>
         /// The condition type identifier.
@@ -91,7 +95,11 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public RuleLogicTypeCode? ConditionTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the condition source.
+        /// The condition source.
+        /// Indicates how a rule which rule condition should be evaluated.
+        /// e.g. For organization location: In Organization X, Location Y
+        /// ConditionSource: Organization => X is required.
+        /// ConditionSource: OrganizationLocation => X and Y are required.
         /// </summary>
         /// <value>
         /// The condition source.
@@ -99,7 +107,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public RuleConditionSource? ConditionSource { get; set; }
 
         /// <summary>
-        /// Gets or sets the sequence.
+        /// The sequence of the rule to be ordered on fetch.
         /// </summary>
         /// <value>
         /// The sequence.

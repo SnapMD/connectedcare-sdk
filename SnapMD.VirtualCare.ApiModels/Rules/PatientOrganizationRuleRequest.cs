@@ -13,7 +13,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class PatientOrganizationRuleRequest : RuleRequest
     {
         /// <summary>
-        /// Gets or sets the organization identifier.
+        /// The organization identifier to evaluated.
         /// </summary>
         /// <value>
         /// The organization identifier.
@@ -21,7 +21,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public int? OrganizationId { get; set; }
 
         /// <summary>
-        /// Gets or sets the location identifier.
+        /// The location identifier to be evaluated.
         /// </summary>
         /// <value>
         /// The location identifier.

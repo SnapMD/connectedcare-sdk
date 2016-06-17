@@ -13,7 +13,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class SubjectAddressRuleRequest : RuleRequest
     {
         /// <summary>
-        /// Gets or sets the subject addresses.
+        /// The list of subject addresses for creating or updating the rule.
         /// </summary>
         /// <value>
         /// The subject addresses.
@@ -27,7 +27,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class SubjectAddress
     {
         /// <summary>
-        /// Gets or sets the country.
+        /// The country of the address.
         /// </summary>
         /// <value>
         /// The country.
@@ -35,7 +35,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string Country { get; set; }
 
         /// <summary>
-        /// Gets or sets the country code.
+        /// The country code of the address.
         /// </summary>
         /// <value>
         /// The country code.
@@ -43,7 +43,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string CountryCode { get; set; }
 
         /// <summary>
-        /// Gets or sets the state.
+        /// The state of the address.
         /// </summary>
         /// <value>
         /// The state.
@@ -51,7 +51,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string State { get; set; }
 
         /// <summary>
-        /// The state abbreviation code.
+        /// The state abbreviation code of the address.
         /// </summary>
         /// <value>
         /// The state code.
@@ -59,7 +59,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string StateCode { get; set; }
 
         /// <summary>
-        /// Gets or sets the city.
+        /// The city of the address.
         /// </summary>
         /// <value>
         /// The city.
@@ -67,7 +67,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string City { get; set; }
 
         /// <summary>
-        /// Gets or sets the postal code.
+        /// The postal code of the address.
         /// </summary>
         /// <value>
         /// The postal code.

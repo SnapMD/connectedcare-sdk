@@ -13,7 +13,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class RuleTemplateResponse : RuleTemplateRequest
     {
         /// <summary>
-        /// Gets or sets the rule set.
+        /// The rule set the rule template belongs to.
         /// </summary>
         /// <value>
         /// The rule set.
@@ -21,7 +21,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public RuleSetResponse RuleSet { get; set; }
 
         /// <summary>
-        /// Gets or sets the created date.
+        /// The created datetime of the rule template.
         /// </summary>
         /// <value>
         /// The created date.
@@ -29,7 +29,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public DateTime CreatedDate { get; set; }
 
         /// <summary>
-        /// Gets or sets the created by user identifier.
+        /// The user identifier of the rule template created by.
         /// </summary>
         /// <value>
         /// The created by user identifier.
@@ -37,7 +37,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public int CreatedByUserId { get; set; }
 
         /// <summary>
-        /// Gets or sets the modified date.
+        /// The modified date of the rule template.
         /// </summary>
         /// <value>
         /// The modified date.
@@ -45,7 +45,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public DateTime? ModifiedDate { get; set; }
 
         /// <summary>
-        /// Gets or sets the modified by user identifier.
+        /// The user identifier of the rule template modified by.
         /// </summary>
         /// <value>
         /// The modified by user identifier.

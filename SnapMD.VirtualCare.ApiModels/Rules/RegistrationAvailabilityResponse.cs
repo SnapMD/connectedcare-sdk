@@ -7,7 +7,7 @@
     public class RegistrationAvailabilityResponse: RegistrationAvailabilityRequest
     {
         /// <summary>
-        /// Gets or sets a value indicating whether this provider is available base on requested criteria.
+        /// A value indicating whether this provider is available for registration base on requested criteria.
         /// </summary>
         /// <value>
         /// <c>true</c> if this provider is available; otherwise, <c>false</c>.
@@ -15,7 +15,7 @@
         public bool IsAvailable { get; set; }
 
         /// <summary>
-        /// Gets or sets the message for result of processing the request.
+        /// The message for result of processing the request.
         /// </summary>
         /// <value>
         /// The message.

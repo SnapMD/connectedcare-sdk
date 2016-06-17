@@ -13,7 +13,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class SubjectDistanceRuleRequest : RuleRequest
     {
         /// <summary>
-        /// Gets or sets the center.
+        /// The center, the geo location to be referenced.
         /// </summary>
         /// <value>
         /// The center.
@@ -21,7 +21,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public GeoCoordinate Center { get; set; }
 
         /// <summary>
-        /// Gets or sets the distance.
+        /// The distance from the center.
         /// </summary>
         /// <value>
         /// The distance.
@@ -29,7 +29,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public decimal? Distance { get; set; }
 
         /// <summary>
-        /// Gets or sets the distance unit.
+        /// The unit for distance calculation.
         /// </summary>
         /// <value>
         /// The distance unit.

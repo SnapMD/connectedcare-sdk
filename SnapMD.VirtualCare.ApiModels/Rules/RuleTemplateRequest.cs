@@ -13,7 +13,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class RuleTemplateRequest : RuleRequestBase
     {
         /// <summary>
-        /// Gets or sets the rule set identifier.
+        /// The rule set identifier of the rule template.
         /// </summary>
         /// <value>
         /// The rule set identifier.
@@ -21,7 +21,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public Guid? RuleSetId { get; set; }
 
         /// <summary>
-        /// Gets or sets the rule type identifier.
+        /// The rule type identifier of the rule template.
         /// </summary>
         /// <value>
         /// The rule type identifier.
@@ -29,7 +29,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public RuleTypeCode? RuleTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the priority.
+        /// The priority of rule tempates.
         /// </summary>
         /// <value>
         /// The priority.
@@ -37,7 +37,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public int? Priority { get; set; }
 
         /// <summary>
-        /// Gets or sets the image path.
+        /// The image path of the rule template.
         /// </summary>
         /// <value>
         /// The image path.
