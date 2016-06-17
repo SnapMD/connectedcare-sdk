@@ -12,7 +12,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public abstract class RuleRequestBase
     {
         /// <summary>
-        /// Gets or sets the identifier.
+        /// The identifier of the rule, rule template or rule set.
         /// </summary>
         /// <value>
         /// The identifier.
@@ -20,7 +20,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public Guid? Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the description.
+        /// The description of the object.
         /// </summary>
         /// <value>
         /// The description.
@@ -28,7 +28,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or sets the satisfied message.
+        /// The satisfied message, when a rule is executed with postive result.
         /// </summary>
         /// <value>
         /// The satisfied message.
@@ -36,7 +36,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string SatisfiedMessage { get; set; }
 
         /// <summary>
-        /// Gets or sets the unsatisfied message.
+        /// The unsatisfied message, when a rule is executed with negative result.
         /// </summary>
         /// <value>
         /// The unsatisfied message.
