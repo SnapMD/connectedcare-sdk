@@ -12,7 +12,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public abstract class RuleRequestBase
     {
         /// <summary>
-        /// Gets or sets the identifier.
+        /// The identifier of the rule, rule template or rule set.
         /// </summary>
         /// <value>
         /// The identifier.
@@ -20,7 +20,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public Guid? Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the description.
+        /// The description of the object.
         /// </summary>
         /// <value>
         /// The description.
@@ -28,7 +28,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or sets the satisfied message.
+        /// The satisfied message, when a rule is executed with postive result.
         /// </summary>
         /// <value>
         /// The satisfied message.
@@ -36,7 +36,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string SatisfiedMessage { get; set; }
 
         /// <summary>
-        /// Gets or sets the unsatisfied message.
+        /// The unsatisfied message, when a rule is executed with negative result.
         /// </summary>
         /// <value>
         /// The unsatisfied message.
@@ -44,7 +44,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string UnsatisfiedMessage { get; set; }
 
         /// <summary>
-        /// Gets or sets the status code.
+        /// The status code of request filter or respose object.
         /// </summary>
         /// <value>
         /// The status code.
@@ -52,7 +52,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public GlobalStatusCode? StatusCode { get; set; }
 
         /// <summary>
-        /// Gets or sets the maximum rows should be returned from the search results.
+        /// The maximum rows should be returned from the search results.
         /// </summary>
         /// <value>
         /// The maximum rows.
@@ -63,11 +63,12 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <summary>
     /// Request model for Rule
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.RuleRequestBase" />
+    /// <seealso cref="RuleRequestBase" />
     public class RuleRequest : RuleRequestBase
     {
         /// <summary>
-        /// Gets or sets the rule template identifier.
+        /// The rule template identifier of the rule.
+        /// A rule template define the logic of the rules.
         /// </summary>
         /// <value>
         /// The rule template identifier.
@@ -75,7 +76,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public Guid? RuleTemplateId { get; set; }
 
         /// <summary>
-        /// Gets or sets the provider identifier.
+        /// The provider identifier that the rule belongs to.
         /// </summary>
         /// <value>
         /// The provider identifier.
@@ -83,7 +84,10 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public int? ProviderId { get; set; }
 
         /// <summary>
-        /// Gets or sets the condition type identifier.
+        /// The condition type identifier.
+        /// In (+) / NotIn (-) * rule evaluation result.
+        /// e.g. For subject address rule: NotIn US CA Los Angeles,
+        /// a subject address in anywhere other than Los Angeles will satisfy this rule.
         /// </summary>
         /// <value>
         /// The condition type identifier.
@@ -91,7 +95,11 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public RuleLogicTypeCode? ConditionTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the condition source.
+        /// The condition source.
+        /// Indicates how a rule which rule condition should be evaluated.
+        /// e.g. For organization location: In Organization X, Location Y
+        /// ConditionSource: Organization => X is required.
+        /// ConditionSource: OrganizationLocation => X and Y are required.
         /// </summary>
         /// <value>
         /// The condition source.
@@ -99,7 +107,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public RuleConditionSource? ConditionSource { get; set; }
 
         /// <summary>
-        /// Gets or sets the sequence.
+        /// The sequence of the rule to be ordered on fetch.
         /// </summary>
         /// <value>
         /// The sequence.

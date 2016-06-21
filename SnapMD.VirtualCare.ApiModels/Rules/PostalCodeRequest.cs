@@ -9,7 +9,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class PostalCodeRequest : SubjectAddress
     {
         /// <summary>
-        /// Gets or sets the postal code identifier.
+        /// The postal code identifier for lookup.
         /// </summary>
         /// <value>
         /// The postal code identifier.

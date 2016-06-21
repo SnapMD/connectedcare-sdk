@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SnapMD.VirtualCare.ApiModels.Rules
+﻿namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
     /// Request Model for PatientOrganizationRule
@@ -13,7 +7,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class PatientOrganizationRuleRequest : RuleRequest
     {
         /// <summary>
-        /// Gets or sets the organization identifier.
+        /// The organization identifier to evaluated.
         /// </summary>
         /// <value>
         /// The organization identifier.
@@ -21,7 +15,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public int? OrganizationId { get; set; }
 
         /// <summary>
-        /// Gets or sets the location identifier.
+        /// The location identifier to be evaluated.
         /// </summary>
         /// <value>
         /// The location identifier.
