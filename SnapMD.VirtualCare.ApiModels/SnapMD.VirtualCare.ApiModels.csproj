@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPatientProfileRequest.cs" />
     <Compile Include="ApiResponse.cs" />
     <Compile Include="Attributes\ModelNameAttribute.cs" />
     <Compile Include="ClinicianSpecialty.cs" />
@@ -82,10 +83,13 @@
     <Compile Include="EmailUserRequest.cs" />
     <Compile Include="IHospitalResponse.cs" />
     <Compile Include="ImageUploadResponse.cs" />
+    <Compile Include="LegacyMedicalHistoryForm.cs" />
     <Compile Include="NewCoUserRequest.cs" />
     <Compile Include="ClinicianPersonResponse.cs" />
     <Compile Include="PatientAdminResponseShort.cs" />
     <Compile Include="PatientPersonResponse.cs" />
+    <Compile Include="PatientProfileFieldChangesTrackingRequest.cs" />
+    <Compile Include="PatientUpdateRequest.cs" />
     <Compile Include="PersonName.cs" />
     <Compile Include="Rules\GeoCoordinate.cs" />
     <Compile Include="Rules\IRuleExecutionRequest.cs" />
