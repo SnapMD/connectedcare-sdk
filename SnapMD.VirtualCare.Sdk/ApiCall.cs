@@ -12,6 +12,7 @@
 using System;
 using System.Diagnostics;
 using System.Net;
+using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SnapMD.VirtualCare.Sdk.Interfaces;
@@ -72,6 +73,10 @@ namespace SnapMD.VirtualCare.Sdk
                     return data.ToObject<T>();
                 }
             }
+            catch (SnapSdkException)
+            {
+                throw;
+            }
             catch (Exception ex)
             {
                 throw new SnapSdkException("Unable to load api at url: " + url, ex);
@@ -91,6 +96,10 @@ namespace SnapMD.VirtualCare.Sdk
             try
             {
                 return MakeCall(wc => wc.DownloadString(url));
+            }
+            catch (SnapSdkException)
+            {
+                throw;
             }
             catch (Exception ex)
             {
@@ -126,7 +135,7 @@ namespace SnapMD.VirtualCare.Sdk
             }
         }
 
-        private void ParseWebException(WebException wex)
+        private string ParseWebException(WebException wex)
         {
             var response = wex.Response as HttpWebResponse;
             if (response == null)
@@ -161,6 +170,9 @@ namespace SnapMD.VirtualCare.Sdk
                     throw new SnapSdkException("Unhandled exception when making API call", wex);
                 }
             }
+            var buf = new byte[response.ContentLength];
+            response.GetResponseStream().Read(buf, 0, (int)response.ContentLength);
+            return Encoding.Default.GetString(buf);
         }
 
         protected JObject MakeCall(IWebClient wc, Func<IWebClient, string> executeFunc)
@@ -181,7 +193,8 @@ namespace SnapMD.VirtualCare.Sdk
             }
             catch (WebException wex)
             {
-                ParseWebException(wex);
+                var errorMessage = ParseWebException(wex);
+                throw new SnapSdkException(errorMessage, wex);
             }
 
             return null;
@@ -221,6 +234,10 @@ namespace SnapMD.VirtualCare.Sdk
 
                     return wc.UploadString(url, method, JsonConvert.SerializeObject(data));
                 });
+            }
+            catch (SnapSdkException)
+            {
+                throw;
             }
             catch (Exception ex)
             {
@@ -273,6 +290,10 @@ namespace SnapMD.VirtualCare.Sdk
                     return wc.UploadString(url, method, request);
                 });
             }
+            catch (SnapSdkException)
+            {
+                throw;
+            }
             catch (Exception ex)
             {
                 throw new SnapSdkException("Unable to load api at url: " + url, ex);
@@ -297,7 +318,8 @@ namespace SnapMD.VirtualCare.Sdk
             }
             catch (WebException wex)
             {
-                ParseWebException(wex);
+                var errorMessage = ParseWebException(wex);
+                throw new SnapSdkException(errorMessage, wex);
             }
 
             return null;
