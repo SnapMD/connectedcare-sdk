@@ -10,6 +10,7 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
+using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens;
 using System.Security.Claims;
@@ -19,13 +20,19 @@ namespace SnapMD.VirtualCare.LeopardonSso
 {
     public class WaltherJwt : SnapJwt
     {
-        private const string Role = "patient";
+        private readonly string Role;
         private readonly RSA _rsa;
         private readonly RsaSecurityKey _rsaSecurityKey;
         private readonly string _issuer;
 
-        public WaltherJwt(string issuer, RSA rsa) : base(issuer, null)
+        public WaltherJwt(string issuer, RSA rsa) : this(issuer, rsa, "patient")
         {
+        }
+
+        public WaltherJwt(string issuer, RSA rsa, string role) : base(issuer, null)
+        {
+            ValidateRole(role);
+            Role = role;
             _rsa = rsa;
             _issuer = issuer;
             _rsaSecurityKey = new RsaSecurityKey(rsa);
