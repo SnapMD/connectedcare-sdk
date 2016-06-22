@@ -35,12 +35,11 @@ namespace SnapMD.VirtualCare.Sdk.Tests
 
             DateTime mockDate = DateTime.UtcNow;
 
-            var mock = new
+            var mock = new AddPatientProfileRequest
             {
                 EmailAddress = testEmail,
-                PatientProfileData = new { PatientName = "p", LastName = "l", Ethnicity = 1, Gender = "m", DOB = mockDate, Height = 1, Weight = 1 },
-                PatientUpdateRequest = new { Height = 2, Weight = 1 },
-                PatientMedicalHistoryData = new { Height = 2, Weight = 1 }
+                PatientProfileData = new PatientUpdateRequest { PatientName = "p", LastName = "l", Ethnicity = 1, Gender = "m", Dob = mockDate, Height = "2", Weight = "1" },
+                PatientMedicalHistoryData = new LegacyMedicalHistoryForm()
             };
 
             mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, "v2/familygroups/dependents"), "POST",
