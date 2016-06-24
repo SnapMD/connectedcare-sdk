@@ -8,7 +8,6 @@ namespace SnapMD.VirtualCare.ApiModels
     public class AddPatientProfileRequest
     {
         public string EmailAddress { get; set; }
-        public int TimeZoneId { get; set; }
         public PatientUpdateRequest PatientProfileData { get; set; }
         public LegacyMedicalHistoryForm PatientMedicalHistoryData { get; set; }
         public PatientProfileFieldChangesTrackingRequest PatientProfileFieldsTracing { get; set; }
