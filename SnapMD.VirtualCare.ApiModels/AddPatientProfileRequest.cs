@@ -11,6 +11,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public PatientUpdateRequest PatientProfileData { get; set; }
         public LegacyMedicalHistoryForm PatientMedicalHistoryData { get; set; }
         public PatientProfileFieldChangesTrackingRequest PatientProfileFieldsTracing { get; set; }
+        public int? TimeZoneId { get; set; }
     }
 
  
