@@ -8,7 +8,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class GeoCoordinate
     {
         /// <summary>
-        /// Gets or sets the latitude.
+        /// The latitude of GeoCoordinate.
         /// </summary>
         /// <value>
         /// The latitude.
@@ -16,7 +16,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public decimal? Latitude { get; set; }
 
         /// <summary>
-        /// Gets or sets the longitude.
+        /// The longitude of GeoCoordinate.
         /// </summary>
         /// <value>
         /// The longitude.

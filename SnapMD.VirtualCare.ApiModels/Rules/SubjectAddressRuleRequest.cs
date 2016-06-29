@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
     /// Request model for SubjectAddressRule
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.RuleRequest" />
+    /// <seealso cref="RuleRequest" />
     public class SubjectAddressRuleRequest : RuleRequest
     {
         /// <summary>
-        /// Gets or sets the subject addresses.
+        /// The list of subject addresses for creating or updating the rule.
         /// </summary>
         /// <value>
         /// The subject addresses.
@@ -27,7 +23,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     public class SubjectAddress
     {
         /// <summary>
-        /// Gets or sets the country.
+        /// The country of the address.
         /// </summary>
         /// <value>
         /// The country.
@@ -35,7 +31,15 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string Country { get; set; }
 
         /// <summary>
-        /// Gets or sets the state.
+        /// The country code of the address.
+        /// </summary>
+        /// <value>
+        /// The country code.
+        /// </value>
+        public string CountryCode { get; set; }
+
+        /// <summary>
+        /// The state of the address.
         /// </summary>
         /// <value>
         /// The state.
@@ -43,7 +47,15 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string State { get; set; }
 
         /// <summary>
-        /// Gets or sets the city.
+        /// The state abbreviation code of the address.
+        /// </summary>
+        /// <value>
+        /// The state code.
+        /// </value>
+        public string StateCode { get; set; }
+
+        /// <summary>
+        /// The city of the address.
         /// </summary>
         /// <value>
         /// The city.
@@ -51,7 +63,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public string City { get; set; }
 
         /// <summary>
-        /// Gets or sets the postal code.
+        /// The postal code of the address.
         /// </summary>
         /// <value>
         /// The postal code.

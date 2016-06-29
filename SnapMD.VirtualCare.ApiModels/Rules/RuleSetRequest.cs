@@ -9,11 +9,11 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <summary>
     /// Request model for RuleSet
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.RuleRequestBase" />
+    /// <seealso cref="RuleRequestBase" />
     public class RuleSetRequest : RuleRequestBase
     {
         /// <summary>
-        /// Gets or sets the rule category identifier.
+        /// The rule category identifier of the rule set.
         /// </summary>
         /// <value>
         /// The rule category identifier.

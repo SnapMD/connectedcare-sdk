@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
     /// Request model for RuleTemplate
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Rules.RuleRequestBase" />
+    /// <seealso cref="RuleRequestBase" />
     public class RuleTemplateRequest : RuleRequestBase
     {
         /// <summary>
-        /// Gets or sets the rule set identifier.
+        /// The rule set identifier of the rule template.
         /// </summary>
         /// <value>
         /// The rule set identifier.
@@ -21,7 +17,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public Guid? RuleSetId { get; set; }
 
         /// <summary>
-        /// Gets or sets the rule type identifier.
+        /// The rule type identifier of the rule template.
         /// </summary>
         /// <value>
         /// The rule type identifier.
@@ -29,11 +25,19 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public RuleTypeCode? RuleTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the priority.
+        /// The priority of rule tempates.
         /// </summary>
         /// <value>
         /// The priority.
         /// </value>
         public int? Priority { get; set; }
+
+        /// <summary>
+        /// The image path of the rule template.
+        /// </summary>
+        /// <value>
+        /// The image path.
+        /// </value>
+        public string ImagePath { get; set; }
     }
 }

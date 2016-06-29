@@ -25,10 +25,19 @@ namespace SnapMD.VirtualCare.LeopardonSso.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://sandbox.connectedcare.md/customer.access?jwt={0}")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://emerald.snap.local/customer.access?jwt={0}")]
         public string JwtSignOnUrl {
             get {
                 return ((string)(this["JwtSignOnUrl"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://emerald.snap.local/clinician.access?jwt={0}")]
+        public string JwtClincianSignOnUrl {
+            get {
+                return ((string)(this["JwtClincianSignOnUrl"]));
             }
         }
     }

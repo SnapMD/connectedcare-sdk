@@ -3,10 +3,26 @@
     /// <summary>
     /// Request model for RegistrationAvailability
     /// </summary>
-    public class RegistrationAvailabilityRequest : SubjectAddress
+    public class RegistrationAvailabilityRequest : SubjectAddress, IRuleExecutionRequest
     {
         /// <summary>
-        /// Gets or sets the geo location.
+        /// The category of the rule for the request.
+        /// </summary>
+        /// <value>
+        /// The category.
+        /// </value>
+        public RuleCategoryCode Category => RuleCategoryCode.RegistrationAvailability;
+
+        /// <summary>
+        /// The hospital identifier for filtering the rules.
+        /// </summary>
+        /// <value>
+        /// The hospital identifier.
+        /// </value>
+        public int HospitalId { get; set; }
+
+        /// <summary>
+        /// The geo location to be evaluated.
         /// </summary>
         /// <value>
         /// The geo location.
@@ -14,7 +30,7 @@
         public GeoCoordinate GeoLocation { get; set; }
 
         /// <summary>
-        /// Gets or sets the organization identifier.
+        /// The organization identifier to evaluated.
         /// </summary>
         /// <value>
         /// The organization identifier.
@@ -22,7 +38,7 @@
         public int? OrganizationId { get; set; }
 
         /// <summary>
-        /// Gets or sets the location identifier.
+        /// The location identifier to evaluated.
         /// </summary>
         /// <value>
         /// The location identifier.
@@ -30,7 +46,8 @@
         public int? LocationId { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="RegistrationAvailabilityRequest"/> is debug.
+        /// A value indicating whether this <see cref="RegistrationAvailabilityRequest"/> is debug.
+        /// Additional information maybe included in the response on debug.
         /// </summary>
         /// <value>
         ///   <c>true</c> if debug; otherwise, <c>false</c>.
