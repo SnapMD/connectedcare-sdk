@@ -136,8 +136,8 @@
     <None Include="SnapMD.VirtualCare.LeopardonSso.ruleset" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.1.10.0\analyzers\SonarAnalyzer.CSharp.dll" />
-    <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.1.10.0\analyzers\SonarAnalyzer.dll" />
+    <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.1.15.0\analyzers\SonarAnalyzer.CSharp.dll" />
+    <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.1.15.0\analyzers\SonarAnalyzer.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
