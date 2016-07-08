@@ -12,6 +12,7 @@
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.Sdk.Interfaces;
 using SnapMD.VirtualCare.Sdk.Models;
+using SnapMD.Web.Api.Models;
 
 namespace SnapMD.VirtualCare.Sdk
 {
@@ -22,10 +23,8 @@ namespace SnapMD.VirtualCare.Sdk
         {
         }
 
-        public ApiResponseV2<PatientProfileResponse> AddDependent(object newPatient)
+        public ApiResponseV2<PatientProfileResponse> AddDependent(AddPatientProfileRequest newPatient)
         {
-            // Todo: Create a request object to pass the data.
-            // Todo: chrisc: the type passed is AddPatientProfileRequest, but it uses other classes that are heavily used in the WebApi 
             return Post<ApiResponseV2<PatientProfileResponse>>("v2/familygroups/dependents", newPatient);
         }
 
@@ -41,7 +40,7 @@ namespace SnapMD.VirtualCare.Sdk
         {
             if (request.ValidateModel())
             {
-                var url = "v2/patients";
+                const string url = "v2/patients";
                 var result = Post<ApiResponseV2<NewPatientResponse>>(url, request);
                 return result;
             }
