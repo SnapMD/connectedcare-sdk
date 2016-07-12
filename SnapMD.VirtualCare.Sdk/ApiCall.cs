@@ -11,6 +11,7 @@
 
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Net;
 using System.Text;
 using Newtonsoft.Json;
@@ -170,9 +171,25 @@ namespace SnapMD.VirtualCare.Sdk
                     throw new SnapSdkException("Unhandled exception when making API call", wex);
                 }
             }
-            var buf = new byte[response.ContentLength];
-            response.GetResponseStream().Read(buf, 0, (int)response.ContentLength);
-            return Encoding.Default.GetString(buf);
+
+            using (var stream = response.GetResponseStream())
+            {
+                Debug.Assert(stream != null);
+                var buf = new byte[response.ContentLength];
+
+                // Fixes S2674 http://www.sonarlint.org/visualstudio/rules/index.html#version=1.10.0&ruleId=S2674
+                using (var memory = new MemoryStream())
+                {
+                    int read;
+                    do
+                    {
+                        read = stream.Read(buf, 0, (int)response.ContentLength);
+                        memory.Write(buf, 0, read);
+                    } while (read > 0);
+
+                    return (Encoding.Default.GetString(memory.ToArray()));
+                }
+            }
         }
 
         protected JObject MakeCall(IWebClient wc, Func<IWebClient, string> executeFunc)
