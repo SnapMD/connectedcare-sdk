@@ -126,14 +126,17 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
 
         private static double UnitConvert(double dist, GeoDistanceUnit unit)
         {
+            // ReSharper disable once ConvertIfStatementToSwitchStatement
             if (unit == GeoDistanceUnit.Kilometer)
             {
-                dist = dist * 1.609344;
+                return dist * 1.609344;
             }
-            else if (unit == GeoDistanceUnit.NauticalMile)
+
+            if (unit == GeoDistanceUnit.NauticalMile)
             {
-                dist = dist * 0.8684;
+                return dist * 0.8684;
             }
+
             return dist;
         }
     }
