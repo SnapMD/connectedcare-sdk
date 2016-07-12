@@ -31,7 +31,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <summary>
         /// Consultation request id.
         /// </summary>
-        public Guid? ConsultationRequestId { get; set; }
+        public Guid? ConsultationRequestUid { get; set; }
 
         /// <summary>
         /// Appointment type.
