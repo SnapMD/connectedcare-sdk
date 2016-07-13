@@ -8,11 +8,14 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
+using System;
+
 namespace SnapMD.VirtualCare.Sdk.Models
 {
     public class OnDemandResponse
     {
         public double? ConsultationAmount { get; set; }
         public int ConsultationId { get; set; }
+        public Guid ConsultationRequestUid { get; set; }
     }
 }

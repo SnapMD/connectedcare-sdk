@@ -1,4 +1,5 @@
-﻿using SnapMD.VirtualCare.ApiModels.Attributes;
+﻿using System;
+using SnapMD.VirtualCare.ApiModels.Attributes;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
@@ -13,5 +14,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The ID of the newly-created consultation.
         /// </summary>
         public int ConsultationId { get; set; }
+
+        /// <summary>
+        /// The UID of the newly-created consultation request.
+        /// </summary>
+        public Guid ConsultationRequestUid { get; set; }
     }
 }
