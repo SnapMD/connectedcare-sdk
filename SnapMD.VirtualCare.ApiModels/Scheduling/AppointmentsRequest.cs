@@ -59,7 +59,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public int? Skip { get; set; }
 
         /// <summary>
-        /// Records to take
+        /// Records to take.
         /// </summary>
         public int? Take { get; set; }
     }
