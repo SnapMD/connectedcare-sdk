@@ -1,7 +1,6 @@
 ﻿using System;
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.ApiModels.Scheduling;
-using SnapMD.VirtualCare.Sdk.Models;
 
 namespace SnapMD.VirtualCare.Sdk.Interfaces
 {
