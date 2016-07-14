@@ -16,8 +16,8 @@ namespace SnapMD.VirtualCare.ApiModels
         public int ConsultationId { get; set; }
 
         /// <summary>
-        /// The UID of the newly-created consultation request.
+        /// The GUID of the newly-created consultation request.
         /// </summary>
-        public Guid ConsultationRequestUid { get; set; }
+        public Guid ConsultationRequestId { get; set; }
     }
 }

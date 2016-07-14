@@ -16,6 +16,6 @@ namespace SnapMD.VirtualCare.Sdk.Models
     {
         public double? ConsultationAmount { get; set; }
         public int ConsultationId { get; set; }
-        public Guid ConsultationRequestUid { get; set; }
+        public Guid ConsultationRequestId { get; set; }
     }
 }
