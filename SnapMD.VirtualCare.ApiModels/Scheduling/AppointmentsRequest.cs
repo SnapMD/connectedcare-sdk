@@ -52,5 +52,15 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// The include patient co-userss.
         /// </value>
         public bool? IncludePatientCoUsers { get; set; }
+
+        /// <summary>
+        /// Records to skip.
+        /// </summary>
+        public int? Skip { get; set; }
+
+        /// <summary>
+        /// Records to take.
+        /// </summary>
+        public int? Take { get; set; }
     }
 }
