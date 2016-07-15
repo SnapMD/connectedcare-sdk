@@ -29,9 +29,9 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public DateTimeOffset? EndTime { get; set; }
 
         /// <summary>
-        /// On demand request id.
+        /// Consultation request id.
         /// </summary>
-        public Guid? OnDemandRequestId { get; set; }
+        public Guid? ConsultationRequestId { get; set; }
 
         /// <summary>
         /// Appointment type.
