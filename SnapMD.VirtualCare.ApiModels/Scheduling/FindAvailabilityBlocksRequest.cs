@@ -5,7 +5,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
     /// <summary>
     /// Request model for AvailabilityBlocks search filter
     /// </summary>
-    public class AvailabilityBlocksRequest
+    public class FindAvailabilityBlocksRequest
     {
         /// <summary>
         /// Gets or sets the clinician ids.

@@ -6,7 +6,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
     /// <summary>
     /// Appointment creation request model.
     /// </summary>
-    public class AppointmentRequest
+    public class NewAppointmentRequest
     {
         /// <summary>
         /// Availability block id.

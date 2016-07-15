@@ -8,11 +8,21 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-namespace SnapMD.VirtualCare.Sdk.Models
+
+using System.Collections.Generic;
+using SnapMD.VirtualCare.Sdk.Models;
+
+namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
-    public enum ConsultationEventType
+    public class OnDemandRequest
     {
-        ClinicianConsultationEvent = 22,
-        PatientConsultationEvent = 23
+        public OnDemandRequest()
+        {
+            Concerns = new List<IntakeConcern>();
+        }
+
+        public List<IntakeConcern> Concerns { get; set; }
+        public string Phone { get; set; }
+        public int PatientId { get; set; }
     }
 }
