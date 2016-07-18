@@ -17,6 +17,6 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
     {
         public double? ConsultationAmount { get; set; }
         public int ConsultationId { get; set; }
-        public Guid ConsultationRequestId { get; set; }
+        public Guid PatientQueueId { get; set; }
     }
 }
