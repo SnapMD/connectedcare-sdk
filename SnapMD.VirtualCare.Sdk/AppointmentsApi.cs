@@ -27,7 +27,7 @@ namespace SnapMD.VirtualCare.Sdk
         {
         }
 
-        public ApiResponseV2<AppointmentResponse> CreateAppointment(NewAppointmentRequest appointment)
+        public ApiResponseV2<AppointmentResponse> CreateAppointment(ApiModels.Scheduling.AppointmentApiRequest appointment)
         {
             var response = Post<ApiResponseV2<AppointmentResponse>>("v2.1/patients/appointments", appointment);
             return response;
@@ -36,18 +36,14 @@ namespace SnapMD.VirtualCare.Sdk
         /// <summary>
         /// Updates the appointment.
         /// </summary>
+        /// <param name="appointmentId">The appointment identifier.</param>
         /// <param name="appointmentRequest">The appointment request.</param>
         /// <returns></returns>
-        /// <exception cref="System.ArgumentException">Appointment request is missing ID.</exception>
-        public ApiResponseV2<AppointmentResponse> UpdateAppointment(EditAppointmentRequest appointmentRequest)
+        public ApiResponseV2<AppointmentResponse> UpdateAppointment(Guid appointmentId, AppointmentApiRequest appointmentRequest)
         {
-            if (appointmentRequest.AppointmentId == null || appointmentRequest.AppointmentId == Guid.Empty)
-            {
-                throw new ArgumentException("Appointment request is missing ID.");
-            }
             return
                 Put<ApiResponseV2<AppointmentResponse>>(
-                    "v2.1/clinicians/appointments/" + appointmentRequest.AppointmentId,
+                    "v2.1/clinicians/appointments/" + appointmentId,
                     appointmentRequest);
         } 
 

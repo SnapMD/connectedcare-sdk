@@ -12,17 +12,41 @@
 using System.Collections.Generic;
 using SnapMD.VirtualCare.Sdk.Models;
 
-namespace SnapMD.VirtualCare.ApiModels.Scheduling
+namespace SnapMD.VirtualCare.ApiModels
 {
-    public class OnDemandRequest
+    /// <summary>
+    /// 
+    /// </summary>
+    public class OnDemandIntakeRequest
     {
-        public OnDemandRequest()
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OnDemandIntakeRequest"/> class.
+        /// </summary>
+        public OnDemandIntakeRequest()
         {
             Concerns = new List<IntakeConcern>();
         }
 
+        /// <summary>
+        /// Gets or sets the concerns.
+        /// </summary>
+        /// <value>
+        /// The concerns.
+        /// </value>
         public List<IntakeConcern> Concerns { get; set; }
+        /// <summary>
+        /// Gets or sets the phone.
+        /// </summary>
+        /// <value>
+        /// The phone.
+        /// </value>
         public string Phone { get; set; }
+        /// <summary>
+        /// Gets or sets the patient identifier.
+        /// </summary>
+        /// <value>
+        /// The patient identifier.
+        /// </value>
         public int PatientId { get; set; }
     }
 }

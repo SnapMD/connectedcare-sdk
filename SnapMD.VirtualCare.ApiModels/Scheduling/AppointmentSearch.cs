@@ -3,8 +3,8 @@
     /// <summary>
     /// Request model for Appointments search filter 
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Scheduling.FindAvailabilityBlocksRequest" />
-    public class FindAppointmentsRequest : FindAvailabilityBlocksRequest
+    /// <seealso cref="AvailabilityBlocksFilter" />
+    public class AppointmentSearch : AvailabilityBlocksFilter
     {
         /// <summary>
         /// The appointment type codes to be searched.

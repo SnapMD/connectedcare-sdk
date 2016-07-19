@@ -8,7 +8,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
     /// <summary>
     /// Appointment response model.
     /// </summary>
-    public class AppointmentResponse : NewAppointmentRequest
+    public class AppointmentResponse : AppointmentApiRequest
     {
         /// <summary>
         /// Appointment id.

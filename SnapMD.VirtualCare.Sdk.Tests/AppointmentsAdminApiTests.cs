@@ -71,16 +71,15 @@ namespace SnapMD.VirtualCare.Sdk.Tests
         public void UpdateAppointmentTest()
         {
             var response = Builder<AppointmentResponse>.CreateNew().Build();
-            var appointment = Builder<EditAppointmentRequest>.CreateNew().Build();
-            var request = Builder<EditAppointmentRequest>.CreateNew().Build();
+            var appointment = Builder<AppointmentApiRequest>.CreateNew().Build();
+            var request = Builder<AppointmentApiRequest>.CreateNew().Build();
             var expectedResponse = new ApiResponseV2<AppointmentResponse>(response);
 
             _mockWebClient.Setup(c => c.UploadString(It.IsAny<Uri>(), "PUT", It.IsAny<string>()))
                 .Returns(JsonConvert.SerializeObject(expectedResponse));
 
             var appointmentId = expectedResponse.Data.First().AppointmentId;
-            appointment.AppointmentId = appointmentId;
-            var actual = _api.UpdateAppointment(request);
+            var actual = _api.UpdateAppointment(appointmentId, request);
 
             AssertAppointments(expectedResponse.Data.First(), actual.Data.First());
 
