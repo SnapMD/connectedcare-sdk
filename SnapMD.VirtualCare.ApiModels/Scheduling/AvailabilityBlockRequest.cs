@@ -33,11 +33,6 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public bool AllowSelfAppt { get; set; }
 
         /// <summary>
-        /// Is all day availability block.
-        /// </summary>
-        public bool IsAllDay { get; set; }
-
-        /// <summary>
         /// Is available.
         /// </summary>
         public bool IsAvailable { get; set; }
