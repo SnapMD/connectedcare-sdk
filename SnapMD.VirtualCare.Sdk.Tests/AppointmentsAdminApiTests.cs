@@ -107,7 +107,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
             Assert.AreEqual(expected.AppointmentTypeCode, actual.AppointmentTypeCode);
             Assert.AreEqual(expected.StartTime, actual.StartTime);
             Assert.AreEqual(expected.EndTime, actual.EndTime);
-            Assert.AreEqual(expected.OnDemandRequestId, actual.OnDemandRequestId);
+            Assert.AreEqual(expected.ConsultationRequestId, actual.ConsultationRequestId);
         }
     }
 }
