@@ -27,8 +27,10 @@
       <Argument Key="maxVersionParts" Value="" xmlns="" />
     </TransformComponentArguments>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\SnapMD.VirtualCare.Sdk\SnapMD.VirtualCare.Sdk.csproj" />
-      <DocumentationSource sourceFile="..\SnapMD.VirtualCare.ApiModels\SnapMD.VirtualCare.ApiModels.csproj" />
+      <DocumentationSource sourceFile="..\SnapMD.VirtualCare.Sdk\bin\Debug\SnapMD.VirtualCare.ApiModels.xml" />
+      <DocumentationSource sourceFile="..\SnapMD.VirtualCare.Sdk\bin\Debug\SnapMD.VirtualCare.ApiModels.dll" />
+      <DocumentationSource sourceFile="..\SnapMD.VirtualCare.Sdk\bin\Debug\SnapMD.VirtualCare.Sdk.XML" />
+      <DocumentationSource sourceFile="..\SnapMD.VirtualCare.Sdk\bin\Debug\SnapMD.VirtualCare.Sdk.dll" />
     </DocumentationSources>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
