@@ -210,3 +210,6 @@ FakesAssemblies/
 # Project-specific
 # Auto-generated XML docs modified at compile time
 SnapMD.VirtualCare.ApiModels/App_Data/*.xml
+
+# Sandcastle temp
+DocumentationBuilder/Help

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
   <HelpKINode Title="access_token property">
-    <HelpKINode Title="SerializableToken.access_token Property " Url="html/P_SnapMD_VirtualCare_ApiModels_SerializableToken_access_token.htm" />
     <HelpKINode Title="SerializableToken.access_token Property " Url="html/P_SnapMD_VirtualCare_Sdk_Models_SerializableToken_access_token.htm" />
+    <HelpKINode Title="SerializableToken.access_token Property " Url="html/P_SnapMD_VirtualCare_ApiModels_SerializableToken_access_token.htm" />
   </HelpKINode>
   <HelpKINode Title="Active enumeration member">
     <HelpKINode Title="GlobalStatusCode Enumeration" Url="html/T_SnapMD_VirtualCare_ApiModels_GlobalStatusCode.htm" />
@@ -894,10 +894,6 @@
   <HelpKINode Title="Distance property" Url="html/P_SnapMD_VirtualCare_ApiModels_Rules_SubjectDistanceRuleRequest_Distance.htm" />
   <HelpKINode Title="DistanceRule enumeration member" Url="html/T_SnapMD_VirtualCare_ApiModels_Rules_RuleTypeCode.htm" />
   <HelpKINode Title="DistanceUnit property" Url="html/P_SnapMD_VirtualCare_ApiModels_Rules_SubjectDistanceRuleRequest_DistanceUnit.htm" />
-  <HelpKINode Title="DOB property">
-    <HelpKINode Title="BaseProfile.DOB Property " Url="html/P_SnapMD_VirtualCare_ApiModels_BaseProfile_DOB.htm" />
-    <HelpKINode Title="PatientConsultationInfo.DOB Property " Url="html/P_SnapMD_VirtualCare_ApiModels_PatientConsultationInfo_DOB.htm" />
-  </HelpKINode>
   <HelpKINode Title="Dob property">
     <HelpKINode Title="ClinicianProfilesResult.Dob Property " Url="html/P_SnapMD_VirtualCare_ApiModels_ClinicianProfilesResult_Dob.htm" />
     <HelpKINode Title="NewPatientRequest.Dob Property " Url="html/P_SnapMD_VirtualCare_ApiModels_NewPatientRequest_Dob.htm" />
@@ -905,11 +901,15 @@
     <HelpKINode Title="PatientOnBoardShortDetail.Dob Property " Url="html/P_SnapMD_VirtualCare_ApiModels_PatientOnBoardShortDetail_Dob.htm" />
     <HelpKINode Title="PatientProfileFieldChangesTrackingRequest.Dob Property " Url="html/P_SnapMD_Web_Api_Models_PatientProfileFieldChangesTrackingRequest_Dob.htm" />
     <HelpKINode Title="PatientRecord.Dob Property " Url="html/P_SnapMD_VirtualCare_ApiModels_PatientRecord_Dob.htm" />
-    <HelpKINode Title="PatientShortInfo.Dob Property " Url="html/P_SnapMD_VirtualCare_ApiModels_PatientShortInfo_Dob.htm" />
-    <HelpKINode Title="SelfSchedulingClinician.Dob Property " Url="html/P_SnapMD_VirtualCare_ApiModels_Scheduling_PatientSelfScheduling_SelfSchedulingClinician_Dob.htm" />
     <HelpKINode Title="PatientUpdateRequest.Dob Property " Url="html/P_SnapMD_VirtualCare_ApiModels_PatientUpdateRequest_Dob.htm" />
+    <HelpKINode Title="PatientShortInfo.Dob Property " Url="html/P_SnapMD_VirtualCare_ApiModels_PatientShortInfo_Dob.htm" />
     <HelpKINode Title="StaffProfileDetailsRequest.Dob Property " Url="html/P_SnapMD_VirtualCare_ApiModels_StaffProfileDetailsRequest_Dob.htm" />
+    <HelpKINode Title="SelfSchedulingClinician.Dob Property " Url="html/P_SnapMD_VirtualCare_ApiModels_Scheduling_PatientSelfScheduling_SelfSchedulingClinician_Dob.htm" />
     <HelpKINode Title="UserProfilesResult.Dob Property " Url="html/P_SnapMD_VirtualCare_ApiModels_UserProfilesResult_Dob.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DOB property">
+    <HelpKINode Title="PatientConsultationInfo.DOB Property " Url="html/P_SnapMD_VirtualCare_ApiModels_PatientConsultationInfo_DOB.htm" />
+    <HelpKINode Title="BaseProfile.DOB Property " Url="html/P_SnapMD_VirtualCare_ApiModels_BaseProfile_DOB.htm" />
   </HelpKINode>
   <HelpKINode Title="DoctorAssigned enumeration member" Url="html/T_SnapMD_VirtualCare_Sdk_Models_ConsultationStatusCode.htm" />
   <HelpKINode Title="DoctorInitiatedConsultation enumeration member" Url="html/T_SnapMD_VirtualCare_Sdk_Models_ConsultationStatusCode.htm" />
@@ -1454,17 +1454,17 @@
     <HelpKINode Title="AvailabilityBlockRuleResponse.Id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_Scheduling_AvailabilityBlockRuleResponse_Id.htm" />
     <HelpKINode Title="ConsultationResult.Id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_ConsultationResult_Id.htm" />
     <HelpKINode Title="ImageUploadResponse.Id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_ImageUploadResponse_Id.htm" />
-    <HelpKINode Title="ResponseObservableItem.Id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_ResponseObservableItem_Id.htm" />
-    <HelpKINode Title="SmallTelecom.Id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_SmallTelecom_Id.htm" />
     <HelpKINode Title="PatientShortInfo.Id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_PatientShortInfo_Id.htm" />
     <HelpKINode Title="PersonRecord.Id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_PersonRecord_Id.htm" />
+    <HelpKINode Title="ResponseObservableItem.Id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_ResponseObservableItem_Id.htm" />
     <HelpKINode Title="RuleRequestBase.Id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_Rules_RuleRequestBase_Id.htm" />
     <HelpKINode Title="ScheduleConsultationDetailByUsername.Id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_ScheduleConsultationDetailByUsername_Id.htm" />
+    <HelpKINode Title="SmallTelecom.Id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_SmallTelecom_Id.htm" />
     <HelpKINode Title="Telecom.Id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_Telecom_Id.htm" />
   </HelpKINode>
   <HelpKINode Title="id property">
-    <HelpKINode Title="SerializableUser.id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_SerializableUser_id.htm" />
     <HelpKINode Title="SerializableUser.id Property " Url="html/P_SnapMD_VirtualCare_Sdk_Models_SerializableUser_id.htm" />
+    <HelpKINode Title="SerializableUser.id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_SerializableUser_id.htm" />
   </HelpKINode>
   <HelpKINode Title="ID property" Url="html/P_SnapMD_VirtualCare_ApiModels_Payments_CimCustomer_ID.htm" />
   <HelpKINode Title="IHospitalResponse interface">
@@ -2671,14 +2671,14 @@
   <HelpKINode Title="PriorSurgery3 property" Url="html/P_SnapMD_VirtualCare_ApiModels_LegacyMedicalHistoryForm_PriorSurgery3.htm" />
   <HelpKINode Title="Private property" Url="html/P_SnapMD_VirtualCare_ApiModels_Scheduling_AvailabilityBlockClinicianRequest_Private.htm" />
   <HelpKINode Title="ProfileID property">
-    <HelpKINode Title="CimCustomer.ProfileID Property " Url="html/P_SnapMD_VirtualCare_ApiModels_Payments_CimCustomer_ProfileID.htm" />
     <HelpKINode Title="PaymentProfile.ProfileID Property " Url="html/P_SnapMD_VirtualCare_ApiModels_Payments_PaymentProfile_ProfileID.htm" />
+    <HelpKINode Title="CimCustomer.ProfileID Property " Url="html/P_SnapMD_VirtualCare_ApiModels_Payments_CimCustomer_ProfileID.htm" />
   </HelpKINode>
+  <HelpKINode Title="profileId property" Url="html/P_SnapMD_VirtualCare_ApiModels_Payments_PaymentProfilePostResult_profileId.htm" />
   <HelpKINode Title="ProfileId property">
     <HelpKINode Title="ClinicianProfilesResult.ProfileId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_ClinicianProfilesResult_ProfileId.htm" />
     <HelpKINode Title="UserProfilesResult.ProfileId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_UserProfilesResult_ProfileId.htm" />
   </HelpKINode>
-  <HelpKINode Title="profileId property" Url="html/P_SnapMD_VirtualCare_ApiModels_Payments_PaymentProfilePostResult_profileId.htm" />
   <HelpKINode Title="ProfileImage property">
     <HelpKINode Title="ClinicianProfilesResult.ProfileImage Property " Url="html/P_SnapMD_VirtualCare_ApiModels_ClinicianProfilesResult_ProfileImage.htm" />
     <HelpKINode Title="UserDetailsRequest.ProfileImage Property " Url="html/P_SnapMD_VirtualCare_ApiModels_UserDetailsRequest_ProfileImage.htm" />
@@ -3121,16 +3121,16 @@
   <HelpKINode Title="Sent property" Url="html/P_SnapMD_VirtualCare_ApiModels_Sms_EncounterSms_Sent.htm" />
   <HelpKINode Title="Sequence property" Url="html/P_SnapMD_VirtualCare_ApiModels_Rules_RuleRequest_Sequence.htm" />
   <HelpKINode Title="SerializableToken class">
-    <HelpKINode Title="SerializableToken Class" Url="html/T_SnapMD_VirtualCare_ApiModels_SerializableToken.htm" />
     <HelpKINode Title="SerializableToken Class" Url="html/T_SnapMD_VirtualCare_Sdk_Models_SerializableToken.htm" />
+    <HelpKINode Title="SerializableToken Class" Url="html/T_SnapMD_VirtualCare_ApiModels_SerializableToken.htm" />
     <HelpKINode Title="about SerializableToken class" Url="html/T_SnapMD_VirtualCare_Sdk_Models_SerializableToken.htm" />
     <HelpKINode Title="about SerializableToken class" Url="html/T_SnapMD_VirtualCare_ApiModels_SerializableToken.htm" />
     <HelpKINode Title="constructor" Url="html/M_SnapMD_VirtualCare_ApiModels_SerializableToken__ctor.htm" />
     <HelpKINode Title="constructor" Url="html/M_SnapMD_VirtualCare_Sdk_Models_SerializableToken__ctor.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_SnapMD_VirtualCare_Sdk_Models_SerializableToken.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_SnapMD_VirtualCare_ApiModels_SerializableToken.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_SnapMD_VirtualCare_ApiModels_SerializableToken.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_SnapMD_VirtualCare_Sdk_Models_SerializableToken.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_SnapMD_VirtualCare_ApiModels_SerializableToken.htm" />
   </HelpKINode>
   <HelpKINode Title="SerializableToken.access_token property">
     <HelpKINode Title="SerializableToken.access_token Property " Url="html/P_SnapMD_VirtualCare_Sdk_Models_SerializableToken_access_token.htm" />
@@ -3144,18 +3144,18 @@
   <HelpKINode Title="SerializableUser class">
     <HelpKINode Title="SerializableUser Class" Url="html/T_SnapMD_VirtualCare_Sdk_Models_SerializableUser.htm" />
     <HelpKINode Title="SerializableUser Class" Url="html/T_SnapMD_VirtualCare_ApiModels_SerializableUser.htm" />
-    <HelpKINode Title="about SerializableUser class" Url="html/T_SnapMD_VirtualCare_Sdk_Models_SerializableUser.htm" />
     <HelpKINode Title="about SerializableUser class" Url="html/T_SnapMD_VirtualCare_ApiModels_SerializableUser.htm" />
+    <HelpKINode Title="about SerializableUser class" Url="html/T_SnapMD_VirtualCare_Sdk_Models_SerializableUser.htm" />
     <HelpKINode Title="constructor" Url="html/M_SnapMD_VirtualCare_ApiModels_SerializableUser__ctor.htm" />
     <HelpKINode Title="constructor" Url="html/M_SnapMD_VirtualCare_Sdk_Models_SerializableUser__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_SnapMD_VirtualCare_ApiModels_SerializableUser.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_SnapMD_VirtualCare_Sdk_Models_SerializableUser.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_SnapMD_VirtualCare_ApiModels_SerializableUser.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_SnapMD_VirtualCare_Sdk_Models_SerializableUser.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_SnapMD_VirtualCare_ApiModels_SerializableUser.htm" />
   </HelpKINode>
   <HelpKINode Title="SerializableUser.id property">
-    <HelpKINode Title="SerializableUser.id Property " Url="html/P_SnapMD_VirtualCare_Sdk_Models_SerializableUser_id.htm" />
     <HelpKINode Title="SerializableUser.id Property " Url="html/P_SnapMD_VirtualCare_ApiModels_SerializableUser_id.htm" />
+    <HelpKINode Title="SerializableUser.id Property " Url="html/P_SnapMD_VirtualCare_Sdk_Models_SerializableUser_id.htm" />
   </HelpKINode>
   <HelpKINode Title="SerializableUser.SerializableUser constructor">
     <HelpKINode Title="SerializableUser Constructor " Url="html/M_SnapMD_VirtualCare_Sdk_Models_SerializableUser__ctor.htm" />
@@ -3733,15 +3733,15 @@
     <HelpKINode Title="PatientProfileFieldChangesTrackingRequest.TimeZone Property " Url="html/P_SnapMD_Web_Api_Models_PatientProfileFieldChangesTrackingRequest_TimeZone.htm" />
     <HelpKINode Title="UserProfilesResult.TimeZone Property " Url="html/P_SnapMD_VirtualCare_ApiModels_UserProfilesResult_TimeZone.htm" />
   </HelpKINode>
-  <HelpKINode Title="TimeZoneID property" Url="html/P_SnapMD_VirtualCare_ApiModels_BaseProfile_TimeZoneID.htm" />
   <HelpKINode Title="TimeZoneId property">
-    <HelpKINode Title="AddPatientProfileRequest.TimeZoneId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_AddPatientProfileRequest_TimeZoneId.htm" />
     <HelpKINode Title="NewPatientRequest.TimeZoneId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_NewPatientRequest_TimeZoneId.htm" />
+    <HelpKINode Title="AddPatientProfileRequest.TimeZoneId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_AddPatientProfileRequest_TimeZoneId.htm" />
     <HelpKINode Title="NewPatientResponse.TimeZoneId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_NewPatientResponse_TimeZoneId.htm" />
     <HelpKINode Title="PatientOnBoardShortDetail.TimeZoneId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_PatientOnBoardShortDetail_TimeZoneId.htm" />
     <HelpKINode Title="UserDetailsRequest.TimeZoneId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_UserDetailsRequest_TimeZoneId.htm" />
     <HelpKINode Title="UserProfilesResult.TimeZoneId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_UserProfilesResult_TimeZoneId.htm" />
   </HelpKINode>
+  <HelpKINode Title="TimeZoneID property" Url="html/P_SnapMD_VirtualCare_ApiModels_BaseProfile_TimeZoneID.htm" />
   <HelpKINode Title="TimeZoneSystemId property" Url="html/P_SnapMD_VirtualCare_ApiModels_UserProfilesResult_TimeZoneSystemId.htm" />
   <HelpKINode Title="To property">
     <HelpKINode Title="AppointmentSlot.To Property " Url="html/P_SnapMD_VirtualCare_ApiModels_Scheduling_PatientSelfScheduling_AppointmentSlot_To.htm" />
@@ -3849,20 +3849,20 @@
   <HelpKINode Title="UserDetailsRequest.TimeZoneId property" Url="html/P_SnapMD_VirtualCare_ApiModels_UserDetailsRequest_TimeZoneId.htm" />
   <HelpKINode Title="UserDetailsRequest.UserDetailsRequest constructor" Url="html/M_SnapMD_VirtualCare_ApiModels_UserDetailsRequest__ctor.htm" />
   <HelpKINode Title="UserId property">
-    <HelpKINode Title="PatientAccountInfo.UserId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_PatientAccountInfo_UserId.htm" />
     <HelpKINode Title="ClinicianPersonResponse.UserId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_ClinicianPersonResponse_UserId.htm" />
     <HelpKINode Title="CoUserEmailInvitationRequest.UserId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_CoUserEmailInvitationRequest_UserId.htm" />
     <HelpKINode Title="CreateStaffProfileResponse.UserId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_CreateStaffProfileResponse_UserId.htm" />
     <HelpKINode Title="Guardian.UserId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_Guardian_UserId.htm" />
     <HelpKINode Title="GuardianRecord.UserId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_GuardianRecord_UserId.htm" />
+    <HelpKINode Title="PatientAccountInfo.UserId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_PatientAccountInfo_UserId.htm" />
     <HelpKINode Title="SelfSchedulingClinician.UserId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_Scheduling_PatientSelfScheduling_SelfSchedulingClinician_UserId.htm" />
     <HelpKINode Title="UserProfilesResult.UserId Property " Url="html/P_SnapMD_VirtualCare_ApiModels_UserProfilesResult_UserId.htm" />
   </HelpKINode>
   <HelpKINode Title="UserID property" Url="html/P_SnapMD_VirtualCare_ApiModels_UserActivationResponse_UserID.htm" />
   <HelpKINode Title="UserLoginId property" Url="html/P_SnapMD_VirtualCare_ApiModels_NewPatientResponse_UserLoginId.htm" />
   <HelpKINode Title="username property">
-    <HelpKINode Title="SerializableUser.username Property " Url="html/P_SnapMD_VirtualCare_ApiModels_SerializableUser_username.htm" />
     <HelpKINode Title="SerializableUser.username Property " Url="html/P_SnapMD_VirtualCare_Sdk_Models_SerializableUser_username.htm" />
+    <HelpKINode Title="SerializableUser.username Property " Url="html/P_SnapMD_VirtualCare_ApiModels_SerializableUser_username.htm" />
   </HelpKINode>
   <HelpKINode Title="UserProfilesResult class">
     <HelpKINode Title="UserProfilesResult Class" Url="html/T_SnapMD_VirtualCare_ApiModels_UserProfilesResult.htm" />
@@ -3933,7 +3933,7 @@
     <HelpKINode Title="Telecom.Value Property " Url="html/P_SnapMD_VirtualCare_ApiModels_Telecom_Value.htm" />
   </HelpKINode>
   <HelpKINode Title="version">
-    <HelpKINode Title="1.0.0.0" Url="html/45b4cf67-0429-441a-9aa3-d14bfecad7e1.htm" />
+    <HelpKINode Title="1.24.0" Url="html/45b4cf67-0429-441a-9aa3-d14bfecad7e1.htm" />
     <HelpKINode Title="history" Url="html/d6dfb982-0d47-4424-a719-55f159a928f9.htm" />
   </HelpKINode>
   <HelpKINode Title="Version property">
