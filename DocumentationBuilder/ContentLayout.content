@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Topics>
-  <Topic id="80aadfcd-896a-470c-9ddb-da63669ff9a6" visible="True" isDefault="true" isSelected="true" title="Welcome to the [TODO: Add project name]">
+  <Topic id="80aadfcd-896a-470c-9ddb-da63669ff9a6" visible="True" isDefault="true" title="SnapMD VirtualCare .NET SDK Reference" tocTitle="SnapMD VirtualCare SDK">
     <HelpKeywords>
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
@@ -9,9 +9,9 @@
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
-    <Topic id="45b4cf67-0429-441a-9aa3-d14bfecad7e1" visible="True" title="Version 1.0.0.0">
+    <Topic id="45b4cf67-0429-441a-9aa3-d14bfecad7e1" visible="True" isSelected="true" title="Version 1.24.0">
       <HelpKeywords>
-        <HelpKeyword index="K" term="version, 1.0.0.0" />
+        <HelpKeyword index="K" term="version, 1.24.0" />
       </HelpKeywords>
     </Topic>
   </Topic>
