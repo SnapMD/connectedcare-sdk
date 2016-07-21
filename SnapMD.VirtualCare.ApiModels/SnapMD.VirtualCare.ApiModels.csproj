@@ -114,6 +114,8 @@
     <Compile Include="PatientPersonResponse.cs" />
     <Compile Include="PatientProfileFieldChangesTrackingRequest.cs" />
     <Compile Include="PatientUpdateRequest.cs" />
+    <Compile Include="Payments\PatientPaymentRequest.cs" />
+    <Compile Include="Payments\PatientPaymentResponse.cs" />
     <Compile Include="PersonName.cs" />
     <Compile Include="Rules\GeoCoordinate.cs" />
     <Compile Include="Rules\IRuleExecutionRequest.cs" />
