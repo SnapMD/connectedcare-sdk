@@ -11,33 +11,45 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using Newtonsoft.Json.Linq;
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.Sdk.Interfaces;
-using SnapMD.VirtualCare.Sdk.Models;
 
 namespace SnapMD.VirtualCare.Sdk
 {
-    public class IntakeApi: ApiCall
+    /// <summary>
+    /// This API returns the data required for populating the intake portion of Appointments and Encounters APIs.
+    /// </summary>
+    /// <seealso cref="SnapMD.VirtualCare.Sdk.ApiCall" />
+    public class IntakeApi : ApiCall
     {
-        public IntakeApi(string baseUrl, string bearerToken, string developerId, string apiKey, IWebClient WebClient)
-            : base(baseUrl, WebClient, bearerToken, developerId, apiKey)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IntakeApi" /> class.
+        /// </summary>
+        /// <param name="baseUrl">The base URL.</param>
+        /// <param name="bearerToken">The bearer token.</param>
+        /// <param name="developerId">The developer identifier.</param>
+        /// <param name="apiKey">The API key.</param>
+        /// <param name="webClient">The web client.</param>
+        public IntakeApi(string baseUrl, string bearerToken, string developerId, string apiKey, IWebClient webClient)
+            : base(baseUrl, webClient, bearerToken, developerId, apiKey)
         {
-            
         }
 
-        public List<CodeSetResponse> GetIntakeItems(int HospitalId)
+        /// <summary>
+        /// Gets the codesets for hospital intake form. The returned values can be used for populating the intake APIs when
+        /// creating a new appointment.
+        /// <see cref="AppointmentsApi" />  <seealso cref="EncountersApi" />
+        /// </summary>
+        /// <param name="hospitalId">The hospital identifier.</param>
+        /// <returns></returns>
+        public List<CodeSetResponse> GetIntakeItems(int hospitalId)
         {
-            var result = MakeCall(string.Format("v2/codesets?hospitalId={0}&fields={1}",HospitalId,"medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"));
+            var result =
+                MakeCall(string.Format("v2/codesets?hospitalId={0}&fields={1}",
+                    hospitalId,
+                    "medicalconditions,medications,medicationallergies,consultprimaryconcerns,consultsecondaryconcerns"));
 
             return result.ToObject<ApiResponseV2<CodeSetResponse>>().Data.ToList();
-
-            //while (dataEnumerator.MoveNext())
-            //    if (dataEnumerator.Current != null)
-            //        return dataEnumerator.Current.;
-
-            //return null;
-
         }
     }
 }
