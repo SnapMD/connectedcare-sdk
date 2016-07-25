@@ -38,3 +38,7 @@ It is crucial that we prevent users' credentials from being stored in the Git re
 ## Contributing
 
 We welcome pull requests. However, please make sure you do not store any passwords or API keys in the Git history. When you change the values in app.config, make sure you back up that file and revert your confidential values before committing. This also means if you visit the project's Property pages in Visual Studio, when it asks you if you want to use the new values in the app.config to update your Settings file, remember to click "No". Otherwise, your confidential information will be stored in `Properties/Settings.settings` and `Properties/Settings.Designer.cs`.
+
+## Documentation
+
+Documentation is contained in the GitHub Wiki, but we also have [online MSDN-style class reference documentation](https://snapmd.github.io/connectedcare-sdk/Help). To contribute to the online class reference, you'll need to download the Sandcastle Help File Builder from https://github.com/EWSoftware/SHFB/releases. From the SnapMD connectedcare-sdk GitHub repository, checkout the `develop` branch. Open the solution, make changes as required, and commit them. Then build the "DocumentationBuilder" project. It will output to `DocumentationBuilder\Help`. Switch branches to `gh-pages`, and copy `DocumentationBuilder\Help` on top of the root Help folder, and commit the changes you've made (the folder is not ignored on this branch). Once pushed the github.io pages will automatically update.
