@@ -9,16 +9,16 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
-using System.Net;
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.Sdk.Interfaces;
-using SnapMD.VirtualCare.Sdk.Models;
 using SnapMD.VirtualCare.Sdk.Wrappers;
 
 namespace SnapMD.VirtualCare.Sdk
 {
+
     public class PatientAdminApi : ApiCall, IPatientAdminApi
     {
+
         public PatientAdminApi(
             string baseUrl,
             string bearerToken,
@@ -59,5 +59,16 @@ namespace SnapMD.VirtualCare.Sdk
         {
             Delete<PatientOnBoardShortDetail>($"v2/admin/patients/{patientId}", null);
         }
+
+        public ApiResponseV2<bool> UpdateDependentRelationAndAuthorization
+            (int patientId, int dependentId, DependentRelationship requestData)
+        {
+            return
+                new ApiResponseV2<bool>(
+                    Put($"v2/admin/patient/{patientId}/dependent/{dependentId}/relationship", requestData)
+                        .ToObject<bool>());
+        }
+
     }
+
 }
