@@ -210,3 +210,6 @@ FakesAssemblies/
 # Project-specific
 # Auto-generated XML docs modified at compile time
 SnapMD.VirtualCare.ApiModels/App_Data/*.xml
+
+# Sandcastle - to check in changes to this folder, switch to the gh-pages branch.
+Help/

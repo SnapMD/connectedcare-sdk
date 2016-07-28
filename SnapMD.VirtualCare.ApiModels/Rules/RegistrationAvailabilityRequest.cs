@@ -22,6 +22,14 @@
         public int HospitalId { get; set; }
 
         /// <summary>
+        /// The raw address text to be evaluated.
+        /// </summary>
+        /// <value>
+        /// The address text.
+        /// </value>
+        public string AddressText { get; set; }
+
+        /// <summary>
         /// The geo location to be evaluated.
         /// </summary>
         /// <value>

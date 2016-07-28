@@ -1,9 +1,5 @@
-﻿using SnapMD.VirtualCare.ApiModels.Scheduling;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SnapMD.VirtualCare.ApiModels.Scheduling;
 
 namespace SnapMD.VirtualCare.ApiModels.Payments
 {
