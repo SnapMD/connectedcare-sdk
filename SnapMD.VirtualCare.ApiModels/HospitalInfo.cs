@@ -45,5 +45,14 @@ namespace SnapMD.VirtualCare.ApiModels
         public string PatientLogin { get; set; }
 
         public IDictionary<string, string> Settings { get; set; }
+
+        [JsonConverter(typeof(StringEnumConverter))]
+        public CustomerSsoType ClinicianSso { get; set; }
+
+        public string ClinicianSsoLinkText { get; set; }
+
+        public string ClinicianConsultEndUrl { get; set; }
+
+        public string ClinicianLogin { get; set; }
     }
 }
