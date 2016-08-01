@@ -55,5 +55,38 @@ namespace SnapMD.VirtualCare.ApiModels
         ///     The customer sso link text.
         /// </value>
         public string CustomerSsoLinkText { get; set; }
+
+        /// <summary>
+        /// Gets or sets the clinician login.
+        /// </summary>
+        /// <value>
+        /// The clinician login.
+        /// </value>
+        public string ClinicianLogin { get; set; }
+
+        /// <summary>
+        /// Gets or sets the clinician consult end URL.
+        /// </summary>
+        /// <value>
+        /// The clinician consult end URL.
+        /// </value>
+        public string ClinicianConsultEndUrl { get; set; }
+
+        /// <summary>
+        /// Gets or sets the clinician sso.
+        /// </summary>
+        /// <value>
+        /// The clinician sso.
+        /// </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public CustomerSsoType ClinicianSso { get; set; }
+
+        /// <summary>
+        /// Gets or sets the clinician sso link text.
+        /// </summary>
+        /// <value>
+        /// The clinician sso link text.
+        /// </value>
+        public string ClinicianSsoLinkText { get; set; }
     }
 }
