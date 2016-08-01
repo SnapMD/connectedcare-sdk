@@ -1,0 +1,15 @@
+﻿{
+  "dependencies": {
+    "SonarAnalyzer.CSharp": "1.16.0",
+    "System.IdentityModel.Tokens.Jwt": "4.0.0"
+  },
+  "frameworks": {
+    "net46": {}
+  },
+  "supports": {
+    "win": {}
+  },
+  "runtimes": {
+    "win": {}
+  }
+}
