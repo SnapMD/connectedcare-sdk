@@ -19,5 +19,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The ID of the newly-created PatientQueue.
         /// </summary>
         public Guid PatientQueueId { get; set; }
+
+        /// <summary>
+        /// The meeting identifier.
+        /// </summary>
+        public Guid MeetingId { get; set; }
     }
 }
