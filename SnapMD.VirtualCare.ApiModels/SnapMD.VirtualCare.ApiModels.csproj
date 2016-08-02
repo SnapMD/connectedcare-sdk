@@ -104,6 +104,7 @@
     <Compile Include="ClinicianSpecialty.cs" />
     <Compile Include="ContactTypeCode.cs" />
     <Compile Include="CreateStaffProfileResponse.cs" />
+    <Compile Include="DependentRelationship.cs" />
     <Compile Include="EmailUserRequest.cs" />
     <Compile Include="IHospitalResponse.cs" />
     <Compile Include="ImageUploadResponse.cs" />
