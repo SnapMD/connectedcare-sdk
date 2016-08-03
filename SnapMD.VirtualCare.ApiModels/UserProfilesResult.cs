@@ -245,5 +245,10 @@ namespace SnapMD.VirtualCare.ApiModels
                 return false;
             }
         }
+
+        /// <summary>
+        /// The person identifier of the user.
+        /// </summary>
+        public Guid? PersonId { get; set; }
     }
 }
