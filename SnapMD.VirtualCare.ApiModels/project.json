@@ -1,16 +1,19 @@
-﻿{
+{
+  "supports": {
+    "net46.app": {},
+    "dnxcore50.app": {}
+  },
   "dependencies": {
-    "Hl7.Fhir.DSTU2": "0.90.4-alpha1",
+    "Hl7.Fhir.DSTU2": "0.90.5-alpha3",
+    "NETStandard.Library": "1.6.0",
     "Newtonsoft.Json": "9.0.1",
-    "SonarAnalyzer.CSharp": "1.13.0"
+    "SonarAnalyzer.CSharp": "1.13.0",
+    "Microsoft.NETCore": "5.0.0",
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.0"
   },
   "frameworks": {
-    "net46": {}
-  },
-  "supports": {
-    "win": {}
-  },
-  "runtimes": {
-    "win": {}
+    "dotnet": {
+      "imports": "portable-net452"
+    }
   }
 }
