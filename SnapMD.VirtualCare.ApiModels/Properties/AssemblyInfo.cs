@@ -26,7 +26,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright © 2016 SnapMD, Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: NeutralResourcesLanguage("en")]
 
 // Version information for an assembly consists of the following four values:
 //
