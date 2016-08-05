@@ -21,7 +21,7 @@ namespace SnapMD.VirtualCare.ApiModels
     public class ApiResponse<T>
     {
         /// <summary>
-        ///     The payload being returned to the requestor.
+        ///   The payload being returned to the requestor
         /// </summary>
         public T Data { get; set; }
 

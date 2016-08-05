@@ -15,6 +15,9 @@ using SnapMD.VirtualCare.Sdk.Wrappers;
 
 namespace SnapMD.VirtualCare.Sdk
 {
+    /// <summary>
+    /// The Encounters API allows you to manage consultations.
+    /// </summary>
     public class EncountersApi : ApiCall
     {
         public EncountersApi(
