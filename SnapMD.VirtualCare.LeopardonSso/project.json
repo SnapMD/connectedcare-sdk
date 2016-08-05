@@ -1,7 +1,7 @@
 ﻿{
   "dependencies": {
-    "SonarAnalyzer.CSharp": "1.13.0",
-    "System.IdentityModel.Tokens.Jwt": "4.0.0"
+    "SonarAnalyzer.CSharp": "1.16.0",
+    "System.IdentityModel.Tokens.Jwt": "4.0.2.206221351"
   },
   "frameworks": {
     "net46": {}

@@ -139,10 +139,6 @@
     <None Include="project.json" />
     <None Include="SnapMD.VirtualCare.Sdk.ruleset" />
   </ItemGroup>
-  <ItemGroup>
-    <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.1.13.0\analyzers\SonarAnalyzer.CSharp.dll" />
-    <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.1.13.0\analyzers\SonarAnalyzer.dll" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

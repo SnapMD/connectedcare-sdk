@@ -14,6 +14,8 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens;
 using System.Security.Claims;
+using SecurityToken = System.IdentityModel.Tokens.SecurityToken;
+using SigningCredentials = System.IdentityModel.Tokens.SigningCredentials;
 
 namespace SnapMD.VirtualCare.LeopardonSso
 {
