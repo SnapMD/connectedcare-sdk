@@ -25,5 +25,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public string access_token { get; set; }
 
         public DateTimeOffset? expires { get; set; }
+
+        public string token_type { get; set; } = "bearer";
     }
 }

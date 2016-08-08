@@ -6,7 +6,8 @@ namespace SnapMD.VirtualCare.Sdk
 {
     public class PersonApi : ApiCall, IPersonApi
     {
-        public PersonApi(string baseUrl, IWebClient client, string bearerToken = null, string developerId = null, string apiKey = null) : base(baseUrl, client, bearerToken, developerId, apiKey)
+        public PersonApi(string baseUrl, IWebClient client, string bearerToken = null, string developerId = null, string apiKey = null) 
+            : base(baseUrl, client, bearerToken, developerId, apiKey)
         {
         }
 
