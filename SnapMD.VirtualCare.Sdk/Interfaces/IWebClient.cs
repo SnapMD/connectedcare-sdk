@@ -22,7 +22,5 @@ namespace SnapMD.VirtualCare.Sdk.Interfaces
         string DownloadString(string address);
 
         string DownloadString(Uri address);
-
-        //WebResponse GetWebResponse(WebRequest request, IAsyncResult result);
     }
 }
