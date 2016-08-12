@@ -250,5 +250,20 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The person identifier of the user.
         /// </summary>
         public Guid? PersonId { get; set; }
+
+        /// <summary>
+        /// Is user dependent.
+        /// </summary>
+        public bool IsDependent { get; set; }
+
+        /// <summary>
+        /// Guardian full name (for dependent patients).
+        /// </summary>
+        public string GuardianName { get; set; }
+
+        /// <summary>
+        /// Guardian user id (for dependent patients).
+        /// </summary>
+        public int? GuardianUserId { get; set; }
     }
 }
