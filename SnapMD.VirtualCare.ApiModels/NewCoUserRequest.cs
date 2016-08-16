@@ -97,13 +97,5 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The color of the hair.
         /// </value>
         public int? HairColor { get; set; }
-
-        /// <summary>
-        /// Gets or sets the address validation exempted.
-        /// </summary>
-        /// <value>
-        /// The address validation exempted.
-        /// </value>
-        public bool? AddressValidationExempted { get; set; }
     }
 }
