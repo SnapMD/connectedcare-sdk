@@ -40,6 +40,9 @@ namespace SnapMD.VirtualCare.ApiModels
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string Token { get; set; }
 
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public bool? AddressValidationExempted { get; set; }
+
         public bool ValidateModel(Func<string, Exception> exceptionToThrow = null)
         {
             if (exceptionToThrow == null)
