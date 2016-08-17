@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using SnapMD.VirtualCare.ApiModels.Scheduling;
 
 namespace SnapMD.VirtualCare.ApiModels.Payments

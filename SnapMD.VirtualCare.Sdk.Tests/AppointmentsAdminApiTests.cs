@@ -7,7 +7,6 @@ using NUnit.Framework;
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.ApiModels.Scheduling;
 using SnapMD.VirtualCare.Sdk.Interfaces;
-using SnapMD.VirtualCare.Sdk.Models;
 using SnapMD.VirtualCare.Sdk.Tests.Properties;
 
 namespace SnapMD.VirtualCare.Sdk.Tests
@@ -15,9 +14,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
     [TestFixture]
     public class AppointmentsAdminApiTests : TestBase
     {
-        private readonly ISingleObjectBuilder<AppointmentResponse> _appointmentBuilder = Builder<AppointmentResponse>.CreateNew();
         private AppointmentsAdminApi _api;
-        private AppointmentResponse _appointment;
         private Mock<IWebClient> _mockWebClient;
         private string _accessToken;
 
@@ -31,71 +28,75 @@ namespace SnapMD.VirtualCare.Sdk.Tests
                 Settings.Default.ApiDeveloperId,
                 Settings.Default.ApiKey,
                 _mockWebClient.Object);
-
-            _appointment = _appointmentBuilder.Build();
         }
 
         [Test]
         public void GetAppointmentTest()
         {
-            var expectedResponse = new ApiResponseV2<AppointmentResponse>(_appointmentBuilder.Build());
+            var appointment = Builder<AppointmentResponse>.CreateNew().Build();
+            var expectedResponse = new ApiResponseV2<AppointmentResponse>(appointment);
 
             _mockWebClient.Setup(c => c.DownloadString(
-                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments/" + _appointment.AppointmentId))))
+                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments/" + appointment.AppointmentId))))
                 .Returns(JsonConvert.SerializeObject(expectedResponse));
 
-            var response = _api.GetAppointment(_appointment.AppointmentId);
+            var response = _api.GetAppointment(appointment.AppointmentId);
 
             AssertAppointments(expectedResponse.Data.First(), response.Data.First());
 
             _mockWebClient.Verify(client => client.DownloadString(
-                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments/" + _appointment.AppointmentId))));
+                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments/" + appointment.AppointmentId))));
         }
 
         [Test]
         public void CreateAppointmentTest()
         {
-            var expectedResponse = new ApiResponseV2<AppointmentResponse>(_appointmentBuilder.Build());
+            var appointment = Builder<AppointmentResponse>.CreateNew().Build();
+            var expectedResponse = new ApiResponseV2<AppointmentResponse>(appointment);
 
             _mockWebClient.Setup(c => c.UploadString(It.IsAny<Uri>(), "POST", It.IsAny<string>()))
                 .Returns(JsonConvert.SerializeObject(expectedResponse));
 
-            var response = _api.CreateAppointment(_appointment);
+            var response = _api.CreateAppointment(appointment);
 
             AssertAppointments(expectedResponse.Data.First(), response.Data.First());
 
             _mockWebClient.Verify(client => client.UploadString(
                 It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments")),
                 "POST",
-                JsonConvert.SerializeObject(_appointment)));
+                JsonConvert.SerializeObject(appointment)));
         }
 
         [Test]
         public void UpdateAppointmentTest()
         {
-            var expectedResponse = new ApiResponseV2<AppointmentResponse>(_appointmentBuilder.Build());
+            var response = Builder<AppointmentResponse>.CreateNew().Build();
+            var appointment = Builder<AppointmentApiRequest>.CreateNew().Build();
+            var request = Builder<AppointmentApiRequest>.CreateNew().Build();
+            var expectedResponse = new ApiResponseV2<AppointmentResponse>(response);
 
             _mockWebClient.Setup(c => c.UploadString(It.IsAny<Uri>(), "PUT", It.IsAny<string>()))
                 .Returns(JsonConvert.SerializeObject(expectedResponse));
 
             var appointmentId = expectedResponse.Data.First().AppointmentId;
-            var response = _api.UpdateAppointment(appointmentId, _appointment);
+            var actual = _api.UpdateAppointment(appointmentId, request);
 
-            AssertAppointments(expectedResponse.Data.First(), response.Data.First());
+            AssertAppointments(expectedResponse.Data.First(), actual.Data.First());
 
             _mockWebClient.Verify(client => client.UploadString(
                 It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments/" + appointmentId)),
                 "PUT",
-                JsonConvert.SerializeObject(_appointment)));
+                JsonConvert.SerializeObject(appointment)));
         }
 
         [Test]
         public void DeleteAppointmentTest()
         {
-            _api.DeleteAppointment(_appointment.AppointmentId);
+            var appointment = Builder<AppointmentResponse>.CreateNew().Build();
+            _api.DeleteAppointment(appointment.AppointmentId);
 
             _mockWebClient.Verify(client => client.UploadString(
-                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments/" + _appointment.AppointmentId)),
+                It.Is<Uri>(uri => uri.ToString().EndsWith("v2.1/clinicians/appointments/" + appointment.AppointmentId)),
                 "DELETE", It.IsAny<string>()));
         }
 
@@ -107,7 +108,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
             Assert.AreEqual(expected.AppointmentTypeCode, actual.AppointmentTypeCode);
             Assert.AreEqual(expected.StartTime, actual.StartTime);
             Assert.AreEqual(expected.EndTime, actual.EndTime);
-            Assert.AreEqual(expected.OnDemandRequestId, actual.OnDemandRequestId);
+            Assert.AreEqual(expected.PatientQueueId, actual.PatientQueueId);
         }
     }
 }

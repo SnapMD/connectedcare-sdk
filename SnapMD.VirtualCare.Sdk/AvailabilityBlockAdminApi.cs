@@ -12,7 +12,7 @@ namespace SnapMD.VirtualCare.Sdk
         {
         }
 
-        public ApiResponseV2<AvailabilityBlockResponse> GetAvailabilityBlocks(AvailabilityBlocksRequest request)
+        public ApiResponseV2<AvailabilityBlockResponse> GetAvailabilityBlocks(AvailabilityBlocksFilter request)
         {
             var clinicianIds =
                 request.ClinicianIds != null && request.ClinicianIds.Length > 0
