@@ -15,12 +15,12 @@ using SnapMD.VirtualCare.Sdk.Models;
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
-    /// 
+    /// Intake Request for OnDemand Consultation
     /// </summary>
     public class OnDemandIntakeRequest
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OnDemandIntakeRequest"/> class.
+        /// Initializes a new instance of the <see cref="OnDemandIntakeRequest"/> class
         /// </summary>
         public OnDemandIntakeRequest()
         {
