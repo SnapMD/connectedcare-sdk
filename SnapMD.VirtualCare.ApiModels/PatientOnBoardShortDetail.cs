@@ -53,6 +53,8 @@ namespace SnapMD.VirtualCare.ApiModels
         public PatientOnBoardStatus? Status { get; set; }
         public bool? PreventSendingInvitation { get; set; }
 
+        public bool? AddressValidationExempted { get; set; }
+
         public bool ValidateModel(Func<string, Exception> exceptionToThrow = null, bool allowNullEmail = false)
         {
             if (exceptionToThrow == null)
