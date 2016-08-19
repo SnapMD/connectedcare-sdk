@@ -6,7 +6,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
     /// <summary>
     /// Appointment creation request model.
     /// </summary>
-    public class AppointmentRequest
+    public class AppointmentApiRequest
     {
         /// <summary>
         /// Availability block id.
@@ -29,9 +29,9 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public DateTimeOffset? EndTime { get; set; }
 
         /// <summary>
-        /// On demand request id.
+        /// PatientQueue id.
         /// </summary>
-        public Guid? OnDemandRequestId { get; set; }
+        public Guid? PatientQueueId { get; set; }
 
         /// <summary>
         /// Appointment type.

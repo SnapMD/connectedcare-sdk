@@ -139,11 +139,14 @@
     <Compile Include="Rules\SubjectDistanceRuleRequest.cs" />
     <Compile Include="Rules\SubjectDistanceRuleResponse.cs" />
     <Compile Include="ProfileImageResponse.cs" />
-    <Compile Include="Scheduling\AppointmentsRequest.cs" />
+    <Compile Include="Scheduling\AppointmentSearch.cs" />
     <Compile Include="Scheduling\Coverage\CoverageFrame.cs" />
     <Compile Include="Scheduling\Coverage\CoverageType.cs" />
+    <Compile Include="Scheduling\IntakeConcern.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityRequest.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityResponse.cs" />
+    <Compile Include="OnDemandIntakeRequest.cs" />
+    <Compile Include="Scheduling\OnDemandResponse.cs" />
     <Compile Include="Scheduling\PatientSelfScheduling\AppointmentSlot.cs" />
     <Compile Include="Scheduling\PatientSelfScheduling\SelfSchedulingClinician.cs" />
     <Compile Include="Scheduling\PatientSelfScheduling\SelfSchedulingClinicianSearchRequest.cs" />
@@ -204,7 +207,7 @@
     <Compile Include="ScheduleConsultationDetailByUsername.cs" />
     <Compile Include="ScheduledConsultation.cs" />
     <Compile Include="ScheduledConsultationResult.cs" />
-    <Compile Include="Scheduling\AppointmentRequest.cs" />
+    <Compile Include="Scheduling\AppointmentApiRequest.cs" />
     <Compile Include="Scheduling\AppointmentTypeCode.cs" />
     <Compile Include="Scheduling\AttendenceCode.cs" />
     <Compile Include="Scheduling\AvailabilityBlockClinicianRequest.cs" />
@@ -213,8 +216,7 @@
     <Compile Include="Scheduling\AvailabilityBlockResponse.cs" />
     <Compile Include="Scheduling\AvailabilityBlockRuleRequest.cs" />
     <Compile Include="Scheduling\AvailabilityBlockRuleResponse.cs" />
-    <Compile Include="Scheduling\AvailabilityBlocksRequest.cs" />
-    <Compile Include="Scheduling\AvailabilityBlocksResponse.cs" />
+    <Compile Include="Scheduling\AvailabilityBlocksFilter.cs" />
     <Compile Include="Scheduling\ParticipantTypeCode.cs" />
     <Compile Include="Scheduling\RepeatPeriodCode.cs" />
     <Compile Include="Sms\EncounterSms.cs" />

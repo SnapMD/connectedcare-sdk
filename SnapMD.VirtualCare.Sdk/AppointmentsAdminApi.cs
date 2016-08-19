@@ -27,14 +27,23 @@ namespace SnapMD.VirtualCare.Sdk
         {
         }
 
-        public ApiResponseV2<AppointmentResponse> CreateAppointment(AppointmentRequest appointment)
+        public ApiResponseV2<AppointmentResponse> CreateAppointment(AppointmentApiRequest appointment)
         {
             return Post<ApiResponseV2<AppointmentResponse>>("v2.1/clinicians/appointments", appointment);
         }
 
-        public ApiResponseV2<AppointmentResponse> UpdateAppointment(Guid appointmentId, AppointmentRequest appointment)
+        /// <summary>
+        /// Updates the appointment.
+        /// </summary>
+        /// <param name="appointmentId">The appointment identifier.</param>
+        /// <param name="appointment">The appointment.</param>
+        /// <returns></returns>
+        public ApiResponseV2<AppointmentResponse> UpdateAppointment(Guid appointmentId, AppointmentApiRequest appointment)
         {
-            return Put<ApiResponseV2<AppointmentResponse>>("v2.1/clinicians/appointments/" + appointmentId, appointment);
+            return
+                Put<ApiResponseV2<AppointmentResponse>>(
+                    "v2.1/clinicians/appointments/" + appointmentId,
+                    appointment);
         }
 
         public ApiResponseV2<AppointmentResponse> GetAppointment(Guid appointmentId)

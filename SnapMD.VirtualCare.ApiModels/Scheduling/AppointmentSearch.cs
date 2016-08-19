@@ -1,12 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace SnapMD.VirtualCare.ApiModels.Scheduling
+﻿namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
     /// <summary>
     /// Request model for Appointments search filter 
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.ApiModels.Scheduling.AvailabilityBlocksRequest" />
-    public class AppointmentsRequest : AvailabilityBlocksRequest
+    /// <seealso cref="AvailabilityBlocksFilter" />
+    public class AppointmentSearch : AvailabilityBlocksFilter
     {
         /// <summary>
         /// The appointment type codes to be searched.

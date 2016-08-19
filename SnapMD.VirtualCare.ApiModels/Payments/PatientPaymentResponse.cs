@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using SnapMD.VirtualCare.ApiModels.Scheduling;
 
 namespace SnapMD.VirtualCare.ApiModels.Payments
@@ -10,17 +10,14 @@ namespace SnapMD.VirtualCare.ApiModels.Payments
     public class PatientPaymentResponse : PatientPaymentRequest
     {
         /// <summary>
-        /// Gets or sets the patient identifier.
+        /// The patient identifier associated with the payment.
         /// </summary>
-        /// <value>
-        /// The patient identifier.
-        /// </value>
-        public int PatientId { get; set; }
+        public int? PatientId { get; set; }
 
         /// <summary>
         /// The credit date.
         /// </summary>
-        public DateTime CreditDate { get; set; }
+        public DateTime? CreditDate { get; set; }
 
         /// <summary>
         /// The debit date.

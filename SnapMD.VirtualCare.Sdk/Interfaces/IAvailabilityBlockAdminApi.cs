@@ -11,7 +11,7 @@ namespace SnapMD.VirtualCare.Sdk.Interfaces
 {
     public interface IAvailabilityBlockAdminApi
     {
-        ApiResponseV2<AvailabilityBlockResponse> GetAvailabilityBlocks(AvailabilityBlocksRequest request);
+        ApiResponseV2<AvailabilityBlockResponse> GetAvailabilityBlocks(AvailabilityBlocksFilter request);
 
         ApiResponseV2<AvailabilityBlockResponse> CreateAvailabilityBlock(AvailabilityBlockRequest availabilityBlockRequest);
     }
