@@ -17,7 +17,7 @@ using System.Xml.Serialization;
 namespace SnapMD.VirtualCare.ApiModels
 {
     [XmlRoot("IntakeQuestionnaire", Namespace = "https://snap.md/api/v2/xml/encounters")]
-    public class IntakeQuestionnaire : MedicalHistoryProfile, IIntakeQuestionnaire
+    public class IntakeQuestionnaire : MedicalHistoryProfile, IIntakeQuestionnaire, IMedicalHistoryProfile
     {
         public IntakeQuestionnaire()
         {

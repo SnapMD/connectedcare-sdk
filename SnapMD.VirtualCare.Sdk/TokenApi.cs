@@ -66,7 +66,7 @@ namespace SnapMD.VirtualCare.Sdk
         }
 
         /// <summary>
-        /// Gets a token based on the token & agent from the Ping Identity sso service
+        /// Gets a token based on the token and agent from the Ping Identity sso service
         /// </summary>
         /// <param name="ssoToken">SSO token</param>
         /// <param name="agentId">Agent ID</param>

@@ -3,7 +3,7 @@
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
-    /// The API uses JSON camel case serialization, so the variables supplied in the incoming request will have lower case.
+    /// Request object adding a patient profile
     /// </summary>
     public class AddPatientProfileRequest
     {

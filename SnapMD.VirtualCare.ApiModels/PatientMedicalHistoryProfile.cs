@@ -16,7 +16,7 @@ namespace SnapMD.VirtualCare.ApiModels
     /// <summary>
     ///     Patient medical history profile.
     /// </summary>
-    public class PatientMedicalHistoryProfile : IPatientMedicalHistoryProfile
+    public class PatientMedicalHistoryProfile : IPatientMedicalHistoryProfile, IMedicalHistoryProfile
     {
         /// <summary>
         ///     Default constructor.

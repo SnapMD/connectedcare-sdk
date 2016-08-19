@@ -1,5 +1,8 @@
-﻿namespace SnapMD.VirtualCare.ApiModels
+﻿using System;
+
+namespace SnapMD.VirtualCare.ApiModels
 {
+    [Obsolete("Please use the MedicalHistoryProfile class")]
     public class LegacyMedicalHistoryForm
     {
         public int? AllergicMedication1 { get; set; }
