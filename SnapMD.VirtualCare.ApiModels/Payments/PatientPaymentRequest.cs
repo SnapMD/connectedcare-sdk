@@ -21,5 +21,10 @@ namespace SnapMD.VirtualCare.ApiModels.Payments
         /// The debit amount.
         /// </summary>
         public decimal? DebitAmount { get; set; }
+
+        /// <summary>
+        /// The consultation identifier to associated with the payment.
+        /// </summary>
+        public int? ConsultationId { get; set; }
     }
 }
