@@ -28,14 +28,24 @@ namespace SnapMD.VirtualCare.Sdk
             return Post<ApiResponseV2<PatientProfileResponse>>("v2/familygroups/dependents", newPatient);
         }
 
-        // todo: short time implementatin. this has to remove eventually: Han
+        /// <summary>
+        /// Gets the patient data.
+        /// </summary>
+        /// <param name="patientId">The patient identifier.</param>
+        /// <returns></returns>
         public ApiResponseV2<GetPatientsResponse> GetPatientData(int patientId)
         {
-            var url = string.Format("v2/patients/profiles/{0}", patientId);
+            var url = $"v2/patients/profiles/{patientId}";
             var result = MakeCall<ApiResponseV2<GetPatientsResponse>>(url);
             return result;
         }
 
+        /// <summary>
+        /// Create a new patient.
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        /// <exception cref="SnapSdkException">Model invalid</exception>
         public ApiResponseV2<NewPatientResponse> NewPatient(NewPatientRequest request)
         {
             if (request.ValidateModel())
