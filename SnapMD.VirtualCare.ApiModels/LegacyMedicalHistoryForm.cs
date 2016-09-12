@@ -2,8 +2,12 @@
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Legacy model to represent patient's medical history as entered in the patient's profile.
+    /// </summary>
+    /// <seealso cref="SnapMD.VirtualCare.ApiModels.ILegacyMedicalHistoryForm" />
     [Obsolete("Please use the MedicalHistoryProfile class")]
-    public class LegacyMedicalHistoryForm
+    public class LegacyMedicalHistoryForm : ILegacyMedicalHistoryForm
     {
         public int? AllergicMedication1 { get; set; }
 

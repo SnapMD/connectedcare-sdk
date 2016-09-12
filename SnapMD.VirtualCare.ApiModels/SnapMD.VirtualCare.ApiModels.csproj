@@ -107,6 +107,10 @@
     <Compile Include="DependentRelationship.cs" />
     <Compile Include="EmailUserRequest.cs" />
     <Compile Include="IHospitalResponse.cs" />
+    <Compile Include="ILegacyAllergyAdapter.cs" />
+    <Compile Include="ILegacyMedicalHistoryForm.cs" />
+    <Compile Include="ILegacyMedicationAdapter.cs" />
+    <Compile Include="ILegacySurgeryAdapter.cs" />
     <Compile Include="ImageUploadResponse.cs" />
     <Compile Include="LegacyMedicalHistoryForm.cs" />
     <Compile Include="NewCoUserRequest.cs" />
