@@ -28,5 +28,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The user type identifier.
         /// </value>
         public UserType? UserTypeId { get; set; }
+
+        /// <summary>
+        /// The token for the email request.
+        /// </summary>
+        public string Token { get; set; }
     }
 }
