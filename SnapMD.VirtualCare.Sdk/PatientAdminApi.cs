@@ -40,19 +40,25 @@ namespace SnapMD.VirtualCare.Sdk
 
         public ApiResponse<PatientOnBoardShortDetail> GetPatient(string email)
         {
-            var url = string.Format("v2/admin/patients?email={0}", email);
+            var url = $"v2/admin/patients?email={email}";
             return MakeCall<ApiResponse<PatientOnBoardShortDetail>>(url);
         }
 
         public ApiResponseV2<AddPatientAdminResponseShort> AddPatient(PatientOnBoardShortDetail patient)
         {
-            if (patient.ValidateModel())
+            return AddPatient(patient, false);
+
+        }
+
+        public ApiResponseV2<AddPatientAdminResponseShort> AddPatient(PatientOnBoardShortDetail patient, bool allowNullEmail)
+        {
+            if (patient.ValidateModel(message => new SnapSdkException(message), allowNullEmail))
             {
                 return Post<ApiResponseV2<AddPatientAdminResponseShort>>("v2/admin/patients", patient);
             }
-            
+
             throw new SnapSdkException("Patient model is missing values");
-            
+
         }
 
         public void DeletePatient(int patientId)
