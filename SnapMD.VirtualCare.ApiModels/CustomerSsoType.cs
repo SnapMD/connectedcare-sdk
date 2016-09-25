@@ -11,10 +11,24 @@
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+	/// <summary>
+	/// An enum encapsulating the different types of SSO access for customers.
+	/// </summary>
     public enum CustomerSsoType
     {
+    	/// <summary>
+    	/// No specific level of access is set.
+    	/// </summary>
         None,
+
+        /// <summary>
+        /// Access by SSO is optional.
+        /// </summary>
         Optional,
+
+        /// <summary>
+        /// Access by SSO is mandatory.
+        /// </summary>
         Mandatory
     }
 }
