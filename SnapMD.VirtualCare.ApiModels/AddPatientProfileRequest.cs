@@ -1,4 +1,5 @@
-﻿using SnapMD.Web.Api.Models;
+﻿using System;
+using SnapMD.Web.Api.Models;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
@@ -12,6 +13,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public LegacyMedicalHistoryForm PatientMedicalHistoryData { get; set; }
         public PatientProfileFieldChangesTrackingRequest PatientProfileFieldsTracing { get; set; }
         public int? TimeZoneId { get; set; }
+        public Guid? ImageId { get; set; }
     }
 
  

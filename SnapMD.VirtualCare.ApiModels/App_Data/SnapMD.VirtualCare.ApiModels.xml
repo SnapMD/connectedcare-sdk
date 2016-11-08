@@ -65,7 +65,7 @@
                 explanation.
             </summary>
             <value>
-                The message..
+                The message.
             </value>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ApiResponseV2`1.Total">
