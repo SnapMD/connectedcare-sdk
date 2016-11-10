@@ -259,9 +259,7 @@
     <None Include="SnapMD.VirtualCare.ApiModels.ruleset" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\SnapMD.VirtualCare.ApiModels.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="App_Data\SnapMD.VirtualCare.ApiModels.xml" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.1.13.0\analyzers\SonarAnalyzer.CSharp.dll" />
