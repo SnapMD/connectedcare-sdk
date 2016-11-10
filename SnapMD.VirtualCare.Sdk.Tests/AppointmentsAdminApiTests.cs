@@ -33,7 +33,11 @@ namespace SnapMD.VirtualCare.Sdk.Tests
         [Test]
         public void GetAppointmentTest()
         {
-            var appointment = Builder<AppointmentResponse>.CreateNew().Build();
+            var appointment = Builder<AppointmentResponse>
+                .CreateNew()
+                .With(x => x.StartTime = null)
+                .With(x => x.EndTime = null)
+                .Build();
             var expectedResponse = new ApiResponseV2<AppointmentResponse>(appointment);
 
             _mockWebClient.Setup(c => c.DownloadString(
