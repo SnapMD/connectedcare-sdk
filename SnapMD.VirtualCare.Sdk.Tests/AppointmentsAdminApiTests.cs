@@ -35,8 +35,8 @@ namespace SnapMD.VirtualCare.Sdk.Tests
         {
             var appointment = Builder<AppointmentResponse>
                 .CreateNew()
-                .With(x => x.StartTime = null)
-                .With(x => x.EndTime = null)
+                .With(x => x.StartTime = DateTime.Now)
+                .With(x => x.EndTime = DateTime.Now.AddHours(1))
                 .Build();
             var expectedResponse = new ApiResponseV2<AppointmentResponse>(appointment);
 
