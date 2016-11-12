@@ -19,6 +19,9 @@ namespace SnapMD.VirtualCare.ApiModels
     public class PatientConsultationInfo
     {
         public int ConsultationId { get; set; }
+        public Guid? MeetingId { get; set; }
+        public Guid PatientPersonId { get; set; }
+        public Guid ProviderPersonId { get; set; }
         public int PatientId { get; set; }
         public string SessionId { get; set; }
         public int ConsultantUserId { get; set; }
