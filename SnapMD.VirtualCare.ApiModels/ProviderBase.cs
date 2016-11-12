@@ -16,104 +16,68 @@
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
-    ///     Base class for providers
+    /// A class encaptulating information about providers.
     /// </summary>
     public abstract class ProviderBase
     {
         /// <summary>
-        ///     Gets or sets the address.
+        /// The address of the provider.
         /// </summary>
-        /// <value>
-        ///     The address.
-        /// </value>
         public string Address { get; set; }
 
         /// <summary>
-        ///     Gets or sets the appointments contact number.
+        /// The provider telephone number used for appointments.
         /// </summary>
-        /// <value>
-        ///     The appointments contact number.
-        /// </value>
         public string AppointmentsContactNumber { get; set; }
 
         /// <summary>
-        ///     Gets or sets the color of the brand.
+        /// The colors used in the provider's brand.
         /// </summary>
-        /// <value>
-        ///     The color of the brand.
-        /// </value>
         public string BrandColor { get; set; }
 
         /// <summary>
-        ///     Gets or sets the name of the brand.
+        /// The name of the provider's brand.
         /// </summary>
-        /// <value>
-        ///     The name of the brand.
-        /// </value>
         public string BrandName { get; set; }
 
         /// <summary>
-        ///     Gets or sets the brand title.
+        /// The title of the provider's brand.
         /// </summary>
-        /// <value>
-        ///     The brand title.
-        /// </value>
         public string BrandTitle { get; set; }
 
         /// <summary>
-        ///     Gets or sets the consultation charge.
+        /// The amount the provider charges for a consultation.
         /// </summary>
-        /// <value>
-        ///     The consultation charge.
-        /// </value>
         public double? ConsultationCharge { get; set; }
 
         /// <summary>
-        ///     Gets or sets the contact number.
+        /// The provider contact telephone number.
         /// </summary>
-        /// <value>
-        ///     The contact number.
-        /// </value>
         public string ContactNumber { get; set; }
 
         /// <summary>
-        ///     Gets or sets the email.
+        /// The provider's email address.
         /// </summary>
-        /// <value>
-        ///     The email.
-        /// </value>
         public string Email { get; set; }
         
         /// <summary>
-        ///     Gets or sets it department contact number.
+        /// The provider's IT department contact number.
         /// </summary>
-        /// <value>
-        ///     It department contact number.
-        /// </value>
         public string ITDepartmentContactNumber { get; set; }
 
         /// <summary>
-        ///     Gets or sets the locale.
+        /// The locale of the provider.
         /// </summary>
-        /// <value>
-        ///     The locale.
-        /// </value>
         public string Locale { get; set; }
 
         /// <summary>
-        ///     Gets or sets the state.
+        /// The state the provider resides in.
         /// </summary>
-        /// <value>
-        ///     The state.
-        /// </value>
         public string State { get; set; }
 
         /// <summary>
-        ///     Gets or sets the state identifier.
+        /// The numeric ID of the state the provider resides in.
         /// </summary>
-        /// <value>
-        ///     The state identifier.
-        /// </value>
         public int? StateId { get; set; }
     }
 }
