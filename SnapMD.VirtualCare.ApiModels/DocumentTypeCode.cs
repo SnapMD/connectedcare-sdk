@@ -12,10 +12,24 @@
 #endregion
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// An enum that encapsulates available public document type codes.
+    /// </summary>
     public enum DocumentTypeCode
     {
+        /// <summary>
+        /// An undefined document.
+        /// </summary>
         None,
+
+        /// <summary>
+        /// The terms and conditions document.
+        /// </summary>
         TermsAndConditions,
+
+        /// <summary>
+        /// The consent to treat document.
+        /// </summary>
         ConsentToTreat
     }
 }

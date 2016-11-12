@@ -8,7 +8,7 @@ namespace SnapMD.VirtualCare.ApiModels
     public class ConsultationParticipantRequest
     {
     	/// <summary>
-    	/// The ID of the participant, when viewed as ever having been a participant in a consultation
+    	/// The ID of the participant, when viewed as ever having been a participant in a consultation.
     	/// </summary>
     	/// <remarks>
     	/// This is distinct from a person ID, which always stays the same.
@@ -17,8 +17,8 @@ namespace SnapMD.VirtualCare.ApiModels
         public Guid? ParticipantId { get; set; }
 
         /// <summary>
-        /// The type of participant 
-        /// </summary<
+        /// The type of participant.
+        /// </summary>
         /// <remarks>
         /// 1. Patient
         /// 2. Practitioner
@@ -27,22 +27,22 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? ParticipantType { get; set; }
 
         /// <summary>
-        /// The first name of the participant
+        /// The first name of the participant.
         /// </summary>
         public string FirstName { get; set; }
 
         /// <summary>
-        /// The last name of the participant
+        /// The last name of the participant.
         /// </summary>
         public string LastName { get; set; }
 
         /// <summary>
-        /// The URL where the participant's profile picture is stored
+        /// The URL where a participant's profile picture is stored.
         /// </summary>
         public string PhotoUrl { get; set; }
 
         /// <summary>
-        /// The content of the participant's profile picture
+        /// The content of a participant's profile picture.
         /// </summary>
         public byte[] PhotoContent { get; set; }
     }

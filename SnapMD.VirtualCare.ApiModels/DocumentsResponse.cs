@@ -15,13 +15,25 @@ using System;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+	/// <summary>
+	/// A class that encapsulates a response to a query about documents.
+	/// </summary>
     [Serializable]
     public class DocumentsResponse
     {
+    	/// <summary>
+    	/// The document type, as a code.
+    	/// </summary>
         public DocumentTypeCode DocumentType { get; set; }
 
+        /// <summary>
+        /// The ID of the hospital that uses the given document.
+        /// </summary>
         public int HospitalId { get; set; }
 
+        /// <summary>
+        /// The text of the document.
+        /// </summary>
         public string DocumentText { get; set; }
     }
 }
