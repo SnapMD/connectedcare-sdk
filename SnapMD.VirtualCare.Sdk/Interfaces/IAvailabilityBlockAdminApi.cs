@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.ApiModels.Scheduling;
-using SnapMD.VirtualCare.Sdk.Models;
 
 namespace SnapMD.VirtualCare.Sdk.Interfaces
 {
@@ -14,5 +9,7 @@ namespace SnapMD.VirtualCare.Sdk.Interfaces
         ApiResponseV2<AvailabilityBlockResponse> GetAvailabilityBlocks(AvailabilityBlocksFilter request);
 
         ApiResponseV2<AvailabilityBlockResponse> CreateAvailabilityBlock(AvailabilityBlockRequest availabilityBlockRequest);
+
+        void DeleteAvailabilityBlock(Guid blockId);
     }
 }
