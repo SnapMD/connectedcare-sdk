@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.ApiModels.Scheduling;
 using SnapMD.VirtualCare.Sdk.Interfaces;
@@ -41,6 +42,11 @@ namespace SnapMD.VirtualCare.Sdk
             var result = Post<ApiResponseV2<AvailabilityBlockResponse>>("v2.1/clinicians/availability-blocks", availabilityBlockRequest);
 
             return result;
+        }
+
+        public void DeleteAvailabilityBlock(Guid blockId)
+        {
+            Delete("v2.1/clinicians/availability-blocks/" + blockId);
         }
     }
 }
