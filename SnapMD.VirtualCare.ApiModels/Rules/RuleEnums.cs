@@ -29,7 +29,13 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// The provider visibility: Provider can see patients if/where/when.
         /// </summary>
         [Description("Provider can see patients if/where/when")]
-        ProviderVisibility
+        ProviderVisibility,
+
+        /// <summary>
+        /// The provider visibility: Provider can see patients if/where/when.
+        /// </summary>
+        [Description("Visibility rule set")]
+        VisibilityRuleSet,
     }
 
     /// <summary>
@@ -56,6 +62,16 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// The patient organization rule
         /// </summary>
         PatientOrganizationRule,
+
+        /// <summary>
+        /// The rule that runs other rules
+        /// </summary>
+        CompoundRule,
+
+        /// <summary>
+        /// The provider license rule
+        /// </summary>
+        ProviderLicenseRule,
     }
 
     /// <summary>
@@ -117,7 +133,17 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// <summary>
         /// The patient organization + location data.
         /// </summary>
-        PatientOrganizationLocation
+        PatientOrganizationLocation,
+
+        /// <summary>
+        /// The sub-rule data.
+        /// </summary>
+        SubRule,
+
+        /// <summary>
+        /// The provider license data.
+        /// </summary>
+        ProviderLicense,
     }
 
     /// <summary>
