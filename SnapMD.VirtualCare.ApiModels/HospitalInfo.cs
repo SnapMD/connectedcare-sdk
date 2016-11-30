@@ -116,5 +116,15 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The clinician's login.
         /// </summary>
         public string ClinicianLogin { get; set; }
+
+        /// <summary>
+        /// The api endpoint patient auth token.
+        /// </summary>
+        public string PatientTokenApi { get; set; }
+
+        /// <summary>
+        /// The api endpoint for patient registration.
+        /// </summary>
+        public string PatientRegistrationApi { get; set; }
     }
 }

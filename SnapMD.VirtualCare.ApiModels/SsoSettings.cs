@@ -88,5 +88,15 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The clinician sso link text.
         /// </value>
         public string ClinicianSsoLinkText { get; set; }
+
+        /// <summary>
+        /// The api endpoint patient auth token.
+        /// </summary>
+        public string PatientTokenApi { get; set; }
+
+        /// <summary>
+        /// The api endpoint for patient registration.
+        /// </summary>
+        public string PatientRegistrationApi { get; set; }
     }
 }
