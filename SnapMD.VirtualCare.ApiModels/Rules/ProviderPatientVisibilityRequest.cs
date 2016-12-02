@@ -32,6 +32,14 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public List<ProviderLicenseRegion> ProviderLicenseRegions { get; set; }
 
         /// <summary>
+        /// Address from patient response
+        /// </summary>
+        /// <value>
+        /// Country/state/city/postal code.
+        /// </value>
+        public SubjectAddress PatientResponseAddress { get; set; }
+
+        /// <summary>
         /// A value indicating whether this <see cref="ProviderPatientVisibilityRequest"/> is debug.
         /// (inhetrited from <see cref="IRuleExecutionRequest"/>).
         /// Additional information maybe included in the response on debug.
