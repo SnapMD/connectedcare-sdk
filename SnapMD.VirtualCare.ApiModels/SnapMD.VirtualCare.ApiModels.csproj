@@ -118,6 +118,7 @@
     <Compile Include="Payments\PatientPaymentRequest.cs" />
     <Compile Include="Payments\PatientPaymentResponse.cs" />
     <Compile Include="PersonName.cs" />
+    <Compile Include="Rules\CompoundRuleResponse.cs" />
     <Compile Include="Rules\GeoCoordinate.cs" />
     <Compile Include="Rules\IRuleExecutionRequest.cs" />
     <Compile Include="Rules\PatientOrganizationRuleRequest.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="Rules\SubjectDistanceRuleRequest.cs" />
     <Compile Include="Rules\SubjectDistanceRuleResponse.cs" />
     <Compile Include="ProfileImageResponse.cs" />
+    <Compile Include="Rules\SubRuleRequest.cs" />
     <Compile Include="Scheduling\AppointmentSearch.cs" />
     <Compile Include="Scheduling\Coverage\CoverageFrame.cs" />
     <Compile Include="Scheduling\Coverage\CoverageType.cs" />
