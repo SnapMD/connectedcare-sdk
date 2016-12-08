@@ -13,7 +13,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// <value>
         /// The category.
         /// </value>
-        public RuleCategoryCode Category => RuleCategoryCode.PatientVisibility;
+        public RuleCategoryCode Category => RuleCategoryCode.VisibilityRuleSet;
 
         /// <summary>
         /// The hospital identifier for filtering the rules.
