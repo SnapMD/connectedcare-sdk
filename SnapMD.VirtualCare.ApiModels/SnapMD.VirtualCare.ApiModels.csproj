@@ -142,6 +142,7 @@
     <Compile Include="Scheduling\AppointmentSearch.cs" />
     <Compile Include="Scheduling\Coverage\CoverageFrame.cs" />
     <Compile Include="Scheduling\Coverage\CoverageType.cs" />
+    <Compile Include="Scheduling\EncounterTypeCode.cs" />
     <Compile Include="Scheduling\IntakeConcern.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityRequest.cs" />
     <Compile Include="Scheduling\OnDemandAvailabilityResponse.cs" />
