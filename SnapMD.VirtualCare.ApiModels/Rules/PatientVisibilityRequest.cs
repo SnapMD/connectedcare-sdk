@@ -5,7 +5,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <summary>
     /// Request model for patient visibility rule
     /// </summary>
-    public class ProviderLicenseRequest : IRuleExecutionRequest
+    public class PatientVisibilityRequest : IRuleExecutionRequest
     {
         /// <summary>
         /// The category of the rule for the request.

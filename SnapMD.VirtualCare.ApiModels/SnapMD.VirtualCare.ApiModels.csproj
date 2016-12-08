@@ -130,8 +130,8 @@
     <Compile Include="Rules\ProviderLicenseRuleRequest.cs" />
     <Compile Include="Rules\PatientResponseRuleResponse .cs" />
     <Compile Include="Rules\ProviderLicenseRuleResponse.cs" />
-    <Compile Include="Rules\ProviderLicenseRequest.cs" />
-    <Compile Include="Rules\PatientResponseRequest.cs" />
+    <Compile Include="Rules\PatientVisibilityRequest.cs" />
+    <Compile Include="Rules\ProviderVisibilityRequest.cs" />
     <Compile Include="Rules\RegistrationAvailabilityRequest.cs" />
     <Compile Include="Rules\RegistrationAvailabilityResponse.cs" />
     <Compile Include="Rules\RuleDetailsRequest.cs" />
