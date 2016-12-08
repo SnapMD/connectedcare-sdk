@@ -118,6 +118,7 @@
     <Compile Include="Payments\PatientPaymentRequest.cs" />
     <Compile Include="Payments\PatientPaymentResponse.cs" />
     <Compile Include="PersonName.cs" />
+    <Compile Include="Rules\CompoundVisibilityResponse.cs" />
     <Compile Include="Rules\CompoundVisibilityRuleResponse.cs" />
     <Compile Include="Rules\GeoCoordinate.cs" />
     <Compile Include="Rules\IRuleExecutionRequest.cs" />
