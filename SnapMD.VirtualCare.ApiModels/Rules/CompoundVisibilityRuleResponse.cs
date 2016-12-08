@@ -9,7 +9,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <summary>
     /// 
     /// </summary>
-    public class CompoundRuleResponse : CompoundRuleRequest, IRuleResponse
+    public class CompoundVisibilityRuleResponse : CompoundVisibilityRuleRequest, IRuleResponse
     {
         /// <summary>
         /// The rule template of the rule.
