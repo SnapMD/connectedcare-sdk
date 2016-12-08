@@ -3,9 +3,9 @@
 namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
-    /// Request model for PatientVisibility (is patient able to see particular provider)
+    /// Request model for patient visibility rule
     /// </summary>
-    public class ProviderPatientVisibilityRequest : IRuleExecutionRequest
+    public class PatientVisibilityRequest : IRuleExecutionRequest
     {
         /// <summary>
         /// The category of the rule for the request.
@@ -32,15 +32,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public List<ProviderLicenseRegion> ProviderLicenseRegions { get; set; }
 
         /// <summary>
-        /// Address from patient response
-        /// </summary>
-        /// <value>
-        /// Country/state/city/postal code.
-        /// </value>
-        public SubjectAddress PatientResponseAddress { get; set; }
-
-        /// <summary>
-        /// A value indicating whether this <see cref="ProviderPatientVisibilityRequest"/> is debug.
+        /// A value indicating whether this is debug.
         /// (inhetrited from <see cref="IRuleExecutionRequest"/>).
         /// Additional information maybe included in the response on debug.
         /// </summary>
