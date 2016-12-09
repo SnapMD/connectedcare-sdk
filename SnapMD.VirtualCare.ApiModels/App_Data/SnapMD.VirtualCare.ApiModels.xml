@@ -3305,6 +3305,21 @@
             The clinician's login.
             </summary>
         </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.PatientTokenApi">
+            <summary>
+            The api endpoint patient auth token.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.PatientRegistrationApi">
+            <summary>
+            The api endpoint for patient registration.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.PatientForgotPasswordApi">
+            <summary>
+            The api endpoint for patient forgot password.
+            </summary>
+        </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.IMedicalHistoryProfile">
             <summary>
                 Patient medical history profile.
@@ -3518,6 +3533,21 @@
             <value>
             The clinician sso link text.
             </value>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.SsoSettings.PatientTokenApi">
+            <summary>
+            The api endpoint patient auth token.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.SsoSettings.PatientRegistrationApi">
+            <summary>
+            The api endpoint for patient registration.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.SsoSettings.PatientForgotPasswordApi">
+            <summary>
+            The api endpoint for patient forgot password.
+            </summary>
         </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.StaffAccountModelRequest">
             <summary>
