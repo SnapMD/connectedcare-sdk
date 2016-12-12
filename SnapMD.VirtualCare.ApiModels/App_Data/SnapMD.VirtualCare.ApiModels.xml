@@ -149,6 +149,41 @@
             Id of the user just created
             </summary>
         </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest">
+            <summary>
+            DocumentEncounterRequest
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.StartTime">
+            <summary>
+            StartTime
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.EndTime">
+            <summary>
+            EndTime
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.IntakeMetadata">
+            <summary>
+            IntakeMetadata
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.Participants">
+            <summary>
+            Participants
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.DocumentEncounterResponse">
+            <summary>
+            DocumentEncounterResponse
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterResponse.ConsultationId">
+            <summary>
+            ConsultationId
+            </summary>
+        </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.EmailUserRequest">
             <summary>
             Request Model for sending email to user. 
@@ -966,11 +1001,6 @@
             The provider visibility: Provider can see patients if/where/when.
             </summary>
         </member>
-        <member name="F:SnapMD.VirtualCare.ApiModels.Rules.RuleCategoryCode.VisibilityRuleSet">
-            <summary>
-            The provider visibility: Provider can see patients if/where/when.
-            </summary>
-        </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.Rules.RuleTypeCode">
             <summary>
             Code for Type of Rules 
@@ -994,21 +1024,6 @@
         <member name="F:SnapMD.VirtualCare.ApiModels.Rules.RuleTypeCode.PatientOrganizationRule">
             <summary>
             The patient organization rule
-            </summary>
-        </member>
-        <member name="F:SnapMD.VirtualCare.ApiModels.Rules.RuleTypeCode.CompoundRule">
-            <summary>
-            The rule that runs other rules
-            </summary>
-        </member>
-        <member name="F:SnapMD.VirtualCare.ApiModels.Rules.RuleTypeCode.ProviderLicenseRule">
-            <summary>
-            The provider license rule
-            </summary>
-        </member>
-        <member name="F:SnapMD.VirtualCare.ApiModels.Rules.RuleTypeCode.PatientResponseRule">
-            <summary>
-            The patient response rule
             </summary>
         </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.Rules.RuleDecisionTypeCode">
@@ -1069,16 +1084,6 @@
         <member name="F:SnapMD.VirtualCare.ApiModels.Rules.RuleConditionSource.PatientOrganizationLocation">
             <summary>
             The patient organization + location data.
-            </summary>
-        </member>
-        <member name="F:SnapMD.VirtualCare.ApiModels.Rules.RuleConditionSource.SubRule">
-            <summary>
-            The sub-rule data.
-            </summary>
-        </member>
-        <member name="F:SnapMD.VirtualCare.ApiModels.Rules.RuleConditionSource.ProviderLicense">
-            <summary>
-            The provider license data.
             </summary>
         </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.Rules.RuleLogicTypeCode">
@@ -1811,6 +1816,36 @@
             Unavailable.
             </summary>
         </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode">
+            <summary>
+            EncounterTypeCode for the appointment
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode.Text">
+            <summary>
+            Text
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode.Phone">
+            <summary>
+            Phone
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode.Video">
+            <summary>
+            Video
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode.InPerson">
+            <summary>
+            InPerson
+            </summary>
+        </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.Scheduling.OnDemandAvailabilityRequest">
             <summary>
             Request Model for OnDemandAvailability
@@ -2223,6 +2258,11 @@
             Intake metadata (Concerns and additional notes).
             </summary>
         </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentApiRequest.EncounterTypeCode">
+            <summary>
+            EncounterTypeCode
+            </summary>
+        </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentApiRequest.Participants">
             <summary>
             Appointment participants.
@@ -2547,6 +2587,14 @@
             </summary>
             <value>
             The patient identifier.
+            </value>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.OnDemandIntakeRequest.EncounterTypeCode">
+            <summary>
+            Gets or sets encounter type code
+            </summary>
+            <value>
+            EncounterTypeCode
             </value>
         </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.SiteNotifications.SiteNotificationRequest">
@@ -3305,21 +3353,6 @@
             The clinician's login.
             </summary>
         </member>
-        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.PatientTokenApi">
-            <summary>
-            The api endpoint patient auth token.
-            </summary>
-        </member>
-        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.PatientRegistrationApi">
-            <summary>
-            The api endpoint for patient registration.
-            </summary>
-        </member>
-        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.PatientForgotPasswordApi">
-            <summary>
-            The api endpoint for patient forgot password.
-            </summary>
-        </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.IMedicalHistoryProfile">
             <summary>
                 Patient medical history profile.
@@ -3533,21 +3566,6 @@
             <value>
             The clinician sso link text.
             </value>
-        </member>
-        <member name="P:SnapMD.VirtualCare.ApiModels.SsoSettings.PatientTokenApi">
-            <summary>
-            The api endpoint patient auth token.
-            </summary>
-        </member>
-        <member name="P:SnapMD.VirtualCare.ApiModels.SsoSettings.PatientRegistrationApi">
-            <summary>
-            The api endpoint for patient registration.
-            </summary>
-        </member>
-        <member name="P:SnapMD.VirtualCare.ApiModels.SsoSettings.PatientForgotPasswordApi">
-            <summary>
-            The api endpoint for patient forgot password.
-            </summary>
         </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.StaffAccountModelRequest">
             <summary>

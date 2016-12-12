@@ -32,8 +32,8 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         Video,
 
         /// <summary>
-        /// Offline documentation
+        /// InPerson
         /// </summary>
-        Document
+        InPerson
     }
 }
