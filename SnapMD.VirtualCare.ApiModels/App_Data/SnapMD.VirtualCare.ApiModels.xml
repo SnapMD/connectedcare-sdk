@@ -149,6 +149,41 @@
             Id of the user just created
             </summary>
         </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest">
+            <summary>
+            DocumentEncounterRequest
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.StartTime">
+            <summary>
+            StartTime
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.EndTime">
+            <summary>
+            EndTime
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.IntakeMetadata">
+            <summary>
+            IntakeMetadata
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.Participants">
+            <summary>
+            Participants
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.DocumentEncounterResponse">
+            <summary>
+            DocumentEncounterResponse
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterResponse.ConsultationId">
+            <summary>
+            ConsultationId
+            </summary>
+        </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.EmailUserRequest">
             <summary>
             Request Model for sending email to user. 
@@ -181,6 +216,26 @@
         <member name="P:SnapMD.VirtualCare.ApiModels.EmailUserRequest.Token">
             <summary>
             The token for the email request.
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.IHospitalResponse">
+            <summary>
+            An interface encapsulating information about a hospital's settings.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.IHospitalResponse.EnabledModules">
+            <summary>
+            The list of modules enabled for a hospital.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.IHospitalResponse.Locale">
+            <summary>
+            The locale of the provider.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.IHospitalResponse.Settings">
+            <summary>
+            The dictionary of hospital settings.
             </summary>
         </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.ImageUploadResponse">
@@ -1761,6 +1816,36 @@
             Unavailable.
             </summary>
         </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode">
+            <summary>
+            EncounterTypeCode for the appointment
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode.Text">
+            <summary>
+            Text
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode.Phone">
+            <summary>
+            Phone
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode.Video">
+            <summary>
+            Video
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode.InPerson">
+            <summary>
+            InPerson
+            </summary>
+        </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.Scheduling.OnDemandAvailabilityRequest">
             <summary>
             Request Model for OnDemandAvailability
@@ -2173,6 +2258,11 @@
             Intake metadata (Concerns and additional notes).
             </summary>
         </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentApiRequest.EncounterTypeCode">
+            <summary>
+            EncounterTypeCode
+            </summary>
+        </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.Scheduling.AppointmentApiRequest.Participants">
             <summary>
             Appointment participants.
@@ -2499,6 +2589,14 @@
             The patient identifier.
             </value>
         </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.OnDemandIntakeRequest.EncounterTypeCode">
+            <summary>
+            Gets or sets encounter type code
+            </summary>
+            <value>
+            EncounterTypeCode
+            </value>
+        </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.SiteNotifications.SiteNotificationRequest">
             <summary>
                 Request payload for site notifications.
@@ -2615,140 +2713,122 @@
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ConsultationParticipantRequest.ParticipantId">
             <summary>
-            The ID of the participant, when viewed as ever having been a participant in a consultation
+            The ID of the participant, when viewed as ever having been a participant in a consultation.
             </summary>
             <remarks>
             This is distinct from a person ID, which always stays the same.
             A single person could have multiple participant ID's, depending on their consultations.
             </remarks> 
         </member>
-        <!-- Badly formed XML comment ignored for member "P:SnapMD.VirtualCare.ApiModels.ConsultationParticipantRequest.ParticipantType" -->
+        <member name="P:SnapMD.VirtualCare.ApiModels.ConsultationParticipantRequest.ParticipantType">
+            <summary>
+            The type of participant.
+            </summary>
+            <remarks>
+            1. Patient
+            2. Practitioner
+            3. Related Person
+            </remarks>
+        </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ConsultationParticipantRequest.FirstName">
             <summary>
-            The first name of the participant
+            The first name of the participant.
             </summary>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ConsultationParticipantRequest.LastName">
             <summary>
-            The last name of the participant
+            The last name of the participant.
             </summary>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ConsultationParticipantRequest.PhotoUrl">
             <summary>
-            The URL where the participant's profile picture is stored
+            The URL where a participant's profile picture is stored.
             </summary>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ConsultationParticipantRequest.PhotoContent">
             <summary>
-            The content of the participant's profile picture
+            The content of a participant's profile picture.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "T:SnapMD.VirtualCare.ApiModels.ConsultationParticipantResponse" -->
+        <member name="T:SnapMD.VirtualCare.ApiModels.ConsultationParticipantResponse">
+            <summary>
+            The object used to encapsulate a consultation participant after a change has been made.
+            </summary>
+        </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ConsultationParticipantResponse.PersonId">
             <summary>
-            The unique ID of a person, which always stays the same
+            The unique ID of a person.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.ConsultationParticipantResponse.MeetingId">
+            <summary>
+            The id of consultation meeting (chat)
             </summary>
         </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.ProviderBase">
             <summary>
-                Base class for providers
+            A class encaptulating information about providers.
             </summary>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ProviderBase.Address">
             <summary>
-                Gets or sets the address.
+            The address of the provider.
             </summary>
-            <value>
-                The address.
-            </value>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ProviderBase.AppointmentsContactNumber">
             <summary>
-                Gets or sets the appointments contact number.
+            The provider telephone number used for appointments.
             </summary>
-            <value>
-                The appointments contact number.
-            </value>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ProviderBase.BrandColor">
             <summary>
-                Gets or sets the color of the brand.
+            The colors used in the provider's brand.
             </summary>
-            <value>
-                The color of the brand.
-            </value>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ProviderBase.BrandName">
             <summary>
-                Gets or sets the name of the brand.
+            The name of the provider's brand.
             </summary>
-            <value>
-                The name of the brand.
-            </value>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ProviderBase.BrandTitle">
             <summary>
-                Gets or sets the brand title.
+            The title of the provider's brand.
             </summary>
-            <value>
-                The brand title.
-            </value>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ProviderBase.ConsultationCharge">
             <summary>
-                Gets or sets the consultation charge.
+            The amount the provider charges for a consultation.
             </summary>
-            <value>
-                The consultation charge.
-            </value>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ProviderBase.ContactNumber">
             <summary>
-                Gets or sets the contact number.
+            The provider contact telephone number.
             </summary>
-            <value>
-                The contact number.
-            </value>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ProviderBase.Email">
             <summary>
-                Gets or sets the email.
+            The provider's email address.
             </summary>
-            <value>
-                The email.
-            </value>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ProviderBase.ITDepartmentContactNumber">
             <summary>
-                Gets or sets it department contact number.
+            The provider's IT department contact number.
             </summary>
-            <value>
-                It department contact number.
-            </value>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ProviderBase.Locale">
             <summary>
-                Gets or sets the locale.
+            The locale of the provider.
             </summary>
-            <value>
-                The locale.
-            </value>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ProviderBase.State">
             <summary>
-                Gets or sets the state.
+            The state the provider resides in.
             </summary>
-            <value>
-                The state.
-            </value>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.ProviderBase.StateId">
             <summary>
-                Gets or sets the state identifier.
+            The numeric ID of the state the provider resides in.
             </summary>
-            <value>
-                The state identifier.
-            </value>
         </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.ProviderRequest">
             <summary>
@@ -2924,6 +3004,26 @@
                 Get Doctor profile image or default one.
             </summary>
         </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.CustomerSsoType">
+            <summary>
+            An enum encapsulating the different types of SSO access for customers.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.CustomerSsoType.None">
+            <summary>
+            No specific level of access is set.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.CustomerSsoType.Optional">
+            <summary>
+            Access by SSO is optional.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.CustomerSsoType.Mandatory">
+            <summary>
+            Access by SSO is mandatory.
+            </summary>
+        </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.GlobalStatusCode">
             <summary>
             Requested by daniel.bouganim@snap.md
@@ -2972,6 +3072,46 @@
             <value>
             The gender: "M" for Male, "F" for Female.
             </value>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.DocumentsResponse">
+            <summary>
+            A class that encapsulates a response to a query about documents.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentsResponse.DocumentType">
+            <summary>
+            The document type, as a code.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentsResponse.HospitalId">
+            <summary>
+            The ID of the hospital that uses the given document.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentsResponse.DocumentText">
+            <summary>
+            The text of the document.
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.DocumentTypeCode">
+            <summary>
+            An enum that encapsulates available public document type codes.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.DocumentTypeCode.None">
+            <summary>
+            An undefined document.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.DocumentTypeCode.TermsAndConditions">
+            <summary>
+            The terms and conditions document.
+            </summary>
+        </member>
+        <member name="F:SnapMD.VirtualCare.ApiModels.DocumentTypeCode.ConsentToTreat">
+            <summary>
+            The consent to treat document.
+            </summary>
         </member>
         <member name="P:SnapMD.VirtualCare.ApiModels.EncounterConcern.CustomCodeSerializable">
             <summary>
@@ -3113,6 +3253,104 @@
         <member name="P:SnapMD.VirtualCare.ApiModels.ScheduledConsultationResult.MeetingId">
             <summary>
             The meeting identifier.
+            </summary>
+        </member>
+        <member name="T:SnapMD.VirtualCare.ApiModels.HospitalInfo">
+            <summary>
+            A class encapsulating info about a hospital.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.City">
+            <summary>
+            The city in which the hospital resides.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.ContactPerson">
+            <summary>
+            The contact person at this hospital.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.CustomerSso">
+            <summary>
+            The level of SSO this hospital requires to access the SnapMD system.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.CustomerSsoLinkText">
+            <summary>
+            The link text used to allow a customer SSO access.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.EnabledModules">
+            <summary>
+            The list of modules enabled for a hospital.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.HospitalId">
+            <summary>
+            The hospital ID.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.HospitalName">
+            <summary>
+            The name of the hospital.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.HospitalImage">
+            <summary>
+            Am image of the hospital.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.IsActive">
+            <summary>
+            Whether the hospital is active.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.OperatingHours">
+            <summary>
+            The operating hours for the provider.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.HospitalDomainName">
+            <summary>
+            The domain name of the provider.
+            </summary>
+            <remarks>
+            The path to the appropriate login URL must be provided when providing a link to this domain name.
+            </remarks>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.PatientConsultEndUrl">
+            <summary>
+            The URL used for handling enounters through patients.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.PatientLogin">
+            <summary>
+            The patient's login.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.Settings">
+            <summary>
+            The dictionary of hospital settings.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.ClinicianSso">
+            <summary>
+            The level of SSO access required for a clinician.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.ClinicianSsoLinkText">
+            <summary>
+            The link text used to allow a clinician SSO access.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.ClinicianConsultEndUrl">
+            <summary>
+            The URL used for handling enounters through clinicians.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.HospitalInfo.ClinicianLogin">
+            <summary>
+            The clinician's login.
             </summary>
         </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.IMedicalHistoryProfile">
