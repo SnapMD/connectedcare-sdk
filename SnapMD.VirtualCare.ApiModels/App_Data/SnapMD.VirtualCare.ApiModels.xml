@@ -1841,9 +1841,9 @@
             Video
             </summary>
         </member>
-        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode.Document">
+        <member name="F:SnapMD.VirtualCare.ApiModels.Scheduling.EncounterTypeCode.InPerson">
             <summary>
-            Offline documentation
+            InPerson
             </summary>
         </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.Scheduling.OnDemandAvailabilityRequest">
