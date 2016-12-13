@@ -164,14 +164,34 @@
             EndTime
             </summary>
         </member>
-        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.IntakeMetadata">
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.PatientId">
             <summary>
-            IntakeMetadata
+            Gets or sets the patient identifier.
             </summary>
         </member>
-        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.Participants">
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.SoapNote">
             <summary>
-            Participants
+            SoapNote
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.Phone">
+            <summary>
+            Gets or sets the phone.
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.AdditionalNotes">
+            <summary>
+            AdditionalNotes
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.EncounterTypeCode">
+            <summary>
+            EncounterTypeCode
+            </summary>
+        </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.Concerns">
+            <summary>
+            IntakeConcerns
             </summary>
         </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.DocumentEncounterResponse">
