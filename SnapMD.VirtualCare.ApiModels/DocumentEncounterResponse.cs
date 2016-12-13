@@ -10,11 +10,8 @@ namespace SnapMD.VirtualCare.ApiModels
     /// <summary>
     /// DocumentEncounterResponse
     /// </summary>
-    public class DocumentEncounterResponse : DocumentEncounterRequest
+    public class DocumentEncounterResponse
     {
-        //TODO: May be not required. Revisit this
-        //public new List<AppointmentParticipantResponse> Participants { get; set; }
-
         /// <summary>
         /// ConsultationId
         /// </summary>
