@@ -194,6 +194,11 @@
             IntakeConcerns
             </summary>
         </member>
+        <member name="P:SnapMD.VirtualCare.ApiModels.DocumentEncounterRequest.MedicalCodesIds">
+            <summary>
+            MedicalCodeIds - example ids of ICD-10-DX system
+            </summary>
+        </member>
         <member name="T:SnapMD.VirtualCare.ApiModels.DocumentEncounterResponse">
             <summary>
             DocumentEncounterResponse

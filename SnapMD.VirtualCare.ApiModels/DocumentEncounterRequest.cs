@@ -52,5 +52,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// IntakeConcerns
         /// </summary>
         public List<IntakeConcern>  Concerns { get; set; }
+
+        /// <summary>
+        /// MedicalCodeIds - example ids of ICD-10-DX system
+        /// </summary>
+        public int[] MedicalCodesIds { get; set; }
     }
 }
