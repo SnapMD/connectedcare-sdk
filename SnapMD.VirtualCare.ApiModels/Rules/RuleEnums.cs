@@ -77,6 +77,11 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// The patient response rule
         /// </summary>
         PatientResponseRule,
+
+        /// <summary>
+        /// The patient address & provider license matching rule
+        /// </summary>
+        PatientProviderLicenseRule,
     }
 
     /// <summary>
