@@ -32,12 +32,36 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         public List<ProviderLicenseRegion> ProviderLicenseRegions { get; set; }
 
         /// <summary>
-        /// Address from patient response
+        /// Parsed patient address from patient's profile
         /// </summary>
         /// <value>
         /// Country/state/city/postal code.
         /// </value>
-        public SubjectAddress PatientResponseAddress { get; set; }
+        public SubjectAddress PatientAddress { get; set; }
+
+        /// <summary>
+        /// Unarsed patient address from patient's profile
+        /// </summary>
+        /// <value>
+        /// Free-form address text.
+        /// </value>
+        public string PatientAddressText { get; set; }
+
+        /// <summary>
+        /// Parsed  encounter address from patient's response
+        /// </summary>
+        /// <value>
+        /// Country/state/city/postal code.
+        /// </value>
+        public SubjectAddress EncounterAddress { get; set; }
+
+        /// <summary>
+        /// Unarsed encounter address from patient's response
+        /// </summary>
+        /// <value>
+        /// Free-form address text.
+        /// </value>
+        public string EncounterAddressText { get; set; }
 
         /// <summary>
         /// A value indicating whether this is debug.

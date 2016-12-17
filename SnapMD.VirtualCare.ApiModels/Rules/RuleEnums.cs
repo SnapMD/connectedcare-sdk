@@ -154,6 +154,16 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// The provider license data.
         /// </summary>
         ProviderLicense,
+
+        /// <summary>
+        /// The provider license data and patient address.
+        /// </summary>
+        ProviderLicenseAndPatientAddress,
+
+        /// <summary>
+        /// The provider license data and address of encounter.
+        /// </summary>
+        ProviderLicenseAndEncounterAddress,
     }
 
     /// <summary>
