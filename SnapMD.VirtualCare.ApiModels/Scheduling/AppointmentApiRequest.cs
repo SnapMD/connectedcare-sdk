@@ -52,5 +52,15 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// Appointment participants.
         /// </summary>
         public List<AppointmentParticipantRequest> Participants { get; set; }
+
+        /// <summary>
+        /// The location or phone number of the appointment.
+        /// </summary>
+        public string Where { get; set; }
+
+        /// <summary>
+        /// The type of location or phone number of the appointment. home | work | temp | old | mobile - purpose of this Where value.
+        /// </summary>
+        public string WhereUse { get; set; }
     }
 }

@@ -126,6 +126,9 @@
     <Compile Include="Rules\PatientOrganizationRuleResponse.cs" />
     <Compile Include="Rules\PostalCodeRequest.cs" />
     <Compile Include="Rules\PostalCodeResponse.cs" />
+    <Compile Include="Rules\ProviderLicenseRuleRequest.cs" />
+    <Compile Include="Rules\ProviderLicenseRuleResponse.cs" />
+    <Compile Include="Rules\ProviderPatientVisibilityRequest.cs" />
     <Compile Include="Rules\RegistrationAvailabilityRequest.cs" />
     <Compile Include="Rules\RegistrationAvailabilityResponse.cs" />
     <Compile Include="Rules\RuleDetailsRequest.cs" />
