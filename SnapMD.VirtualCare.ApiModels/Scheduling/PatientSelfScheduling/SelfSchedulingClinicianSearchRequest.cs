@@ -28,6 +28,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling.PatientSelfScheduling
         public bool OnlyMyProviders { get; set; }
 
         /// <summary>
+        /// Filter providers using visibility rules
+        /// </summary>
+        public bool ApplyVisibilityRules { get; set; }
+
+        /// <summary>
         /// Gender.
         /// </summary>
         public string Gender { get; set; }

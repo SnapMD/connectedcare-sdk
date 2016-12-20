@@ -54,33 +54,5 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// The state code.
         /// </value>
         public string RegionCode { get; set; }
-
-        /// <summary>
-        /// Compare two regions for equality.
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
-        public override bool Equals(object obj)
-        {
-            var second = obj as ProviderLicenseRegion;
-            if (second == null)
-                return false;
-            return string.Equals(Country, second.Country, StringComparison.InvariantCultureIgnoreCase) &&
-                   string.Equals(CountryCode, second.CountryCode, StringComparison.InvariantCultureIgnoreCase) &&
-                   string.Equals(Region, second.Region, StringComparison.InvariantCultureIgnoreCase) &&
-                   string.Equals(RegionCode, second.RegionCode, StringComparison.InvariantCultureIgnoreCase);
-        }
-
-        /// <summary>
-        /// Create hash code according to new <see cref="Equals(object)"/> method.
-        /// </summary>
-        /// <returns></returns>
-        public override int GetHashCode()
-        {
-            return (Country     ?? string.Empty).ToLowerInvariant().GetHashCode() ^
-                   (CountryCode ?? string.Empty).ToLowerInvariant().GetHashCode() ^
-                   (Region      ?? string.Empty).ToLowerInvariant().GetHashCode() ^
-                   (RegionCode  ?? string.Empty).ToLowerInvariant().GetHashCode();
-        }
     }
 }
