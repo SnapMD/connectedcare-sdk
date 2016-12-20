@@ -113,6 +113,10 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? DoctorStatus { get; set; }
         public int? PatientStatus { get; set; }
 
+        public string PhoneNumber { get; set; }
+
+        public string PhoneType { get; set; }
+
         public EncounterTypeCode EncounterTypeCode { get; set; }
     }
 

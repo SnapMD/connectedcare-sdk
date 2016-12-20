@@ -39,6 +39,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public string Phone { get; set; }
 
         /// <summary>
+        /// Gets or sets the phonetype
+        /// </summary>
+        public string PhoneType { get; set; }
+
+        /// <summary>
         /// AdditionalNotes
         /// </summary>
         public string AdditionalNotes { get; set; }
