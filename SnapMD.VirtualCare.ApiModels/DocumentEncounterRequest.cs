@@ -49,6 +49,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public string AdditionalNotes { get; set; }
 
         /// <summary>
+        /// ServiceTypeId
+        /// </summary>
+        public int? ServiceTypeId { get; set; }
+
+        /// <summary>
         /// EncounterTypeCode
         /// </summary>
         public EncounterTypeCode EncounterTypeCode { get; set; }
