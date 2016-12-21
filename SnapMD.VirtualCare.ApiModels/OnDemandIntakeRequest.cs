@@ -11,6 +11,7 @@
 
 using System.Collections.Generic;
 using SnapMD.VirtualCare.Sdk.Models;
+using SnapMD.VirtualCare.ApiModels.Scheduling;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
@@ -48,5 +49,13 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The patient identifier.
         /// </value>
         public int PatientId { get; set; }
+
+        /// <summary>
+        /// Gets or sets encounter type code
+        /// </summary>
+        /// <value>
+        /// EncounterTypeCode
+        /// </value>
+        public EncounterTypeCode EncounterTypeCode { get; set; }
     }
 }

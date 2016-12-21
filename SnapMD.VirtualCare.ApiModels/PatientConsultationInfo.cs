@@ -11,6 +11,7 @@
 //    limitations under the License.
 #endregion
 
+using SnapMD.VirtualCare.ApiModels.Scheduling;
 using System;
 using System.Collections.Generic;
 
@@ -111,6 +112,12 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? Status { get; set; }
         public int? DoctorStatus { get; set; }
         public int? PatientStatus { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public string PhoneType { get; set; }
+
+        public EncounterTypeCode EncounterTypeCode { get; set; }
     }
 
     public class Guardian

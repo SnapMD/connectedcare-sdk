@@ -13,6 +13,7 @@
 
 using System;
 using SnapMD.VirtualCare.Sdk.Models;
+using SnapMD.VirtualCare.ApiModels.Scheduling;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
@@ -43,5 +44,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public double? CopayAmount { get; set; }
 
         public double? ConsultationAmount { get; set; }
+
+        public EncounterTypeCode EncounterTypeCode { get; set; }
     }
 }
