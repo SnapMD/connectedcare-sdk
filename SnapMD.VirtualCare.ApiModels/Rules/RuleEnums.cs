@@ -34,7 +34,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
         /// <summary>
         /// The provider visibility: Provider can see patients if/where/when.
         /// </summary>
-        [Description("Visibility rule set")]
+        [Description("Allow Patient and Provider to see each other if")]
         VisibilityRuleSet,
     }
 
