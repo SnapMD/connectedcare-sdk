@@ -1,4 +1,7 @@
-﻿namespace SnapMD.VirtualCare.ApiModels.Scheduling
+﻿using System;
+using System.Collections.Generic;
+
+namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
     /// <summary>
     /// Response Model for OnDemandAvailability
@@ -15,11 +18,14 @@
         public bool ProviderOnDemandEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets the count of ondemand availability blocks at the moment.
+        /// The list of family members with <see cref="FamilyMember.ProviderAvailable"/> property set.
         /// </summary>
-        /// <value>
-        /// The count of ondemand availability blocks at the moment.
-        /// </value>
+        public List<FamilyMember> FamilyMembers { get; set; }
+
+        /// <summary>
+        /// Deprecated
+        /// </summary>
+        [Obsolete("This field is no more calculated in API call")]
         public int OnDemandAvailabilityBlockCount { get; set; }
     }
 }
