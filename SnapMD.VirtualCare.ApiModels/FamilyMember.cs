@@ -45,5 +45,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public string MobilePhone { get; set; }
         public int? OrganationId { get; set; }
         public int? LocationId { get; set; }
+
+        public bool? ProviderAvailable { get; set; }
     }
 }
