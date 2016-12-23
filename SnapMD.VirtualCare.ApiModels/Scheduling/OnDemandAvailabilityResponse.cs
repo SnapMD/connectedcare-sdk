@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
@@ -20,5 +21,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// The list of family members with <see cref="FamilyMember.ProviderAvailable"/> property set.
         /// </summary>
         public List<FamilyMember> FamilyMembers { get; set; }
+
+        /// <summary>
+        /// Deprecated
+        /// </summary>
+        [Obsolete("This field is no more calculated in API call")]
+        public int OnDemandAvailabilityBlockCount { get; set; }
     }
 }
