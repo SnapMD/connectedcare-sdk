@@ -18,13 +18,15 @@ namespace SnapMD.VirtualCare.ApiModels
     public interface IIntakeQuestionnaire : IMedicalHistoryProfile
     {
         List<EncounterConcern> Concerns { get; set; }
-        
+
         PatientRecord PatientRecord { get; set; }
 
         DoctorRecord DoctorRecord { get; set; }
-        
+
         HospitalRecord HospitalRecord { get; set; }
 
         List<GuardianRecord> GuardiansRecords { get; set; }
+
+        string AdditionalNotes { get; set; }
     }
 }
