@@ -46,5 +46,20 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// The consultation identifier.
         /// </value>
         public int? ConsultationId { get; set; }
+
+        /// <summary>
+        /// Whether the appointment is dismissed
+        /// </summary>
+        public bool Dismissed { get; set; }
+
+        /// <summary>
+        /// Dismissal reason, null if wasn't dismissed
+        /// </summary>
+        public string DismissedReason { get; set; }
+
+        /// <summary>
+        /// Service type name
+        /// </summary>
+        public string ServiceTypeName { get; set; }
     }
 }
