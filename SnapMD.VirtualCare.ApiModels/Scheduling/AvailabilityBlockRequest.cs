@@ -51,5 +51,10 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// Availability block clinician.
         /// </summary>
         public AvailabilityBlockClinicianRequest Clinician { get; set; }
+
+        /// <summary>
+        /// A time interval in an explicitly set timezone.
+        /// </summary>
+        public ZonedTime ZonedTime { get; set; }
     }
 }

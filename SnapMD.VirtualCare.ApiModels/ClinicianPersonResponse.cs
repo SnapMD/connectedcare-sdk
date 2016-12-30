@@ -36,5 +36,10 @@ namespace SnapMD.VirtualCare.ApiModels
         ///     The user identifier.
         /// </value>
         public int UserId { get; set; }
+
+        /// <summary>
+        /// Person's email
+        /// </summary>
+        public string Email { get; set; }
     }
 }

@@ -62,5 +62,16 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// The type of location or phone number of the appointment. home | work | temp | old | mobile - purpose of this Where value.
         /// </summary>
         public string WhereUse { get; set; }
+
+        /// <summary>
+        /// Service type ID
+        /// </summary>
+        public int? ServiceTypeId { get; set; }
+
+        /// <summary>
+        /// A time interval in an explicitly set timezone.
+        /// If set, overrides StartTime and EndTime.
+        /// </summary>
+        public ZonedTime ZonedTime { get; set; }
     }
 }

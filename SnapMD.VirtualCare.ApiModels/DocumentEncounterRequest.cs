@@ -67,5 +67,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// MedicalCodeIds - example ids of ICD-10-DX system
         /// </summary>
         public int[] MedicalCodesIds { get; set; }
+
+        /// <summary>
+        /// A time interval in an explicitly set timezone.
+        /// </summary>
+        public ZonedTime ZonedTime { get; set; }
     }
 }

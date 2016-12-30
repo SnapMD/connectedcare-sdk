@@ -117,6 +117,10 @@ namespace SnapMD.VirtualCare.ApiModels
 
         public string PhoneType { get; set; }
 
+        public bool Dismissed { get; set; }
+
+        public AppointmentTypeCode AppointmentType { get; set; }
+
         public EncounterTypeCode EncounterTypeCode { get; set; }
     }
 
