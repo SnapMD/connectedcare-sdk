@@ -22,6 +22,14 @@ namespace SnapMD.VirtualCare.ApiModels
         public int ProviderId { get; set; }
 
         /// <summary>
+        ///     Gets or sets the department.
+        /// </summary>
+        /// <value>
+        ///     The department.
+        /// </value>
+        public string Department { get; set; }
+
+        /// <summary>
         ///     Gets or sets the specialty.
         /// </summary>
         /// <value>

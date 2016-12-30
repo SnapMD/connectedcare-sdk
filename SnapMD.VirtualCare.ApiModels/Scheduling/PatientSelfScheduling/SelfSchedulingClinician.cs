@@ -54,6 +54,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling.PatientSelfScheduling
         public string Address { get; set; }
 
         /// <summary>
+        /// Department
+        /// </summary>
+        public string Department { get; set; }
+
+        /// <summary>
         /// Medical speciality.
         /// </summary>
         public string MedicalSpeciality { get; set; }
