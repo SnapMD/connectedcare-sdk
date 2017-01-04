@@ -56,7 +56,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <summary>
         /// EncounterTypeCode
         /// </summary>
-        public EncounterTypeCode EncounterTypeCode { get; set; }
+        public EncounterTypeCode? EncounterTypeCode { get; set; }
 
         /// <summary>
         /// IntakeConcerns
