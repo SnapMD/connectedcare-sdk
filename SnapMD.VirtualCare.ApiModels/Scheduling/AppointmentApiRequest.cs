@@ -46,7 +46,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <summary>
         /// EncounterTypeCode
         /// </summary>
-        public EncounterTypeCode EncounterTypeCode { get; set; }
+        public EncounterTypeCode? EncounterTypeCode { get; set; }
 
         /// <summary>
         /// Appointment participants.
