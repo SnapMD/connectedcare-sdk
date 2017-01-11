@@ -20,7 +20,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public int PatientId { get; set; }
         public string PatientName { get; set; }
         public string ProfileImagePath { get; set; }
-        public Guid? PersonImagePath { get; set; }
+        public Guid? PersonImageId { get; set; }
         public int RelationCode { get; set; }
         public bool IsAuthorized { get; set; }
         public DateTime? Birthdate { get; set; }
