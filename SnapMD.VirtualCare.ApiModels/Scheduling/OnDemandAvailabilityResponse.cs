@@ -23,7 +23,12 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public List<FamilyMember> FamilyMembers { get; set; }
 
         /// <summary>
-        /// Deprecated
+        /// Start of current or next (if current does not available) availability block
+        /// </summary>
+        public DateTime? AvailabilityBlockStartTime { get; set; }
+
+        /// <summary>
+        /// Deprecated. Currently 1, if there exists available on demand provider right now, 0 - otherwise.
         /// </summary>
         [Obsolete("This field is no more calculated in API call")]
         public int OnDemandAvailabilityBlockCount { get; set; }
