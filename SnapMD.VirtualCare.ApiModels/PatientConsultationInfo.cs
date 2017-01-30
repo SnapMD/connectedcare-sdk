@@ -72,6 +72,7 @@ namespace SnapMD.VirtualCare.ApiModels
                 return string.Empty;
             }
         }
+        public Double DisconnctedDuration { get; set; }
 
         public DateTime? WaitingConsultationInfo { get; set; }
         public DateTime? StartedConsultationInfo { get; set; }
