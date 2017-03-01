@@ -168,7 +168,17 @@ namespace SnapMD.VirtualCare.Sdk
                 }
                 default:
                 {
-                    throw new SnapSdkException("Unhandled exception when making API call", wex);
+                    if (wex.Response != null)
+                    {
+                        throw new SnapSdkException(
+                            $"Unhandled exception when making API call. {((HttpWebResponse)wex.Response).StatusCode} - {((HttpWebResponse)wex.Response).StatusDescription}.",
+                            wex);
+                    }
+
+                    throw new SnapSdkException(
+                        $"Unhandled exception when making API call.",
+                        wex);
+
                 }
             }
 
