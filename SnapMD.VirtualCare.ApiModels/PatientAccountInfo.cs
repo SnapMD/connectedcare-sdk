@@ -10,6 +10,9 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
+
+using System;
+
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
@@ -28,5 +31,6 @@ namespace SnapMD.VirtualCare.ApiModels
         public bool IsDependent { get; set; }
         public int? GuardianId { get; set; }
         public string Email { get; set; }
+        public Guid PersonId { get; set; }
     }
 }
