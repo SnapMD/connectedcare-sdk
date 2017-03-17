@@ -32,7 +32,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
         private Mock<IWebClient> mockWebClient;
         private string accessToken;
 
-        private readonly PatientOnBoardShortDetail patientDetail = new PatientOnBoardShortDetail
+        private readonly PatientOnBoardShortDetailRequest patientDetail = new PatientOnBoardShortDetailRequest
         {
             Dob = DateTime.Now.AddYears(-30),
             Gender = "M",
@@ -90,7 +90,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
         {
             mockWebClient.Setup(client => client.DownloadString(
                 It.Is<Uri>(uri => uri.ToString().Contains("v2/admin/patients?email=" + patientEmail))))
-                .Returns(JsonConvert.SerializeObject(new ApiResponse<PatientOnBoardShortDetail>
+                .Returns(JsonConvert.SerializeObject(new ApiResponse<PatientOnBoardShortDetailRequest>
                 {
                     Data = patientDetail,
                     Success = true
