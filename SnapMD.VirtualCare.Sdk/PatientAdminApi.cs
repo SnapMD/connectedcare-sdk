@@ -44,13 +44,13 @@ namespace SnapMD.VirtualCare.Sdk
             return MakeCall<ApiResponse<PatientOnBoardShortDetail>>(url);
         }
 
-        public ApiResponseV2<AddPatientAdminResponseShort> AddPatient(PatientOnBoardShortDetail patient)
+        public ApiResponseV2<AddPatientAdminResponseShort> AddPatient(PatientOnBoardShortDetailRequest patient)
         {
             return AddPatient(patient, false);
 
         }
 
-        public ApiResponseV2<AddPatientAdminResponseShort> AddPatient(PatientOnBoardShortDetail patient, bool allowNullEmail)
+        public ApiResponseV2<AddPatientAdminResponseShort> AddPatient(PatientOnBoardShortDetailRequest patient, bool allowNullEmail)
         {
             if (patient.ValidateModel(message => new SnapSdkException(message), allowNullEmail))
             {
@@ -63,7 +63,7 @@ namespace SnapMD.VirtualCare.Sdk
 
         public void DeletePatient(int patientId)
         {
-            Delete<PatientOnBoardShortDetail>($"v2/admin/patients/{patientId}", null);
+            Delete<PatientOnBoardShortDetailRequest>($"v2/admin/patients/{patientId}", null);
         }
 
         public ApiResponseV2<bool> UpdateDependentRelationAndAuthorization
