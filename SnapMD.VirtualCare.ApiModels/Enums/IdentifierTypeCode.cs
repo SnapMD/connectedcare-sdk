@@ -74,25 +74,25 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Account number Creditor</summary>
         /// <remarks>
-        /// Class: Financial<p>A more precise definition of an account number: sometimes two distinct account numbers must be transmitted in the same message, one as the creditor, the other as the debitor.<p>Kreditorenkontonummer
+        /// Class: Financial&lt;p&gt;A more precise definition of an account number: sometimes two distinct account numbers must be transmitted in the same message, one as the creditor, the other as the debitor.&lt;p&gt;Kreditorenkontonummer
         /// </remarks>
         ANC = 104,
 
         /// <summary>Account number debitor</summary>
         /// <remarks>
-        /// Class: Financial<p>A more precise definition of an account number: sometimes two distinct account numbers must be transmitted in the same message, one as the creditor, the other as the debitor.<p>Debitorenkontonummer
+        /// Class: Financial&lt;p&gt;A more precise definition of an account number: sometimes two distinct account numbers must be transmitted in the same message, one as the creditor, the other as the debitor.&lt;p&gt;Debitorenkontonummer
         /// </remarks>
         AND = 105,
 
         /// <summary>Anonymous identifier</summary>
         /// <remarks>
-        /// An identifier for a living subject whose real identity is protected or suppressed<p>Justification: For public health reporting purposes, anonymous identifiers are occasionally used for protecting patient identity in reporting certain results. For instance
+        /// An identifier for a living subject whose real identity is protected or suppressed&lt;p&gt;Justification: For public health reporting purposes, anonymous identifiers are occasionally used for protecting patient identity in reporting certain results. For instance
         /// </remarks>
         ANON = 106,
 
         /// <summary>Temporary Account Number</summary>
         /// <remarks>
-        /// Class: Financial<p>Temporary version of an Account Number.<p>Use Case: An ancillary system that does not normally assign account numbers is the first time to register a patient. This ancillary system will generate a temporary account number that will only
+        /// Class: Financial&lt;p&gt;Temporary version of an Account Number.&lt;p&gt;Use Case: An ancillary system that does not normally assign account numbers is the first time to register a patient. This ancillary system will generate a temporary account number that will only
         /// </remarks>
         ANT = 107,
 
@@ -116,7 +116,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Bank Card Number</summary>
         /// <remarks>
-        /// Class: Financial<p>An identifier that is unique to a person's bank card. Replaces AM, DI, DS, MS, and VS beginning in v 2.5.
+        /// Class: Financial&lt;p&gt;An identifier that is unique to a person's bank card. Replaces AM, DI, DS, MS, and VS beginning in v 2.5.
         /// </remarks>
         BC = 111,
 
@@ -143,7 +143,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Cost Center number</summary>
         /// <remarks>
-        /// Class: Financial<p>Use Case: needed especially for transmitting information about invoices.
+        /// Class: Financial&lt;p&gt;Use Case: needed especially for transmitting information about invoices.
         /// </remarks>
         CC = 116,
 
@@ -170,13 +170,13 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Drug Enforcement Administration registration number</summary>
         /// <remarks>
-        /// An identifier for an individual or organization relative to controlled substance regulation and transactions.<p>Use case: This is a registration number that identifies an individual or organization relative to controlled substance regulation and transacti
+        /// An identifier for an individual or organization relative to controlled substance regulation and transactions.&lt;p&gt;Use case: This is a registration number that identifies an individual or organization relative to controlled substance regulation and transacti
         /// </remarks>
         DEA = 121,
 
         /// <summary>Drug Furnishing or prescriptive authority Number</summary>
         /// <remarks>
-        /// An identifier issued to a health care provider authorizing the person to write drug orders<p>Use Case: A nurse practitioner has authorization to furnish or prescribe pharmaceutical substances; this identifier is in component 1.
+        /// An identifier issued to a health care provider authorizing the person to write drug orders&lt;p&gt;Use Case: A nurse practitioner has authorization to furnish or prescribe pharmaceutical substances; this identifier is in component 1.
         /// </remarks>
         DFN = 122,
 
@@ -266,7 +266,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Jurisdictional health number (Canada)</summary>
         /// <remarks>
-        /// Class: Insurance<p>2 uses: a) UK jurisdictional CHI number; b) Canadian provincial health card number:
+        /// Class: Insurance&lt;p&gt;2 uses: a) UK jurisdictional CHI number; b) Canadian provincial health card number:
         /// </remarks>
         JHN = 140,
 
@@ -299,7 +299,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Member Number</summary>
         /// <remarks>
-        /// An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier.<p>Use Case: Person is covered by an insurance policy. This person may or may not be the subscriber of the policy.
+        /// An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier.&lt;p&gt;Use Case: Person is covered by an insurance policy. This person may or may not be the subscriber of the policy.
         /// </remarks>
         MB = 147,
 
@@ -332,7 +332,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Medical License number</summary>
         /// <remarks>
-        /// An identifier that is unique to a medical doctor within the jurisdiction of a licensing board.<p>Use Case: These license numbers are sometimes used as identifiers. In some states, the same authority issues all three identifiers, e.g. medical, osteopathic
+        /// An identifier that is unique to a medical doctor within the jurisdiction of a licensing board.&lt;p&gt;Use Case: These license numbers are sometimes used as identifiers. In some states, the same authority issues all three identifiers, e.g. medical, osteopathic
         /// </remarks>
         MD = 153,
 
@@ -350,7 +350,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Temporary Medical Record Number</summary>
         /// <remarks>
-        /// Temporary version of a Medical Record Number<p>Use Case: An ancillary system that does not normally assign medical record numbers is the first time to register a patient. This ancillary system will generate a temporary medical record number that will only
+        /// Temporary version of a Medical Record Number&lt;p&gt;Use Case: An ancillary system that does not normally assign medical record numbers is the first time to register a patient. This ancillary system will generate a temporary medical record number that will only
         /// </remarks>
         MRT = 156,
 
@@ -380,25 +380,25 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>National Health Plan Identifier</summary>
         /// <remarks>
-        /// Class: Insurance<p>Used for the UK NHS national identifier.<p>In the US, the Assigning Authority for this value is typically CMS, but it may be used by all providers and insurance companies in HIPAA related transactions.
+        /// Class: Insurance&lt;p&gt;Used for the UK NHS national identifier.&lt;p&gt;In the US, the Assigning Authority for this value is typically CMS, but it may be used by all providers and insurance companies in HIPAA related transactions.
         /// </remarks>
         NH = 161,
 
         /// <summary>National unique individual identifier</summary>
         /// <remarks>
-        /// Class: Insurance<p>In the US, the Assigning Authority for this value is typically CMS, but it may be used by all providers and insurance companies in HIPAA related transactions.
+        /// Class: Insurance&lt;p&gt;In the US, the Assigning Authority for this value is typically CMS, but it may be used by all providers and insurance companies in HIPAA related transactions.
         /// </remarks>
         NI = 162,
 
         /// <summary>National Insurance Organization Identifier</summary>
         /// <remarks>
-        /// Class: Insurance<p>In Germany a national identifier for an insurance company. It is printed on the insurance card (health card). It is not to be confused with the health card number itself.<p>Krankenkassen-ID der KV-Karte
+        /// Class: Insurance&lt;p&gt;In Germany a national identifier for an insurance company. It is printed on the insurance card (health card). It is not to be confused with the health card number itself.&lt;p&gt;Krankenkassen-ID der KV-Karte
         /// </remarks>
         NII = 163,
 
         /// <summary>National Insurance Payor Identifier (Payor)</summary>
         /// <remarks>
-        /// Class: Insurance<p>In Germany the insurance identifier addressed as the payor.<p>Krankenkassen-ID des Rechnungsempfängers<p>Use case: a subdivision issues the card with their identifier, but the main division is going to pay the invoices.
+        /// Class: Insurance&lt;p&gt;In Germany the insurance identifier addressed as the payor.&lt;p&gt;Krankenkassen-ID des Rechnungsempfängers&lt;p&gt;Use case: a subdivision issues the card with their identifier, but the main division is going to pay the invoices.
         /// </remarks>
         NIIP = 164,
 
@@ -410,7 +410,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>National provider identifier</summary>
         /// <remarks>
-        /// Class: Insurance<p>In the US, the Assigning Authority for this value is typically CMS, but it may be used by all providers and insurance companies in HIPAA related transactions.
+        /// Class: Insurance&lt;p&gt;In the US, the Assigning Authority for this value is typically CMS, but it may be used by all providers and insurance companies in HIPAA related transactions.
         /// </remarks>
         NPI = 166,
 
@@ -482,7 +482,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Provider number</summary>
         /// <remarks>
-        /// A number that is unique to an individual provider, a provider group or an organization within an Assigning Authority.<p>Use case: This allows PRN to represent either an individual (a nurse) or a group/organization (orthopedic surgery team).
+        /// A number that is unique to an individual provider, a provider group or an organization within an Assigning Authority.&lt;p&gt;Use case: This allows PRN to represent either an individual (a nurse) or a group/organization (orthopedic surgery team).
         /// </remarks>
         PRN = 179,
 
@@ -494,7 +494,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Resource identifier</summary>
         /// <remarks>
-        /// A generalized resource identifier.<p>Use Case: An identifier type is needed to accommodate what are commonly known as resources. The resources can include human (e.g. a respiratory therapist), non-human (e.g. a companion animal), inanimate object (e.g. 
+        /// A generalized resource identifier.&lt;p&gt;Use Case: An identifier type is needed to accommodate what are commonly known as resources. The resources can include human (e.g. a respiratory therapist), non-human (e.g. a companion animal), inanimate object (e.g. 
         /// </remarks>
         RI = 182,
 
@@ -536,7 +536,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Subscriber Number</summary>
         /// <remarks>
-        /// Class: Insurance<p>An identifier for a subscriber of an insurance policy which is unique for, and usually assigned by, the insurance carrier.<p>Use Case: A person is the subscriber of an insurance policy. The person's family may be plan members, but are n
+        /// Class: Insurance&lt;p&gt;An identifier for a subscriber of an insurance policy which is unique for, and usually assigned by, the insurance carrier.&lt;p&gt;Use Case: A person is the subscriber of an insurance policy. The person's family may be plan members, but are n
         /// </remarks>
         SN = 190,
 
@@ -557,7 +557,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Treaty Number/ (Canada)</summary>
         /// <remarks>
-        /// A number assigned to a member of an indigenous group in Canada.<p>Use Case: First Nation.
+        /// A number assigned to a member of an indigenous group in Canada.&lt;p&gt;Use Case: First Nation.
         /// </remarks>
         TN = 195,
 
@@ -572,7 +572,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
 
         /// <summary>Medicare/CMS (formerly HCFA)'s Universal Physician Identification numbers</summary>
         /// <remarks>
-        /// Class: Insurance<p>An identifier for a provider within the CMS/Medicare program.  A globally unique identifier for the provider in the Medicare program.
+        /// Class: Insurance&lt;p&gt;An identifier for a provider within the CMS/Medicare program.  A globally unique identifier for the provider in the Medicare program.
         /// </remarks>
         UPIN = 198,
 
