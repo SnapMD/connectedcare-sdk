@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
@@ -33,5 +34,6 @@ namespace SnapMD.VirtualCare.ApiModels
         public string Location { get; set; }
         public int? OrganizationId { get; set; }
         public int? LocationId { get; set; }
+        public IList<IdentifierValue> Identifiers { get; set; }
     }
 }

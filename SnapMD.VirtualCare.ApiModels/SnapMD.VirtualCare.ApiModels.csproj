@@ -108,6 +108,9 @@
     <Compile Include="DocumentEncounterRequest.cs" />
     <Compile Include="DocumentEncounterResponse.cs" />
     <Compile Include="EmailUserRequest.cs" />
+    <Compile Include="Enums\IdentifierTypeCode.cs" />
+    <Compile Include="Enums\IdentifierUsageCode.cs" />
+    <Compile Include="IdentifierValue.cs" />
     <Compile Include="IHospitalResponse.cs" />
     <Compile Include="ImageUploadResponse.cs" />
     <Compile Include="LegacyMedicalHistoryForm.cs" />
