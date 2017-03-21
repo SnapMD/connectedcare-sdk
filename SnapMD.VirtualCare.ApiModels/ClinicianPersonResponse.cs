@@ -49,5 +49,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Person's email
         /// </summary>
         public string Email { get; set; }
+
+        /// <summary>
+        /// Person's status online|offline
+        /// </summary>
+        public string Presence { get; set; }
     }
 }
