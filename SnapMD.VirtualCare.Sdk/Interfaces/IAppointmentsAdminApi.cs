@@ -10,5 +10,6 @@ namespace SnapMD.VirtualCare.Sdk.Interfaces
         ApiResponseV2<AppointmentResponse> UpdateAppointment(Guid appointmentId, AppointmentApiRequest appointment);
         ApiResponseV2<AppointmentResponse> GetAppointment(Guid appointmentId);
         void DeleteAppointment(Guid appointmentId);
+        void DeleteAppointmentFromIntegration(Guid appointmentId);
     }
 }

@@ -53,7 +53,12 @@ namespace SnapMD.VirtualCare.Sdk
 
         public void DeleteAppointment(Guid appointmentId)
         {
-            Delete("v2.1/clinicians/appointments/" + appointmentId);
+            Delete($"v2.1/clinicians/appointments/{appointmentId}");
+        }
+
+        public void DeleteAppointmentFromIntegration(Guid appointmentId)
+        {
+            Delete($"v2.1/clinicians/appointments/{appointmentId}/integrations");
         }
     }
 }
