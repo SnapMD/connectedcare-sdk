@@ -61,5 +61,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Current status of the identifier value in the system
         /// </summary>
         public GlobalStatusCode StatusCode { get; set; }
+
+        /// <summary>
+        /// Is the identifier read only for the requested user
+        /// </summary>
+        public bool ReadOnly { get; set; }
     }
 }
