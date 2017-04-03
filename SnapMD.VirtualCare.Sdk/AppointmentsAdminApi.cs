@@ -32,6 +32,11 @@ namespace SnapMD.VirtualCare.Sdk
             return Post<ApiResponseV2<AppointmentResponse>>("v2.1/clinicians/appointments", appointment);
         }
 
+        public ApiResponseV2<AppointmentResponse> CreateAppointmentFromIntegrations(AppointmentApiRequest appointment)
+        {
+            return Post<ApiResponseV2<AppointmentResponse>>("v2.1/clinicians/appointments/integrations", appointment);
+        }
+
         /// <summary>
         /// Updates the appointment.
         /// </summary>
