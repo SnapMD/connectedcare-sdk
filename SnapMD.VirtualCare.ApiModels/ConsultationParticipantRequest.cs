@@ -37,6 +37,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public string LastName { get; set; }
 
         /// <summary>
+        /// The email address of the participant
+        /// </summary>
+        public string Email { get; set; }
+
+        /// <summary>
         /// The URL where a participant's profile picture is stored.
         /// </summary>
         public string PhotoUrl { get; set; }
