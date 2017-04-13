@@ -265,5 +265,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Guardian user id (for dependent patients).
         /// </summary>
         public int? GuardianUserId { get; set; }
+
+        /// <summary>
+        /// User role description.
+        /// </summary>
+        public string UserRoleDescription { get; set; }
     }
 }
