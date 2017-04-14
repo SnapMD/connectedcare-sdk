@@ -104,6 +104,10 @@
     <Compile Include="ClinicianSpecialty.cs" />
     <Compile Include="ContactTypeCode.cs" />
     <Compile Include="CreateStaffProfileResponse.cs" />
+    <Compile Include="Enums\AllergyCategoryCode.cs" />
+    <Compile Include="Enums\AllergyCriticalityCode.cs" />
+    <Compile Include="Enums\AllergyTypeCode.cs" />
+    <Compile Include="PatientAllergyItem.cs" />
     <Compile Include="DependentRelationship.cs" />
     <Compile Include="DocumentEncounterRequest.cs" />
     <Compile Include="DocumentEncounterResponse.cs" />
