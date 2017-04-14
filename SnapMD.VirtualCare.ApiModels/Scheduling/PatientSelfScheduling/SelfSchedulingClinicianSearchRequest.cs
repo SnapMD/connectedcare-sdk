@@ -33,6 +33,12 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling.PatientSelfScheduling
         public bool ApplyVisibilityRules { get; set; }
 
         /// <summary>
+        /// PatientId for visibility rules (must be an authorized dependent of current user) or 
+        /// null for whole family of current user
+        /// </summary>
+        public int? PatientId { get; set; }
+
+        /// <summary>
         /// Gender.
         /// </summary>
         public string Gender { get; set; }
