@@ -18,7 +18,8 @@ namespace SnapMD.VirtualCare.ApiModels
     [XmlRoot("MedicalHistory", Namespace = "https://snap.md/api/v2/xml/medicalhistory")]
     public class MedicalHistoryProfile : IMedicalHistoryProfile
     {
-        [XmlArrayItem("CustomCode")] // For backward compatibility
+        [XmlArrayItem("CustomCode", typeof(LegacyPatientAllergyItem))]
+        [XmlArrayItem("PatientAllergy", typeof(PatientAllergyItem))]
         public List<PatientAllergyItem> MedicationAllergies { get; set; }
 
         public List<SurgeryRecord> Surgeries { get; set; }

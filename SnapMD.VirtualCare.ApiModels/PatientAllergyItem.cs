@@ -19,7 +19,7 @@ using System.Xml.Serialization;
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
-    /// Record about 1 patient medication allergy
+    /// Record describing one patient medication allergy
     /// </summary>
     public class PatientAllergyItem
     {
@@ -74,5 +74,14 @@ namespace SnapMD.VirtualCare.ApiModels
         public bool ShouldSerializeCriticalityId() { return CriticalityId.HasValue; }
         public bool ShouldSerializeTypeId() { return TypeId.HasValue; }
         public bool ShouldSerializeCategoryId() { return CategoryId.HasValue; }
+    }
+
+    /// <summary>
+    /// Record describing one patient medication allergy.
+    /// It's used during old consultation metadata deserialization from XML ONLY to distinguish from new metadata.
+    /// </summary>
+    public class LegacyPatientAllergyItem: PatientAllergyItem
+    {
+
     }
 }
