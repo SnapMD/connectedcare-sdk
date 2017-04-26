@@ -54,5 +54,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Person's status online|offline
         /// </summary>
         public string Presence { get; set; }
+        
+        /// <summary>
+        /// Shows if Provider have Coduct consultation permission.
+        /// </summary>
+        public bool CanHaveConsultation { get; set; }
     }
 }
