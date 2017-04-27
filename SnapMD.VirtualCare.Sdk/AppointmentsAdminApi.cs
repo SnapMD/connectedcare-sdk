@@ -51,6 +51,15 @@ namespace SnapMD.VirtualCare.Sdk
                     appointment);
         }
 
+        public ApiResponseV2<AppointmentResponse> UpdateAppointmentFromIntegrations(Guid appointmentId, AppointmentApiRequest appointment)
+        {
+            return
+                Put<ApiResponseV2<AppointmentResponse>>(
+                    $"v2.1/clinicians/appointments/{appointmentId}/integrations" ,
+                    appointment);
+        }
+
+
         public ApiResponseV2<AppointmentResponse> GetAppointment(Guid appointmentId)
         {
             return MakeCall<ApiResponseV2<AppointmentResponse>>("v2.1/clinicians/appointments/" + appointmentId);
