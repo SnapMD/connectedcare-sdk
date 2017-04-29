@@ -59,5 +59,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Shows if Provider have Coduct consultation permission.
         /// </summary>
         public bool CanHaveConsultation { get; set; }
+        
+        /// <summary>
+        /// Staff profile gender.
+        /// </summary>
+        public string Gender { get; set; }
     }
 }
