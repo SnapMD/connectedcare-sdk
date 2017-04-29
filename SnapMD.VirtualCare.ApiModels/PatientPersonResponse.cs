@@ -28,5 +28,13 @@ namespace SnapMD.VirtualCare.ApiModels
         ///     The hospital identifier.
         /// </value>
         public int ProviderId { get; set; }
+        
+        /// <summary>
+        ///     Gets or sets the patient gender
+        /// </summary>
+        /// <value>
+        ///     The patient gender
+        /// </value>
+        public string Gender { get; set; }
     }
 }
