@@ -45,5 +45,15 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The id of consultation meeting (chat)
         /// </summary>
         public Guid? MeetingId { get; set; }
+        
+        /// <summary>
+        /// The participant status
+        /// </summary>
+        public int Status { get; set; }
+
+        /// <summary>
+        /// The invitation email
+        /// </summary>
+        public string Email { get; set; }
     }
 }

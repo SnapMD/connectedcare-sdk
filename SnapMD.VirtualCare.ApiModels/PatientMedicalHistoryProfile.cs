@@ -25,7 +25,7 @@ namespace SnapMD.VirtualCare.ApiModels
         {
             MedicalConditions = new List<CustomCode>();
             InfantData = new NewbornRecord();
-            MedicationAllergies = new List<CustomCode>();
+            MedicationAllergies = new List<PatientAllergyItem>();
             Surgeries = new List<SurgeryRecord>();
             Medications = new List<CustomCode>();
         }
@@ -33,7 +33,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <summary>
         ///     Medical allergies.
         /// </summary>
-        public List<CustomCode> MedicationAllergies { get; set; }
+        public List<PatientAllergyItem> MedicationAllergies { get; set; }
 
         /// <summary>
         ///     Patient surgeries.

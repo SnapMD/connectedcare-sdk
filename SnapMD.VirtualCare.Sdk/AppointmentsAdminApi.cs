@@ -32,6 +32,11 @@ namespace SnapMD.VirtualCare.Sdk
             return Post<ApiResponseV2<AppointmentResponse>>("v2.1/clinicians/appointments", appointment);
         }
 
+        public ApiResponseV2<AppointmentResponse> CreateAppointmentFromIntegrations(AppointmentApiRequest appointment)
+        {
+            return Post<ApiResponseV2<AppointmentResponse>>("v2.1/clinicians/appointments/integrations", appointment);
+        }
+
         /// <summary>
         /// Updates the appointment.
         /// </summary>
@@ -46,6 +51,15 @@ namespace SnapMD.VirtualCare.Sdk
                     appointment);
         }
 
+        public ApiResponseV2<AppointmentResponse> UpdateAppointmentFromIntegrations(Guid appointmentId, AppointmentApiRequest appointment)
+        {
+            return
+                Put<ApiResponseV2<AppointmentResponse>>(
+                    $"v2.1/clinicians/appointments/{appointmentId}/integrations" ,
+                    appointment);
+        }
+
+
         public ApiResponseV2<AppointmentResponse> GetAppointment(Guid appointmentId)
         {
             return MakeCall<ApiResponseV2<AppointmentResponse>>("v2.1/clinicians/appointments/" + appointmentId);
@@ -53,7 +67,12 @@ namespace SnapMD.VirtualCare.Sdk
 
         public void DeleteAppointment(Guid appointmentId)
         {
-            Delete("v2.1/clinicians/appointments/" + appointmentId);
+            Delete($"v2.1/clinicians/appointments/{appointmentId}");
+        }
+
+        public void DeleteAppointmentFromIntegration(Guid appointmentId)
+        {
+            Delete($"v2.1/clinicians/appointments/{appointmentId}/integrations");
         }
     }
 }

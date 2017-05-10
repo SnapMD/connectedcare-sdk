@@ -23,7 +23,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <summary>
         ///     Medical allergies.
         /// </summary>
-        List<CustomCode> MedicationAllergies { get; set; }
+        List<PatientAllergyItem> MedicationAllergies { get; set; }
 
         /// <summary>
         ///     Patient surgeries.

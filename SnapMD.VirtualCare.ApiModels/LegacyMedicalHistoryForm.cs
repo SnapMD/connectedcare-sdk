@@ -1,13 +1,19 @@
-﻿namespace SnapMD.VirtualCare.ApiModels
+﻿using System;
+
+namespace SnapMD.VirtualCare.ApiModels
 {
     public class LegacyMedicalHistoryForm
     {
+        [Obsolete("Use List<PatientAllergyItem> in parent datastructure instead")]
         public int? AllergicMedication1 { get; set; }
 
+        [Obsolete("Use List<PatientAllergyItem> in parent datastructure instead")]
         public int? AllergicMedication2 { get; set; }
 
+        [Obsolete("Use List<PatientAllergyItem> in parent datastructure instead")]
         public int? AllergicMedication3 { get; set; }
 
+        [Obsolete("Use List<PatientAllergyItem> in parent datastructure instead")]
         public int? AllergicMedication4 { get; set; }
 
         public string IsChildBornFullTerm { get; set; }
