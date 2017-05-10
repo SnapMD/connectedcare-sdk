@@ -30,5 +30,9 @@ namespace SnapMD.VirtualCare.ApiModels
         public int ProviderId { get; set; }
 
         public int UserLoginId { get; set; }
+
+        public string Gender { get; set; }
+
+        public string MobilePhone { get; set; }
     }
 }
