@@ -14,32 +14,79 @@ using System;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Model for creating new patient
+    /// </summary>
     public class NewPatientRequest
     {
+        /// <summary>
+        /// Patient Address
+        /// </summary>
         public string Address { get; set; }
 
+        /// <summary>
+        /// Patient Dob
+        /// </summary>
         public DateTime? Dob { get; set; }
         
+        /// <summary>
+        /// TimeZoneId
+        /// </summary>
         public int TimeZoneId { get; set; }
 
+        /// <summary>
+        /// Valid email address
+        /// </summary>
         public string Email { get; set; }
 
+        /// <summary>
+        /// First and Last name
+        /// </summary>
         public FirstLast Name { get; set; }
 
+        /// <summary>
+        /// Password
+        /// </summary>
         public string Password { get; set; }
 
+        /// <summary>
+        /// ProviderId
+        /// </summary>
         public int ProviderId { get; set; }
 
+        /// <summary>
+        /// Country
+        /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string Country { get; set; }
 
+        /// <summary>
+        /// Zipcode
+        /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string ZipCode { get; set; }
 
-        //Token is used for co-user only
+        /// <summary>
+        /// Token. This is being used for co-user only
+        /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string Token { get; set; }
 
+        /// <summary>
+        /// Gender M|F
+        /// </summary>
+        public string Gender { get; set; }
+
+        /// <summary>
+        /// MobilePhone with CountryCode (+142568848 or +446039584)
+        /// </summary>
+        public string MobilePhone { get; set; }
+
+        /// <summary>
+        /// Validates NewPatientRequest
+        /// </summary>
+        /// <param name="exceptionToThrow">exceptionToThrow</param>
+        /// <returns></returns>
         public bool ValidateModel(Func<string, Exception> exceptionToThrow = null)
         {
             if (exceptionToThrow == null)
@@ -85,6 +132,15 @@ namespace SnapMD.VirtualCare.ApiModels
                 throw exceptionToThrow("ProviderId required.");
             }
 
+            if (!string.IsNullOrEmpty(MobilePhone) && !MobilePhone.StartsWith("+"))
+            {
+                throw exceptionToThrow("Country code is required while entering MobilePhone");
+            }
+
+            if (!string.IsNullOrEmpty(Gender) && !(Gender.ToUpper() == "M" || Gender.ToUpper() == "F"))
+            {
+                throw exceptionToThrow($"Invalid entry for gender {Gender}");
+            }
             return true;
         }
     }
