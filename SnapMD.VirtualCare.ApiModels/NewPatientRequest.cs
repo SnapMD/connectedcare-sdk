@@ -75,12 +75,14 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <summary>
         /// Gender M|F
         /// </summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string Gender { get; set; }
 
         /// <summary>
-        /// MobilePhone with CountryCode (+142568848 or +446039584)
+        /// MobileNumberWithCountryCode (+142568848 or +446039584)
         /// </summary>
-        public string MobilePhone { get; set; }
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public string MobileNumberWithCountryCode { get; set; }
 
         /// <summary>
         /// Validates NewPatientRequest
@@ -132,7 +134,7 @@ namespace SnapMD.VirtualCare.ApiModels
                 throw exceptionToThrow("ProviderId required.");
             }
 
-            if (!string.IsNullOrEmpty(MobilePhone) && !MobilePhone.StartsWith("+"))
+            if (!string.IsNullOrEmpty(MobileNumberWithCountryCode) && !MobileNumberWithCountryCode.StartsWith("+"))
             {
                 throw exceptionToThrow("Country code is required while entering MobilePhone");
             }
