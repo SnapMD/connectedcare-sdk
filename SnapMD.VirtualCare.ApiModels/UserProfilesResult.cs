@@ -237,8 +237,10 @@ namespace SnapMD.VirtualCare.ApiModels
             {
                 if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
                     Dob.HasValue && !string.IsNullOrWhiteSpace(Gender) &&
-                    !string.IsNullOrWhiteSpace(MobilePhone) && 
-                    !string.IsNullOrWhiteSpace(TimeZone))
+                    !string.IsNullOrWhiteSpace(MobilePhone) &&
+                    !string.IsNullOrWhiteSpace(TimeZone) &&
+                    !string.IsNullOrEmpty(Height) &&
+                    !string.IsNullOrEmpty(Weight))
                 {
                     return true;
                 }
