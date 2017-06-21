@@ -40,5 +40,14 @@ namespace SnapMD.VirtualCare.LeopardonSso.Properties {
                 return ((string)(this["JwtClincianSignOnUrl"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://emerald.snap.local/admin.access?jwt={0}")]
+        public string JwtAdminSignOnUrl {
+            get {
+                return ((string)(this["JwtAdminSignOnUrl"]));
+            }
+        }
     }
 }
