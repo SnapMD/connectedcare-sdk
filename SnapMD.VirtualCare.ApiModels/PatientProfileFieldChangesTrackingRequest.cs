@@ -8,7 +8,7 @@
 
         public bool? City { get; set; }
 
-        public bool? Country { get; set; }
+        public bool? MobilePhoneCountryCodeId { get; set; }
 
         public bool? CurrentMedications { get; set; }
 

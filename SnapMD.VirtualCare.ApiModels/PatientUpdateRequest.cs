@@ -35,6 +35,6 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? OrganizationId { get; set; }
         public int? LocationId { get; set; }
         public IList<IdentifierValue> Identifiers { get; set; }
-        public string CountryCode { get; set; }
+        public int? MobilePhoneCountryCodeId { get; set; }
     }
 }
