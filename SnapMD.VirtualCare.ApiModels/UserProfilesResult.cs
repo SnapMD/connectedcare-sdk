@@ -239,7 +239,7 @@ namespace SnapMD.VirtualCare.ApiModels
                 if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
                     Dob.HasValue && !string.IsNullOrWhiteSpace(Gender) &&
                     !string.IsNullOrWhiteSpace(MobilePhone) &&
-                    !string.IsNullOrWhiteSpace(TimeZone))
+                    (TimeZoneId ?? 0) != 0)
                 {
                     return true;
                 }
