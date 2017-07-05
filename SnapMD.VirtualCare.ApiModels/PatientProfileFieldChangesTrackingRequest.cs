@@ -1,4 +1,6 @@
-﻿namespace SnapMD.Web.Api.Models
+﻿using System;
+
+namespace SnapMD.Web.Api.Models
 {
     public class PatientProfileFieldChangesTrackingRequest
     {
@@ -8,7 +10,10 @@
 
         public bool? City { get; set; }
 
+        [Obsolete("Use MobilePhoneCountryCodeId instead")]
         public bool? Country { get; set; }
+
+        public bool? MobilePhoneCountryCodeId { get; set; }
 
         public bool? CurrentMedications { get; set; }
 
