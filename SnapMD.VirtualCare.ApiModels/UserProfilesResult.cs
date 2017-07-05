@@ -231,6 +231,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </value>
         public bool HasRequiredFields
         {
+            //this property should be set in the api checking actual required fields and switches.
             //address isn't required for dependents
             // taking this out: !string.IsNullOrWhiteSpace(Address)
             get
@@ -238,9 +239,7 @@ namespace SnapMD.VirtualCare.ApiModels
                 if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
                     Dob.HasValue && !string.IsNullOrWhiteSpace(Gender) &&
                     !string.IsNullOrWhiteSpace(MobilePhone) &&
-                    !string.IsNullOrWhiteSpace(TimeZone) &&
-                    !string.IsNullOrEmpty(Height) &&
-                    !string.IsNullOrEmpty(Weight))
+                    !string.IsNullOrWhiteSpace(TimeZone))
                 {
                     return true;
                 }
