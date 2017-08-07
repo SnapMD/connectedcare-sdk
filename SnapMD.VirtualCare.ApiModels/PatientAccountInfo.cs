@@ -24,13 +24,24 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? UserId { get; set; }
         public string ProfileImagePath { get; set; }
         public string FullName { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string Phone { get; set; }
 
         public bool IsAuthorized { get; set; }
         public PatientAccountStatus Status { get; set; }
+        public string Gender { get; set; }
         public bool IsDependent { get; set; }
         public int? GuardianId { get; set; }
         public string Email { get; set; }
         public Guid PersonId { get; set; }
+        public int FamilyGroupId { get; set; }
+
+        public int? EthnicityId { get; set; }
+        public string EthnicityName { get; set; }
+        public int? OrganizationId { get; set; }
+        public string OrganizationName { get; set; }
+        public int? LocationId { get; set; }
+        public string LocationName { get; set; }
     }
 }
