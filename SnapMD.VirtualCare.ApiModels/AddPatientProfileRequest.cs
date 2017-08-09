@@ -1,5 +1,6 @@
 ﻿using System;
 using SnapMD.Web.Api.Models;
+using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
@@ -11,6 +12,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public string EmailAddress { get; set; }
         public PatientUpdateRequest PatientProfileData { get; set; }
         public LegacyMedicalHistoryForm PatientMedicalHistoryData { get; set; }
+        public List<PatientAllergyItem> MedicationAllergies { get; set; }
         public PatientProfileFieldChangesTrackingRequest PatientProfileFieldsTracing { get; set; }
         public int? TimeZoneId { get; set; }
         public Guid? ImageId { get; set; }

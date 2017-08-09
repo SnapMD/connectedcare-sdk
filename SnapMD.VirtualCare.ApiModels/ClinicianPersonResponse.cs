@@ -49,5 +49,20 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Person's email
         /// </summary>
         public string Email { get; set; }
+
+        /// <summary>
+        /// Person's status online|offline
+        /// </summary>
+        public string Presence { get; set; }
+        
+        /// <summary>
+        /// Shows if Provider have Coduct consultation permission.
+        /// </summary>
+        public bool CanHaveConsultation { get; set; }
+        
+        /// <summary>
+        /// Staff profile gender.
+        /// </summary>
+        public string Gender { get; set; }
     }
 }

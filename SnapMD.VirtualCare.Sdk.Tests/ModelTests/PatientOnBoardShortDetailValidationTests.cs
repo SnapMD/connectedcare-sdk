@@ -10,7 +10,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests.ModelTests
         [Test]
         public void TestModelValidationFail()
         {
-            var target = new PatientOnBoardShortDetail();
+            var target = new PatientOnBoardShortDetailRequest();
             var thrown = Assert.Throws<Exception>(() => target.ValidateModel(m => new Exception(m)));
             Assert.AreEqual("First name required.", thrown.Message);
 
@@ -42,7 +42,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests.ModelTests
         [Test]
         public void TestModelValidationAllowsNullEmail()
         {
-            var target = new PatientOnBoardShortDetail
+            var target = new PatientOnBoardShortDetailRequest
             {
                 FirstName = "First Name",
                 Email = null,

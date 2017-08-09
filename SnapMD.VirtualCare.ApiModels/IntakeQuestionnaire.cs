@@ -21,7 +21,7 @@ namespace SnapMD.VirtualCare.ApiModels
     {
         public IntakeQuestionnaire()
         {
-            MedicationAllergies = new List<CustomCode>();
+            MedicationAllergies = new List<PatientAllergyItem>();
             Surgeries = new List<SurgeryRecord>();
             MedicalConditions = new List<CustomCode>();
             Medications = new List<CustomCode>();

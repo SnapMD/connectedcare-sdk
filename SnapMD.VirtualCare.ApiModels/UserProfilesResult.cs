@@ -231,14 +231,15 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </value>
         public bool HasRequiredFields
         {
+            //this property should be set in the api checking actual required fields and switches.
             //address isn't required for dependents
             // taking this out: !string.IsNullOrWhiteSpace(Address)
             get
             {
                 if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
                     Dob.HasValue && !string.IsNullOrWhiteSpace(Gender) &&
-                    !string.IsNullOrWhiteSpace(MobilePhone) && 
-                    !string.IsNullOrWhiteSpace(TimeZone))
+                    !string.IsNullOrWhiteSpace(MobilePhone) &&
+                    (TimeZoneId ?? 0) != 0)
                 {
                     return true;
                 }
@@ -265,5 +266,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Guardian user id (for dependent patients).
         /// </summary>
         public int? GuardianUserId { get; set; }
+
+        /// <summary>
+        /// User role description.
+        /// </summary>
+        public string UserRoleDescription { get; set; }
     }
 }
