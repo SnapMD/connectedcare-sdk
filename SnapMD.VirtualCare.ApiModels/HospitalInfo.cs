@@ -118,6 +118,27 @@ namespace SnapMD.VirtualCare.ApiModels
         public string ClinicianLogin { get; set; }
 
         /// <summary>
+        /// The level of SSO access required for an admin.
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public CustomerSsoType AdminSso { get; set; }
+
+        /// <summary>
+        /// The link text used to allow an admin SSO access.
+        /// </summary>
+        public string AdminSsoLinkText { get; set; }
+
+        /// <summary>
+        /// The URL used for handling encounters through admins.
+        /// </summary>
+        public string AdminConsultEndUrl { get; set; }
+
+        /// <summary>
+        /// The admin's login.
+        /// </summary>
+        public string AdminLogin { get; set; }
+
+        /// <summary>
         /// The api endpoint patient auth token.
         /// </summary>
         public string PatientTokenApi { get; set; }
