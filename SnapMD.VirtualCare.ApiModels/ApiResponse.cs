@@ -101,4 +101,36 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </summary>
         public int? Total { get; set; }
     }
+
+    /// <summary>
+    ///     Wraps the response based on our documented API.
+    ///     Comparing to <see cref="ApiResponseV2{T}"/> contains total data object in addition to collection of data items.
+    /// </summary>
+    /// <typeparam name="T">Type of response vector item</typeparam>
+    /// <typeparam name="S">Type of scalar response data</typeparam>
+    public class ApiResponseV2WithTotals<T, S> : ApiResponseV2<T>
+    {
+        /// <summary>
+        ///     Allows shorthand for IEnumerable types.
+        /// </summary>
+        /// <param name="data"></param>
+        public ApiResponseV2WithTotals(IEnumerable<T> data, S totals): base(data)
+        {
+            Totals = totals;
+        }
+
+        /// <summary>
+        ///     Default constructor.
+        /// </summary>
+        public ApiResponseV2WithTotals()
+        {
+        }
+
+        /// <summary>
+        ///     Contains scalar reponse information (such as total counts, comments) in addition 
+        ///     to <see cref="ApiResponseV2{T}.Data"/> vector
+        /// </summary>
+        public S Totals { get; set; }
+
+    }
 }

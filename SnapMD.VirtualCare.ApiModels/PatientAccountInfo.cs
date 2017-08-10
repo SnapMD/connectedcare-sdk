@@ -27,6 +27,8 @@ namespace SnapMD.VirtualCare.ApiModels
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }
+        public string Dob { get; set; }
+        public int? Age { get; set; }
 
         public bool IsAuthorized { get; set; }
         public PatientAccountStatus Status { get; set; }
