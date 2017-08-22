@@ -101,6 +101,9 @@
     <Compile Include="AddPatientProfileRequest.cs" />
     <Compile Include="ApiResponse.cs" />
     <Compile Include="Attributes\ModelNameAttribute.cs" />
+    <Compile Include="PatientProfilesResult.cs" />
+    <Compile Include="PatientsGroupResponse.cs" />
+    <Compile Include="PatientsGroupRequest.cs" />
     <Compile Include="ClinicianSpecialty.cs" />
     <Compile Include="ContactTypeCode.cs" />
     <Compile Include="CreateStaffProfileResponse.cs" />
