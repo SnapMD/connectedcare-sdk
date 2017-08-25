@@ -45,5 +45,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public string OrganizationName { get; set; }
         public int? LocationId { get; set; }
         public string LocationName { get; set; }
+
+        public int[] GroupsIds { get; set; }
     }
 }
