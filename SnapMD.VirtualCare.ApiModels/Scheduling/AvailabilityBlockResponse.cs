@@ -41,5 +41,10 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// Last modified date.
         /// </summary>
         public DateTimeOffset? ModifiedDate { get; set; }
+        
+        /// <summary>
+        /// Modified by user name.
+        /// </summary>
+        public string ModifiedByUserName { get; set; }
     }
 }
