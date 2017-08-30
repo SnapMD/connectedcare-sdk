@@ -5,6 +5,7 @@
         public int[] ClinicianIds { get; set; }
 
         public int? GroupId { get; set; }
+        public int[] GroupsIds { get; set; }
 
         public string Name { get; set; }
 
