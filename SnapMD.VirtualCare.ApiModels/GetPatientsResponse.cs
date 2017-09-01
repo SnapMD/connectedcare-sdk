@@ -13,7 +13,7 @@
 namespace SnapMD.VirtualCare.ApiModels
 {
 
-    public struct GetPatientsResponse
+    public class GetPatientsResponse
     {
         public string PatientName { get; set; }
         public string LastName { get; set; }
@@ -28,6 +28,15 @@ namespace SnapMD.VirtualCare.ApiModels
         public string Location { get; set; }
         public int? OrganizationId { get; set; }
         public int? LocationId { get; set; }
+        public PatientGroup[] Groups { get; set; }
 
+        public class PatientGroup
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public string Description { get; set; }
+            public int? ParentGroupId { get; set; }
+        }
     }
+
 }
