@@ -224,12 +224,12 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? Ethnicity { get; set; }
 
         /// <summary>
-        /// Gets a value indicating whether this instance has required fields.
+        /// Gets a value indicating whether this instance has default required fields (common for all hospitals).
         /// </summary>
         /// <value>
         /// <c>true</c> if this instance has required fields; otherwise, <c>false</c>.
         /// </value>
-        public bool HasRequiredFields
+        public bool HasDefaultRequiredFields
         {
             //this property should be set in the api checking actual required fields and switches.
             //address isn't required for dependents
@@ -246,6 +246,14 @@ namespace SnapMD.VirtualCare.ApiModels
                 return false;
             }
         }
+        
+        /// <summary>
+        /// Gets or sets a value indicating whether this instance has required fields.
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if this instance has required fields; otherwise, <c>false</c>.
+        /// </value>
+        public bool HasRequiredFields { get; set; }
 
         /// <summary>
         /// The person identifier of the user.
