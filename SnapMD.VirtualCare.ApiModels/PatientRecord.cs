@@ -14,6 +14,8 @@ namespace SnapMD.VirtualCare.ApiModels
 
         public string Address { get; set; }
 
+        public AddressObject AddressObject { get; set; }
+
         public string HomePhone { get; set; }
 
         public string MobilePhone { get; set; }

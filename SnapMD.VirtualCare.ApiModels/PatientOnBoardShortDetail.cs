@@ -53,6 +53,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public string Address { get; set; }
 
         /// <summary>
+        /// Structurized address
+        /// </summary>
+        public AddressObject AddressObject { get; set; }
+
+        /// <summary>
         /// GET 'api/countrycode'
         /// </summary>
         public int? CountryId { get; set; }
@@ -114,7 +119,7 @@ namespace SnapMD.VirtualCare.ApiModels
                 // error: date of birth required.
                 throw exceptionToThrow("Date of birth required.");
             }
-            if (string.IsNullOrEmpty(Address))
+            if (string.IsNullOrEmpty(Address) && AddressObject.SafeIsEmpty())
             {
                 // error: address required.
                 throw exceptionToThrow("Address required.");
