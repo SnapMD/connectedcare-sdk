@@ -25,6 +25,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public string Address { get; set; }
 
         /// <summary>
+        /// Structurized Patient Address
+        /// </summary>
+        public AddressObject AddressObject { get; set; }
+
+        /// <summary>
         /// Patient Dob
         /// </summary>
         public DateTime? Dob { get; set; }

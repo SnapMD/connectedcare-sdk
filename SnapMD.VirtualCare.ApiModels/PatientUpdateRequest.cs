@@ -25,6 +25,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public string PreferedPharmacy { get; set; }
         public string PharmacyContact { get; set; }
         public string Address { get; set; }
+        public AddressObject AddressObject { get; set; }
         public string ProfileImagePath { get; set; }
         public string Height { get; set; }
         public string Weight { get; set; }
