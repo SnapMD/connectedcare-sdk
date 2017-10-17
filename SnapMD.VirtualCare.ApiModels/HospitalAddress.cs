@@ -18,5 +18,6 @@ namespace SnapMD.VirtualCare.ApiModels
     {
         public int HospitalId { get; set; }
         public string Address { get; set; }
+        public AddressObject AddressObject { get; set; }
     }
 }
