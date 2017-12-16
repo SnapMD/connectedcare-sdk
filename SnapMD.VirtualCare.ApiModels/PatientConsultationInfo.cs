@@ -45,6 +45,7 @@ namespace SnapMD.VirtualCare.ApiModels
 
         public DateTime? DOB { get; set; }
         public DateTime? CreatedDate { get; set; }
+        public DateTime? UpdatedDate { get; set; }
 
         public string ConsultationDate
         {
