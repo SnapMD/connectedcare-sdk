@@ -36,5 +36,18 @@ namespace SnapMD.VirtualCare.ApiModels
         ///     The patient gender
         /// </value>
         public string Gender { get; set; }
+
+        /// <summary>
+        /// Gets or sets the patient email.
+        /// </summary>
+        /// <value>
+        ///     The patient email.
+        /// </value>
+        public string Email { get; set; }
+
+        /// <summary>
+        /// Flag: patient info is included to a list, but that patient would be excluded by visibility rules.
+        /// </summary>
+        public bool IsInvisible { get; set; }
     }
 }

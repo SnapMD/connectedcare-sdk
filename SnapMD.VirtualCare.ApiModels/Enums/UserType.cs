@@ -7,6 +7,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
     {
         Unknown = 0,
         Customer = 1,
-        Clinician = 2
+        Clinician = 2,
+        SnapMDAdmin = 3
     }
 }

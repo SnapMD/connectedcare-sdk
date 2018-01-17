@@ -25,6 +25,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public string Address { get; set; }
 
         /// <summary>
+        /// Structurized Patient Address
+        /// </summary>
+        public AddressObject AddressObject { get; set; }
+
+        /// <summary>
         /// Patient Dob
         /// </summary>
         public DateTime? Dob { get; set; }
@@ -115,7 +120,7 @@ namespace SnapMD.VirtualCare.ApiModels
                     throw exceptionToThrow("Email address required.");
                 }
 
-                if (string.IsNullOrEmpty(Address))
+                if (string.IsNullOrWhiteSpace(Address) && AddressObject.SafeIsEmpty())
                 {
                     // error: address required.
                     throw exceptionToThrow("Address required.");

@@ -20,7 +20,7 @@ namespace SnapMD.VirtualCare.LeopardonSso
 {
     public class SnapJwt : AbstractJwt
     {
-        public static readonly string[] Roles = new[] { "patient", "clinician" };
+        public static readonly string[] Roles = new[] { "patient", "clinician", "provider", "admin" };
 
         private const string Role = "patient";
         private readonly string _issuer;

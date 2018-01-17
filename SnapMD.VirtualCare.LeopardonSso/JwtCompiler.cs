@@ -52,9 +52,8 @@ namespace SnapMD.VirtualCare.LeopardonSso
         }
 
         private string DefaultJwtSignOnUrl =>
-            _role == SnapJwt.Roles[0] ?
-                Settings.Default.JwtSignOnUrl :
-                Settings.Default.JwtClincianSignOnUrl;
+            _role == SnapJwt.Roles[0] ? Settings.Default.JwtSignOnUrl : 
+                (_role == "admin" ? Settings.Default.JwtAdminSignOnUrl : Settings.Default.JwtClincianSignOnUrl);
 
         private Task<string> BuildJwtAsync(string name, string email)
         {

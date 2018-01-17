@@ -25,6 +25,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public string PreferedPharmacy { get; set; }
         public string PharmacyContact { get; set; }
         public string Address { get; set; }
+        public AddressObject AddressObject { get; set; }
         public string ProfileImagePath { get; set; }
         public string Height { get; set; }
         public string Weight { get; set; }
@@ -35,6 +36,10 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? OrganizationId { get; set; }
         public int? LocationId { get; set; }
         public IList<IdentifierValue> Identifiers { get; set; }
+
+        [Obsolete("Use MobilePhoneCountryCodeId instead")]
         public string CountryCode { get; set; }
+
+        public int? MobilePhoneCountryCodeId { get; set; }
     }
 }

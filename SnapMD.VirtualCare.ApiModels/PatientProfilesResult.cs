@@ -1,4 +1,5 @@
-﻿//    Copyright 2016 SnapMD, Inc.
+﻿#region Copyright
+//    Copyright 2016 SnapMD, Inc.
 //    Licensed under the Apache License, Version 2.0 (the "License");
 //    you may not use this file except in compliance with the License.
 //    You may obtain a copy of the License at
@@ -8,33 +9,22 @@
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
-
+#endregion
 using System;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
-    public class NewPatientResponse
+    /// <summary>
+    ///     Represents public information for a clinician that is suitable for patient use.
+    /// </summary>
+    public class PatientProfilesResult
     {
-        public string Address { get; set; }
-
-        public AddressObject AddressObject { get; set; }
-
-        public DateTime? Dob { get; set; }
-        
-        public int TimeZoneId { get; set; }
-
-        public string Email { get; set; }
-
-        public FirstLast Name { get; set; }
-
-        public int PatientId { get; set; }
-
-        public int ProviderId { get; set; }
-
-        public int UserLoginId { get; set; }
-
+        public int? ProfileId { get; set; }
+        public int HospitalId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string Gender { get; set; }
-
-        public string MobilePhone { get; set; }
+        public string ProfileImagePath { get; set; }
+        public string Dob { get; set; }
     }
 }

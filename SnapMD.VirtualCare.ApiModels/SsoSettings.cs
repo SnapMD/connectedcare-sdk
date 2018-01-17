@@ -90,6 +90,39 @@ namespace SnapMD.VirtualCare.ApiModels
         public string ClinicianSsoLinkText { get; set; }
 
         /// <summary>
+        /// Gets or sets the admin login.
+        /// </summary>
+        /// <value>
+        /// The admin login.
+        /// </value>
+        public string AdminLogin { get; set; }
+
+        /// <summary>
+        /// Gets or sets the admin consult end URL.
+        /// </summary>
+        /// <value>
+        /// The admin consult end URL.
+        /// </value>
+        public string AdminConsultReturnUrl { get; set; }
+
+        /// <summary>
+        /// Gets or sets the admin sso.
+        /// </summary>
+        /// <value>
+        /// The admin sso.
+        /// </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public CustomerSsoType AdminSso { get; set; }
+
+        /// <summary>
+        /// Gets or sets the admin sso link text.
+        /// </summary>
+        /// <value>
+        /// The admin sso link text.
+        /// </value>
+        public string AdminSsoLinkText { get; set; }
+
+        /// <summary>
         /// The api endpoint patient auth token.
         /// </summary>
         public string PatientTokenApi { get; set; }

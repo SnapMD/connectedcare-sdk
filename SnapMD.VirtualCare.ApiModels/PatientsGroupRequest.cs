@@ -1,8 +1,8 @@
 ﻿namespace SnapMD.VirtualCare.ApiModels
 {
-    public class ClinicianGroupRequest
+    public class PatientsGroupRequest
     {
-        public int[] ClinicianIds { get; set; }
+        public int[] PatientsIds { get; set; }
 
         public int? GroupId { get; set; }
         public int[] GroupsIds { get; set; }

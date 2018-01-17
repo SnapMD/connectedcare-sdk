@@ -98,9 +98,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressObject.cs" />
+    <Compile Include="AddressObjectExtensions.cs" />
+    <Compile Include="ProfilesLocationRequest.cs" />
     <Compile Include="AddPatientProfileRequest.cs" />
     <Compile Include="ApiResponse.cs" />
     <Compile Include="Attributes\ModelNameAttribute.cs" />
+    <Compile Include="PatientProfilesResult.cs" />
+    <Compile Include="PatientsGroupResponse.cs" />
+    <Compile Include="PatientsGroupRequest.cs" />
     <Compile Include="ClinicianSpecialty.cs" />
     <Compile Include="ContactTypeCode.cs" />
     <Compile Include="CreateStaffProfileResponse.cs" />

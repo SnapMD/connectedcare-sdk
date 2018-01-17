@@ -85,5 +85,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Doctor Current Business Address.
         /// </summary>
         public string BusinessAddress { get; set; }
+
+        /// <summary>
+        /// Doctor Current Business Address (Use this over BusinessAddress).
+        /// </summary>
+        public AddressObject BusinessAddressObject { get; set; }
     }
 }
