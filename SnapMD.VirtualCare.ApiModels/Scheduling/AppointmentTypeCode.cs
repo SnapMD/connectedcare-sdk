@@ -23,6 +23,11 @@
         /// <summary>
         /// Patient self-scheduled.
         /// </summary>
-        PatientScheduled
+        PatientScheduled,
+
+        /// <summary>
+        /// Appointment for document encounter
+        /// </summary>
+        DocumentEncounter
     }
 }
