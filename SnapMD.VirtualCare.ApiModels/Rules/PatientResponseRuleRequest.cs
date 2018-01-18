@@ -7,6 +7,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// Request model for PatientResponseRule
     /// </summary>
     /// <seealso cref="RuleRequest" />
+    [Obsolete("This class is not used in API calls anymore")]
     public class PatientResponseRuleRequest : RuleRequest
     {
         /// <summary>

@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels.Rules
 {
     /// <summary>
     /// Request model for provider-patient visibility rules
     /// </summary>
+    [Obsolete("This class is not used in API calls anymore")]
     public class CompoundVisibilityRequest : IRuleExecutionRequest
     {
         /// <summary>
