@@ -7,6 +7,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// Request model for ProviderLicenseRule
     /// </summary>
     /// <seealso cref="RuleRequest" />
+    [Obsolete("This class is not used in API calls anymore")]
     public class ProviderLicenseRuleRequest : RuleRequest
     {
         /// <summary>
@@ -21,6 +22,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <summary>
     /// SubjectAddress model.
     /// </summary>
+    [Obsolete("This class is not used in API calls anymore")]
     public class ProviderLicenseRegion
     {
         /// <summary>
