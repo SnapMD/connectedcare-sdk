@@ -7,5 +7,7 @@
         public string LastName { get; set; }
 
         public string MedicalSpeciality { get; set; }
+
+        public string BusinessAddress { get; set; }
     }
 }
