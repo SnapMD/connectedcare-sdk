@@ -9,6 +9,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <summary>
     /// Response model for provider-patient visibility rules
     /// </summary>
+    [Obsolete("This class is not used in API calls anymore")]
     public class CompoundVisibilityResponse
     {
         /// <summary>

@@ -7,6 +7,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// </summary>
     /// <seealso cref="IRuleResponse" />
     /// <seealso cref="ProviderLicenseRuleRequest" />
+    [Obsolete("This class is not used in API calls anymore")]
     public class ProviderLicenseRuleResponse : ProviderLicenseRuleRequest, IRuleResponse
     {
         /// <summary>
