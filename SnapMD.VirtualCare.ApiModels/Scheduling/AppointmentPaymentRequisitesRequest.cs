@@ -1,5 +1,8 @@
 ﻿namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
+    /// <summary>
+    /// Health plan, credit card and other info which may be used to prefill consultation creation forms.
+    /// </summary>
     public class AppointmentPaymentRequisitesRequest
     {
         /// <summary>
@@ -20,12 +23,12 @@
         /// <summary>
         /// Consultation cost as was calculated during appointment creation. Real cost may differ.
         /// </summary>
-        public decimal? ConsultationAmount { get; set; }
+        public double? ConsultationAmount { get; set; }
 
         /// <summary>
         /// Amount of consultation cost covered by insurance as was calculated during appointment creation. Real amount may differ.
         /// </summary>
-        public decimal? CopayAmount { get; set; }
+        public double? CopayAmount { get; set; }
 
     }
 }
