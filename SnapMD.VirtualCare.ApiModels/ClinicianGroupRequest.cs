@@ -1,7 +1,7 @@
 ﻿namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
-    /// Body parameters/response results for many providers groups methods API.
+    /// Body parameters for many providers groups methods API.
     /// </summary>
     /// <remarks>
     /// Depending of the API method, only a part of field set can be used.
