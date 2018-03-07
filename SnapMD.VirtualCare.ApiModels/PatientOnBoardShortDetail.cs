@@ -144,5 +144,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Prevent sending invitation email
         /// </summary>
         public bool? PreventSendingInvitation { get; set; }
+
+        /// <summary>
+        /// Create [User] record even if <see cref="PatientOnBoardShortDetail.Email"/> is null.
+        /// </summary>
+        public bool CreateUserWithoutEmail { get; set; }
     }
 }
