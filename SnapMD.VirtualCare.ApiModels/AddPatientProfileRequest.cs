@@ -9,7 +9,6 @@ namespace SnapMD.VirtualCare.ApiModels
     /// </summary>
     public class AddPatientProfileRequest
     {
-        public bool CreateUserWithoutEmail { get; set; }
         public string EmailAddress { get; set; }
         public PatientUpdateRequest PatientProfileData { get; set; }
         public LegacyMedicalHistoryForm PatientMedicalHistoryData { get; set; }
