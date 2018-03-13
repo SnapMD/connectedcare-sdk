@@ -54,6 +54,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public List<AppointmentParticipantRequest> Participants { get; set; }
 
         /// <summary>
+        /// Payment info which may be used on consultation creation. May be null.
+        /// </summary>
+        public AppointmentPaymentRequisitesRequest PaymentRequisites { get; set; }
+
+        /// <summary>
         /// The location or phone number of the appointment.
         /// </summary>
         public string Where { get; set; }

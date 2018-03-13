@@ -18,6 +18,11 @@ namespace SnapMD.VirtualCare.ApiModels
         string Locale { get; set; }
 
         /// <summary>
+        /// The Currency of the provider.
+        /// </summary>
+        string Currency { get; set; }
+
+        /// <summary>
         /// The dictionary of hospital settings.
         /// </summary>
         IDictionary<string, string> Settings { get; set; }
