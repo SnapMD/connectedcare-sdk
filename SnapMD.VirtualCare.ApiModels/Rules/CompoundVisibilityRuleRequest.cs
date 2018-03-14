@@ -9,6 +9,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <summary>
     /// Request model for SubRule
     /// </summary>
+    [Obsolete("This class is not used in API calls anymore")]
     public class SubRuleRequest : RuleRequest
     {
         /// <summary>
@@ -20,6 +21,7 @@ namespace SnapMD.VirtualCare.ApiModels.Rules
     /// <summary>
     /// CompoundRule
     /// </summary>
+    [Obsolete("This class is not used in API calls anymore")]
     public class CompoundVisibilityRuleRequest : RuleRequest
     {
         /// <summary>

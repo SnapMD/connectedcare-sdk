@@ -43,6 +43,13 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </value>
         public string Phone { get; set; }
         /// <summary>
+        /// The type of location or phone number.
+        /// </summary>
+        /// <value>
+        /// The phone type.
+        /// </value>
+        public string PhoneType { get; set; }
+        /// <summary>
         /// Gets or sets the patient identifier.
         /// </summary>
         /// <value>
