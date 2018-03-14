@@ -73,7 +73,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <summary>
         /// The Currency of the provider.
         /// </summary>
-        public string Currency { get; set; }
+        public Currency Currency { get; set; }
 
         /// <summary>
         /// The state the provider resides in.
