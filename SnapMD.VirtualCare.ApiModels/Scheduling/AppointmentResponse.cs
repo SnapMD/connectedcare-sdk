@@ -61,5 +61,10 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// Service type name
         /// </summary>
         public string ServiceTypeName { get; set; }
+
+        /// <summary>
+        /// The latest flag (color mark) for appointment.
+        /// </summary>
+        public int? AppointmentFlag { get; set; }
     }
 }
