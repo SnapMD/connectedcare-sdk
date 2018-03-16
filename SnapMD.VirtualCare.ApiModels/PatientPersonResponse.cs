@@ -59,5 +59,11 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Flag: patient info is included to a list, but that patient would be excluded by visibility rules.
         /// </summary>
         public bool IsInvisible { get; set; }
+
+        /// <summary>
+        /// Flag: patient info is included to a list, but that patient would be excluded by visibility rules.
+        /// </summary>
+        public bool? OnDemandAvailable { get; set; }
+
     }
 }
