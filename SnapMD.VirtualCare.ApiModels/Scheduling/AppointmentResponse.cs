@@ -48,6 +48,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public int? ConsultationId { get; set; }
 
         /// <summary>
+        /// ProxyUserId from consultation (if exists).
+        /// </summary>
+        public int? ProxyUserId { get; set; }
+
+        /// <summary>
         /// Whether the appointment is dismissed
         /// </summary>
         public bool Dismissed { get; set; }
