@@ -35,5 +35,10 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// The end time.
         /// </value>
         public DateTime? EndTime { get; set; }
+        
+        /// <summary>
+        ///  Flag to include all family members
+        /// </summary>
+        public bool IncludeFamilyMembers { get; set; } = true;
     }
 }
