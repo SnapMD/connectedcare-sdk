@@ -20,7 +20,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <summary>
         /// The Currency of the provider.
         /// </summary>
-        string Currency { get; set; }
+        Currency Currency { get; set; }
 
         /// <summary>
         /// The dictionary of hospital settings.

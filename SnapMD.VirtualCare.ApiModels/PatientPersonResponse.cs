@@ -46,6 +46,16 @@ namespace SnapMD.VirtualCare.ApiModels
         public string Email { get; set; }
 
         /// <summary>
+        /// Patient's age human-readable representation
+        /// </summary>
+        public string AgeString { get; set; }
+
+        /// <summary>
+        /// Patient's address
+        /// </summary>
+        public AddressLocationObject Address { get; set; }
+
+        /// <summary>
         /// Flag: patient info is included to a list, but that patient would be excluded by visibility rules.
         /// </summary>
         public bool IsInvisible { get; set; }
