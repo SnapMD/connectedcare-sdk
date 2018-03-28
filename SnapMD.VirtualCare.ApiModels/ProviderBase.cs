@@ -71,6 +71,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public string Locale { get; set; }
 
         /// <summary>
+        /// The DefaultCountry of the provider.
+        /// </summary>
+        public string DefaultCountry { get; set; }
+
+        /// <summary>
         /// The Currency of the provider.
         /// </summary>
         public Currency Currency { get; set; }
