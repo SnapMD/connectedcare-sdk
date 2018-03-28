@@ -29,6 +29,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public int AssignedDoctorId { get; set; }
         public string AssignedDoctorFirstName { get; set; }
         public string AssignedDoctorLastName { get; set; }
+        public int? ProxyUserId { get; set; }
 
         public string AssignedDoctorName
         {
