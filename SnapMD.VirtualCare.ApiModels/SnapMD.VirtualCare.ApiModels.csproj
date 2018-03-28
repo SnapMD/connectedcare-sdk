@@ -98,8 +98,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressLocationObject.cs" />
     <Compile Include="AddressObject.cs" />
     <Compile Include="AddressObjectExtensions.cs" />
+    <Compile Include="Currency.cs" />
     <Compile Include="ProfilesLocationRequest.cs" />
     <Compile Include="AddPatientProfileRequest.cs" />
     <Compile Include="ApiResponse.cs" />
