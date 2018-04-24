@@ -48,5 +48,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? LocationId { get; set; }
 
         public bool? ProviderAvailable { get; set; }
+        public bool? IsInQueue { get; set; }
+        public bool? IsInConsultation { get; set; }
     }
 }
