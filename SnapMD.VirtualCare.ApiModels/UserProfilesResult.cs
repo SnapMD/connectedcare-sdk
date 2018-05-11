@@ -252,9 +252,6 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </value>
         public bool PatientHasDefaultRequiredFields
         {
-            // this property should be set in the api checking actual required fields for the patient.
-            // address isn't required for dependents
-            // taking this out: !string.IsNullOrWhiteSpace(Address)
             get
             {
                 if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
