@@ -224,22 +224,41 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? Ethnicity { get; set; }
 
         /// <summary>
-        /// Gets a value indicating whether this instance has default required fields (common for all hospitals).
+        /// Gets a value indicating whether this Staff Profile has default required fields (common for all hospitals).
         /// </summary>
         /// <value>
-        /// <c>true</c> if this instance has required fields; otherwise, <c>false</c>.
+        /// <c>true</c> if this staff profile has required fields; otherwise, <c>false</c>.
         /// </value>
-        public bool HasDefaultRequiredFields
+        public bool StaffHasDefaultRequiredFields
         {
-            //this property should be set in the api checking actual required fields and switches.
-            //address isn't required for dependents
-            // taking this out: !string.IsNullOrWhiteSpace(Address)
             get
             {
                 if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
                     Dob.HasValue && !string.IsNullOrWhiteSpace(Gender) &&
                     !string.IsNullOrWhiteSpace(MobilePhone) &&
                     (TimeZoneId ?? 0) != 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Gets a value indicating whether this Patient has default required fields (common for all hospitals).
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if this instance has required fields; otherwise, <c>false</c>.
+        /// </value>
+        public bool PatientHasDefaultRequiredFields
+        {
+            // this property should be set in the api checking actual required fields for the patient.
+            // address isn't required for dependents
+            // taking this out: !string.IsNullOrWhiteSpace(Address)
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
+                    !string.IsNullOrWhiteSpace(MobilePhone))
                 {
                     return true;
                 }
