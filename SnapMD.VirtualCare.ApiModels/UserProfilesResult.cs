@@ -224,6 +224,28 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? Ethnicity { get; set; }
 
         /// <summary>
+        /// Gets a value indicating whether this user has default required fields (common for all hospitals).
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if this user has required fields; otherwise, <c>false</c>.
+        /// </value>
+        [Obsolete("Use StaffHasDefaultRequiredFields or PatientHasDefaultRequiredFields instead")]
+        public bool HasDefaultRequiredFields
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
+                    Dob.HasValue && !string.IsNullOrWhiteSpace(Gender) &&
+                    !string.IsNullOrWhiteSpace(MobilePhone) &&
+                    (TimeZoneId ?? 0) != 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Gets a value indicating whether this Staff Profile has default required fields (common for all hospitals).
         /// </summary>
         /// <value>
