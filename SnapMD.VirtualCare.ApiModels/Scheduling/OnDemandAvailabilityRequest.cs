@@ -8,6 +8,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
     public class OnDemandAvailabilityRequest
     {
         /// <summary>
+        /// PatientId
+        /// </summary>
+        public int? PatientId { get; set; }
+
+        /// <summary>
         /// The hospital identifier (default to login user's providerId) for the request.
         /// </summary>
         /// <value>
@@ -30,5 +35,10 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// The end time.
         /// </value>
         public DateTime? EndTime { get; set; }
+        
+        /// <summary>
+        ///  Flag to include all family members
+        /// </summary>
+        public bool IncludeFamilyMembers { get; set; } = true;
     }
 }

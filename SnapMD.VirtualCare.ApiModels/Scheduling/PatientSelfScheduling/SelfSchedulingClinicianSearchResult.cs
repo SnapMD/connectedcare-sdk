@@ -19,8 +19,35 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling.PatientSelfScheduling
         public DateTimeOffset? NextSlotStart { get; set; }
 
         /// <summary>
-        /// Grouping totals.
+        /// Simple totals (map properties to counts).
         /// </summary>
         public Dictionary<string, int> Totals { get; set; }
+
+        /// <summary>
+        /// Grouped totals. Map properties to arrays of counters for differemt values.
+        /// </summary>
+        public Dictionary<string, Counter[]> Counters;
+
+        /// <summary>
+        /// Counters for values of some property.
+        /// </summary>
+        public class Counter
+        {
+            /// <summary>
+            /// Value of the property. 
+            /// May be string, enum, table row id (int?, Guid?). Type depends on the property.
+            /// </summary>
+            public object Value { get; set; }
+
+            /// <summary>
+            /// Display name for the value.
+            /// </summary>
+            public string Display { get; set; }
+
+            /// <summary>
+            /// Counter for the value.
+            /// </summary>
+            public int Count { get; set; }
+        }
     }
 }

@@ -16,6 +16,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public int[] ClinicianIds { get; set; }
 
         /// <summary>
+        /// Caregivers user ids for filtering.
+        /// </summary>
+        public int[] CaregiversIds { get; set; }
+
+        /// <summary>
         /// Gets or sets the groups.
         /// </summary>
         /// <value>

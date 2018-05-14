@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
@@ -90,5 +91,48 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Doctor Current Business Address (Use this over BusinessAddress).
         /// </summary>
         public AddressObject BusinessAddressObject { get; set; }
+
+        /// <summary>
+        /// List of organizations/locations doctor/presenter may service.
+        /// </summary>
+        public IList<StaffServiceOrganizationModel>  ServiceOrganizations { get; set; }
+    }
+
+    /// <summary>
+    ///  Organization doctor/presenter may service
+    /// </summary>
+    public class StaffServiceOrganizationModel
+    {
+        /// <summary>
+        /// Organization id
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
+        /// Organization name. Presents in responses, ignored in requests.
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// List of service locations inside this organization.
+        /// Null or empty list is a wildcard meaning "all locations".
+        /// </summary>
+        public IList<StaffServiceLocationModel> Locations { get; set; }
+    }
+
+    /// <summary>
+    ///  Location doctor/presenter may service
+    /// </summary>
+    public class StaffServiceLocationModel
+    {
+        /// <summary>
+        /// Location id
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
+        /// Location name. Presents in responses, ignored in requests.
+        /// </summary>
+        public string Name { get; set; }
     }
 }
