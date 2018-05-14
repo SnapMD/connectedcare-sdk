@@ -71,5 +71,26 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// The latest flag (color mark) for appointment.
         /// </summary>
         public int? AppointmentFlag { get; set; }
+		
+		        /// <summary>
+        /// PatientQueueState
+        /// </summary>
+        public int? PatientQueueState { get; set; }
+
+        /// <summary>
+        /// If patient is connected to PatientQueue
+        /// </summary>
+        public bool? PatientQueueConnected { get; set; }
+
+        /// <summary>
+        /// Connection time of patient to the PatientQueue
+        /// </summary>
+        public DateTime? PatientQueueConnectionTime { get; set; }
+
+        /// <summary>
+        /// Connected userId of patientQueue
+        /// </summary>
+        public int? PatientQueueOwnerUserId { get; set; }
+		
     }
 }

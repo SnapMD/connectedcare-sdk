@@ -50,5 +50,9 @@ namespace SnapMD.VirtualCare.ApiModels
         public bool? ProviderAvailable { get; set; }
         public bool? IsInQueue { get; set; }
         public bool? IsInConsultation { get; set; }
+
+        public int? PatientQueueState { get; set; }
+        public bool? PatientQueueConnected { get; set; }
+        public DateTime? PatientQueueConnectionTime { get; set; }
     }
 }
