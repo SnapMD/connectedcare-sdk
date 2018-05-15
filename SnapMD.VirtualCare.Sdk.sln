@@ -9,10 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.VirtualCare.Sdk.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.VirtualCare.ApiModels", "SnapMD.VirtualCare.ApiModels\SnapMD.VirtualCare.ApiModels.csproj", "{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapMD.VirtualCare.LeopardonSso", "SnapMD.VirtualCare.LeopardonSso\SnapMD.VirtualCare.LeopardonSso.csproj", "{926E086A-77FE-4328-9C5A-3436F15A58C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
+		DotNetCore|Any CPU = DotNetCore|Any CPU
+		DotNetCore|x64 = DotNetCore|x64
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 	EndGlobalSection
@@ -21,6 +25,10 @@ Global
 		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Debug|x64.ActiveCfg = Debug|x64
 		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Debug|x64.Build.0 = Debug|x64
+		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.DotNetCore|Any CPU.ActiveCfg = DotNetCore|Any CPU
+		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.DotNetCore|Any CPU.Build.0 = DotNetCore|Any CPU
+		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.DotNetCore|x64.ActiveCfg = DotNetCore|x64
+		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.DotNetCore|x64.Build.0 = DotNetCore|x64
 		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7C7BE4A0-39AC-4BD5-9A86-8D16D5258CFC}.Release|x64.ActiveCfg = Release|x64
@@ -29,6 +37,10 @@ Global
 		{49F684C1-8787-49D7-9BFE-BA066658573D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49F684C1-8787-49D7-9BFE-BA066658573D}.Debug|x64.ActiveCfg = Debug|x64
 		{49F684C1-8787-49D7-9BFE-BA066658573D}.Debug|x64.Build.0 = Debug|x64
+		{49F684C1-8787-49D7-9BFE-BA066658573D}.DotNetCore|Any CPU.ActiveCfg = DotNetCore|Any CPU
+		{49F684C1-8787-49D7-9BFE-BA066658573D}.DotNetCore|Any CPU.Build.0 = DotNetCore|Any CPU
+		{49F684C1-8787-49D7-9BFE-BA066658573D}.DotNetCore|x64.ActiveCfg = DotNetCore|x64
+		{49F684C1-8787-49D7-9BFE-BA066658573D}.DotNetCore|x64.Build.0 = DotNetCore|x64
 		{49F684C1-8787-49D7-9BFE-BA066658573D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49F684C1-8787-49D7-9BFE-BA066658573D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{49F684C1-8787-49D7-9BFE-BA066658573D}.Release|x64.ActiveCfg = Release|x64
@@ -36,9 +48,25 @@ Global
 		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.Debug|x64.ActiveCfg = Debug|x64
 		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.Debug|x64.Build.0 = Debug|x64
+		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.DotNetCore|Any CPU.ActiveCfg = DotNetCore|Any CPU
+		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.DotNetCore|Any CPU.Build.0 = DotNetCore|Any CPU
+		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.DotNetCore|x64.ActiveCfg = DotNetCore|x64
+		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.DotNetCore|x64.Build.0 = DotNetCore|x64
 		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.Release|Any CPU.Build.0 = Release|Any CPU
 		{26B4F2AD-87AE-491B-801A-5D70FB0D2D74}.Release|x64.ActiveCfg = Release|x64
+		{926E086A-77FE-4328-9C5A-3436F15A58C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{926E086A-77FE-4328-9C5A-3436F15A58C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{926E086A-77FE-4328-9C5A-3436F15A58C6}.Debug|x64.ActiveCfg = Debug|x64
+		{926E086A-77FE-4328-9C5A-3436F15A58C6}.Debug|x64.Build.0 = Debug|x64
+		{926E086A-77FE-4328-9C5A-3436F15A58C6}.DotNetCore|Any CPU.ActiveCfg = DotNetCore|Any CPU
+		{926E086A-77FE-4328-9C5A-3436F15A58C6}.DotNetCore|Any CPU.Build.0 = DotNetCore|Any CPU
+		{926E086A-77FE-4328-9C5A-3436F15A58C6}.DotNetCore|x64.ActiveCfg = DotNetCore|x64
+		{926E086A-77FE-4328-9C5A-3436F15A58C6}.DotNetCore|x64.Build.0 = DotNetCore|x64
+		{926E086A-77FE-4328-9C5A-3436F15A58C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{926E086A-77FE-4328-9C5A-3436F15A58C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{926E086A-77FE-4328-9C5A-3436F15A58C6}.Release|x64.ActiveCfg = Release|x64
+		{926E086A-77FE-4328-9C5A-3436F15A58C6}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
