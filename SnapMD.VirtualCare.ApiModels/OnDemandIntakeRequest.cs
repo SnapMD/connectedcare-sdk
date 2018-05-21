@@ -12,6 +12,7 @@
 using System.Collections.Generic;
 using SnapMD.VirtualCare.Sdk.Models;
 using SnapMD.VirtualCare.ApiModels.Scheduling;
+using System;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
@@ -64,5 +65,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// EncounterTypeCode
         /// </value>
         public EncounterTypeCode? EncounterTypeCode { get; set; }
+
+        /// <summary>
+        /// PatientQueueId
+        /// </summary>
+        public Guid? PatientQueueId { get; set; }
     }
 }
