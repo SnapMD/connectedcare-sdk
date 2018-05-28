@@ -72,7 +72,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling.PatientSelfScheduling
         /// <summary>
         /// Ids of subspecialities to search for.
         /// </summary>
-        public int[] SubspecialitiesIds { get; set; }
+        public int?[] SubspecialitiesIds { get; set; }
 
         /// <summary>
         /// Items to skip.
