@@ -48,9 +48,8 @@ namespace SnapMD.VirtualCare.ApiModels
         private void Parse(string scode, string descr)
         {
             int code = 0;
-            if (scode != null)
-                int.TryParse(scode, out code);
-            if (!string.IsNullOrWhiteSpace(descr) && code == 0)
+            if ((scode == null || !int.TryParse(scode, out code)) &&
+                !string.IsNullOrWhiteSpace(descr))
             {
                 var splitChar = 'ξ';
                 if (descr.IndexOf(splitChar) == -1)
