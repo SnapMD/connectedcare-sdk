@@ -60,7 +60,7 @@ namespace SnapMD.VirtualCare.ApiModels
                     descr = tokens[1];
             }
             Code = code;
-            Description = descr;
+            Description = descr ?? "";
         }
 
         /// <summary>
