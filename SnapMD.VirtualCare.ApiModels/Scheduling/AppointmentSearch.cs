@@ -60,5 +60,10 @@
         /// Records to take.
         /// </summary>
         public int? Take { get; set; }
+
+        /// <summary>
+        /// Excludes total count
+        /// </summary>
+        public bool ExcludeTotalCount { get; set; }
     }
 }
