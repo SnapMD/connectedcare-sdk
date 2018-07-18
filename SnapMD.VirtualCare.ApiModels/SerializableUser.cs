@@ -10,11 +10,15 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
+
+using System;
+
 namespace SnapMD.VirtualCare.ApiModels
 {
     public class SerializableUser
     {
         public int id { get; set; }
         public string username { get; set; }
+        public Guid? apiSessionId { get; set; }
     }
 }

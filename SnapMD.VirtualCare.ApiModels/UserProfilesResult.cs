@@ -317,5 +317,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// User role description.
         /// </summary>
         public string UserRoleDescription { get; set; }
+
+        /// <summary>
+        /// The FamilyGroupId of the patient.
+        /// </summary>
+        public int? FamilyGroupId { get; set; }
     }
 }
