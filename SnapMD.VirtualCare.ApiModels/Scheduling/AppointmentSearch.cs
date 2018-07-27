@@ -65,5 +65,15 @@
         /// Excludes total count
         /// </summary>
         public bool ExcludeTotalCount { get; set; }
+
+        /// <summary>
+        /// PatientName filter
+        /// </summary>
+        public string PatientName { get; set; }
+
+        /// <summary>
+        /// ProvideName filter
+        /// </summary>
+        public string ProviderName { get; set; }
     }
 }
