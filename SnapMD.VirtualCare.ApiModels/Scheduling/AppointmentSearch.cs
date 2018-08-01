@@ -75,5 +75,10 @@
         /// ProvideName filter
         /// </summary>
         public string ProviderName { get; set; }
+
+        /// <summary>
+        /// PatientOrPhysicianNameFilter filter
+        /// </summary>
+        public string PatientOrPhysicianNameFilter { get; set; }
     }
 }
