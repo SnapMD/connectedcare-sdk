@@ -1,7 +1,7 @@
 ﻿namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
-    /// SortOrder
+    /// SortOrderDirection
     /// </summary>
     public enum SortOrderDirection
     {
@@ -27,13 +27,13 @@
     public class SortOrderField
     {
         /// <summary>
-        /// ColumnName
+        /// Sorting ColumnName
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
         /// Sort Direction
         /// </summary>
-        public SortOrderDirection SortOrder { get; set; }
+        public SortOrderDirection SortOrderDirection { get; set; }
     }
 }
