@@ -75,6 +75,6 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <summary>
         /// Sortingorder of the resultset
         /// </summary>
-        public SortOrderField[] SortOrders { get; set; }
+        public SortOrderField[] SortOrderFields { get; set; }
     }
 }
