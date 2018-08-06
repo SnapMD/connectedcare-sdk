@@ -3,7 +3,7 @@
     /// <summary>
     /// SortOrder
     /// </summary>
-    public enum SortOrder
+    public enum SortOrderDirection
     {
         /// <summary>
         /// Default None
@@ -24,7 +24,7 @@
     /// <summary>
     /// Sorting order of a given resultset
     /// </summary>
-    public class DataSortOrder
+    public class SortOrderField
     {
         /// <summary>
         /// ColumnName
@@ -34,6 +34,6 @@
         /// <summary>
         /// Sort Direction
         /// </summary>
-        public SortOrder SortOrder { get; set; }
+        public SortOrderDirection SortOrder { get; set; }
     }
 }
