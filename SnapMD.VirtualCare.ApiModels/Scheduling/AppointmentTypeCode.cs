@@ -28,11 +28,6 @@
         /// <summary>
         /// Appointment for document encounter
         /// </summary>
-        DocumentEncounter,
-
-        /// <summary>
-        /// Appointment for document encounter
-        /// </summary>
-        OnDemandCallback
+        DocumentEncounter
     }
 }
