@@ -70,5 +70,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// PatientQueueId
         /// </summary>
         public Guid? PatientQueueId { get; set; }
+
+        /// <summary>
+        /// Service type. May be null, so default type would be chosen
+        /// </summary>
+        public int? ServiceTypeId { get; set; }
     }
 }
