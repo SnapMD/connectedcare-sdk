@@ -37,6 +37,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </value>
         public List<IntakeConcern> Concerns { get; set; }
         /// <summary>
+        /// Additional textual concerns information.
+        /// </summary>
+        public string AdditionalNotes { get; set; }
+        /// <summary>
         /// Gets or sets the phone.
         /// </summary>
         /// <value>
