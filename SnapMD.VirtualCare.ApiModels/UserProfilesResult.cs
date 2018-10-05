@@ -136,6 +136,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public string TimeZoneSystemId { get; set; }
 
         /// <summary>
+        /// Gets or sets current time string in user timezone. Example: '2018-10-04T17:01:25.9329178'.
+        /// </summary>
+        public string UserCurrentTime { get; set; }
+
+        /// <summary>
         /// Gets or sets the user identifier.
         /// </summary>
         /// <value>
