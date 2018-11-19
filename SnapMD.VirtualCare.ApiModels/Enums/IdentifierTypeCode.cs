@@ -16,6 +16,9 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
     /// </remarks>
     public enum IdentifierTypeCode
     {
+        /// <summary>
+        ///  Identifier device is None.
+        /// </summary>
         None = 0,
 
         /// <summary>Universal Device Identifier</summary>

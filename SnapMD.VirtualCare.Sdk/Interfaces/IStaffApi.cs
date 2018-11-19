@@ -2,6 +2,9 @@
 
 namespace SnapMD.VirtualCare.Sdk.Interfaces
 {
+    /// <summary>
+    /// Return person api.
+    /// </summary>
     public interface IStaffApi
     {
         /// <summary>
