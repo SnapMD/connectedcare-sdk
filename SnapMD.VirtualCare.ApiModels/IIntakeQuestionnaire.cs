@@ -15,18 +15,53 @@ using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Represent IIntake Questionnaire.
+    /// </summary>
     public interface IIntakeQuestionnaire : IMedicalHistoryProfile
     {
+        /// <summary>
+        ///     Gets or sets the Concerns.
+        /// </summary>
+        /// <value>
+        ///  List of EncounterConcern.
+        /// </value>
         List<EncounterConcern> Concerns { get; set; }
 
+        /// <summary>
+        ///     Gets or sets the PatientRecord.
+        /// </summary>
+        /// <value>
+        /// PatientRecord.
+        /// </value>
         PatientRecord PatientRecord { get; set; }
-
+        /// <summary>
+        ///     Gets or sets the DoctorRecord.
+        /// </summary>
+        /// <value>
+        /// DoctorRecord.
+        /// </value>
         DoctorRecord DoctorRecord { get; set; }
-
+        /// <summary>
+        ///     Gets or sets the HospitalRecord.
+        /// </summary>
+        /// <value>
+        /// HospitalRecord.
+        /// </value>
         HospitalRecord HospitalRecord { get; set; }
-
+        /// <summary>
+        ///     Gets or sets the GuardiansRecords.
+        /// </summary>
+        /// <value>
+        /// GuardiansRecords.
+        /// </value>
         List<GuardianRecord> GuardiansRecords { get; set; }
-
+        /// <summary>
+        ///     Gets or sets the AdditionalNotes.
+        /// </summary>
+        /// <value>
+        /// AdditionalNotes.
+        /// </value>
         string AdditionalNotes { get; set; }
     }
 }
