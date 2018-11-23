@@ -16,32 +16,51 @@ using System.Xml.Serialization;
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
-    /// Represent IPatient Admin Api.
+    /// Encapsulate the Medical History profil data .
     /// </summary>
     [XmlRoot("MedicalHistory", Namespace = "https://snap.md/api/v2/xml/medicalhistory")]
     public class MedicalHistoryProfile : IMedicalHistoryProfile
     {
         /// <summary>
-        ///  Get and Set Medication Allergies.
+        /// Gets or sets the MedicationAllergies.
         /// </summary>
+        /// <value>
+        /// Allergic Medication.
+        /// </value>
         [XmlArrayItem("CustomCode", typeof(LegacyPatientAllergyItem))]
         [XmlArrayItem("PatientAllergy", typeof(PatientAllergyItem))]
         public List<PatientAllergyItem> MedicationAllergies { get; set; }
+
         /// <summary>
-        ///  Get and Set Surgeries.
+        /// Gets or sets the Surgeries.
         /// </summary>
+        /// <value>
+        /// Surgeries Record.
+        /// </value>
         public List<SurgeryRecord> Surgeries { get; set; }
+
         /// <summary>
-        ///  Get and Set Medical Conditions.
+        /// Gets or sets the medical conditions.
         /// </summary>
+        /// <value>
+        /// Medical Conditions Record.
+        /// </value>
         public List<CustomCode> MedicalConditions { get; set; }
+
         /// <summary>
-        ///  Get and Set Medications.
+        /// Gets or sets the Medications.
         /// </summary>
+        /// <value>
+        /// Medications Record.
+        /// </value>
         public List<CustomCode> Medications { get; set; }
+
         /// <summary>
-        ///  Get and Set InfantData.
+        /// Gets or sets the Infant Data.
         /// </summary>
+        /// <value>
+        /// InfantData Record.
+        /// </value>
         public NewbornRecord InfantData { get; set; }
     }
 }
