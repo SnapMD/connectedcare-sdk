@@ -15,19 +15,33 @@ using System.Xml.Serialization;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Represent IPatient Admin Api.
+    /// </summary>
     [XmlRoot("MedicalHistory", Namespace = "https://snap.md/api/v2/xml/medicalhistory")]
     public class MedicalHistoryProfile : IMedicalHistoryProfile
     {
+        /// <summary>
+        ///  Get and Set Medication Allergies.
+        /// </summary>
         [XmlArrayItem("CustomCode", typeof(LegacyPatientAllergyItem))]
         [XmlArrayItem("PatientAllergy", typeof(PatientAllergyItem))]
         public List<PatientAllergyItem> MedicationAllergies { get; set; }
-
+        /// <summary>
+        ///  Get and Set Surgeries.
+        /// </summary>
         public List<SurgeryRecord> Surgeries { get; set; }
-
+        /// <summary>
+        ///  Get and Set Medical Conditions.
+        /// </summary>
         public List<CustomCode> MedicalConditions { get; set; }
-
+        /// <summary>
+        ///  Get and Set Medications.
+        /// </summary>
         public List<CustomCode> Medications { get; set; }
-
+        /// <summary>
+        ///  Get and Set InfantData.
+        /// </summary>
         public NewbornRecord InfantData { get; set; }
     }
 }

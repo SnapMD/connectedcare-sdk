@@ -15,6 +15,9 @@ using System;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Encapsulate New CoUser Request.
+    /// </summary>
     public class NewCoUserRequest : PatientRecord
     {
         /// <summary>

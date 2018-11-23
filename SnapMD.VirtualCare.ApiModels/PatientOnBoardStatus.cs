@@ -11,10 +11,22 @@
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Represents the Patient On Board Status.
+    /// </summary>
     public enum PatientOnBoardStatus
     {
+        /// <summary>
+        /// Enumaration code None value 0
+        /// </summary>
         None = 0,
+        /// <summary>
+        /// Enumaration code Active value 1
+        /// </summary>
         Active = 1,
+        /// <summary>
+        /// Enumaration code Inactive value -1
+        /// </summary>
         Inactive = -1
     }
 }

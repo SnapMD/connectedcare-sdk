@@ -11,10 +11,31 @@
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Represents patient account status.
+    /// </summary>
     public enum PatientAccountStatus
     {
+        /// <summary>
+        ///     Enum data Active .
+        /// </summary>
+        /// <value>
+        ///     1.
+        /// </value> 
         Active = 1,
+        /// <summary>
+        ///     Enum data Inactive .
+        /// </summary>
+        /// <value>
+        ///     0.
+        /// </value> 
         Inactive = 0,
+        /// <summary>
+        ///     Enum data Pending .
+        /// </summary>
+        /// <value>
+        ///     2.
+        /// </value> 
         Pending = 2
     }
 }
