@@ -14,7 +14,7 @@ using System;
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
-    ///    Encapsulate the new patient response.
+    /// Represents New Patient Response.
     /// </summary>
     public class NewPatientResponse
     {
@@ -57,12 +57,11 @@ namespace SnapMD.VirtualCare.ApiModels
         ///     Time zone ID.
         /// </value>
         public int TimeZoneId { get; set; }
-
         /// <summary>
-        ///     Gets or sets the Email.
+        ///     Get or Set the Email.
         /// </summary>
         /// <value>
-        ///     Patient Email.
+        ///   Email
         /// </value>
         public string Email { get; set; }
 
@@ -74,7 +73,6 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </value>
         public FirstLast Name { get; set; }
 
-
         /// <summary>
         ///     Gets or sets the patient Id.
         /// </summary>
@@ -82,15 +80,13 @@ namespace SnapMD.VirtualCare.ApiModels
         ///     Patient Id.
         /// </value>
         public int PatientId { get; set; }
-
         /// <summary>
-        ///     Gets or sets the provider Id.
+        ///     Get or Set the Provider Id.
         /// </summary>
         /// <value>
-        ///     ProviderId.
+        ///   ProviderId
         /// </value>
         public int ProviderId { get; set; }
-
         /// <summary>
         ///     Gets or sets the User Login Id.
         /// </summary>
@@ -98,16 +94,14 @@ namespace SnapMD.VirtualCare.ApiModels
         ///     UserLoginId.
         /// </value>
         public int UserLoginId { get; set; }
-
-
         /// <summary>
-        ///     Gets or sets the Gender.
+        ///     Get or Set the Gender.
         /// </summary>
         /// <value>
-        ///     Gender.
+        ///   Male or Female
         /// </value>
         public string Gender { get; set; }
-
+      
         /// <summary>
         ///     Gets or sets the Mobile phone.
         /// </summary>
