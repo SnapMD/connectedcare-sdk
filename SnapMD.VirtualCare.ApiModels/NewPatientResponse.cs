@@ -19,41 +19,43 @@ namespace SnapMD.VirtualCare.ApiModels
     public class NewPatientResponse
     {
         /// <summary>
-        ///     Get or Set the Address.
+        ///     Gets or sets the Address.
         /// </summary>
         /// <value>
-        ///    Address
+        ///     The Address.
         /// </value>
         public string Address { get; set; }
+
         /// <summary>
-        ///     Get or Set AddressObject.
+        ///     Gets or sets the Address.
         /// </summary>
         /// <value>
-        ///    Line 1
-        ///    Line 2
-        ///    City 
-        ///    State
-        ///    StateCode
-        ///    PostalCode
-        ///    Country
-        ///    CountryCode
-        ///    AddressText
+        ///     1.Line1.
+        ///     2.Line2
+        ///     3.City
+        ///     4.State
+        ///     5.StateCode
+        ///     6.PostalCode
+        ///     7.Country
+        ///     8.CountryCode
+        ///     8.AddressTest
         /// </value>
         public AddressObject AddressObject { get; set; }
+
         /// <summary>
-        ///     Get or Set the Date of Birth.
+        ///     Gets or sets the Date of Birth.
         /// </summary>
         /// <value>
-        ///    Date of Birth
+        ///     The Date of Birth.
         /// </value>
         public DateTime? Dob { get; set; }
+
         /// <summary>
-        ///     Get or Set the Time Zone Id.
+        ///     Gets or sets the Time zone.
         /// </summary>
         /// <value>
-        ///   TimeZoneId
+        ///     Time zone ID.
         /// </value>
-
         public int TimeZoneId { get; set; }
         /// <summary>
         ///     Get or Set the Email.
@@ -61,23 +63,22 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         ///   Email
         /// </value>
-
         public string Email { get; set; }
+
         /// <summary>
-        ///     Get or Set the Name.
+        ///     Gets or sets the patient Name.
         /// </summary>
         /// <value>
-        ///   Name
+        ///     Patient Name.
         /// </value>
-
         public FirstLast Name { get; set; }
+
         /// <summary>
-        ///     Get or Set the Patient Id.
+        ///     Gets or sets the patient Id.
         /// </summary>
         /// <value>
-        ///   PatientId
+        ///     Patient Id.
         /// </value>
-
         public int PatientId { get; set; }
         /// <summary>
         ///     Get or Set the Provider Id.
@@ -85,15 +86,13 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         ///   ProviderId
         /// </value>
-
         public int ProviderId { get; set; }
         /// <summary>
-        ///     Get or Set the UserLoginId.
+        ///     Gets or sets the User Login Id.
         /// </summary>
         /// <value>
-        ///   UserLoginId
+        ///     UserLoginId.
         /// </value>
-
         public int UserLoginId { get; set; }
         /// <summary>
         ///     Get or Set the Gender.
@@ -101,13 +100,13 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         ///   Male or Female
         /// </value>
-
         public string Gender { get; set; }
+      
         /// <summary>
-        ///     Get or Set the MobilePhone.
+        ///     Gets or sets the Mobile phone.
         /// </summary>
         /// <value>
-        ///  MobilePhone
+        ///     MobilePhone.
         /// </value>
         public string MobilePhone { get; set; }
     }

@@ -12,15 +12,66 @@
 #endregion
 namespace SnapMD.VirtualCare.Sdk.Models
 {
+    /// <summary>
+    /// Provide status code 
+    /// </summary>
     public enum ConsultationStatusCode
     {
+        /// <summary>
+        /// Payment Done.
+        /// </summary>
+        /// <value>
+        /// code is 68.
+        /// </value>
         PaymentDone = 68,
+        /// <summary>
+        /// Doctor assigned.
+        /// </summary>
+        /// <value>
+        /// code is 69.
+        /// </value>
         DoctorAssigned = 69,
-        CustomerInWaiting=82,
+        /// <summary>
+        /// Cutomer in waiting.
+        /// </summary>
+        /// <value>
+        /// Code is 69.
+        /// </value>
+        CustomerInWaiting = 82,
+        /// <summary>
+        /// Doctor Initiated Consultation.
+        /// </summary>
+        /// <value>
+        /// Code is 70.
+        /// </value>
         DoctorInitiatedConsultation = 70,
+        /// <summary>
+        /// Started Consultation .
+        /// </summary>
+        /// <value>
+        /// Code is 71.
+        /// </value>
         StartedConsultation = 71,
+        /// <summary>
+        /// Started Consultation .
+        /// </summary>
+        /// <value>
+        /// Code is 71.
+        /// </value>
         EndedConsultation = 72,
+        /// <summary>
+        /// Cancel Consultation .
+        /// </summary>
+        /// <value>
+        /// Code is 79.
+        /// </value>
         CancelConsultaion = 79,
+        /// <summary>
+        /// Progress Consultation .
+        /// </summary>
+        /// <value>
+        /// Code is 80.
+        /// </value>
         InProgress = 80
     };
 }

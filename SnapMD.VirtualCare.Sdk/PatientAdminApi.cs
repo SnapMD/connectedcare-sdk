@@ -15,10 +15,19 @@ using SnapMD.VirtualCare.Sdk.Wrappers;
 
 namespace SnapMD.VirtualCare.Sdk
 {
-
+    /// <summary>
+    /// Represents Patient Admin Api.
+    /// </summary>
     public class PatientAdminApi : ApiCall, IPatientAdminApi
     {
-
+        /// <summary>
+        /// Represents Patient Admin Api Constructor.
+        /// </summary>
+        /// <param name="apiKey"></param>
+        /// <param name="baseUrl"></param>
+        /// <param name="bearerToken"></param>
+        /// <param name="developerId"></param>
+        /// <param name="webClient"></param>
         public PatientAdminApi(
             string baseUrl,
             string bearerToken,
@@ -29,6 +38,13 @@ namespace SnapMD.VirtualCare.Sdk
         {
         }
 
+        /// <summary>
+        /// Represents Patient Admin Api Constructor.
+        /// </summary>
+        /// <param name="apiKey"></param>
+        /// <param name="baseUrl"></param>
+        /// <param name="bearerToken"></param>
+        /// <param name="developerId"></param>
         public PatientAdminApi(
             string baseUrl,
             string bearerToken,
@@ -38,18 +54,37 @@ namespace SnapMD.VirtualCare.Sdk
         {
         }
 
+        /// <summary>
+        ///    Get Patients.
+        /// </summary>
+        /// <value>
+        ///   <paramref name="email"/>
+        /// </value>
         public ApiResponse<PatientOnBoardShortDetail> GetPatient(string email)
         {
             var url = $"v2/admin/patients?email={email}";
             return MakeCall<ApiResponse<PatientOnBoardShortDetail>>(url);
         }
 
+        /// <summary>
+        ///    Add Patients.
+        /// </summary>
+        /// <value>
+        ///   <paramref name="patient"/>
+        /// </value>
         public ApiResponseV2<AddPatientAdminResponseShort> AddPatient(PatientOnBoardShortDetailRequest patient)
         {
             return AddPatient(patient, false);
 
         }
 
+        /// <summary>
+        ///    Add Patients.
+        /// </summary>
+        /// <value>
+        ///   <paramref name="patient"/>
+        ///   <paramref name="allowNullEmail"/>
+        /// </value>
         public ApiResponseV2<AddPatientAdminResponseShort> AddPatient(PatientOnBoardShortDetailRequest patient, bool allowNullEmail)
         {
             if (patient.ValidateModel(message => new SnapSdkException(message), allowNullEmail))
@@ -60,12 +95,25 @@ namespace SnapMD.VirtualCare.Sdk
             throw new SnapSdkException("Patient model is missing values");
 
         }
-
+        /// <summary>
+        ///    Delete the Patient.
+        /// </summary>
+        /// <value>
+        ///   <paramref name="patientId"/>
+        /// </value>
         public void DeletePatient(int patientId)
         {
             Delete<PatientOnBoardShortDetailRequest>($"v2/admin/patients/{patientId}", null);
         }
 
+        /// <summary>
+        ///    Delete the Update Dependent Relation And Authorization.
+        /// </summary>
+        /// <value>
+        ///   <paramref name="patientId"/>
+        ///   <paramref name="dependentId"/>
+        ///   <paramref name="requestData"/>
+        /// </value>
         public ApiResponseV2<bool> UpdateDependentRelationAndAuthorization
             (int patientId, int dependentId, DependentRelationship requestData)
         {

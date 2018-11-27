@@ -7,12 +7,22 @@ using SnapMD.VirtualCare.Sdk.Models;
 
 namespace SnapMD.VirtualCare.Sdk
 {
+    /// <summary>
+    /// Api to check availability block
+    /// </summary>
     public class AvailabilityBlockAdminApi : ApiCall, IAvailabilityBlockAdminApi
     {
+        /// <summary>
+        /// Avai block constructor
+        /// </summary>
         public AvailabilityBlockAdminApi(string baseUrl, IWebClient client, string bearerToken = null, string developerId = null, string apiKey = null) : base(baseUrl, client, bearerToken, developerId, apiKey)
         {
         }
 
+        /// <summary>
+        /// Method to get filterred Availablity block.
+        /// </summary>
+        /// <param name="request">Avialability block filtering.</param>
         public ApiResponseV2<AvailabilityBlockResponse> GetAvailabilityBlocks(AvailabilityBlocksFilter request)
         {
             var clinicianIds =
@@ -37,6 +47,10 @@ namespace SnapMD.VirtualCare.Sdk
             return result;
         }
 
+        /// <summary>
+        /// Method to create Availablity block.
+        /// </summary>
+        /// <param name="availabilityBlockRequest">Provide availability block.</param>
         public ApiResponseV2<AvailabilityBlockResponse> CreateAvailabilityBlock(AvailabilityBlockRequest availabilityBlockRequest)
         {
             var result = Post<ApiResponseV2<AvailabilityBlockResponse>>("v2.1/clinicians/availability-blocks", availabilityBlockRequest);
@@ -44,6 +58,10 @@ namespace SnapMD.VirtualCare.Sdk
             return result;
         }
 
+        /// <summary>
+        /// Method to delete Availablity block.
+        /// </summary>
+        /// <param name="blockId">Block Id which will be deleted.</param>
         public void DeleteAvailabilityBlock(Guid blockId)
         {
             Delete("v2.1/clinicians/availability-blocks/" + blockId);
