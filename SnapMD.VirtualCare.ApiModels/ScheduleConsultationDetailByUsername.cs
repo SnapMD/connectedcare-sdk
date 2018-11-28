@@ -22,7 +22,6 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    Get or Set the Assigned Doctor User name
         /// </summary>
         public string AssignedDoctorUsername { get; set; }
-
         /// <summary>
         ///     Get or Set the Consultation Id.
         /// </summary>
@@ -30,7 +29,6 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    ConsultationId
         /// </value>
         public int? ConsultationId { get; set; }
-
         /// <summary>
         ///     Get or Set the Doctor Name.
         /// </summary>
@@ -38,7 +36,6 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    DoctorName
         /// </value>
         public string DoctorName { get; set; }
-
         /// <summary>
         ///     Get or Set the Id.
         /// </summary>
@@ -54,7 +51,6 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    IsNoCharge
         /// </value>
         public bool IsNoCharge { get; set; }
-
         /// <summary>
         ///     Get or Set Note.
         /// </summary>
@@ -62,7 +58,7 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    Note
         /// </value>
         public string Note { get; set; }
-
+        
         /// <summary>
         ///     Get or Set Patient.
         /// </summary>
@@ -78,7 +74,7 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    PatientUsername
         /// </value>
         public string PatientUsername { get; set; }
-
+       
         /// <summary>
         ///     Get or Set Prev Consultation ID.
         /// </summary>
@@ -86,7 +82,7 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    PrevConsultationID
         /// </value>
         public int? PrevConsultationID { get; set; }
-
+        
         /// <summary>
         ///     Get or Set  Primary Consern.
         /// </summary>
@@ -126,7 +122,7 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    SchedulingReasonType
         /// </value>
         public int? SchedulingReasonType { get; set; }
-
+        
         /// <summary>
         ///     Get or Set SecondaryConsern.
         /// </summary>
