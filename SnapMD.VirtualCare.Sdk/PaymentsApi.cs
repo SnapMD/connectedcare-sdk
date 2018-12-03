@@ -76,7 +76,6 @@ namespace SnapMD.VirtualCare.Sdk
             var result = Post<ApiResponseV2<PaymentProfilePostResult>>(string.Format("v2/patients/payments"), paymentData);
             return result;
         }
-
         /// <summary>
         ///     Get the Get Payment Status .
         /// </summary>

@@ -247,7 +247,7 @@ namespace SnapMD.Web.Api.Models
         ///PrimaryPhysician
         /// </value>
         public bool? PrimaryPhysician { get; set; }
-       
+
         /// <summary>
         /// Get or set PrimaryPhysicianContact
         /// </summary>
@@ -287,7 +287,6 @@ namespace SnapMD.Web.Api.Models
         ///State
         /// </value>
         public bool? State { get; set; }
-
         /// <summary>
         /// Get or set StateId
         /// </summary>

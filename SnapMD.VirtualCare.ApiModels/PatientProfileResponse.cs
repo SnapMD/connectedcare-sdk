@@ -30,7 +30,6 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Security Token
         /// </value>
         public string SecurityToken { get; set; }
-
         /// <summary>
         /// Get or set the Patient Name
         /// </summary>

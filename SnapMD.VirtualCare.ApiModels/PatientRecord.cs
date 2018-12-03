@@ -78,7 +78,6 @@ namespace SnapMD.VirtualCare.ApiModels
         /// MobilePhone
         /// </value>
         public string MobilePhone { get; set; }
-
         /// <summary>
         /// Get or set the Dob
         /// </summary>
@@ -102,7 +101,6 @@ namespace SnapMD.VirtualCare.ApiModels
         /// OrganizationName
         /// </value>
         public string OrganizationName { get; set; }
-
 
         /// <summary>
         /// Get or set the Location Name

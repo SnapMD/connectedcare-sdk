@@ -233,7 +233,6 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    Identifiers
         /// </value>
         public IList<IdentifierValue> Identifiers { get; set; }
-
         /// <summary>
         ///     Get or Set CountryCode.
         /// </summary>
@@ -242,7 +241,6 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </value>
         [Obsolete("Use MobilePhoneCountryCodeId instead")]
         public string CountryCode { get; set; }
-
         /// <summary>
         ///     Get or Set Mobile Phone Country CodeId.
         /// </summary>
