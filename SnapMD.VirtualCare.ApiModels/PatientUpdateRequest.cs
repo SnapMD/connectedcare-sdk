@@ -27,7 +27,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </summary>
         /// <value>
         ///    LastName
-        /// </value> 
+        /// </value>
         public string LastName { get; set; }
         /// <summary>
         ///     Get or Set the Dob.

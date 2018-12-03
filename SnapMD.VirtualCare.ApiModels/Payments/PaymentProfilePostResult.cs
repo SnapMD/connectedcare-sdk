@@ -25,6 +25,7 @@ namespace SnapMD.VirtualCare.ApiModels.Payments
         ///    profileId
         /// </value> 
         public string profileId { get; set; }
+
         /// <summary>
         ///     Get or Set payment Profile Id .
         /// </summary>

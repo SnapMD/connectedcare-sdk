@@ -39,6 +39,7 @@ namespace SnapMD.Web.Api.Models
         /// </value>
         [Obsolete("Use MobilePhoneCountryCodeId instead")]
         public bool? Country { get; set; }
+
         /// <summary>
         /// Get or set the Mobile Phone Country Code Id
         /// </summary>
@@ -46,6 +47,7 @@ namespace SnapMD.Web.Api.Models
         /// Mobile Phone Country Code Id
         /// </value>
         public bool? MobilePhoneCountryCodeId { get; set; }
+
         /// <summary>
         /// Get or set the CurrentMedications
         /// </summary>
@@ -53,6 +55,7 @@ namespace SnapMD.Web.Api.Models
         /// CurrentMedications
         /// </value>
         public bool? CurrentMedications { get; set; }
+
         /// <summary>
         /// Get or set the Dob
         /// </summary>
@@ -60,14 +63,15 @@ namespace SnapMD.Web.Api.Models
         /// Dob
         /// </value>
         public bool? Dob { get; set; }
+
         /// <summary>
         /// Get or set the patient email
         /// </summary>
         /// <value>
         /// patient email
         /// </value>
-
         public bool? Email { get; set; }
+
         /// <summary>
         /// Get or set the Ethnicity
         /// </summary>
@@ -75,6 +79,7 @@ namespace SnapMD.Web.Api.Models
         /// Ethnicity
         /// </value>
         public bool? Ethnicity { get; set; }
+
         /// <summary>
         /// Get or set the EyeColor
         /// </summary>
@@ -82,6 +87,7 @@ namespace SnapMD.Web.Api.Models
         /// EyeColor
         /// </value>
         public bool? EyeColor { get; set; }
+
         /// <summary>
         /// Get or set the Family Pediatrician
         /// </summary>
@@ -89,6 +95,7 @@ namespace SnapMD.Web.Api.Models
         /// FamilyPediatrician
         /// </value>
         public bool? FamilyPediatrician { get; set; }
+
         /// <summary>
         /// Get or set the Family Pediatrician Contact
         /// </summary>
@@ -96,6 +103,7 @@ namespace SnapMD.Web.Api.Models
         /// Family Pediatrician Contact
         /// </value>
         public bool? FamilyPediatricianContact { get; set; }
+
         /// <summary>
         /// Get or set the Gender
         /// </summary>
@@ -103,6 +111,7 @@ namespace SnapMD.Web.Api.Models
         ///Gender
         /// </value>
         public bool? Gender { get; set; }
+
         /// <summary>
         /// Get or set the HairColor
         /// </summary>
@@ -110,22 +119,23 @@ namespace SnapMD.Web.Api.Models
         ///HairColor
         /// </value>
         public bool? HairColor { get; set; }
+
         /// <summary>
         /// Get or set the Height
         /// </summary>
         /// <value>
         ///Height
         /// </value>
-
         public bool? Height { get; set; }
+
         /// <summary>
         /// Get or set the Height
         /// </summary>
         /// <value>
         ///Height
         /// </value>
-
         public bool? HeightUnit { get; set; }
+
         /// <summary>
         /// Get or set HomePhone
         /// </summary>
@@ -133,6 +143,7 @@ namespace SnapMD.Web.Api.Models
         ///HomePhone
         /// </value>
         public bool? HomePhone { get; set; }
+
         /// <summary>
         /// Get or set HospitalId
         /// </summary>
@@ -140,6 +151,7 @@ namespace SnapMD.Web.Api.Models
         ///HospitalId
         /// </value>
         public int HospitalId { get; set; }
+
         /// <summary>
         /// Get or set LastName
         /// </summary>
@@ -147,6 +159,7 @@ namespace SnapMD.Web.Api.Models
         ///LastName
         /// </value>
         public bool? LastName { get; set; }
+
         /// <summary>
         /// Get or set Location
         /// </summary>
@@ -154,6 +167,7 @@ namespace SnapMD.Web.Api.Models
         ///Location
         /// </value>
         public bool? Location { get; set; }
+
         /// <summary>
         /// Get or set Medical Conditions
         /// </summary>
@@ -161,6 +175,7 @@ namespace SnapMD.Web.Api.Models
         ///MedicalConditions
         /// </value>
         public bool? MedicalConditions { get; set; }
+
         /// <summary>
         /// Get or set MedicationAllergies
         /// </summary>
@@ -168,6 +183,7 @@ namespace SnapMD.Web.Api.Models
         ///MedicationAllergies
         /// </value>
         public bool? MedicationAllergies { get; set; }
+
         /// <summary>
         /// Get or set MobilePhone
         /// </summary>
@@ -175,6 +191,7 @@ namespace SnapMD.Web.Api.Models
         ///MobilePhone
         /// </value>
         public bool? MobilePhone { get; set; }
+
         /// <summary>
         /// Get or set Organization
         /// </summary>
@@ -182,6 +199,7 @@ namespace SnapMD.Web.Api.Models
         ///Organization
         /// </value>
         public bool? Organization { get; set; }
+
         /// <summary>
         /// Get or set PatientName
         /// </summary>
@@ -189,6 +207,7 @@ namespace SnapMD.Web.Api.Models
         ///PatientName
         /// </value>
         public bool? PatientName { get; set; }
+
         /// <summary>
         /// Get or set Pharmacy Contact
         /// </summary>
@@ -196,6 +215,7 @@ namespace SnapMD.Web.Api.Models
         ///Pharmacy Contact
         /// </value>
         public bool? PharmacyContact { get; set; }
+
         /// <summary>
         /// Get or set Physician Specialist
         /// </summary>
@@ -203,6 +223,7 @@ namespace SnapMD.Web.Api.Models
         ///PhysicianSpecialist
         /// </value>
         public bool? PhysicianSpecialist { get; set; }
+
         /// <summary>
         /// Get or set PhysicianSpecialistContact
         /// </summary>
@@ -210,6 +231,7 @@ namespace SnapMD.Web.Api.Models
         ///PhysicianSpecialistContact
         /// </value>
         public bool? PhysicianSpecialistContact { get; set; }
+
         /// <summary>
         /// Get or set PreferedPharmacy
         /// </summary>
@@ -217,6 +239,7 @@ namespace SnapMD.Web.Api.Models
         ///PreferedPharmacy
         /// </value>
         public bool? PreferedPharmacy { get; set; }
+
         /// <summary>
         /// Get or set PrimaryPhysician
         /// </summary>
@@ -224,6 +247,7 @@ namespace SnapMD.Web.Api.Models
         ///PrimaryPhysician
         /// </value>
         public bool? PrimaryPhysician { get; set; }
+
         /// <summary>
         /// Get or set PrimaryPhysicianContact
         /// </summary>
@@ -231,14 +255,15 @@ namespace SnapMD.Web.Api.Models
         ///PrimaryPhysicianContact
         /// </value>
         public bool? PrimaryPhysicianContact { get; set; }
+
         /// <summary>
         /// Get or set PriorSurgeries
         /// </summary>
         /// <value>
         ///PriorSurgeries
         /// </value>
-
         public bool? PriorSurgeries { get; set; }
+
         /// <summary>
         /// Get or set SchoolContact
         /// </summary>
@@ -246,6 +271,7 @@ namespace SnapMD.Web.Api.Models
         ///SchoolContact
         /// </value>
         public bool? SchoolContact { get; set; }
+
         /// <summary>
         /// Get or set SchoolName
         /// </summary>
@@ -253,6 +279,7 @@ namespace SnapMD.Web.Api.Models
         ///SchoolName
         /// </value>
         public bool? SchoolName { get; set; }
+
         /// <summary>
         /// Get or set State
         /// </summary>
@@ -266,8 +293,8 @@ namespace SnapMD.Web.Api.Models
         /// <value>
         ///StateId
         /// </value>
-
         public bool? StateId { get; set; }
+
         /// <summary>
         /// Get or set TimeZone
         /// </summary>
@@ -275,6 +302,7 @@ namespace SnapMD.Web.Api.Models
         ///TimeZone
         /// </value>
         public bool? TimeZone { get; set; }
+
         /// <summary>
         /// Get or set Weight
         /// </summary>
@@ -282,6 +310,7 @@ namespace SnapMD.Web.Api.Models
         ///Weight
         /// </value>
         public bool? Weight { get; set; }
+
         /// <summary>
         /// Get or set WeightUnit
         /// </summary>
@@ -289,6 +318,7 @@ namespace SnapMD.Web.Api.Models
         ///WeightUnit
         /// </value>
         public bool? WeightUnit { get; set; }
+
         /// <summary>
         /// Get or set ZipCode
         /// </summary>
