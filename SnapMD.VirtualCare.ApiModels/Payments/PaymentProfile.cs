@@ -21,13 +21,54 @@ namespace SnapMD.VirtualCare.ApiModels.Payments
     /// </summary>
     [ModelName("ApiModels.PaymentProfile")]
     public class PaymentProfile {
-
+        /// <summary>
+        ///     Get or Set the patient  billing address.
+        /// </summary>
+        /// <value>
+        ///    The patient full billing addres
+        /// </value>
         public CimAddress BillingAddress { get; set; }
+        /// <summary>
+        ///     Get or Set the patient  id.
+        /// </summary>
+        /// <value>
+        ///    The patient Id
+        /// </value>
         public string ProfileID { get; set; }
+        /// <summary>
+        ///     Get or Set the bussiness status.
+        /// </summary>
+        /// <value>
+        ///  The bussiness status
+        /// </value>
         public bool IsBusiness { get; set; }
+        /// <summary>
+        ///     Get or Set the card number.
+        /// </summary>
+        /// <value>
+        ///   Card Number
+        /// </value>
         public string CardNumber { get; set; }
+        /// <summary>
+        ///     Get or Set the card type.
+        /// </summary>
+        /// <value>
+        ///   Card type
+        /// </value>
         public string CardType { get; set; }
+        /// <summary>
+        ///     Get or Set the card expiration.
+        /// </summary>
+        /// <value>
+        ///  The card expiration
+        /// </value>
         public string CardExpiration { get; set; }
+        /// <summary>
+        ///     Get or Set the Card Code.
+        /// </summary>
+        /// <value>
+        ///  The Card Code
+        /// </value>
         public string CardCode { get; set; }
     }
 

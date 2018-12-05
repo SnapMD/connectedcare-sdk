@@ -12,18 +12,26 @@
 using System;
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.Sdk.Interfaces;
-using SnapMD.VirtualCare.Sdk.Models;
 
 namespace SnapMD.VirtualCare.Sdk
 {
+    /// <summary>
+    /// The object used to encapsulate a Doctor Record.
+    /// </summary>
     public class DocumentsApi : ApiCall
     {
+        /// <summary>
+        /// Document Api
+        /// </summary>
         public DocumentsApi(string baseUrl, string developerId, string apiKey, IWebClient client)
             : base(baseUrl, client, null, developerId, apiKey)
         {
             RequiresAuthentication = false;
         }
 
+        /// <summary>
+        /// Document Api
+        /// </summary>
         public ApiResponseV2<DocumentsResponse> GetDocument(DocumentTypeCode documentType, int hospitalId)
         {
             if (documentType == 0)
