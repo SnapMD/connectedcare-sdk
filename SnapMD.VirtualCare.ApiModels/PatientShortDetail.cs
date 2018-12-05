@@ -13,6 +13,7 @@ using System;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+
     public class PatientShortInfo
     {
         public int Id { get; set; }
