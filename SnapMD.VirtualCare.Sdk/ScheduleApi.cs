@@ -15,24 +15,49 @@ using SnapMD.VirtualCare.Sdk.Interfaces;
 
 namespace SnapMD.VirtualCare.Sdk
 {
+    /// <summary>
+    /// Represents the Schedule Api.
+    /// </summary>
     public class ScheduleApi : ApiCall
     {
+        /// <summary>
+        /// Represent the ScheduleApi Constructor
+        /// </summary>
+        /// <param name="apiKey">Api Key</param>
+        /// <param name="baseUrl"> Base Url</param>
+        /// <param name="bearerToken"> Bearer Token</param>
+        /// <param name="developerId"> Developer Id</param>
+        /// <param name="webClient"> webClient </param>
         public ScheduleApi(string baseUrl, string bearerToken, string developerId, string apiKey, IWebClient webClient)
             : base(baseUrl, webClient, bearerToken, developerId, apiKey)
         {
         }
 
+        /// <summary>
+        /// Represent the ScheduleApi Constructor
+        /// </summary>
+        /// <param name="baseUrl">baseUrl</param>
+        /// <param name="webClient">webClient</param>
         public ScheduleApi(string baseUrl, IWebClient webClient)
             : base(baseUrl, webClient)
         {
         }
 
+        /// <summary>
+        /// Delete the Slot
+        /// </summary>
+        /// <param name="slotId"> Slot Id</param>
         public ApiResponseV2<ScheduleSlot> DeleteSlot(int slotId)
         {
             var result = Delete<ApiResponseV2<ScheduleSlot>>(string.Format("v2/schedule/consultation/slot/{0}", slotId), null);
             return result;
         }
 
+        /// <summary>
+        /// Delete the Slot
+        /// </summary>
+        /// <param name="slotId"> Slot Id</param>
+        /// <param name="timeSpan">Time Span </param>
         public ApiResponseV2<ScheduleSlot> DeleteSlot(int slotId, object timeSpan)
         {
             var result = Delete<ApiResponseV2<ScheduleSlot>>(string.Format("v2/schedule/consultation/slot/{0}", slotId), timeSpan);

@@ -15,14 +15,45 @@ using System;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    ///<summary>
+    /// Encapsulate the ScheduleSlot.
+    /// </summary>
     public class ScheduleSlot
     {
+        ///<summary>
+        ///Get or set the ScheduleSlotId.
+        /// </summary>
+        /// <value>Schedule Slot Id</value>
         public int ScheduleSlotId { get; set; }
+        ///<summary>
+        ///Get or set the HospitalId.
+        /// </summary>
+        /// <value>Hospital Id</value>
         public int HospitalId { get; set; }
+        ///<summary>
+        ///Get or set the DocUserId.
+        /// </summary>
+        /// <value>Doc User Id</value>
         public int DocUserId { get; set; }
+        ///<summary>
+        ///Get or set the Slot Date.
+        /// </summary>
+        /// <value>Slot Dated</value>
         public DateTime SlotDate { get; set; }
+        ///<summary>
+        ///Get or set the Slot Start Time.
+        /// </summary>
+        /// <value>Slot Start Timed</value>
         public DateTime? SlotStartTime { get; set; }
+        ///<summary>
+        ///Get or set the Slot End Time.
+        /// </summary>
+        /// <value>Slot End Time</value>
         public DateTime? SlotEndTime { get; set; }
+        ///<summary>
+        ///Get or set the Slot Status.
+        /// </summary>
+        /// <value>Slot Status</value>
         public string SlotStatus { get; set; }
     }
 }

@@ -7,6 +7,9 @@ using SnapMD.VirtualCare.ApiModels.Enums;
 
 namespace SnapMD.VirtualCare.Sdk.Interfaces
 {
+    /// <summary>
+    /// Represent the Token Api.
+    /// </summary>
     public interface ITokenApi
     {
         /// <summary>
