@@ -35,7 +35,6 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         ///    DoctorName
         /// </value>
-
         public string DoctorName { get; set; }
         /// <summary>
         ///     Get or Set the Id.
@@ -44,13 +43,13 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    Id
         /// </value>
         public int Id { get; set; }
+
         /// <summary>
         ///     Get or Set IsNoCharge.
         /// </summary>
         /// <value>
         ///    IsNoCharge
         /// </value>
-
         public bool IsNoCharge { get; set; }
         /// <summary>
         ///     Get or Set Note.
@@ -59,6 +58,7 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    Note
         /// </value>
         public string Note { get; set; }
+        
         /// <summary>
         ///     Get or Set Patient.
         /// </summary>
@@ -74,14 +74,15 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    PatientUsername
         /// </value>
         public string PatientUsername { get; set; }
+       
         /// <summary>
         ///     Get or Set Prev Consultation ID.
         /// </summary>
         /// <value>
         ///    PrevConsultationID
         /// </value>
-
         public int? PrevConsultationID { get; set; }
+        
         /// <summary>
         ///     Get or Set  Primary Consern.
         /// </summary>
@@ -89,22 +90,23 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    PrimaryConsern
         /// </value>
         public string PrimaryConsern { get; set; }
+
         /// <summary>
         ///     Get or Set ProfileImagePath.
         /// </summary>
         /// <value>
         ///    ProfileImagePath
         /// </value>
-
         public string ProfileImagePath { get; set; }
+
         /// <summary>
         ///     Get or Set ScheduledFrom.
         /// </summary>
         /// <value>
         ///    ScheduledFrom
         /// </value>
-
         public string ScheduledFrom { get; set; }
+
         /// <summary>
         ///     Get or Set ScheduledTime.
         /// </summary>
@@ -112,21 +114,21 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    ScheduledTime
         /// </value>
         public DateTime? ScheduledTime { get; set; }
+
         /// <summary>
         ///     Get or Set SchedulingReasonType.
         /// </summary>
         /// <value>
         ///    SchedulingReasonType
         /// </value>
-
         public int? SchedulingReasonType { get; set; }
+        
         /// <summary>
         ///     Get or Set SecondaryConsern.
         /// </summary>
         /// <value>
         ///    SecondaryConsern
         /// </value>
-
         public string SecondaryConsern { get; set; }
     }
 }
