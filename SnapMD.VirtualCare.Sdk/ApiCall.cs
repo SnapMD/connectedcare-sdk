@@ -22,7 +22,9 @@ namespace SnapMD.VirtualCare.Sdk
 {
     //replace all calls and references to webclient, with WebClientWrapper, 
     //and route them through the wrapper.
-
+    /// <summary>
+    /// ApiCall information.
+    /// </summary>
     public class ApiCall
     {
         private readonly string _apiKey;
@@ -30,6 +32,14 @@ namespace SnapMD.VirtualCare.Sdk
         private readonly string _bearerToken;
         private readonly string _developerId;
 
+        /// <summary>
+        /// ApiCall Constructor.
+        /// </summary>
+        /// <param name="apiKey"></param>
+        /// <param name="baseUrl"></param>
+        /// <param name="bearerToken"></param>
+        /// <param name="client"></param>
+        /// <param name="developerId"></param>
         public ApiCall(string baseUrl,
             IWebClient client,
             string bearerToken = null,
@@ -53,16 +63,49 @@ namespace SnapMD.VirtualCare.Sdk
            WebClientInstance = client;
         }
 
+        /// <summary>
+        ///  Get or Set NotFound Status.
+        /// </summary>
+        /// <value>
+        /// NotFound Status true or false.
+        /// </value>
         public bool NotFound { get; private set; }
 
+        /// <summary>
+        ///  Get or Set RequiresAuthentication Status.
+        /// </summary>
+        /// <value>
+        /// True or false.
+        /// </value>
         public bool RequiresAuthentication { get; set; }
 
+        /// <summary>
+        ///  Get or Set ServerError Status.
+        /// </summary>
+        /// <value>
+        /// True or false.
+        /// </value>
         public bool ServerError { get; private set; }
 
+        /// <summary>
+        ///  Get or Set Unauthorized Status.
+        /// </summary>
+        /// <value>
+        /// True or false.
+        /// </value>
         public bool Unauthorized { get; private set; }
 
+        /// <summary>
+        ///  Get or Set WebClientInstance Status.
+        /// </summary>
+        /// <value>
+        /// True or false.
+        /// </value>
         public IWebClient WebClientInstance { get; set; }
 
+        /// <summary>
+        /// Method MakeCall.
+        /// </summary>
         protected virtual T MakeCall<T>(string apiPath) where T : class
         {
             var url = new Uri(_baseUri, apiPath);
@@ -86,11 +129,21 @@ namespace SnapMD.VirtualCare.Sdk
             return null;
         }
 
+        /// <summary>
+        /// Method MakeCall.
+        /// </summary>
+        /// <param name="arguments"></param>
+        /// <param name="pathFormat"></param>
+        
         protected virtual JObject MakeCall(string pathFormat, params object[] arguments)
         {
             return MakeCall(string.Format(pathFormat, arguments));
         }
 
+        /// <summary>
+        /// Method MakeCall.
+        /// </summary>
+        /// <param name="apiPath"></param>
         protected virtual JObject MakeCall(string apiPath)
         {
             var url = new Uri(_baseUri, apiPath);
@@ -108,7 +161,11 @@ namespace SnapMD.VirtualCare.Sdk
             }
         }
 
-
+        /// <summary>
+        /// Method MakeCall.
+        /// </summary>
+        /// <param name="executeFunc"></param>
+        
         protected JObject MakeCall(Func<IWebClient, string> executeFunc)
         {
             // Allow domains we don't have a certificate for
@@ -202,6 +259,11 @@ namespace SnapMD.VirtualCare.Sdk
             }
         }
 
+        /// <summary>
+        /// Method MakeCall.
+        /// </summary>
+        /// <param name="executeFunc"></param>
+        /// <param name="wc"></param>
         protected JObject MakeCall(IWebClient wc, Func<IWebClient, string> executeFunc)
         {
             try
@@ -227,21 +289,42 @@ namespace SnapMD.VirtualCare.Sdk
             return null;
         }
 
+        /// <summary>
+        /// Method Put.
+        /// </summary>
+        /// <param name="apiPath"></param>
+        /// <param name="data"></param>
         protected virtual JObject Put(string apiPath, object data)
         {
             return UploadData(apiPath, "PUT", data);
         }
 
+        /// <summary>
+        /// Method Post.
+        /// </summary>
+        /// <param name="apiPath"></param>
+        /// <param name="data"></param>
         protected virtual JObject Post(string apiPath, object data)
         {
             return UploadData(apiPath, "POST", data);
         }
 
+        /// <summary>
+        /// Method Delete.
+        /// </summary>
+        /// <param name="apiPath"></param>
+        /// <param name="data"></param>
         protected virtual JObject Delete(string apiPath, object data = null)
         {
             return UploadData(apiPath, "DELETE", data);
         }
 
+        /// <summary>
+        /// Method UploadData.
+        /// </summary>
+        /// <param name="apiPath"></param>
+        /// <param name="data"></param>
+        /// <param name="method"></param>
         private JObject UploadData(string apiPath, string method, object data)
         {
             var url = new Uri(_baseUri, apiPath);

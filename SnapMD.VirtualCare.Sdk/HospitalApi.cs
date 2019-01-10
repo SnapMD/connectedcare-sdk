@@ -43,12 +43,20 @@ namespace SnapMD.VirtualCare.Sdk
             return o;
         }
 
+        /// <summary>
+        /// Gets the hospital.
+        /// </summary>
+        /// <returns></returns>
         public ApiResponseV2<HospitalInfo> GetHospital()
         {
             var o = MakeCall<ApiResponseV2<HospitalInfo>>("v2/hospital");
             return o;
         }
 
+        /// <summary>
+        /// Update Address.
+        /// </summary>
+        /// <param name="address"></param>
         public HospitalAddress UpdateAddress(HospitalAddress address)
         {
             return Put<HospitalAddress>("hospitaladdress", address);

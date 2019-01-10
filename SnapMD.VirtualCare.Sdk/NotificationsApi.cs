@@ -10,6 +10,14 @@ namespace SnapMD.VirtualCare.Sdk
     /// <seealso cref="SnapMD.VirtualCare.Sdk.ApiCall" />
     public class NotificationsApi : ApiCall
     {
+        /// <summary>
+        ///  Notifications Api Construction.
+        /// </summary>
+        /// <param name="apiKey"></param>
+        /// <param name="baseUrl"></param>
+        /// <param name="bearerToken"></param>
+        /// <param name="developerId"></param>
+        /// <param name="webClient"></param>
         public NotificationsApi(
             string baseUrl,
             string bearerToken,
@@ -20,6 +28,13 @@ namespace SnapMD.VirtualCare.Sdk
         {
         }
 
+        /// <summary>
+        ///  Notifications Api Construction.
+        /// </summary>
+        /// <param name="apiKey"></param>
+        /// <param name="baseUrl"></param>
+        /// <param name="bearerToken"></param>
+        /// <param name="developerId"></param>
         public NotificationsApi(
             string baseUrl,
             string bearerToken,
