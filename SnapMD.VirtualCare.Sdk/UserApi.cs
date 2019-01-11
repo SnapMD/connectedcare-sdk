@@ -15,13 +15,27 @@ using Newtonsoft.Json.Linq;
 
 namespace SnapMD.VirtualCare.Sdk
 {
+    /// <summary>
+    ///  The UserApi.
+    /// </summary>
     public class UserApi : ApiCall
     {
+        /// <summary>
+        ///  The UserApi Constructor.
+        /// </summary>
+        /// <param name="apiKey"></param>
+        /// <param name="baseUrl"></param>
+        /// <param name="bearerToken"></param>
+        /// <param name="client"></param>
+        /// <param name="developerId"></param>
         public UserApi(string baseUrl, string bearerToken, string developerId, string apiKey, SnapMD.VirtualCare.Sdk.Interfaces.IWebClient client)
             : base(baseUrl, client, bearerToken, developerId, apiKey)
         {
         }
 
+        /// <summary>
+        ///  The Get UserId.
+        /// </summary>
         public int? GetUserId()
         {
             var response = MakeCall("v2/account/user");

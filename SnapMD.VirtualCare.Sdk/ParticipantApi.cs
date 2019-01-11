@@ -7,20 +7,18 @@ using SnapMD.VirtualCare.Sdk.Models;
 namespace SnapMD.VirtualCare.Sdk
 {
     /// <summary>
-    ///     This API is currently for internal use only.
+    ///     This Participant Api.
     /// </summary>
-    /// <seealso cref="SnapMD.VirtualCare.Sdk.ApiCall" />
     public class ParticipantApi : ApiCall, IParticipantApi
     {
         /// <summary>
-        ///    contructor of the api ParticipantApi.
+        ///   Participant Api Constructor.
         /// </summary>
-        /// <value>
-        ///    <paramref name="apiKey"/>
-        ///    <paramref name="baseUrl"/>
-        ///    <paramref name="bearerToken"/>
-        ///    <paramref name="developerId"/>
-        /// </value>
+        /// <param name="apiKey"></param>
+        /// <param name="baseUrl"></param>
+        /// <param name="bearerToken"></param>
+        /// <param name="client"></param>
+        /// <param name="developerId"></param>
         public ParticipantApi(string baseUrl, IWebClient client, string bearerToken = null, string developerId = null, string apiKey = null) : base(baseUrl, client, bearerToken, developerId, apiKey)
         {
         }

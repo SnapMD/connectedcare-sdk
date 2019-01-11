@@ -60,9 +60,9 @@ namespace SnapMD.VirtualCare.Sdk
         }
 
         /// <summary>
-        /// Update Address
+        /// Update Address.
         /// </summary>
-        /// <returns></returns>
+        /// <param name="address"></param>
         public HospitalAddress UpdateAddress(HospitalAddress address)
         {
             return Put<HospitalAddress>("hospitaladdress", address);
