@@ -17,34 +17,105 @@ using SnapMD.VirtualCare.ApiModels.Scheduling;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// The object used to encapsulate a consultation result.
+    /// </summary>
     public class ConsultationResult
     {
+        /// <summary>
+        /// The assign doctor for consultation.
+        /// </summary>
         public ResponseObservableItem AssignedDoctor { get; set; }
 
+        /// <summary>
+        /// The conference key of the consultation.
+        /// </summary>
         public string ConferenceKey { get; set; }
 
+        /// <summary>
+        /// Consultation Status.
+        /// </summary>
+        /// <remarks>
+        /// 1. PaymentDone = 68
+        /// 2. DoctorAssigned = 69
+        /// 3. CustomerInWaiting = 82
+        /// 4. DoctorInitiatedConsultation = 70
+        /// 5. StartedConsultation = 71
+        /// 6. EndedConsultation = 72
+        /// </remarks>
         public ConsultationStatusCode ConsultationStatus { get; set; }
 
+        /// <summary>
+        /// The Hospital Id.
+        /// </summary>
         public int HospitalId { get; set; }
 
+        /// <summary>
+        /// The Consulation Id.
+        /// </summary>
         public int Id { get; set; }
 
+        /// <summary>
+        /// The Consulation is scheduled or ondemand.
+        /// </summary>
         public string IsScheduled { get; set; }
 
+        /// <summary>
+        /// Not of the consulation
+        /// </summary>
         public string Note { get; set; }
 
+        /// <summary>
+        /// Response obserable patient.
+        /// </summary>
+        /// <remarks>
+        /// 1. Id
+        /// 2. Description
+        /// 3. ShortName
+        /// </remarks>
         public ResponseObservableItem Patient { get; set; }
 
+        /// <summary>
+        /// Phone number
+        /// </summary>
         public string PhoneNumber { get; set; }
 
+        /// <summary>
+        /// Response obserable User.
+        /// </summary>
+        /// <remarks>
+        /// 1. Id
+        /// 2. Description
+        /// 3. ShortName
+        /// </remarks>
         public ResponseObservableItem ResponsibleUser { get; set; }
 
+        /// <summary>
+        /// Consultation Time
+        /// </summary>
         public DateTime? Time { get; set; }
 
+        /// <summary>
+        /// Copay Amount
+        /// </summary>
         public double? CopayAmount { get; set; }
 
+        /// <summary>
+        /// Consultation Ammount
+        /// </summary>
         public double? ConsultationAmount { get; set; }
 
+        /// <summary>
+        /// Encounter type code.
+        /// </summary>
+        /// <remarks>
+        /// 1. None
+        /// 2. Text
+        /// 3. Vedio
+        /// 4. Chat
+        /// 5. Phone
+        /// 6.InPerson
+        /// </remarks>
         public EncounterTypeCode EncounterTypeCode { get; set; }
     }
 }

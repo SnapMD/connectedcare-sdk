@@ -14,13 +14,29 @@ using Newtonsoft.Json.Linq;
 
 namespace SnapMD.VirtualCare.Sdk.Reports
 {
+    /// <summary>
+    /// Represents the Snap Reports Api.
+    /// </summary>
     public class SnapReportsApi : ApiCall
     {
+        /// <summary>
+        /// Represent the Snap Reports Api Constructor
+        /// </summary>
+        /// <param name="apiKey">Api Key</param>
+        /// <param name="baseUrl"> Base Url</param>
+        /// <param name="bearerToken"> Bearer Token</param>
+        /// <param name="developerId"> Developer Id</param>
+
         public SnapReportsApi(string baseUrl, string bearerToken, string developerId, string apiKey)
             : base(baseUrl, new SnapMD.VirtualCare.Sdk.Wrappers.WebClientWrapper(new System.Net.WebClient()), bearerToken, developerId, apiKey)
         {
         }
 
+        /// <summary>
+        /// Represent the method Get Patient Consultation ReportDetails
+        /// </summary>
+        /// <param name="consultationId">ConsultationId</param>
+        ///<returns>Patient Consultation Report Details</returns>
         public string GetPatientConsultationReportDetails(int consultationId)
         {
             var url = string.Format("reports/consultationreportdetails/{0}", consultationId);
@@ -29,6 +45,11 @@ namespace SnapMD.VirtualCare.Sdk.Reports
             return result;
         }
 
+        /// <summary>
+        /// Represent the method Get Patient Consultation Chat Note
+        /// </summary>
+        /// <param name="consultationId">ConsultationId</param>
+        ///<returns>Chat not of the consultation</returns>
         public string GetPatientConsultationChatNote(int consultationId)
         {
             var url = string.Format("reports/consultationreportdetails/chatnote/{0}", consultationId);
@@ -36,7 +57,12 @@ namespace SnapMD.VirtualCare.Sdk.Reports
             var result = Convert.ToString(o["data"]);
             return result;
         }
-        
+
+        /// <summary>
+        /// Represent the method Get Counsultation Files
+        /// </summary>
+        /// <param name="consultationId">ConsultationId</param>
+        ///<returns>Constultation files</returns>
         public string GetCounsultationFiles(int consultationId)
         {
             var jsonObject = new JObject();

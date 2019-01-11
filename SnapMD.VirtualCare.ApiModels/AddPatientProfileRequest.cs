@@ -9,13 +9,61 @@ namespace SnapMD.VirtualCare.ApiModels
     /// </summary>
     public class AddPatientProfileRequest
     {
+        /// <summary>
+        /// Get or set Create User Without Email
+        /// </summary>
+        /// <value>
+        /// CreateUserWithoutEmail
+        /// </value>
         public bool CreateUserWithoutEmail { get; set; }
+        /// <summary>
+        /// Get or set Email Address
+        /// </summary>
+        /// <value>
+        /// EmailAddress
+        /// </value>
         public string EmailAddress { get; set; }
+        /// <summary>
+        /// Get or set Patient Profile Data
+        /// </summary>
+        /// <value>
+        /// Profile data of the patient
+        /// </value>
         public PatientUpdateRequest PatientProfileData { get; set; }
+        /// <summary>
+        /// Get or set Patient MedicalHistory Data
+        /// </summary>
+        /// <value>
+        /// Patient MedicalHistory Data
+        /// </value>
         public LegacyMedicalHistoryForm PatientMedicalHistoryData { get; set; }
+        /// <summary>
+        /// Get or set Medication Allergies
+        /// </summary>
+        /// <value>
+        ///MedicationAllergies
+        /// </value>
         public List<PatientAllergyItem> MedicationAllergies { get; set; }
+        /// <summary>
+        /// Get or set Patient ProfileFields Tracing
+        /// </summary>
+        /// <value>
+        ///PatientProfileFieldsTracing
+        /// </value>
         public PatientProfileFieldChangesTrackingRequest PatientProfileFieldsTracing { get; set; }
+        /// <summary>
+        /// Get or set Time Zone Id
+        /// </summary>
+        /// <value>
+        ///Time Zone Id
+        /// </value>
         public int? TimeZoneId { get; set; }
+        /// <summary>
+        /// Get or set ImageId
+        /// </summary>
+        /// <value>
+        ///ImageId
+        /// </value>
         public Guid? ImageId { get; set; }
     }
 

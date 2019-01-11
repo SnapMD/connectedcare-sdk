@@ -10,13 +10,52 @@
 //    limitations under the License.
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Provide consultation events 
+    /// </summary>
     public enum ConsultationEvents
     {
+        /// <summary>
+        /// Reveiw Consulation.
+        /// </summary>
+        /// <value>
+        /// code is 116.
+        /// </value>
         ReviewConsultation = 116,
+        /// <summary>
+        /// Started Consulation.
+        /// </summary>
+        /// <value>
+        /// code is 116.
+        /// </value>
         StartedConsultation = 117,
+        /// <summary>
+        /// Stopped Consulation.
+        /// </summary>
+        /// <value>
+        /// code is 116.
+        /// </value>
         StoppedConsultation = 118,
+        /// <summary>
+        /// Ended Consulation.
+        /// </summary>
+        /// <value>
+        /// code is 116.
+        /// </value>
         EndedConsultation = 119,
+        /// <summary>
+        /// Waiting Consulation.
+        /// </summary>
+        /// <value>
+        /// code is 116.
+        /// </value>
         WaitingConsultation = 120,
+        /// <summary>
+        /// Join Consulation.
+        /// </summary>
+        /// <value>
+        /// code is 116.
+        /// </value>
         JoinConsultation = 121
     }
     

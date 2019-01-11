@@ -17,8 +17,14 @@ using SnapMD.VirtualCare.Sdk.Wrappers;
 
 namespace SnapMD.VirtualCare.Sdk
 {
+    /// <summary>
+    /// Return encounter admin api.
+    /// </summary>
     public class EncounterAdminApi : ApiCall
     {
+        /// <summary>
+        /// EncounterAdminApi constructor
+        /// </summary>
         public EncounterAdminApi(
             string baseUrl,
             string bearerToken,
@@ -29,6 +35,9 @@ namespace SnapMD.VirtualCare.Sdk
         {
         }
 
+        /// <summary>
+        /// EncounterAdminApi constructor
+        /// </summary>
         public EncounterAdminApi(
             string baseUrl,
             string bearerToken,
@@ -38,6 +47,9 @@ namespace SnapMD.VirtualCare.Sdk
         {
         }
 
+        /// <summary>
+        /// Return Schedule Encounter
+        /// </summary>
         public ScheduledConsultationResult ScheduleEncounter(ScheduleConsultationDetailByUsername encounterData)
         {
             var response = Post("v2/admin/schedule/consultations", encounterData);

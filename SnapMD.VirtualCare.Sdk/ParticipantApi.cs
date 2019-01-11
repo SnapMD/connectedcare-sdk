@@ -24,10 +24,13 @@ namespace SnapMD.VirtualCare.Sdk
         }
 
         /// <summary>
-        ///   AddParticipant the method.
+        ///     Add Participant .
         /// </summary>
-        /// <param name="appointmentId"></param>
-        /// <param name="request"></param>
+        /// <value>
+        ///   <paramref name="appointmentId"/>
+        ///   <paramref name="appointmentId"/>
+        ///   <paramref name="request"/>
+        /// </value>
         public ApiResponseV2<AppointmentParticipantResponse> AddParticipant(Guid appointmentId, AppointmentParticipantRequest request)
         {
             var result = Post<ApiResponseV2<AppointmentParticipantResponse>>
