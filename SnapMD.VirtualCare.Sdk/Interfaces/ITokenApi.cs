@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SnapMD.VirtualCare.ApiModels.Enums;
+using SnapMD.VirtualCare.Sdk.Models;
 
 namespace SnapMD.VirtualCare.Sdk.Interfaces
 {
@@ -27,5 +28,7 @@ namespace SnapMD.VirtualCare.Sdk.Interfaces
         /// <param name="jwt"></param>
         /// <returns>Token string</returns>
         string GetToken(string jwt);
+
+        UserSessionRes GetUserSession(string email, string secret, UserType userType = UserType.Customer, int interfaceType = 0, string deviceId = null);
     }
 }

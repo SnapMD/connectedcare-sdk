@@ -95,6 +95,7 @@
     <Compile Include="Interfaces\IPatientProfileApi.cs" />
     <Compile Include="Interfaces\IPersonApi.cs" />
     <Compile Include="Interfaces\IStaffApi.cs" />
+    <Compile Include="Models\UserSessionRes.cs" />
     <Compile Include="NotificationsApi.cs" />
     <Compile Include="AppointmentsApi.cs" />
     <Compile Include="EncounterAdminApi.cs" />
