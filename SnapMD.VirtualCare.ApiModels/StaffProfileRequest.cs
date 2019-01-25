@@ -13,10 +13,19 @@
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Staff Profile Request.
+    /// </summary>
     public class StaffProfileRequest : BaseProfile
     {
+        /// <summary>
+        /// Admin User ID.
+        /// </summary>
         public int AdminUserID { get; set; }
 
+        /// <summary>
+        /// Staff User ID.
+        /// </summary>
         public int StaffUserID { get; set; }
 
         /// <summary>

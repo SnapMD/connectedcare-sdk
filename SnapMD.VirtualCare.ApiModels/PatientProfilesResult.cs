@@ -19,12 +19,54 @@ namespace SnapMD.VirtualCare.ApiModels
     /// </summary>
     public class PatientProfilesResult
     {
+        /// <summary>
+        /// Get or set the Profile Id
+        /// </summary>
+        /// <value>
+        /// ProfileId
+        /// </value>
         public int? ProfileId { get; set; }
+        /// <summary>
+        /// Get or set the Hospital Id
+        /// </summary>
+        /// <value>
+        /// HospitalId
+        /// </value>
         public int HospitalId { get; set; }
+        /// <summary>
+        /// Get or set the FirstName
+        /// </summary>
+        /// <value>
+        /// FirstName
+        /// </value>
         public string FirstName { get; set; }
+        /// <summary>
+        /// Get or set the LastName
+        /// </summary>
+        /// <value>
+        /// LastName
+        /// </value>
         public string LastName { get; set; }
+        /// <summary>
+        /// Get or set the Gender
+        /// </summary>
+        /// <value>
+        /// Gender
+        /// </value>
         public string Gender { get; set; }
+        /// <summary>
+        /// Get or set the Profile Image Path
+        /// </summary>
+        /// <value>
+        /// ProfileImagePath
+        /// </value>
         public string ProfileImagePath { get; set; }
+        /// <summary>
+        /// Get or set the Dob
+        /// </summary>
+        /// <value>
+        /// Dob
+        /// </value>
         public string Dob { get; set; }
     }
 }

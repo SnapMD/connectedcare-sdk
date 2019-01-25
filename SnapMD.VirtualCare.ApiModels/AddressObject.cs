@@ -3,18 +3,89 @@ using System.Text;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Represent the Address Object.
+    /// </summary>
     public class AddressObject
     {
+        /// <summary>
+        /// Get or set the Address Line1
+        /// </summary>
+        /// <value>
+        /// Address Line1
+        /// </value>
         public string Line1 { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Get or set the Address Line2
+        /// </summary>
+        /// <value>
+        /// Address Line2
+        /// </value>
         public string Line2 { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Get or set the  City
+        /// </summary>
+        /// <value>
+        /// City
+        /// </value>
         public string City { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Get or set the  State
+        /// </summary>
+        /// <value>
+        /// State
+        /// </value>
         public string State { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Get or set the  State Code
+        /// </summary>
+        /// <value>
+        /// State Code
+        /// </value>
         public string StateCode { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Get or set the  PostalCode
+        /// </summary>
+        /// <value>
+        /// Postal Code
+        /// </value>
         public string PostalCode { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Get or set the  Country
+        /// </summary>
+        /// <value>
+        /// Country
+        /// </value>
         public string Country { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Get or set the  Country Code
+        /// </summary>
+        /// <value>
+        /// Country Code
+        /// </value>
         public string CountryCode { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Get or set the  Address Text
+        /// </summary>
+        /// <value>
+        /// Address Text
+        /// </value>
         public string AddressText => ToString();
 
+        /// <summary>
+        /// Return the status Is Empty or Not 
+        /// </summary>
+        /// <value>
+        /// Bool value true or false
+        /// </value>
         public bool IsEmpty()
         {
 #pragma warning disable S1067 // Expressions should not be too complex
@@ -28,6 +99,12 @@ namespace SnapMD.VirtualCare.ApiModels
 #pragma warning restore S1067 // Expressions should not be too complex
         }
 
+        /// <summary>
+        /// Return the status Is Equals 
+        /// </summary>
+        /// <value>
+        /// Bool value true or false
+        /// </value>
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj))

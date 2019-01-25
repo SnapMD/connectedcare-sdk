@@ -12,12 +12,45 @@
 #endregion
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Represents the Soap Note.
+    /// </summary>
     public class SoapNote
     {
+        /// <summary>
+        ///  Get or Set Subjective
+        /// </summary>
+        /// <value> 
+        /// Subjective
+        /// </value>
         public string Subjective { get; set; }
+        /// <summary>
+        ///  Get or Set Objective
+        /// </summary>
+        /// <value> 
+        /// Objective
+        /// </value>
         public string Objective { get; set; }
+        /// <summary>
+        ///  Get or Set Assessment
+        /// </summary>
+        /// <value> 
+        /// Assessment
+        /// </value>
         public string Assessment { get; set; }
+        /// <summary>
+        ///  Get or Set Plan
+        /// </summary>
+        /// <value> 
+        /// Plan
+        /// </value>
         public string Plan { get; set; }
+        /// <summary>
+        ///  Get or Set CptCode
+        /// </summary>
+        /// <value> 
+        /// CptCode
+        /// </value>
         public string CptCode { get; set; }
     }
 }

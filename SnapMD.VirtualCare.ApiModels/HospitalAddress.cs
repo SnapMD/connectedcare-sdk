@@ -13,11 +13,40 @@ using System;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Encapsultae the Hospital Address
+    /// </summary>
     [Serializable]
     public class HospitalAddress
     {
+        /// <summary>
+        ///     Gets or sets the Hospital Id.
+        /// </summary>
+        /// <value>
+        ///     The Hospital Id.
+        /// </value>
         public int HospitalId { get; set; }
+        /// <summary>
+        ///     Gets or sets the Hospital Adress.
+        /// </summary>
+        /// <value>
+        ///     The Hospital Address.
+        /// </value>
         public string Address { get; set; }
+        /// <summary>
+        ///     Gets or sets the Adress Objects.
+        /// </summary>
+        /// <value>
+        ///     1.Line1.
+        ///     2.Line2
+        ///     3.City
+        ///     4.State
+        ///     5.StateCode
+        ///     6.PostalCode
+        ///     7.Country
+        ///     8.CountryCode
+        ///     8.AddressTest
+        /// </value>
         public AddressObject AddressObject { get; set; }
     }
 }

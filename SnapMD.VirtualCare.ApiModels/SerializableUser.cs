@@ -15,10 +15,25 @@ using System;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Represents the Serializable User.
+    /// </summary>
     public class SerializableUser
     {
+        /// <summary>
+        ///  Get or Set id
+        /// </summary>
+        /// <value> id</value>
         public int id { get; set; }
+        /// <summary>
+        ///  Get or Set username
+        /// </summary>
+        /// <value> username</value>
         public string username { get; set; }
+        /// <summary>
+        ///  Get or Set api Session Id
+        /// </summary>
+        /// <value> api Session Id </value>
         public Guid? apiSessionId { get; set; }
     }
 }

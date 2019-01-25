@@ -26,7 +26,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling.PatientSelfScheduling
         /// <summary>
         /// Grouped totals. Map properties to arrays of counters for differemt values.
         /// </summary>
-        public Dictionary<string, Counter[]> Counters;
+        public Dictionary<string, Counter[]> Counters { get; set; }
 
         /// <summary>
         /// Counters for values of some property.

@@ -13,14 +13,59 @@ using System;
 
 namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
+    /// <summary>
+    /// Represents the OnDemandResponse.
+    /// </summary>
     public class OnDemandResponse
     {
+        /// <summary>
+        ///     Get or Set the Consultation Amount.
+        /// </summary>
+        /// <value>
+        ///   Consultation Amount
+        /// </value>
         public double? ConsultationAmount { get; set; }
+        /// <summary>
+        ///     Get or Set the Consultation Id.
+        /// </summary>
+        /// <value>
+        ///   Consultation Id
+        /// </value>
         public int ConsultationId { get; set; }
+        /// <summary>
+        ///     Get or Set the On Demand Request Id.
+        /// </summary>
+        /// <value>
+        ///   On Demand Request Id
+        /// </value>
         public Guid OnDemandRequestId { get; set; }
+        /// <summary>
+        ///     Get or Set Patient Queue Entry Id.
+        /// </summary>
+        /// <value>
+        ///  Patient Queue Entry Id
+        /// </value>
         public Guid PatientQueueEntryId { get; set; }
+        /// <summary>
+        ///     Get or Set Patient Person Id.
+        /// </summary>
+        /// <value>
+        ///  Patient Person Id
+        /// </value>
         public Guid PatientPersonId { get; set; }
+        /// <summary>
+        ///     Get or Set Patient Person Id.
+        /// </summary>
+        /// <value>
+        ///  Patient Person Id
+        /// </value>
         public Guid MeetingId { get; set; }
+        /// <summary>
+        ///     Get or Set Appointment Id.
+        /// </summary>
+        /// <value>
+        ///  Appointment Id
+        /// </value>
         public Guid? AppointmentId { get; set; }
     }
 }

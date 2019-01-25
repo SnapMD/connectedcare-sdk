@@ -13,9 +13,25 @@
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    ///    Represet the Function.
+    /// </summary>
     public class Function
     {
+        /// <summary>
+        ///   Get or set the  Function Id.
+        /// </summary>
+        /// <value>
+        ///  FunctionId.
+        /// </value>
         public int FunctionId { get; set; }
+
+        /// <summary>
+        ///   Get or set the  Description.
+        /// </summary>
+        /// <value>
+        ///  Description.
+        /// </value>
         public string Description { get; set; }
     }
 }
