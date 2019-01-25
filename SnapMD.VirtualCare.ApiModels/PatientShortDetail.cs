@@ -13,13 +13,39 @@ using System;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// A class encapsulating Patient Short Info.
+    /// </summary>
     public class PatientShortInfo
     {
+        /// <summary>
+        /// The id of the patient info.
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// The Primary Physician info.
+        /// </summary>
+        /// <value>Primary Physician </value>
         public string PrimaryPhysician { get; set; }
+        /// <summary>
+        /// The Name of Physician.
+        /// </summary>
+        /// <value>Physician Name </value>                                                                                                                              </value>
         public string Name { get; set; }
+        /// <summary>
+        /// The Physician Address.
+        /// </summary>
+        /// <value>Physician Address </value>    
         public string Address { get; set; }
+        /// <summary>
+        /// The Physician City.
+        /// </summary>
+        /// <value>Physician City </value>    
         public string City { get; set; }
+        /// <summary>
+        /// The Physician ZipCode.
+        /// </summary>
+        /// <value>Zip Code </value>    
         public string ZipCode { get; set; }
 
         /// <summary>
@@ -29,6 +55,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The gender: "M" for Male, "F" for Female.
         /// </value>
         public string Gender { get; set; }
+        /// <summary>
+        /// The Physician ZipCode.
+        /// </summary>
+        /// <value>Zip Code </value>    
         public DateTime? Dob { get; set; }
     }
 }

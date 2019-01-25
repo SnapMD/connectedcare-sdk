@@ -57,6 +57,9 @@ namespace SnapMD.VirtualCare.ApiModels
 #pragma warning restore S1067 // Expressions should not be too complex
         }
 
+        /// <summary>
+        /// Override the string function.
+        /// </summary>
         public override string ToString()
         {
             var sb = new StringBuilder();
