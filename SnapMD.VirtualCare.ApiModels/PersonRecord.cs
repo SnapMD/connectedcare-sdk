@@ -30,6 +30,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public string PhotoUrl { get; set; }
 
         /// <summary>
+        /// ID of the personal image from person profile
+        /// </summary>
+        public Guid? ProfileImageId { get; set; }
+
+        /// <summary>
         ///     Gets or sets the hospital identifier.
         /// </summary>
         /// <value>

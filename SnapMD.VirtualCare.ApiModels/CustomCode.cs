@@ -34,29 +34,33 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </summary>
         public CustomCode(string singleLine = null) : this()
         {
-            Description = string.Empty;
+            Parse(null, singleLine);
+        }
 
-            if (!string.IsNullOrWhiteSpace(singleLine))
+        /// <summary>
+        ///     Initialize custom code from either code and string line or just string line.
+        /// </summary>
+        public CustomCode(string scode, string descr) : this()
+        {
+            Parse(scode, descr);
+        }
+
+        private void Parse(string scode, string descr)
+        {
+            int code = 0;
+            if ((scode == null || !int.TryParse(scode, out code)) &&
+                !string.IsNullOrWhiteSpace(descr))
             {
                 var splitChar = 'ξ';
-                if (singleLine.IndexOf(splitChar) == -1)
-                {
+                if (descr.IndexOf(splitChar) == -1)
                     splitChar = '?';
-                }
 
-                var tokens = singleLine.Split(splitChar);
-                if (tokens.Length > 1)
-                {
-                    int temp;
-                    int.TryParse(tokens[0], out temp);
-                    Code = temp;
-                    Description = tokens[1];
-                }
-                else
-                {
-                    Description = singleLine;
-                }
+                var tokens = descr.Split(splitChar);
+                if (tokens.Length > 1 && int.TryParse(tokens[0], out code))
+                    descr = tokens[1];
             }
+            Code = code;
+            Description = descr ?? "";
         }
 
         /// <summary>

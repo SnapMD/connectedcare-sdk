@@ -1,4 +1,5 @@
-﻿namespace SnapMD.VirtualCare.ApiModels.Scheduling
+﻿using SnapMD.VirtualCare.ApiModels;
+namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
     /// <summary>
     /// Request model for Appointments search filter 
@@ -60,5 +61,20 @@
         /// Records to take.
         /// </summary>
         public int? Take { get; set; }
+
+        /// <summary>
+        /// Excludes total count
+        /// </summary>
+        public bool ExcludeTotalCount { get; set; }
+
+        /// <summary>
+        /// PatientOrPhysicianNameFilter filter
+        /// </summary>
+        public string PatientOrPhysicianNameFilter { get; set; }
+
+        /// <summary>
+        /// Sortingorder of the resultset
+        /// </summary>
+        public SortOrderField[] SortOrderFields { get; set; }
     }
 }

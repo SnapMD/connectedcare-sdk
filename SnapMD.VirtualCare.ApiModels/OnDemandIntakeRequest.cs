@@ -12,6 +12,7 @@
 using System.Collections.Generic;
 using SnapMD.VirtualCare.Sdk.Models;
 using SnapMD.VirtualCare.ApiModels.Scheduling;
+using System;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
@@ -35,6 +36,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The concerns.
         /// </value>
         public List<IntakeConcern> Concerns { get; set; }
+        /// <summary>
+        /// Additional textual concerns information.
+        /// </summary>
+        public string AdditionalNotes { get; set; }
         /// <summary>
         /// Gets or sets the phone.
         /// </summary>
@@ -64,5 +69,15 @@ namespace SnapMD.VirtualCare.ApiModels
         /// EncounterTypeCode
         /// </value>
         public EncounterTypeCode? EncounterTypeCode { get; set; }
+
+        /// <summary>
+        /// PatientQueueId
+        /// </summary>
+        public Guid? PatientQueueId { get; set; }
+
+        /// <summary>
+        /// Service type. May be null, so default type would be chosen
+        /// </summary>
+        public int? ServiceTypeId { get; set; }
     }
 }

@@ -136,6 +136,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public string TimeZoneSystemId { get; set; }
 
         /// <summary>
+        /// Gets or sets current time string in user timezone. Example: '2018-10-04T17:01:25.9329178'.
+        /// </summary>
+        public string UserCurrentTime { get; set; }
+
+        /// <summary>
         /// Gets or sets the user identifier.
         /// </summary>
         /// <value>
@@ -224,16 +229,56 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? Ethnicity { get; set; }
 
         /// <summary>
-        /// Gets a value indicating whether this instance has default required fields (common for all hospitals).
+        /// Gets a value indicating whether this user has default required fields (common for all hospitals).
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if this user has required fields; otherwise, <c>false</c>.
+        /// </value>
+        [Obsolete("Use StaffHasDefaultRequiredFields or PatientHasDefaultRequiredFields instead")]
+        public bool HasDefaultRequiredFields
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
+                    Dob.HasValue && !string.IsNullOrWhiteSpace(Gender) &&
+                    !string.IsNullOrWhiteSpace(MobilePhone) &&
+                    (TimeZoneId ?? 0) != 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Gets a value indicating whether this Staff Profile has default required fields (common for all hospitals).
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if this staff profile has required fields; otherwise, <c>false</c>.
+        /// </value>
+        public bool StaffHasDefaultRequiredFields
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
+                    Dob.HasValue && !string.IsNullOrWhiteSpace(Gender) &&
+                    !string.IsNullOrWhiteSpace(MobilePhone) &&
+                    (TimeZoneId ?? 0) != 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Gets a value indicating whether this Patient has default required fields (common for all hospitals).
         /// </summary>
         /// <value>
         /// <c>true</c> if this instance has required fields; otherwise, <c>false</c>.
         /// </value>
-        public bool HasDefaultRequiredFields
+        public bool PatientHasDefaultRequiredFields
         {
-            //this property should be set in the api checking actual required fields and switches.
-            //address isn't required for dependents
-            // taking this out: !string.IsNullOrWhiteSpace(Address)
             get
             {
                 if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
@@ -279,5 +324,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// User role description.
         /// </summary>
         public string UserRoleDescription { get; set; }
+
+        /// <summary>
+        /// The FamilyGroupId of the patient.
+        /// </summary>
+        public int? FamilyGroupId { get; set; }
     }
 }
