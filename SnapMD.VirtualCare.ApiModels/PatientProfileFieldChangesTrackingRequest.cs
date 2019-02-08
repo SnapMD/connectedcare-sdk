@@ -326,5 +326,45 @@ namespace SnapMD.Web.Api.Models
         ///ZipCode
         /// </value>
         public bool? ZipCode { get; set; }
+        
+        /// <summary>
+        /// Get or set HomePhoneCountryCodeId
+        /// </summary>
+        /// <value>
+        ///HomePhoneCountryCodeId
+        /// </value>
+        public bool? HomePhoneCountryCodeId { get; set; }
+
+        /// <summary>
+        /// Get or set CurrentLocation
+        /// </summary>
+        /// <value>
+        ///CurrentLocation
+        /// </value>
+        public bool? CurrentLocation { get; set; }
+
+        /// <summary>
+        /// Get or set AddressCountry
+        /// </summary>
+        /// <value>
+        ///AddressCountry
+        /// </value>
+        public bool? AddressCountry { get; set; }
+
+        /// <summary>
+        /// Get or set AddressLine1
+        /// </summary>
+        /// <value>
+        ///AddressLine1
+        /// </value>
+        public bool? AddressLine1 { get; set; }
+
+        /// <summary>
+        /// Get or set AddressLine2
+        /// </summary>
+        /// <value>
+        ///AddressLine2
+        /// </value>
+        public bool? AddressLine2 { get; set; }
     }
 }
