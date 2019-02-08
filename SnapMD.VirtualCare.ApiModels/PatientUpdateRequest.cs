@@ -248,5 +248,12 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    MobilePhoneCountryCodeId
         /// </value>
         public int? MobilePhoneCountryCodeId { get; set; }
+        /// <summary>
+        ///     Get or Set Home Phone Country CodeId.
+        /// </summary>
+        /// <value>
+        ///    HomePhoneCountryCodeId
+        /// </value>
+        public int? HomePhoneCountryCodeId { get; set; }
     }
 }
