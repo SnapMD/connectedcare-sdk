@@ -14,6 +14,7 @@ using Newtonsoft.Json.Linq;
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.ApiModels.Enums;
 using SnapMD.VirtualCare.Sdk.Interfaces;
+using SnapMD.VirtualCare.Sdk.Models;
 using SerializableToken = SnapMD.VirtualCare.Sdk.Models.SerializableToken;
 
 namespace SnapMD.VirtualCare.Sdk
@@ -80,6 +81,24 @@ namespace SnapMD.VirtualCare.Sdk
                 throw new SnapSdkException("The SSO token call returned empty, login is not possible");
 
             return response.Data.First();
+        }
+
+        public UserSessionRes GetUserSession(string email, string secret, UserType userType = UserType.Customer, int interfaceType = 0, string deviceId = null)
+        {
+            var request = new
+            {
+                email,
+                password = secret,
+                hospitalId = HospitalId,
+                userTypeId = userType,
+                interfaceTypeId = interfaceType,
+                deviceId
+            };
+
+            var response = Post("v3/auth/user-sessions", request);
+
+            var userSessionRes = response.ToObject<UserSessionRes>();
+            return userSessionRes;
         }
     }
 }

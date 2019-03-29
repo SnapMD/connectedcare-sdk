@@ -13,10 +13,25 @@
 
 namespace SnapMD.VirtualCare.ApiModels.Payments 
 {
+    /// <summary>
+    /// Represents Payment Profile Post Result.
+    /// </summary>
     public class PaymentProfilePostResult
     {
+        /// <summary>
+        ///     Get or Set the profile Id .
+        /// </summary>
+        /// <value>
+        ///    profileId
+        /// </value> 
         public string profileId { get; set; }
 
+        /// <summary>
+        ///     Get or Set payment Profile Id .
+        /// </summary>
+        /// <value>
+        ///    paymentProfileId
+        /// </value> 
         public string paymentProfileId { get; set; }
     }
 }

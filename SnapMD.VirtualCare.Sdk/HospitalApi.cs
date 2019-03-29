@@ -15,8 +15,14 @@ using SnapMD.VirtualCare.Sdk.Models;
 
 namespace SnapMD.VirtualCare.Sdk
 {
+    /// <summary>
+    /// Return Hospital Api
+    /// </summary>
     public class HospitalApi : ApiCall
     {
+        /// <summary>
+        /// Constructor HospitalApi
+        /// </summary>
         public HospitalApi(string baseUrl, string bearerToken, string developerId, string apiKey, IWebClient client)
             : base(baseUrl, client, bearerToken, developerId, apiKey)
         {
@@ -25,7 +31,7 @@ namespace SnapMD.VirtualCare.Sdk
         /// <summary>
         /// Gets the hospital address based on the current logged-in user's provider ID.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Return Hospital Address</returns>
         public ApiResponseV2<HospitalAddress> GetAddress()
         {
             var o = MakeCall<ApiResponseV2<HospitalAddress>>("v2/hospitaladdress");
@@ -43,12 +49,20 @@ namespace SnapMD.VirtualCare.Sdk
             return o;
         }
 
+        /// <summary>
+        /// Gets the hospital details.
+        /// </summary>
+        /// <returns></returns>
         public ApiResponseV2<HospitalInfo> GetHospital()
         {
             var o = MakeCall<ApiResponseV2<HospitalInfo>>("v2/hospital");
             return o;
         }
 
+        /// <summary>
+        /// Update Address.
+        /// </summary>
+        /// <param name="address"></param>
         public HospitalAddress UpdateAddress(HospitalAddress address)
         {
             return Put<HospitalAddress>("hospitaladdress", address);

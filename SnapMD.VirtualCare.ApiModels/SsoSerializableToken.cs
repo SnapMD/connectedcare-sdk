@@ -14,10 +14,25 @@
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Represents the Sso Serializable Token.
+    /// </summary>
     public class SsoSerializableToken : SerializableToken
     {
+        /// <summary>
+        ///  Get or Set Provider Id
+        /// </summary>
+        /// <value> 
+        /// ProviderId
+        /// </value>
         public int ProviderId { get; set; }
 
+        /// <summary>
+        ///  Get or Set Domain Name
+        /// </summary>
+        /// <value> 
+        /// DomainName
+        /// </value>
         public string DomainName { get; set; }
     }
 }

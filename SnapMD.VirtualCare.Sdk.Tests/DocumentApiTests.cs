@@ -13,6 +13,7 @@ using System;
 using System.Linq;
 using NUnit.Framework;
 using SnapMD.VirtualCare.ApiModels;
+using SnapMD.VirtualCare.Sdk.Models;
 using SnapMD.VirtualCare.Sdk.Tests.Properties;
 
 namespace SnapMD.VirtualCare.Sdk.Tests
@@ -23,9 +24,9 @@ namespace SnapMD.VirtualCare.Sdk.Tests
         [Test]
         public void TestGetDocument()
         {
-            string token;
+            UserSessionRes userSession;
 
-            var mockWebClient = TokenandWebClientSetup(out token);
+            var mockWebClient = V3TokenandWebClientSetup(out userSession);
 
             mockWebClient.Setup(x => x.DownloadString(
                 new Uri(BaseUri, @"v2/publicdocuments?documentType=1&hospitalId=126")))

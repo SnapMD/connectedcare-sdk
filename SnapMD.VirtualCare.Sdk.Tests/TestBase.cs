@@ -15,6 +15,7 @@ using Moq;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using SnapMD.VirtualCare.Sdk.Interfaces;
+using SnapMD.VirtualCare.Sdk.Models;
 using SnapMD.VirtualCare.Sdk.Tests.Properties;
 using SnapMD.VirtualCare.Sdk.Wrappers;
 
@@ -58,6 +59,32 @@ namespace SnapMD.VirtualCare.Sdk.Tests
             token = apiCall.GetToken("sameerfairgoogl@gmail.com", "P@ssword123");
 
             return wclient;
+        }
+
+        public Mock<IWebClient> V3TokenandWebClientSetup(out UserSessionRes userSession)
+        {
+            var userSessionRes = new UserSessionRes
+            {
+                AccessToken = "Sample_V3Token",
+                ApiSessionId = Guid.NewGuid(),
+                Expires = new DateTimeOffset(DateTime.Now.AddHours(24)),
+            };
+
+            Mock<IWebClient> mockWebClient = new Mock<IWebClient>();
+
+            mockWebClient.Setup(x => x.UploadString(new Uri(BaseUri, @"v3/auth/user-sessions"), "POST",
+                "{\"email\":\"aaron.lord+toddg@snap.md\",\"password\":\"Password@123\",\"hospitalId\":1,\"userTypeId\":1,\"interfaceTypeId\":0,\"deviceId\":null}"))
+                .Returns(JsonConvert.SerializeObject(userSessionRes));
+
+            mockWebClient.Setup(x => x.Headers).Returns(new WebHeaderCollection());
+
+            var apiCall = new TokenApi(Settings.Default.BaseUrl, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
+            //token = apiCall.GetToken("sameerfairgoogl@gmai.com", "P@ssword123");
+            userSession = apiCall.GetUserSession("aaron.lord+toddg@snap.md", "Password@123");
+
+            Assert.AreEqual(userSessionRes.AccessToken, userSession?.AccessToken);
+
+            return mockWebClient;
         }
     }
 }

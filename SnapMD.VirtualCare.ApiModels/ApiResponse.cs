@@ -133,4 +133,36 @@ namespace SnapMD.VirtualCare.ApiModels
         public S Totals { get; set; }
 
     }
+
+    /// <summary>
+    /// Standard wrapper returned from all v3 API methods
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class ApiResponseV3<T>
+    {
+        /// <summary>
+        /// Arbitrary response code.
+        /// By convention, zero or null value means success, non-zero value means error or warning
+        /// </summary>
+        public int? ResponseCode { get; set; }
+
+        /// <summary>
+        /// Message explaining  <see cref="ResponseCode"/>.
+        /// </summary>
+        public string Message { get; set; }
+
+        /// <summary>
+        /// Returned data.
+        /// </summary>
+        public T Data { get; set; }
+
+        /// <summary>
+        /// Dynamic type of the <see cref="Data"/>
+        /// </summary>
+        public string DataKind { get; set; } = typeof(T).FullName;
+
+        public ApiResponseV3() { }
+
+        public ApiResponseV3(T data) { Data = data; }
+    }
 }
