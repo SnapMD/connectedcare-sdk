@@ -59,6 +59,8 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </summary>
         public Dictionary<string, string> FieldsPresence { get; set; }
 
+        public Dictionary<string, string> PatientSettings { get; set; }
+
         /// <summary>
         /// The hospital ID.
         /// </summary>
