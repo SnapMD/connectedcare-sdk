@@ -9,6 +9,9 @@ namespace SnapMD.VirtualCare.ApiModels
     /// </remarks>
     public class ClinicianGroupResponse: ClinicianGroupRequest
     {
+        /// <summary>
+        /// Id of the Clinicial 
+        /// </summary>
         public int? ClinicianId { get; set; }
 
         /// <summary>

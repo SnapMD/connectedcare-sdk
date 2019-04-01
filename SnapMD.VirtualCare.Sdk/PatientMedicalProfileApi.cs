@@ -14,13 +14,28 @@ using SnapMD.VirtualCare.Sdk.Interfaces;
 
 namespace SnapMD.VirtualCare.Sdk
 {
+    /// <summary>
+    /// Represents Patient Medical Profile Api Information.
+    /// </summary>
     public class PatientMedicalProfileApi : ApiCall
     {
+        /// <summary>
+        /// Constructor PatientMedicalProfileApi.
+        /// </summary>
+        /// <param name="apiKey"></param>
+        /// <param name="baseUrl"></param>
+        /// <param name="bearerToken"></param>
+        /// <param name="developerId"></param>
+        /// <param name="webClient"></param>
         public PatientMedicalProfileApi(string baseUrl, string bearerToken, string developerId, string apiKey, IWebClient webClient)
             : base(baseUrl, webClient, bearerToken, developerId, apiKey)
         {
         }
 
+        /// <summary>
+        /// Get Patient Data.
+        /// </summary>
+        /// <param name="patientId"></param>
         public ApiResponseV2<PatientMedicalHistoryProfile> GetPatientData(int patientId)
         {
             var url = string.Format("v2/patients/medicalprofile/{0}", patientId);
@@ -28,6 +43,11 @@ namespace SnapMD.VirtualCare.Sdk
             return result;
         }
 
+        /// <summary>
+        ///  Update Patient Data
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="profile"></param>
         public ApiResponseV2<PatientMedicalHistoryProfile> UpdatePatientData(int patientId, IPatientMedicalHistoryProfile profile)
         {
             var url = string.Format("v2/patients/medicalprofile/{0}", patientId);

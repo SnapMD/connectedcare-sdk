@@ -16,10 +16,21 @@ using Newtonsoft.Json;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+
+    /// <summary>
+    ///     Struct representing the Encounter Concern.
+    /// </summary>
     public struct EncounterConcern
     {
         private ICustomCode _customCode;
 
+
+        /// <summary>
+        ///     Gets or sets the Cutome Code.
+        /// </summary>
+        /// <value>
+        ///     The CustomCode.
+        /// </value>
         [XmlIgnore, JsonIgnore]
         public ICustomCode CustomCode
         {
@@ -43,6 +54,13 @@ namespace SnapMD.VirtualCare.ApiModels
             get { return (CustomCode?)CustomCode; }
             set { CustomCode = value; }
         }
+
+        /// <summary>
+        ///     Gets or sets the status of Primary.
+        /// </summary>
+        /// <value>
+        ///     The IsPrimary.
+        /// </value>
 
         [XmlAttribute]
         public bool IsPrimary { get; set; }

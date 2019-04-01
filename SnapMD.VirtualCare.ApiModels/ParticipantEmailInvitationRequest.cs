@@ -12,12 +12,33 @@
 #endregion
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    ///    Encapsulate the Participant Email Invitation Request.
+    /// </summary>
     public class ParticipantEmailInvitationRequest
     {
+        /// <summary>
+        ///     Gets or sets the Participant Name.
+        /// </summary>
+        /// <value>
+        ///     Participant Name.
+        /// </value>
         public string Name { get; set; }
 
+        /// <summary>
+        ///     Gets or sets the Participant Email.
+        /// </summary>
+        /// <value>
+        ///     Participant Email.
+        /// </value>
         public string Email { get; set; }
 
+        /// <summary>
+        ///     Gets or sets the Participant User Id.
+        /// </summary>
+        /// <value>
+        ///     Participant UserId.
+        /// </value>
         public int UserId { get; set; }
     }
 }

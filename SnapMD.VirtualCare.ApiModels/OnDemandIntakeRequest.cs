@@ -37,6 +37,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </value>
         public List<IntakeConcern> Concerns { get; set; }
         /// <summary>
+        /// Additional textual concerns information.
+        /// </summary>
+        public string AdditionalNotes { get; set; }
+        /// <summary>
         /// Gets or sets the phone.
         /// </summary>
         /// <value>
@@ -70,5 +74,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// PatientQueueId
         /// </summary>
         public Guid? PatientQueueId { get; set; }
+
+        /// <summary>
+        /// Service type. May be null, so default type would be chosen
+        /// </summary>
+        public int? ServiceTypeId { get; set; }
     }
 }

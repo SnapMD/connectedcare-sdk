@@ -11,9 +11,25 @@
 
 namespace SnapMD.VirtualCare.Sdk.Models
 {
+    ///<summary>
+    /// Represent the stucture IntakeConcern.
+    /// </summary>
     public struct IntakeConcern
     {
+        ///<summary>
+        ///Get or set the IntakeConcern status Is Primary.
+        /// </summary>
+        /// <value>status</value>
         public bool IsPrimary { get; set; }
+        ///<summary>
+        ///Get or set the IntakeConcern Code.
+        /// </summary>
+        /// <value>Code</value>
+        public int? Code { get; set; }
+        ///<summary>
+        ///Get or set the Intake Description.
+        /// </summary>
+        /// <value>Intake Description</value>
         public string Description { get; set; }
     }
 }

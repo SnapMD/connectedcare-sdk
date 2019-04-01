@@ -11,10 +11,25 @@
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    ///    Represet the First and Last .
+    /// </summary>
     public class FirstLast
     {
+        /// <summary>
+        ///   Get or set the  First.
+        /// </summary>
+        /// <value>
+        ///  First.
+        /// </value>
         public string First { get; set; }
 
+        /// <summary>
+        ///   Get or set the  Last.
+        /// </summary>
+        /// <value>
+        ///  Last.
+        /// </value>
         public string Last { get; set; }
     }
 }

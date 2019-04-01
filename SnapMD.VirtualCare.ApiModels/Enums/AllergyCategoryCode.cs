@@ -15,10 +15,40 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
     /// </remarks>
     public enum AllergyCategoryCode
     {
+        /// <summary>
+        ///  Allergy Category None.
+        /// </summary>
+        /// <value>
+        /// code is 0.
+        /// </value>
         None = 0,
+        /// <summary>
+        ///  Allergy Category Food.
+        /// </summary>
+        /// <value>
+        /// code is 1.
+        /// </value>
         Food = 1,
+        /// <summary>
+        ///  Allergy Category Medication.
+        /// </summary>
+        /// <value>
+        /// code is 2.
+        /// </value>
         Medication = 2,
+        /// <summary>
+        ///  Allergy Category Environment.
+        /// </summary>
+        /// <value>
+        /// code is 3.
+        /// </value>
         Environment = 3,
+        /// <summary>
+        ///  Allergy Category Biologic.
+        /// </summary>
+        /// <value>
+        /// code is 4.
+        /// </value>
         Biologic = 4
     }
 }

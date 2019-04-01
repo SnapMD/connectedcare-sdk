@@ -23,7 +23,7 @@ namespace SnapMD.VirtualCare.ApiModels
     public class SerializableToken
     {
         public string access_token { get; set; }
-
         public DateTimeOffset? expires { get; set; }
+        public Guid? apiSessionId { get; set; }
     }
 }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Create Staff profile response
+    /// </summary>
     public class CreateStaffProfileResponse
     {
         /// <summary>

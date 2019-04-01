@@ -16,19 +16,37 @@ using SnapMD.Web.Api.Models;
 
 namespace SnapMD.VirtualCare.Sdk
 {
+    /// <summary>
+    /// Patient Profile Api .
+    /// </summary>
     public class PatientProfileApi : ApiCall, IPatientProfileApi
     {
+        /// <summary>
+        /// Patient Profile Api Constructor.
+        /// </summary>
+        /// <param name="apiKey">Key</param>
+        /// <param name="baseUrl">Url</param>
+        /// <param name="bearerToken">Token</param>
+        /// <param name="developerId">developer Id</param>
+        /// <param name="webClient">Web Client </param>
         public PatientProfileApi(string baseUrl, string bearerToken, string developerId, string apiKey, IWebClient webClient)
             : base(baseUrl, webClient, bearerToken, developerId, apiKey)
         {
         }
 
+        /// <summary>
+        /// Add Dependent.
+        /// </summary>
+        /// <param name="newPatient">Pateint Information </param>
         public ApiResponseV2<PatientProfileResponse> AddDependent(AddPatientProfileRequest newPatient)
         {
             return Post<ApiResponseV2<PatientProfileResponse>>("v2/familygroups/dependents", newPatient);
         }
 
-        // todo: short time implementatin. this has to remove eventually: Han
+        /// <summary>
+        ///Get Patient Data.
+        /// </summary>
+        /// <param name="patientId">Pateint Id </param>
         public ApiResponseV2<GetPatientsResponse> GetPatientData(int patientId)
         {
             var url = string.Format("v2/patients/profiles/{0}", patientId);
@@ -36,6 +54,10 @@ namespace SnapMD.VirtualCare.Sdk
             return result;
         }
 
+        /// <summary>
+        ///New Patient.
+        /// </summary>
+        /// <param name="request">Pateint Id </param>
         public ApiResponseV2<NewPatientResponse> NewPatient(NewPatientRequest request)
         {
             if (request.ValidateModel())

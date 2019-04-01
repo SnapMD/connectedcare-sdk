@@ -23,6 +23,9 @@ namespace SnapMD.VirtualCare.ApiModels
     public class HospitalInfo : ProviderBase, IHospitalResponse
     {
 
+        /// <summary>
+        /// The enum of Field Presence.
+        /// </summary>
         public enum FieldPresence { Mandatory, Optional, Invisible }
 
         /// <summary>
@@ -55,6 +58,8 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Configuration of mandatory/optional/invisible fields
         /// </summary>
         public Dictionary<string, string> FieldsPresence { get; set; }
+
+        public Dictionary<string, string> PatientSettings { get; set; }
 
         /// <summary>
         /// The hospital ID.

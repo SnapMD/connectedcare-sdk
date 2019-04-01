@@ -27,13 +27,13 @@
     public class SortOrderField
     {
         /// <summary>
-        /// Sorting ColumnName
+        /// Sort Field Name
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
         /// Sort Direction
         /// </summary>
-        public SortOrderDirection SortOrderDirection { get; set; }
+        public SortOrderDirection Direction { get; set; }
     }
 }

@@ -13,8 +13,17 @@
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    /// Represents Payments Api.
+    /// </summary>
     public class PendingStaffProfileRequest : BaseProfile
     {
+        /// <summary>
+        ///     Get or Set Co User ID .
+        /// </summary>
+        /// <value>
+        ///    CoUserID
+        /// </value> 
         public int CoUserID { get; set; }
     }
 }
