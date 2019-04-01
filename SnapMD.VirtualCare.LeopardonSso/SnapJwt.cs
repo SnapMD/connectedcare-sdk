@@ -34,7 +34,7 @@ namespace SnapMD.VirtualCare.LeopardonSso
 
         protected override string Audience => @"snapmd";
 
-        protected override string Issuer => _issuer; 
+        protected override string Issuer => _issuer;
 
         protected override SigningCredentials SigningCredentials =>
             new SigningCredentials(SecurityKey,
@@ -56,19 +56,24 @@ namespace SnapMD.VirtualCare.LeopardonSso
             return CreateToken(CreateClaims(name, email), false);
         }
 
-        public string Encode(string name, string email)
+        public string Encode(string name, string email, Guid? jti = null)
         {
-            return CreateToken(CreateClaims(name, email));
+            return CreateToken(CreateClaims(name, email, jti));
         }
 
-        protected virtual List<Claim> CreateClaims(string name, string email)
+        protected virtual List<Claim> CreateClaims(string name, string email, Guid? jti = null)
         {
-            return new List<Claim>
+            var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, name),
                 new Claim(ClaimTypes.Email, email),
                 new Claim(ClaimTypes.Role, Role)
             };
+
+            if (jti.HasValue)
+                claims.Add(new Claim("jti", $"{jti}"));
+
+            return claims;
         }
 
         public static void ValidateRole(string role)
