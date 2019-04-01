@@ -114,6 +114,7 @@ namespace SnapMD.VirtualCare.ApiModels
         ///     Allows shorthand for IEnumerable types.
         /// </summary>
         /// <param name="data"></param>
+        /// <param name="totals"></param>
         public ApiResponseV2WithTotals(IEnumerable<T> data, S totals): base(data)
         {
             Totals = totals;
@@ -161,8 +162,15 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </summary>
         public string DataKind { get; set; } = typeof(T).FullName;
 
+        /// <summary>
+        /// Standard wrapper returned from all v3 API methods
+        /// </summary>
         public ApiResponseV3() { }
 
+        /// <summary>
+        /// Standard wrapper returned from all v3 API methods
+        /// </summary>
+        /// <param name="data"></param>
         public ApiResponseV3(T data) { Data = data; }
     }
 }
