@@ -15,9 +15,25 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
     /// </remarks>
     public enum AllergyCriticalityCode
     {
+        /// <summary>
+        /// Allergy Criticality Code field name is None
+        /// </summary>
+        /// <value> 0 </value>
         None = 0,
+        /// <summary>
+        /// Allergy Criticality Code field name is None
+        /// </summary>
+        /// <value> 1 </value>
         Low = 1,
+        /// <summary>
+        /// Allergy Criticality Code field name is High
+        /// </summary>
+        /// <value> 2 </value>
         High = 2,
+        /// <summary>
+        /// Allergy Criticality Code field name is Unable To Assess
+        /// </summary>
+        /// <value> 3 </value>
         UnableToAssess = 3
     }
 }

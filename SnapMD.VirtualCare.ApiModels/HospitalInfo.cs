@@ -26,7 +26,20 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <summary>
         /// The enum of Field Presence.
         /// </summary>
-        public enum FieldPresence { Mandatory, Optional, Invisible }
+        public enum FieldPresence {
+            /// <summary>
+            /// Field Presence Mandatory
+            /// </summary>
+            Mandatory,
+            /// <summary>
+            /// Field Presence Optional
+            /// </summary>
+            Optional,
+            /// <summary>
+            /// Field Presence Invisible
+            /// </summary>
+            Invisible
+        }
 
         /// <summary>
         /// The city in which the hospital resides.
@@ -59,6 +72,9 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </summary>
         public Dictionary<string, string> FieldsPresence { get; set; }
 
+        /// <summary>
+        /// Configuration of mandatory/optional/invisible fields PatientSettings
+        /// </summary>
         public Dictionary<string, string> PatientSettings { get; set; }
 
         /// <summary>
