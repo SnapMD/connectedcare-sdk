@@ -48,7 +48,7 @@ namespace SnapMD.VirtualCare.LeopardonSso
                 SecurityAlgorithms.RsaSha256Signature,
                 true);
 
-        protected override SigningCredentials SigningCredentials => 
+        protected override SigningCredentials SigningCredentials =>
             new SigningCredentials(
                 _rsaSecurityKey,
                 SecurityAlgorithms.RsaSha256Signature,
@@ -66,14 +66,19 @@ namespace SnapMD.VirtualCare.LeopardonSso
             }
         }
 
-        protected override List<Claim> CreateClaims(string name, string email)
+        protected override List<Claim> CreateClaims(string name, string email, Guid? jti = null)
         {
-            return new List<Claim>
+            var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, name),
                 new Claim(ClaimTypes.Email, email),
                 new Claim(ClaimTypes.Role, Role)
             };
+
+            if (jti.HasValue)
+                claims.Add(new Claim("jti", $"{jti}"));
+
+            return claims;
         }
     }
 }

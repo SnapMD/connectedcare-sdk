@@ -44,31 +44,31 @@ namespace SnapMD.VirtualCare.LeopardonSso
             GC.SuppressFinalize(this);
         }
 
-        public async Task<string> GetRedirectPath(string name, string email)
+        public async Task<string> GetRedirectPath(string name, string email, Guid? jti = null)
         {
             var signonUrl = JwtSignOnUrl ?? DefaultJwtSignOnUrl;
-            var token = await BuildJwtAsync(name, email);
+            var token = await BuildJwtAsync(name, email, jti);
             return string.Format(signonUrl, token);
         }
 
         private string DefaultJwtSignOnUrl =>
-            _role == SnapJwt.Roles[0] ? Settings.Default.JwtSignOnUrl : 
+            _role == SnapJwt.Roles[0] ? Settings.Default.JwtSignOnUrl :
                 (_role == "admin" ? Settings.Default.JwtAdminSignOnUrl : Settings.Default.JwtClincianSignOnUrl);
 
-        private Task<string> BuildJwtAsync(string name, string email)
+        private Task<string> BuildJwtAsync(string name, string email, Guid? jti = null)
         {
             return Task.Run(() =>
             {
-                var accessToken = BuildJwt(name, email);
+                var accessToken = BuildJwt(name, email, jti);
                 return accessToken;
             });
         }
 
-        private string BuildJwt(string name, string email)
+        private string BuildJwt(string name, string email, Guid? jti = null)
         {
             // Decrypt with private key using Jose JWT library
             var jwtToken = new WaltherJwt(_issuer, _rsa, _role);
-            var identity = jwtToken.Encode(name, email);
+            var identity = jwtToken.Encode(name, email, jti);
             return identity;
         }
 
