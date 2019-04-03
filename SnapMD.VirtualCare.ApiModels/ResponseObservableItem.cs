@@ -17,8 +17,17 @@ namespace SnapMD.VirtualCare.ApiModels
     /// </summary>
     public class ResponseObservableItem
     {
+        /// <summary>
+        /// Get or Set the Response Observable Item Id
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// Get r Set the Description
+        /// </summary>
         public string Description { get; set; }
+        /// <summary>
+        /// Get or set the Short Name
+        /// </summary>
         public string ShortName { get; set; }
     }
 }

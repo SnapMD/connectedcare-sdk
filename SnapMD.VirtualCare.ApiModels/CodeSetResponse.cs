@@ -15,16 +15,43 @@ using System.Collections.Generic;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
+    /// <summary>
+    ///   Encapsulate the Code Set Response
+    /// </summary>
     public class CodeSetResponse
     {
+        /// <summary>
+        /// Get or set the Name of the code set
+        /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// Get or set the Hospital Id
+        /// </summary>
         public int HospitalId { get; set; }
+        /// <summary>
+        /// Get or set the Codes
+        /// </summary>
         public IList<CodeItem> Codes { get; set; }
 
+        /// <summary>
+        ///   Encapsulate the Code Item
+        /// </summary>
         public class CodeItem
         {
+            /// <summary>
+            /// Get or set the Code Id
+            /// </summary>
+            /// <value> Code Id </value>
             public int CodeId { get; set; }
+            /// <summary>
+            /// Get or set the Name of the code 
+            /// </summary>
+            /// <value> Code Name </value>
             public string Text { get; set; }
+            /// <summary>
+            /// Get or set the Display Order 
+            /// </summary>
+            /// <value> Display Order </value>
             public int DisplayOrder { get; set; }
         }
     }

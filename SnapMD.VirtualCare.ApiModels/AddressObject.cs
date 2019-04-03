@@ -134,6 +134,12 @@ namespace SnapMD.VirtualCare.ApiModels
 #pragma warning restore S1067 // Expressions should not be too complex
         }
 
+        /// <summary>
+        /// Return the address string
+        /// </summary>
+        /// <value>
+        /// String value of address
+        /// </value>
         public override string ToString()
         {
             var sb = new StringBuilder();
