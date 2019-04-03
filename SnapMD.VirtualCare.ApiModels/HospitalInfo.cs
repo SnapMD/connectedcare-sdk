@@ -54,7 +54,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <summary>
         /// The level of SSO this hospital requires to access the SnapMD system.
         /// </summary>
-        [JsonConverter(typeof (StringEnumConverter))]
+        [JsonConverter(typeof(StringEnumConverter))]
         public CustomerSsoType CustomerSso { get; set; }
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The URL used for handling enounters through patients.
         /// </summary>
         public string PatientConsultEndUrl { get; set; }
-        
+
         /// <summary>
         /// The patient's login.
         /// </summary>
@@ -181,5 +181,11 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The api endpoint for patient forgot password.
         /// </summary>
         public string PatientForgotPasswordApi { get; set; }
+
+        /// <summary>
+        /// Different types of rules presence (visibility, registration etc.)
+        /// </summary>
+        public RulesStatus RulesStatus { get; set; }
+
     }
 }
