@@ -1,0 +1,18 @@
+{
+  "name": "snap-sso-session-options",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aes-js": "^3.1.2",
+    "command-line-args": "^5.1.1",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "uuid": "^3.3.2"
+  }
+}
