@@ -23,5 +23,5 @@ let req = {
 snapsso.getUrl(req, opts, accessurl => {
   console.log('req:', req, 'opts', opts, '\n', 'accessurl:', accessurl)
 }, err => {
-    console.log('err:', err)
+  console.log('err:', err)
 })

@@ -39,8 +39,16 @@ exports.getUrl = (req, opts, success, error) => {
 
     if (token != undefined) {
       let host = opts.host || 'snap.local'
-      let ssop = encrypt(secret, Buffer.from(jti), aesjs.utils.utf8.toBytes(JSON.stringify({fee: opts.fee})))
-      let url = `https://${host}/${req.role}.access?jwt=${token}&op=${ssop}&language=${opts.lang}`
+      if (typeof host === 'object')
+        host = host.domain
+      let lang = opts.lang
+      if (typeof lang === 'object')
+        lang = lang.code
+      let fee = opts.fee
+      if (typeof fee === 'object')
+        fee = fee.fee
+      let ssop = encrypt(secret, Buffer.from(jti), aesjs.utils.utf8.toBytes(JSON.stringify({fee: fee})))
+      let url = `https://${host}/${req.role}.access?jwt=${token}&op=${ssop}&language=${lang}`
       if (success)
         success(url, req, opts)
     } else {
