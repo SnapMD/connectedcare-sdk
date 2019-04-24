@@ -38,6 +38,15 @@ app.controller('snapCtrl', function($scope, $http, $cookies, $location) {
       console.error('getFees: error', response)
       $scope.appMessage = `getFees failed: ${response.statusText}`
     });
+
+    $http.get('/api/roles').then(function (response) {
+      console.log('getRoles: success', response.data)
+      $scope.roles = response.data
+      $scope.opts.role = $scope.roles[0]
+    }, function (response) {
+      console.error('getRoles: error', response)
+      $scope.appMessage = `getRoles failed: ${response.statusText}`
+    });
   }
 
   $scope.loadConfig()
