@@ -44,7 +44,8 @@
     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 
     <!-- Modal Content -->
-    <form class="modal-content animate" action="/action_page.php">
+    <form class="modal-content animate">
+      <h3 style="text-align: center;">Options</h3>
       <div class="container">
         <label for="hosts"><b>Hosts</b></label><br />
         <select name="hosts" ng-model="opts.host" ng-options="opt.name for opt in hosts"></select><br /><br />
@@ -55,8 +56,10 @@
         <label for="langs"><b>Languages</b></label><br />
         <select name="langs" ng-model="opts.lang" ng-options="opt.name for opt in langs"></select><br /><br />
 
-        <label for="fees"><b>Fees</b></label><br />
-        <select name="fees" ng-model="opts.fee" ng-options="opt.name for opt in fees"></select><br /><br />
+        <div ng-show="opts.role.code == 'patient'">
+          <label for="fees"><b>Fees</b></label><br />
+          <select name="fees" ng-model="opts.fee" ng-options="opt.name for opt in fees"></select>
+        </div>
       </div>
 
       <div class="container" style="background-color:#f1f1f1">
