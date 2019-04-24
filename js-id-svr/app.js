@@ -30,6 +30,10 @@ app.get('/api/fees', (req, res) => {
   res.json(config.fees)
 })
 
+app.get('/api/roles', (req, res) => {
+  res.json(config.roles)
+})
+
 app.post('/api/sso-sessions', function(req, res) {
 	console.log('req.body:', req.body)
   let rq = req.body.req

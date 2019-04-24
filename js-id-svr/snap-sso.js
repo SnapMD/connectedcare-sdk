@@ -27,9 +27,13 @@ exports.getUrl = (req, opts, success, error) => {
 
   let jti = uuid('binary') 
 
-  req.jti   = bytesToUuid(jti)
-  req.role  = req.role || opts.role || 'patient'
-  jwt.sign(req, privatekey, signOptions, (err, token) => {
+  let jr = {
+    email: req.email,
+    name: req.name,
+    role: req.role || opts.role || 'patient',
+    jti: bytesToUuid(jti)
+  }
+  jwt.sign(jr, privatekey, signOptions, (err, token) => {
     let debug = opts.debug
     if (debug) {
       debug.signOptions = signOptions
@@ -47,8 +51,10 @@ exports.getUrl = (req, opts, success, error) => {
       let fee = opts.fee
       if (typeof fee === 'object')
         fee = fee.fee
+      if (typeof fee === 'object')
+        fee = fee.fee
       let ssop = encrypt(secret, Buffer.from(jti), aesjs.utils.utf8.toBytes(JSON.stringify({fee: fee})))
-      let url = `https://${host}/${req.role}.access?jwt=${token}&op=${ssop}&language=${lang}`
+      let url = `https://${host}/${jr.role}.access?jwt=${token}&op=${ssop}&language=${lang}`
       if (success)
         success(url, req, opts)
     } else {

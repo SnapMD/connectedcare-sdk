@@ -141,3 +141,7 @@ span.psw {
   from {transform: scale(0)} 
   to {transform: scale(1)}
 }
+
+#modalMessage {
+  margin: 100px;
+}
