@@ -54,7 +54,7 @@ exports.getUrl = (req, opts, success, error) => {
       if (typeof fee === 'object')
         fee = fee.fee
       let ssop = encrypt(secret, Buffer.from(jti), aesjs.utils.utf8.toBytes(JSON.stringify({fee: fee})))
-      let url = `https://${host}/${role}.access?jwt=${token}&op=${ssop}&language=${lang}`
+      let url = `https://${host}/${role}.access?jwt=${token}&op=${encodeURIComponent(ssop)}&language=${lang}`
       if (success)
         success(url, req, opts)
     } else {
