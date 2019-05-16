@@ -117,10 +117,9 @@ namespace SnapMD.VirtualCare.Sdk
         public ApiResponseV2<bool> UpdateDependentRelationAndAuthorization
             (int patientId, int dependentId, DependentRelationship requestData)
         {
-            return
-                new ApiResponseV2<bool>(
-                    Put($"v2/admin/patient/{patientId}/dependent/{dependentId}/relationship", requestData)
-                        .ToObject<bool>());
+            var result = Put($"v2/admin/patient/{patientId}/dependent/{dependentId}/relationship", requestData);
+            var data = result["data"][0].ToObject<bool>();
+            return new ApiResponseV2<bool>(data);
         }
 
     }
