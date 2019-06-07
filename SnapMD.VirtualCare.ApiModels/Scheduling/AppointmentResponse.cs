@@ -68,6 +68,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public string ServiceTypeName { get; set; }
 
         /// <summary>
+        /// Was the appointment payed
+        /// </summary>
+        public bool Payed { get; set; }
+
+        /// <summary>
         /// The latest flag (color mark) for appointment.
         /// </summary>
         public int? AppointmentFlag { get; set; }
