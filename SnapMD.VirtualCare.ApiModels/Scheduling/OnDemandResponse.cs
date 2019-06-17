@@ -67,5 +67,13 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         ///  Appointment Id
         /// </value>
         public Guid? AppointmentId { get; set; }
+        /// <summary>
+        /// Confirmation number of a payment or null, if payment was not requested.
+        /// </summary>
+        public string PaymentConfirmationNumber { get; set; }
+        /// <summary>
+        /// Amount of a payment or null, if payment was not requested.
+        /// </summary>
+        public decimal? TotalPaid { get; set; }
     }
 }
