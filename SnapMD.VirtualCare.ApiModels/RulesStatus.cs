@@ -10,24 +10,27 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
+
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
-    ///     Simple object for IDs and text.
+    /// Different types of rules presence (visibility, registration etc.)
     /// </summary>
-    public class ResponseObservableItem
+    public class RulesStatus
     {
         /// <summary>
-        /// Get or Set the Response Observable Item Id
+        /// Is patient's home address used in visibility rules?
         /// </summary>
-        public int Id { get; set; }
+        public bool HomeAddressRuleActive { get; set; }
+
         /// <summary>
-        /// Get r Set the Description
+        /// Is patient's response address used in visibility rules?
         /// </summary>
-        public string Description { get; set; }
+        public bool ResponseAddressRuleActive { get; set; }
+
         /// <summary>
-        /// Get or set the Short Name
+        /// Is any of the patient's registration rules active?
         /// </summary>
-        public string ShortName { get; set; }
+        public bool RegistrationRuleActive { get; set; }
     }
 }

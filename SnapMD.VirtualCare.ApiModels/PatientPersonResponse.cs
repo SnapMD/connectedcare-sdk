@@ -1,3 +1,5 @@
+using SnapMD.VirtualCare.ApiModels.Scheduling;
+
 namespace SnapMD.VirtualCare.ApiModels
 {
     /// <summary>
@@ -59,5 +61,13 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Flag: patient info is included to a list, but that patient would be excluded by visibility rules.
         /// </summary>
         public bool IsInvisible { get; set; }
+
+        /// <summary>
+        /// Encounter types available for that patient
+        /// </summary>
+        /// <value>
+        /// Array of available types, probably empty. Null != empty, null means "has not been determined".
+        /// </value>
+        public EncounterTypeCode[] AvailableEncounterTypes { get; set; }
     }
 }

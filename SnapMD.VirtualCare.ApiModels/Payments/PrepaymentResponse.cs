@@ -10,24 +10,22 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
-namespace SnapMD.VirtualCare.ApiModels
+namespace SnapMD.VirtualCare.ApiModels.Payments
 {
+
     /// <summary>
-    ///     Simple object for IDs and text.
+    /// The response returned when a call to MakePrepayment is made
     /// </summary>
-    public class ResponseObservableItem
+    public class PrepaymentResponse
     {
         /// <summary>
-        /// Get or Set the Response Observable Item Id
+        /// The confirmation # of the payment (may be null, if Amount == 0)
         /// </summary>
-        public int Id { get; set; }
+        public string ConfirmationNumber { get; set; }
+
         /// <summary>
-        /// Get r Set the Description
+        /// Payed amount
         /// </summary>
-        public string Description { get; set; }
-        /// <summary>
-        /// Get or set the Short Name
-        /// </summary>
-        public string ShortName { get; set; }
+        public decimal Amount { get; set; }
     }
 }

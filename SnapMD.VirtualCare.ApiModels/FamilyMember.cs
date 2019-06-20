@@ -11,6 +11,7 @@
 //    limitations under the License.
 #endregion
 
+using SnapMD.VirtualCare.ApiModels.Scheduling;
 using System;
 
 namespace SnapMD.VirtualCare.ApiModels
@@ -224,6 +225,15 @@ namespace SnapMD.VirtualCare.ApiModels
         ///  ProviderAvailable
         /// </value>
         public bool? ProviderAvailable { get; set; }
+        
+        /// <summary>
+        /// Encounter types available for that patient
+        /// </summary>
+        /// <value>
+        /// Array of available types, probably empty. Null != empty, null means "has not been determined".
+        /// </value>
+        public EncounterTypeCode[] AvailableEncounterTypes { get; set; }
+
         /// <summary>
         ///   Get or set the  IsInQueue.
         /// </summary>

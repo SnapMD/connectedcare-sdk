@@ -61,7 +61,14 @@ namespace SnapMD.VirtualCare.ApiModels
         {
             get { return FirstName + " " + LastName; }
         }
-        
+
+
+        /// <summary>
+        /// Get or set the email
+        /// </summary>
+        /// <value>
+        /// Email address
+        /// </value>
         public string Email { get; set; }
 
         /// <summary>
@@ -125,12 +132,37 @@ namespace SnapMD.VirtualCare.ApiModels
             }
         }
 
+
+        /// <summary>
+        /// Get or set Profile Image Path
+        /// </summary>
+        /// <value>
+        ///  Profile Image Path
+        /// </value>
         public string ProfileImagePath { get; set; }
 
+        /// <summary>
+        /// Get or set States Licenced
+        /// </summary>
+        /// <value>
+        ///  States Licenced
+        /// </value>
         public string StatesLicenced { get; set; }
+        /// <summary>
+        /// Get or set Sub Speciality
+        /// </summary>
+        /// <value>
+        ///  Sub Speciality
+        /// </value>
 
         public string SubSpeciality { get; set; }
 
+        /// <summary>
+        /// Get or set Date of the birth
+        /// </summary>
+        /// <value>
+        ///  Date of the birth
+        /// </value>
         public DateTime? Dob { get; set; }
     }
 }
