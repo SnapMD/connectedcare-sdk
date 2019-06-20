@@ -63,6 +63,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </value>
 
         [XmlAttribute]
+        [JsonProperty("isPrimary")]
         public bool IsPrimary { get; set; }
     }
 }

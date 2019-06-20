@@ -11,6 +11,7 @@
 //    limitations under the License.
 #endregion
 
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
@@ -43,6 +44,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </value>
         [XmlArray("EncounterConcerns")]
         [XmlArrayItem("Concern")]
+        [JsonProperty("concerns")]
         public List<EncounterConcern> Concerns { get; set; }
 
 
@@ -52,6 +54,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// PatientRecord.
         /// </value>
+        [JsonProperty("patient")]
         public PatientRecord PatientRecord { get; set; }
         /// <summary>
         ///     Gets or sets the DoctorRecord.
@@ -59,6 +62,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// DoctorRecord.
         /// </value>
+        [JsonProperty("doctor")]
         public DoctorRecord DoctorRecord { get; set; }
         /// <summary>
         ///     Gets or sets the HospitalRecord.
@@ -66,6 +70,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// HospitalRecord.
         /// </value>
+        [JsonProperty("hospital")]
         public HospitalRecord HospitalRecord { get; set; }
 
         /// <summary>
@@ -74,11 +79,13 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// GuardiansRecords.
         /// </value>
+        [JsonProperty("guardians")]
         public List<GuardianRecord> GuardiansRecords { get; set; }
 
         /// <summary>
         /// Additional appointment notes
         /// </summary>
+        [JsonProperty("additionalNotes")]
         public string AdditionalNotes { get; set; }
     }
 }

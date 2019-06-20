@@ -11,6 +11,7 @@
 //    limitations under the License.
 #endregion
 
+using Newtonsoft.Json;
 using SnapMD.VirtualCare.ApiModels.Enums;
 using System;
 using System.ComponentModel;
@@ -73,6 +74,7 @@ namespace SnapMD.VirtualCare.ApiModels
         ///   RecordedDate
         /// </value>
         [XmlElement, DefaultValue(null)]
+        [JsonProperty("recordedDate")]
         public DateTime? RecordedDate { get; set; }
 
 
@@ -128,6 +130,7 @@ namespace SnapMD.VirtualCare.ApiModels
         ///   Code
         /// </value>
         [XmlAttribute]
+        [JsonProperty("code")]
         public int Code { get; set; }
 
         /// <summary>
@@ -137,6 +140,7 @@ namespace SnapMD.VirtualCare.ApiModels
         ///   Description
         /// </value>
         [XmlElement(IsNullable = false)]
+        [JsonProperty("description")]
         public string Description { get; set; }
 
         /// <summary>
