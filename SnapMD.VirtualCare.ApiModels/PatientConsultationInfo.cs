@@ -354,6 +354,11 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Value from PatientProfile.EncounterTypeCode property.
         /// </value>
         public EncounterTypeCode EncounterTypeCode { get; set; }
+
+        /// <summary>
+        /// ConsultationStatus
+        /// </summary>
+        public int? ConsultationStatus { get; set; }
     }
 
     /// <summary>
