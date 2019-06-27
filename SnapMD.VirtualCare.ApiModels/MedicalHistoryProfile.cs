@@ -10,7 +10,6 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 #endregion
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
@@ -30,7 +29,6 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </value>
         [XmlArrayItem("CustomCode", typeof(LegacyPatientAllergyItem))]
         [XmlArrayItem("PatientAllergy", typeof(PatientAllergyItem))]
-        [JsonProperty("medicationAllergies")]
         public List<PatientAllergyItem> MedicationAllergies { get; set; }
 
         /// <summary>
@@ -39,7 +37,6 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// Surgeries Record.
         /// </value>
-        [JsonProperty("surgeries")]
         public List<SurgeryRecord> Surgeries { get; set; }
 
         /// <summary>
@@ -48,7 +45,6 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// Medical Conditions Record.
         /// </value>
-        [JsonProperty("medicalConditions")]
         public List<CustomCode> MedicalConditions { get; set; }
 
         /// <summary>
@@ -57,7 +53,6 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// Medications Record.
         /// </value>
-        [JsonProperty("medications")]
         public List<CustomCode> Medications { get; set; }
 
         /// <summary>
@@ -66,7 +61,6 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// InfantData Record.
         /// </value>
-        [JsonProperty("infantData")]
         public NewbornRecord InfantData { get; set; }
     }
 }
