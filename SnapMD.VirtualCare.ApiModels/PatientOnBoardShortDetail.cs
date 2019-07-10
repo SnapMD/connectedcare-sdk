@@ -82,6 +82,12 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </summary>
         public PatientOnBoardStatus? Status { get; set; }
 
+
+        /// <summary>
+        /// Can the user take medical services?
+        /// </summary>
+        public bool IsPatient { get; set; } = true; // default value 'true' is for backward compatibility
+
         /// <summary>
         /// Validate model
         /// </summary>
