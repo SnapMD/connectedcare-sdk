@@ -60,7 +60,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
         {
             string token;
             var mockWebClient = TokenandWebClientSetup(out token);
-            const string mockRequest = "{\"Address\":\"my address\",\"AddressObject\":null,\"Dob\":\"2015-12-01T00:00:00\",\"TimeZoneId\":1,\"Email\":\"mock@mail.com\",\"Name\":{\"First\":\"test\",\"Last\":\"user\"},\"Password\":\"password\",\"ProviderId\":1}";
+            const string mockRequest = "{\"Address\":\"my address\",\"AddressObject\":null,\"Dob\":\"2015-12-01T00:00:00\",\"TimeZoneId\":1,\"Email\":\"mock@mail.com\",\"Name\":{\"First\":\"test\",\"Last\":\"user\"},\"Password\":\"password\",\"ProviderId\":1,\"IsPatient\":true}";
 
             const string testResponse = @"{
                 'data': [{
