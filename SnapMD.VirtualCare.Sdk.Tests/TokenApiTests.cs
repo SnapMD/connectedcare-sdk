@@ -39,7 +39,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
 
             var apiCall = new TokenApi(url, 1, Settings.Default.ApiDeveloperId, Settings.Default.ApiKey, mockWebClient.Object);
 
-            Assert.IsNotNullOrEmpty(apiCall.GetToken("aaron.lord+toddg@snap.md", "Password@123"));
+            Assert.That(apiCall.GetToken("aaron.lord+toddg@snap.md", "Password@123"), Is.Not.Null.And.Not.Empty);
         }
     }
 }

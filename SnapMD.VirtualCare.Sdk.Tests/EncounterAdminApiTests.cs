@@ -58,7 +58,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
             }
         };
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void TestSetup()
         {
             mockWebClient = TokenandWebClientSetup(out accessToken);
