@@ -45,7 +45,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
             MobileNumberWithCountryCode = "+19024405177"
         };
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void TestSetup()
         {
             mockWebClient = TokenandWebClientSetup(out accessToken);

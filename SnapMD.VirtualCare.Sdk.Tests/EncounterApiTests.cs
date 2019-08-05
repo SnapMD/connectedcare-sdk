@@ -51,7 +51,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests
             UserTimeZone = TimeZoneInfo.Utc
         };
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void TestSetup()
         {
             mockWebClient = TokenandWebClientSetup(out accessToken);
