@@ -62,5 +62,17 @@ namespace SnapMD.VirtualCare.ApiModels
         /// InfantData Record.
         /// </value>
         public NewbornRecord InfantData { get; set; }
+
+        /// <summary>
+        /// Create medical profile object from data satisfying <see cref="IMedicalHistoryProfile"/> interface (shallow copy).
+        public static MedicalHistoryProfile CreateFrom(IMedicalHistoryProfile src)
+            => new MedicalHistoryProfile
+                    {
+                        Surgeries = src.Surgeries,
+                        MedicalConditions = src.MedicalConditions,
+                        Medications = src.Medications,
+                        MedicationAllergies = src.MedicationAllergies, 
+                        InfantData = src.InfantData
+                    };
     }
 }
