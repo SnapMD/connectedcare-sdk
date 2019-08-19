@@ -65,14 +65,13 @@ namespace SnapMD.VirtualCare.ApiModels
 
         /// <summary>
         /// Create medical profile object from data satisfying <see cref="IMedicalHistoryProfile"/> interface (shallow copy).
-        public static MedicalHistoryProfile CreateFrom(IMedicalHistoryProfile src)
-            => new MedicalHistoryProfile
-                    {
-                        Surgeries = src.Surgeries,
-                        MedicalConditions = src.MedicalConditions,
-                        Medications = src.Medications,
-                        MedicationAllergies = src.MedicationAllergies, 
-                        InfantData = src.InfantData
-                    };
+        public static void Copy (IMedicalHistoryProfile dst, IMedicalHistoryProfile src)
+        {
+            dst.Surgeries = src.Surgeries;
+            dst.MedicalConditions = src.MedicalConditions;
+            dst.Medications = src.Medications;
+            dst.MedicationAllergies = src.MedicationAllergies;
+            dst.InfantData = src.InfantData;
+        }
     }
 }
