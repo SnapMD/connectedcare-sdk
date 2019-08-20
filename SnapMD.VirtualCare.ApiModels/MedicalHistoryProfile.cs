@@ -19,6 +19,7 @@ namespace SnapMD.VirtualCare.ApiModels
     /// Encapsulate the Medical History profil data .
     /// </summary>
     [XmlRoot("MedicalHistory", Namespace = "https://snap.md/api/v2/xml/medicalhistory")]
+    [XmlInclude(typeof(IntakeQuestionnaire))]
     public class MedicalHistoryProfile : IMedicalHistoryProfile
     {
         /// <summary>
