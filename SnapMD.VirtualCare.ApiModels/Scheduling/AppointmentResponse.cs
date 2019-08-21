@@ -85,7 +85,7 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <summary>
         /// Payment amount
         /// </summary>
-        public bool CreditUsed { get; set; }
+        public bool? CreditUsed { get; set; }
 
         /// <summary>
         /// The latest flag (color mark) for appointment.
