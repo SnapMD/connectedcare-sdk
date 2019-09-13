@@ -59,7 +59,10 @@
         <div ng-show="opts.role.code == 'patient'">
           <label for="fees"><b>Fees</b></label><br />
           <select name="fees" ng-model="opts.fee" ng-options="opt.name for opt in fees"></select>
-        </div>
+        </div><br />
+
+        <label for="page"><b>Page</b></label><br />
+        <input type="text" name="page" ng-model="opts.page" />
       </div>
 
       <div class="container" style="background-color:#f1f1f1">
