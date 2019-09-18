@@ -36,6 +36,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// Patient MedicalHistory Data
         /// </value>
+        [Obsolete("Use MedicalHistoryProfile instead (except InfantData)")]
         public LegacyMedicalHistoryForm PatientMedicalHistoryData { get; set; }
         /// <summary>
         /// Get or set Medication Allergies
@@ -43,7 +44,12 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         ///MedicationAllergies
         /// </value>
+        [Obsolete("Use MedicalHistoryProfile instead")]
         public List<PatientAllergyItem> MedicationAllergies { get; set; }
+        /// <summary>
+        /// Current user medical profile  (except InfantData - will be used in a future).
+        /// </summary>
+        public MedicalHistoryProfile MedicalHistoryProfile { get; set; }
         /// <summary>
         /// Get or set Patient ProfileFields Tracing
         /// </summary>

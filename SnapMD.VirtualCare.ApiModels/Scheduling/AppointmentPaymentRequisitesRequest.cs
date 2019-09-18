@@ -11,6 +11,11 @@
         public int? HealthPlanId { get; set; }
 
         /// <summary>
+        /// Insurance company name for <see cref="HealthPlanId"/>
+        /// </summary>
+        public string InsuranceCompany { get; set; }
+
+        /// <summary>
         /// The Customer Profile ID returned from v2/patients/payments.
         /// </summary>
         public string CimProfileId { get; set; }

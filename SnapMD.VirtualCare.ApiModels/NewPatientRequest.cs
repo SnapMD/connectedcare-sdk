@@ -90,6 +90,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public string MobileNumberWithCountryCode { get; set; }
 
         /// <summary>
+        /// Is this the patient or non-patient user
+        /// </summary>
+        public bool IsPatient { get; set; } = true;
+
+        /// <summary>
         /// Validates NewPatientRequest
         /// </summary>
         /// <param name="exceptionToThrow">exceptionToThrow</param>

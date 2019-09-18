@@ -190,5 +190,10 @@ namespace SnapMD.VirtualCare.ApiModels
         ///   GroupsIds
         /// </value>
         public int[] GroupsIds { get; set; }
+
+        /// <summary>
+        /// Is the user patient (true) or NPU (false)
+        /// </summary>
+        public bool IsPatient { get; set; }
     }
 }

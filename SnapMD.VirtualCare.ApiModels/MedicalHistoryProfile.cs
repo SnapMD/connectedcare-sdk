@@ -19,6 +19,7 @@ namespace SnapMD.VirtualCare.ApiModels
     /// Encapsulate the Medical History profil data .
     /// </summary>
     [XmlRoot("MedicalHistory", Namespace = "https://snap.md/api/v2/xml/medicalhistory")]
+    [XmlInclude(typeof(IntakeQuestionnaire))]
     public class MedicalHistoryProfile : IMedicalHistoryProfile
     {
         /// <summary>
@@ -62,5 +63,16 @@ namespace SnapMD.VirtualCare.ApiModels
         /// InfantData Record.
         /// </value>
         public NewbornRecord InfantData { get; set; }
+
+        /// <summary>
+        /// Create medical profile object from data satisfying <see cref="IMedicalHistoryProfile"/> interface (shallow copy).
+        public static void Copy (IMedicalHistoryProfile dst, IMedicalHistoryProfile src)
+        {
+            dst.Surgeries = src.Surgeries;
+            dst.MedicalConditions = src.MedicalConditions;
+            dst.Medications = src.Medications;
+            dst.MedicationAllergies = src.MedicationAllergies;
+            dst.InfantData = src.InfantData;
+        }
     }
 }
