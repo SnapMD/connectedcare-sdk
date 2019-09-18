@@ -359,6 +359,17 @@ namespace SnapMD.VirtualCare.ApiModels
         /// ConsultationStatus
         /// </summary>
         public int? ConsultationStatus { get; set; }
+
+        /// <summary>
+        /// PatientPaymentId
+        /// </summary>
+        public Guid? PatientPaymentId { get; set; }
+
+        /// <summary>
+        /// PatientPaymentUseCode
+        /// </summary>
+        public int? PatientPaymentUseCode { get; set; }
+
     }
 
     /// <summary>
