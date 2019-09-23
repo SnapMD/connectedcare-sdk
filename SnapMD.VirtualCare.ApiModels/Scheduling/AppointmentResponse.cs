@@ -111,6 +111,15 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// Connected userId of patientQueue
         /// </summary>
         public int? PatientQueueOwnerUserId { get; set; }
-		
+
+        /// <summary>
+        /// PatientPaymentId
+        /// </summary>
+        public Guid? PatientPaymentId { get; set; }
+
+        /// <summary>
+        /// PatientPaymentUseCode
+        /// </summary>
+        public int? PatientPaymentUseCode { get; set; }
     }
 }
