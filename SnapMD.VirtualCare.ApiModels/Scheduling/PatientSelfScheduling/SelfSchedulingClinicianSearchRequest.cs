@@ -85,6 +85,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling.PatientSelfScheduling
         public int? Take { get; set; }
 
         /// <summary>
+        /// ServiceTypeId
+        /// </summary>
+        public int? ServiceTypeId { get; set; }
+
+        /// <summary>
         /// Get a shallow copy of the request.
         /// </summary>
         /// <returns>Copy of the current request</returns>
