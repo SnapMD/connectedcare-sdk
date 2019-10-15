@@ -45,7 +45,15 @@ namespace SnapMD.VirtualCare.Sdk.Interfaces
         ///<param name="dependentId"></param>
         ///<param name="requestData"></param>
         ApiResponseV2<bool> UpdateDependentRelationAndAuthorization(int patientId, int dependentId, DependentRelationship requestData);
-
+        /// <summary>
+        ///     Add dependent to patient family profile.
+        ///     Works similar to HTTP POST 'v2/admin/patient/{patientId}/dependent', only requires relationship
+        /// </summary>
+        ApiResponseV2<PatientProfileResponse> AddDependentWithRelationForPatient(int patientId, AddDependentProfileRequest request, bool validateHardcoded, bool validateCustom);
+        /// <summary>
+        /// Sends or Resends Invitation to a CoUser.
+        /// </summary>
+        bool SendEmailInvitationToCoUser(CoUserEmailInvitationRequest request);
     }
 
 }

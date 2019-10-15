@@ -108,6 +108,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDependentProfileRequest.cs" />
     <Compile Include="AddressLocationObject.cs" />
     <Compile Include="AddressObject.cs" />
     <Compile Include="AddressObjectExtensions.cs" />
