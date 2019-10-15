@@ -9,6 +9,8 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
+using System.Net;
+using System.Net.Http;
 using SnapMD.VirtualCare.ApiModels;
 using SnapMD.VirtualCare.Sdk.Interfaces;
 using SnapMD.VirtualCare.Sdk.Wrappers;
@@ -122,6 +124,19 @@ namespace SnapMD.VirtualCare.Sdk
             return new ApiResponseV2<bool>(data);
         }
 
+        public ApiResponseV2<PatientProfileResponse> AddDependentWithRelationForPatient(int patientId,
+            AddDependentProfileRequest request,
+            bool validateHardcoded,
+            bool validateCustom)
+        {
+            return Post<ApiResponseV2<PatientProfileResponse>>($@"v2.1/admin/patient/{patientId}/dependent?validateHardcoded={validateHardcoded}&validateCustom={validateCustom}", request);
+        }
+
+        public bool SendEmailInvitationToCoUser(CoUserEmailInvitationRequest request)
+        {
+            var result = Post<HttpResponseMessage>("v2/emails/cousers/invitations", request);
+            return result.StatusCode == HttpStatusCode.OK;
+        }
     }
 
 }
