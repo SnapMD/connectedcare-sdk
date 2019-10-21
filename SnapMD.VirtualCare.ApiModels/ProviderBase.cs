@@ -81,6 +81,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public Currency Currency { get; set; }
 
         /// <summary>
+        /// The PatientMinimumAge of the provider.
+        /// </summary>
+        public string PatientMinimumAge { get; set; }
+
+        /// <summary>
         /// The state the provider resides in.
         /// </summary>
         public string State { get; set; }
