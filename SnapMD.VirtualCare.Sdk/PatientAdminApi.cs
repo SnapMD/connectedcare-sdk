@@ -137,6 +137,11 @@ namespace SnapMD.VirtualCare.Sdk
             var result = Post<HttpResponseMessage>("v2/emails/cousers/invitations", request);
             return result.StatusCode == HttpStatusCode.OK;
         }
+
+        public void UpdatePatient(AddPatientProfileRequest request)
+        {
+            var result = Put("patients/profile", request);
+        }
     }
 
 }

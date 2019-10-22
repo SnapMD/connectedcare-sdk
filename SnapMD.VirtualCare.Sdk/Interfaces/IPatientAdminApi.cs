@@ -54,6 +54,10 @@ namespace SnapMD.VirtualCare.Sdk.Interfaces
         /// Sends or Resends Invitation to a CoUser.
         /// </summary>
         bool SendEmailInvitationToCoUser(CoUserEmailInvitationRequest request);
+        /// <summary>
+        /// Updates patient profile for current user.
+        /// </summary>
+        void UpdatePatient(AddPatientProfileRequest request);
     }
 
 }
