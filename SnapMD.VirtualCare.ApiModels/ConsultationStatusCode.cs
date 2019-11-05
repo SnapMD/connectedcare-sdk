@@ -32,13 +32,6 @@ namespace SnapMD.VirtualCare.Sdk.Models
         /// </value>
         DoctorAssigned = 69,
         /// <summary>
-        /// Cutomer in waiting.
-        /// </summary>
-        /// <value>
-        /// Code is 69.
-        /// </value>
-        CustomerInWaiting = 82,
-        /// <summary>
         /// Doctor Initiated Consultation.
         /// </summary>
         /// <value>
@@ -53,10 +46,10 @@ namespace SnapMD.VirtualCare.Sdk.Models
         /// </value>
         StartedConsultation = 71,
         /// <summary>
-        /// Started Consultation .
+        /// Ended Consultation .
         /// </summary>
         /// <value>
-        /// Code is 71.
+        /// Code is 72.
         /// </value>
         EndedConsultation = 72,
         /// <summary>
@@ -72,6 +65,48 @@ namespace SnapMD.VirtualCare.Sdk.Models
         /// <value>
         /// Code is 80.
         /// </value>
-        InProgress = 80
+        InProgress = 80,
+        /// <summary>
+        /// Dropped Consultation .
+        /// </summary>
+        /// <value>
+        /// Code is 81.
+        /// </value>
+        DroppedConsultation = 81,
+        /// <summary>
+        /// Cutomer in waiting.
+        /// </summary>
+        /// <value>
+        /// Code is 82.
+        /// </value>
+        CustomerInWaiting = 82,
+        /// <summary>
+        /// Disconnected Consultation .
+        /// </summary>
+        /// <value>
+        /// Code is 83.
+        /// </value>
+        DisconnectedConsultation = 83,
+        /// <summary>
+        /// Doctor Review Consultation .
+        /// </summary>
+        /// <value>
+        /// Code is 154.
+        /// </value>
+        DoctorReviewConsultation = 154,
+        /// <summary>
+        /// Dismissed Consultation .
+        /// </summary>
+        /// <value>
+        /// Code is 163.
+        /// </value>
+        Dismissed = 163,
+        /// <summary>
+        /// Provider Did Not Attend Consultation.
+        /// </summary>
+        /// <value>
+        /// Code is 199.
+        /// </value>
+        ProviderDNA = 199,
     };
 }
