@@ -115,7 +115,7 @@ namespace SnapMD.VirtualCare.ApiModels
         public int? LocationId { get; set; }
 
         /// <summary>
-        /// Gets or sets the time zone.
+        /// .NET's time zone display name
         /// </summary>
         /// <value>
         /// The time zone.
@@ -123,12 +123,22 @@ namespace SnapMD.VirtualCare.ApiModels
         public string TimeZone { get; set; }
 
         /// <summary>
-        /// Gets or sets the time zone identifier.
+        /// TimeZoneId in SnapMD database
         /// </summary>
         /// <value>
         /// The time zone identifier.
         /// </value>
         public int? TimeZoneId { get; set; }
+
+        /// <summary>
+        /// SnapMD's time zone long name (usually coincides with <see cref="TimeZoneSystemId"/>).
+        /// </summary>
+        public string TimeZoneName { get; set; }
+
+        /// <summary>
+        /// Abbreviated time zone tane
+        /// </summary>
+        public string TimeZoneAbbreviation { get; set; }
 
         /// <summary>
         /// Gets or sets time zone string identifier. Example: 'Eastern Standard Time'.
