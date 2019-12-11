@@ -102,6 +102,13 @@ namespace SnapMD.VirtualCare.Sdk.Models
         /// </value>
         Dismissed = 163,
         /// <summary>
+        /// Provider leaved consultation as unresolved.
+        /// </summary>
+        /// <value>
+        /// Code is 198.
+        /// </value>
+        Unresolved = 198,
+        /// <summary>
         /// Provider Did Not Attend Consultation.
         /// </summary>
         /// <value>
