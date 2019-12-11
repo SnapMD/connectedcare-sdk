@@ -301,6 +301,25 @@ namespace SnapMD.VirtualCare.ApiModels
                 return false;
             }
         }
+
+        /// <summary>
+        /// Gets a value indicating whether this Patient has Virtrial required fields (common for all hospitals).
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if this instance has required fields; otherwise, <c>false</c>.
+        /// </value>
+        public bool PatientHasVirtrialRequiredFields
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(FirstName) && !string.IsNullOrWhiteSpace(LastName) &&
+                    (TimeZoneId ?? 0) != 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
         
         /// <summary>
         /// Gets or sets a value indicating whether this instance has required fields.
