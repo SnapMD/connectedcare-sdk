@@ -86,6 +86,11 @@ namespace SnapMD.VirtualCare.ApiModels
         public string PatientMinimumAge { get; set; }
 
         /// <summary>
+        /// The HelpCenterUrl of the provider.
+        /// </summary>
+        public string HelpCenterUrl { get; set; }
+
+        /// <summary>
         /// The state the provider resides in.
         /// </summary>
         public string State { get; set; }
