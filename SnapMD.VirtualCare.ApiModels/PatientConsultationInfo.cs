@@ -204,12 +204,17 @@ namespace SnapMD.VirtualCare.ApiModels
             }
         }
         /// <summary>
-        ///     Get or Set Consultation Disconncted Duration Time.
+        ///     How long ago provider was disconnected from consultation (minutes).
         /// </summary>
         /// <value>
         /// Consultation Disconncted Duration Time.
         /// </value> 
         public Double DisconnctedDuration { get; set; }
+
+        /// <summary>
+        ///     How long ago last patricipant (provider/patient/guest) was disconnected from consultations (minutes).
+        /// </summary>
+        public Double NoParticipantsDuration { get; set; }
 
         /// <summary>
         ///     Get or Set  Waiting Consultation Information.
