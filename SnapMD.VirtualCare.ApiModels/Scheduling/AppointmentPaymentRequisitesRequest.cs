@@ -10,10 +10,15 @@
         /// </summary>
         public int? HealthPlanId { get; set; }
 
+        private string _insuranceCompany;
         /// <summary>
         /// Insurance company name for <see cref="HealthPlanId"/>
         /// </summary>
-        public string InsuranceCompany { get; set; }
+        public string InsuranceCompany
+        {
+            get => HealthPlanId == -2 ? "Default insurance plan" : _insuranceCompany;
+            set => _insuranceCompany = value;
+        }
 
         /// <summary>
         /// The Customer Profile ID returned from v2/patients/payments.
