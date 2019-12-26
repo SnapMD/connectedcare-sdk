@@ -358,5 +358,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The FamilyGroupId of the patient.
         /// </summary>
         public int? FamilyGroupId { get; set; }
+
+        /// <summary>
+        /// User preferred language code (ISO 639)
+        /// </summary>
+        public string PreferredLanguageCode { get; set; }
     }
 }
