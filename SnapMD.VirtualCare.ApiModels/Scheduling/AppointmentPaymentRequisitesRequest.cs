@@ -40,5 +40,10 @@
         /// </summary>
         public double? CopayAmount { get; set; }
 
+        /// <summary>
+        /// A code string of the coupon that needs to be applied to the payment.
+        /// </summary>
+        public string CouponCode { get; set; }
+
     }
 }
