@@ -275,6 +275,15 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Consultation Duration.
         /// </value>
         public long? ConsultationDuration { get; set; }
+
+
+        /// <summary>
+        /// True, if patient and provider are connected to active consultation
+        /// False, if either patient or proveder are not connected.
+        /// Null for consultations which are not active (ended, dropped, dismissed etc.)
+        /// </summary>
+        public bool? IsCurrentlyConnected { get; set; }
+
         /// <summary>
         ///     Get or Set Consultation Duration.
         /// </summary>
