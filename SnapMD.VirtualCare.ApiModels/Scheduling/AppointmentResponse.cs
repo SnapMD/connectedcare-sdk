@@ -83,6 +83,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public string PaymentTransactionId { get; set; }
 
         /// <summary>
+        /// Payment error text
+        /// </summary>
+        public string PaymentError { get; set; }
+
+        /// <summary>
         /// Payment amount
         /// </summary>
         public bool? CreditUsed { get; set; }

@@ -45,5 +45,7 @@
         /// </summary>
         public string CouponCode { get; set; }
 
+        public string Type { get; set; }
+
     }
 }
