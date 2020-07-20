@@ -16,7 +16,7 @@
         /// </summary>
         public string InsuranceCompany
         {
-            get => HealthPlanId == -2 ? "Default insurance plan" : _insuranceCompany;
+            get => HealthPlanId == -2 ? "Use my membership" : _insuranceCompany;
             set => _insuranceCompany = value;
         }
 
