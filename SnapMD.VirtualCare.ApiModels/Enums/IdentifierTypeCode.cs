@@ -610,6 +610,19 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
         /// <remarks>
         /// A number associated with a permit for a person who is granted permission to work in a country for a specified time period.
         /// </remarks>
-        WP = 205
+        WP = 205,
+
+        /// <summary>
+        /// Hint external id for Insurance
+        /// </summary>
+        HII = 206,
+        /// <summary>
+        /// Hint external id for EHR and Payments
+        /// </summary>
+        HEI = 207,
+        /// <summary>
+        /// Hint external id for Payments
+        /// </summary>
+        HPI = 208
     };
 }
