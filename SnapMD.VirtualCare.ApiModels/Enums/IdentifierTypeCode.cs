@@ -617,7 +617,7 @@ namespace SnapMD.VirtualCare.ApiModels.Enums
         /// </summary>
         HII = 206,
         /// <summary>
-        /// Hint external id for EHR and Payments
+        /// Hint external id for EHR
         /// </summary>
         HEI = 207,
         /// <summary>
