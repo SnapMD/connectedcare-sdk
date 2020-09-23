@@ -71,6 +71,10 @@ namespace SnapMD.VirtualCare.ApiModels
         ///ImageId
         /// </value>
         public Guid? ImageId { get; set; }
+        /// <summary>
+        /// If set to false the 'SyncPatientDataCommand' won't be called.
+        /// </summary>
+        public bool CallThirdParty { get; set; } = true;
     }
 
  

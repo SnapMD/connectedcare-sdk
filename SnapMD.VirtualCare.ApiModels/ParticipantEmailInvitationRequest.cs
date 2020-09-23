@@ -26,12 +26,12 @@ namespace SnapMD.VirtualCare.ApiModels
         public string Name { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Participant Email.
+        ///     Gets or sets the Participant Email address or phone.
         /// </summary>
         /// <value>
-        ///     Participant Email.
+        ///     Participant Email address or phone.
         /// </value>
-        public string Email { get; set; }
+        public string EmailOrPhone { get; set; }
 
         /// <summary>
         ///     Gets or sets the Participant User Id.

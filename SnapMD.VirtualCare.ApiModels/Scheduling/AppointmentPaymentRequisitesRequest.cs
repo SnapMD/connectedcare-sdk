@@ -10,10 +10,15 @@
         /// </summary>
         public int? HealthPlanId { get; set; }
 
+        private string _insuranceCompany;
         /// <summary>
         /// Insurance company name for <see cref="HealthPlanId"/>
         /// </summary>
-        public string InsuranceCompany { get; set; }
+        public string InsuranceCompany
+        {
+            get => HealthPlanId == -2 ? "Use my membership" : _insuranceCompany;
+            set => _insuranceCompany = value;
+        }
 
         /// <summary>
         /// The Customer Profile ID returned from v2/patients/payments.
@@ -34,6 +39,13 @@
         /// Amount of consultation cost covered by insurance as was calculated during appointment creation. Real amount may differ.
         /// </summary>
         public double? CopayAmount { get; set; }
+
+        /// <summary>
+        /// A code string of the coupon that needs to be applied to the payment.
+        /// </summary>
+        public string CouponCode { get; set; }
+
+        public string Type { get; set; }
 
     }
 }

@@ -255,5 +255,10 @@ namespace SnapMD.VirtualCare.ApiModels
         ///    HomePhoneCountryCodeId
         /// </value>
         public int? HomePhoneCountryCodeId { get; set; }
+
+        /// <summary>
+        /// Language code - reference to LanguageCodes directory/>
+        /// </summary>
+        public string PreferredLanguageCode { get; set; }
     }
 }
