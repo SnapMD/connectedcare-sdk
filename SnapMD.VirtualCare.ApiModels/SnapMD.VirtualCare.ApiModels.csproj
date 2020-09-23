@@ -108,6 +108,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDependentProfileRequest.cs" />
     <Compile Include="AddressLocationObject.cs" />
     <Compile Include="AddressObject.cs" />
     <Compile Include="AddressObjectExtensions.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Currency.cs" />
     <Compile Include="FileSharing\ConsultationSnapshot.cs" />
     <Compile Include="FileSharing\FileModel.cs" />
+    <Compile Include="PrescribingLocationItem.cs" />
     <Compile Include="Payments\PrepaymentResponse.cs" />
     <Compile Include="RulesStatus.cs" />
     <Compile Include="SortOrderField.cs" />

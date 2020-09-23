@@ -83,6 +83,11 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         public string PaymentTransactionId { get; set; }
 
         /// <summary>
+        /// Payment error text
+        /// </summary>
+        public string PaymentError { get; set; }
+
+        /// <summary>
         /// Payment amount
         /// </summary>
         public bool? CreditUsed { get; set; }
@@ -91,8 +96,8 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// The latest flag (color mark) for appointment.
         /// </summary>
         public int? AppointmentFlag { get; set; }
-		
-		        /// <summary>
+
+        /// <summary>
         /// PatientQueueState
         /// </summary>
         public int? PatientQueueState { get; set; }
@@ -121,5 +126,10 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// PatientPaymentUseCode
         /// </summary>
         public int? PatientPaymentUseCode { get; set; }
+
+        /// <summary>
+        /// Are there circumstances preventing the start of the consultation
+        /// </summary>
+        public int QueuingReadyState { get; set; }
     }
 }

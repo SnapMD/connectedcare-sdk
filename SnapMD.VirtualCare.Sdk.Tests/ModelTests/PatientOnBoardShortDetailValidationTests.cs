@@ -20,7 +20,7 @@ namespace SnapMD.VirtualCare.Sdk.Tests.ModelTests
 
             target.Email = "test@mail.com";
             thrown = Assert.Throws<Exception>(() => target.ValidateModel(m => new Exception(m)));
-            Assert.AreEqual("Unknown gender. Expected gender any [M, F]", thrown.Message);
+            Assert.AreEqual("Unknown gender. Expected gender any [M, F, O]", thrown.Message);
 
             target.Gender = "F";
             thrown = Assert.Throws<Exception>(() => target.ValidateModel(m => new Exception(m)));

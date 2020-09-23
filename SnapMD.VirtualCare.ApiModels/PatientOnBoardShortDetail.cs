@@ -113,7 +113,7 @@ namespace SnapMD.VirtualCare.ApiModels
                 throw exceptionToThrow("Email address required.");
             }
 
-            var genders = new List<string> { "M", "F" };
+            var genders = new List<string> { "M", "F", "O" }; //'O' goes for 'Other'
             if (string.IsNullOrEmpty(Gender) || !genders.Contains(Gender))
             {
                 // error: gender unknown.
