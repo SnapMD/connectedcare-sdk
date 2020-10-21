@@ -66,5 +66,10 @@ namespace SnapMD.VirtualCare.ApiModels
         /// Is the identifier read only for the requested user
         /// </summary>
         public bool ReadOnly { get; set; }
+
+        /// <summary>
+        /// Modified by patient or provider or null means 'unknown'
+        /// </summary>
+        public bool? ModifiedByPatient { get; set; }
     }
 }
