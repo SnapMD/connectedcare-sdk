@@ -29,6 +29,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The provider telephone number used for appointments.
         /// </summary>
         public string AppointmentsContactNumber { get; set; }
+        public string AppointmentsContactEmail { get; set; }
 
         /// <summary>
         /// The colors used in the provider's brand.
@@ -64,6 +65,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// The provider's IT department contact number.
         /// </summary>
         public string ITDepartmentContactNumber { get; set; }
+        public string ITDepartmentContactEmail { get; set; }
 
         /// <summary>
         /// The locale of the provider.
