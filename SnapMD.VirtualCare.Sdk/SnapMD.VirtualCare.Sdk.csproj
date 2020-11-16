@@ -73,8 +73,8 @@
     <CodeAnalysisRuleSet>SnapMD.VirtualCare.Sdk.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\..\src\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\src\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -145,8 +145,10 @@
     <None Include="SnapMD.VirtualCare.Sdk.ruleset" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.1.13.0\analyzers\SonarAnalyzer.CSharp.dll" />
-    <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.1.13.0\analyzers\SonarAnalyzer.dll" />
+    <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.8.14.0.22654\analyzers\SonarAnalyzer.CSharp.dll" />
+    <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.8.14.0.22654\analyzers\SonarAnalyzer.dll" />
+    <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.8.14.0.22654\analyzers\Google.Protobuf.dll" />
+    <Analyzer Include="..\..\..\src\packages\SonarAnalyzer.CSharp.8.14.0.22654\analyzers\SonarAnalyzer.CFG.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
