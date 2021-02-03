@@ -87,5 +87,13 @@ namespace SnapMD.VirtualCare.ApiModels.Payments
         ///     The shipping addresses.
         /// </value>
         public IList<CimAddress> ShippingAddresses { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the payment systems.
+        /// </summary>
+        /// <value>
+        ///     The payment profiles.
+        /// </value>
+        public IList<PaymentSystem> PaymentSystems { get; set; }
     }
 }
