@@ -47,5 +47,9 @@
 
         public string Type { get; set; }
 
+        public bool Payed { get; set; }
+
+        public string TransactionId { get; set; }
+
     }
 }
