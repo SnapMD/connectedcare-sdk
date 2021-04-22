@@ -78,6 +78,16 @@ namespace SnapMD.VirtualCare.ApiModels
         public Dictionary<string, string> PatientSettings { get; set; }
 
         /// <summary>
+        /// Configuration of visible/invisible fields to Patient of Provider Profile
+        /// </summary>
+        public Dictionary<string, bool> ProviderVisibleFields { get; set; }
+
+        /// <summary>
+        /// Configuration of mandatory/optional fields Provider Profile
+        /// </summary>
+        public Dictionary<string, string> ProviderProfileFields { get; set; }
+
+        /// <summary>
         /// The hospital ID.
         /// </summary>
         public int HospitalId { get; set; }
