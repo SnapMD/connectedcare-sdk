@@ -14,6 +14,7 @@
 using SnapMD.VirtualCare.ApiModels.Scheduling;
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace SnapMD.VirtualCare.ApiModels
 {
@@ -184,6 +185,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// Consultation Time Information
         /// </value> 
+        [JsonConverter(typeof(DateTimeZoneHandlingConverter))]
         public DateTime? ConsultationTimeInfo { get; set; }
 
         /// <summary>
