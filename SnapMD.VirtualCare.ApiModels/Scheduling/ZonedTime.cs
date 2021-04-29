@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace SnapMD.VirtualCare.ApiModels.Scheduling
 {
@@ -15,11 +16,13 @@ namespace SnapMD.VirtualCare.ApiModels.Scheduling
         /// <summary>
         /// The interval start time
         /// </summary>
+        [JsonConverter(typeof(DateTimeZoneHandlingConverter))]
         public DateTime StartTime { get; set; }
 
         /// <summary>
         /// The interval end time
         /// </summary>
+        [JsonConverter(typeof(DateTimeZoneHandlingConverter))]
         public DateTime EndTime { get; set; }
     }
 }
