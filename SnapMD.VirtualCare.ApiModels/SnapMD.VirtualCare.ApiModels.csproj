@@ -137,6 +137,7 @@
     <Compile Include="AddressObjectExtensions.cs" />
     <Compile Include="ConsultationFolderResponse.cs" />
     <Compile Include="Currency.cs" />
+    <Compile Include="DateTimeZoneHandlingConverter.cs" />
     <Compile Include="FileSharing\ConsultationSnapshot.cs" />
     <Compile Include="FileSharing\FileModel.cs" />
     <Compile Include="Payments\PaymentSystem.cs" />
