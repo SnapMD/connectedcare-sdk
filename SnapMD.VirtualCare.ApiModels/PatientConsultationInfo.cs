@@ -143,7 +143,8 @@ namespace SnapMD.VirtualCare.ApiModels
         /// </summary>
         /// <value>
         /// DOB.
-        /// </value> 
+        /// </value>
+        /// we don't convert DOB to local time
         public DateTime? DOB { get; set; }
         /// <summary>
         ///     Get or Set Consultation create date
@@ -151,6 +152,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// Consultation create date.
         /// </value> 
+        [JsonConverter(typeof(DateTimeZoneHandlingConverter))]
         public DateTime? CreatedDate { get; set; }
         /// <summary>
         ///     Get or Set Consultation Update date
@@ -158,6 +160,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// Consultation Update date.
         /// </value> 
+        [JsonConverter(typeof(DateTimeZoneHandlingConverter))]
         public DateTime? UpdatedDate { get; set; }
 
         /// <summary>
@@ -224,6 +227,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         ///  Waiting Consultation Information.
         /// </value>
+        [JsonConverter(typeof(DateTimeZoneHandlingConverter))]
         public DateTime? WaitingConsultationInfo { get; set; }
         /// <summary>
         ///     Get or Set Started Consultation  Information.
@@ -231,6 +235,7 @@ namespace SnapMD.VirtualCare.ApiModels
         /// <value>
         /// Consultation Started Consultation Information.
         /// </value>
+        [JsonConverter(typeof(DateTimeZoneHandlingConverter))]
         public DateTime? StartedConsultationInfo { get; set; }
 
         /// <summary>
